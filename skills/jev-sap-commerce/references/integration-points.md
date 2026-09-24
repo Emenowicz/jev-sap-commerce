@@ -29,7 +29,7 @@ how long the caller can wait and what happens on "no decision".
 
 ### Business process action
 
-Illustrative sketch; these classes are not in `assets/`.
+Illustrative sketch; these classes are not in the `jevintegration` extension.
 
 ```java
 public class CheckDeliveryNoteAction extends AbstractSimpleDecisionAction<OrderProcessModel>

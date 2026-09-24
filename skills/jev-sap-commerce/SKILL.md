@@ -31,12 +31,15 @@ Do not invent fields.
 
 | Jev fits: a judgment about text | Keep in code: numbers, dates, identity, rules |
 | --- | --- |
-| Review moderation (abuse, spam, personal data, off topic) | Fraud scoring on order totals, velocity, addresses |
+| Review moderation (abuse, spam, personal data, off topic): **built into `jevintegration`** | Fraud scoring on order totals, velocity, addresses |
 | Category or attribute suggestion from product copy | Pricing, discounts, promotion eligibility |
 | Product content quality score, before approval | Stock, ATP, sourcing, delivery dates |
 | Customer ticket or message routing, urgency | Anything a FlexibleSearch, regex or rule can answer exactly |
 | Order note, gift message or B2B comment triage | Date comparison, counting, arithmetic |
 | Search query intent, e.g. which Solr handler to use | Deciding on its own a step that has legal or financial effect |
+
+Only review moderation ships in the extension. The other rows are use cases that fit Jev; you build
+them on top of the extension (section 3), so don't tell the user they already exist.
 
 Jev reads numbers, dates and counts poorly. If a decision rests on numbers, say so, and offer a
 text-only question or plain code instead. If the user still wants a numeric decision, measure Jev
