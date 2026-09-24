@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
+	<itemtypes>
+		<itemtype code="JevJudgment" autocreate="true" generate="true">
+			<description>One Jev decision about one item: Jev's raw answers, what was decided and, in a dry run, what a person had decided. Written once, read-only afterwards.</description>
+			<!-- 28400 was free in SAP's modules when this was written. Change it if it collides with a type in your project. -->
+			<deployment table="JevJudgments" typecode="28400"/>
+			<attributes>
+				<attribute qualifier="item" type="Item">
+					<description>The judged item, for example a CustomerReview.</description>
+					<modifiers optional="false" initial="true" write="false"/>
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="useCase" type="java.lang.String">
+					<modifiers optional="false" initial="true" write="false"/>
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="dryRun" type="boolean">
+					<description>True: judged to measure Jev only; nothing was changed.</description>
+					<defaultvalue>Boolean.FALSE</defaultvalue>
+					<modifiers optional="false" initial="true" write="false"/>
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="language" type="java.lang.String">
+					<description>Isocode of the language the judged text is written in.</description>
+					<modifiers initial="true" write="false"/>
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="model" type="java.lang.String">
+					<description>The Jev model version that answered.</description>
+					<modifiers initial="true" write="false"/>
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="answers" type="java.lang.String">
+					<description>Jev's raw answers as JSON, so thresholds can be re-tuned without calling Jev again.</description>
+					<modifiers initial="true" write="false"/>
+					<persistence type="property">
+						<columntype>
+							<value>HYBRIS.LONG_STRING</value>
+						</columntype>
+					</persistence>
+				</attribute>
+				<attribute qualifier="decision" type="java.lang.String">
+					<modifiers initial="true" write="false"/>
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="humanDecision" type="java.lang.String">
+					<description>Dry run only: what a person had decided, to compare with.</description>
+					<modifiers initial="true" write="false"/>
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="inputTokens" type="java.lang.Integer">
+					<modifiers initial="true" write="false"/>
+					<persistence type="property"/>
+				</attribute>
+			</attributes>
+			<indexes>
+				<index name="JevJudgmentItemIdx">
+					<key attribute="item"/>
+					<key attribute="useCase"/>
+				</index>
+			</indexes>
+		</itemtype>
+	</itemtypes>
+</items>

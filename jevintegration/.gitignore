@@ -1,0 +1,17 @@
+# written by the SAP Commerce build
+/build.xml
+/platformhome.properties
+/classes/
+/testclasses/
+/gensrc/
+/eclipsebin/
+/bin/
+/resources/jevintegration/
+/resources/jevintegration.build.number
+/.classpath
+/.project
+/.settings/
+/.externalToolBuilders/
+/.springBeans
+/extensioninfo.xsd
+/resources/items.xsd

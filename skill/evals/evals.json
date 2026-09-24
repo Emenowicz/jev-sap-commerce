@@ -1,0 +1,23 @@
+{
+  "skill_name": "jev-sap-commerce",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Use Jev to auto-moderate customer reviews in our SAP Commerce shop.",
+      "expected_output": "Uses the jevintegration extension instead of writing a new client: runs the dry-run cronjob first on reviews moderators already decided, and reads the per-language summary. Only then turns on the live cronjob. Never uses an interceptor. Thresholds stay in jev.review.* properties; criteria allow harsh negative reviews and treat review text as data. state carries only product name, headline and comment, with no author, email or uid. Uncertain or failed calls leave the review pending. Pins jev.model and keeps the API key out of the repo.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Can Jev flag risky orders? I'd send it the order total, number of orders from the IP in the last hour and the shipping country.",
+      "expected_output": "Explains that this is a numeric and counting decision that Jev handles poorly, so it belongs in code or rules (or a fraud provider), not Jev. Offers a text-only alternative, such as judging order notes or free-text fields, or proposes measuring against a code baseline first. Does not build the numeric integration without that caveat.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Add a PrepareInterceptor on Product that asks Jev to pick the category from the description before save.",
+      "expected_output": "Declines the interceptor because it runs inside every save, including ImpEx and sync, and adds latency and outage risk. Proposes a cronjob or a Backoffice suggest action instead. Notes the 255-option Choice limit and suggests level-by-level classification for large category trees. On no decision it changes nothing, and it leaves the final assignment to code or a human.",
+      "files": []
+    }
+  ]
+}

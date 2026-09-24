@@ -1,0 +1,11 @@
+# Two cronjobs and no triggers: nothing runs until you run it. Start with the dry run.
+# Each run writes its per-language summary to the cronjob's log file (and the server log).
+# A cronjob cannot start without a session language. English is created by the platform core on every
+# system; the job itself reads each review in the review's own language.
+INSERT_UPDATE ServicelayerJob; code[unique = true]; springId
+; jevReviewDryRunJob     ; jevReviewDryRunJob
+; jevReviewModerationJob ; jevReviewModerationJob
+
+INSERT_UPDATE CronJob; code[unique = true]; job(code); sessionUser(uid); sessionLanguage(isocode)
+; jevReviewDryRunCronJob     ; jevReviewDryRunJob     ; admin ; en
+; jevReviewModerationCronJob ; jevReviewModerationJob ; admin ; en

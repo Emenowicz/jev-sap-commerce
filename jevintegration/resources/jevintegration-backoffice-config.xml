@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config xmlns="http://www.hybris.com/cockpit/config">
+	<context merge-by="module" parent="auto" component="explorer-tree">
+		<explorer-tree:explorer-tree xmlns:explorer-tree="http://www.hybris.com/cockpitng/config/explorertree">
+			<explorer-tree:navigation-node id="jevintegration.treenode">
+				<explorer-tree:type-node code="JevJudgment" id="jevintegration.treenode.judgments"/>
+			</explorer-tree:navigation-node>
+		</explorer-tree:explorer-tree>
+	</context>
+	<context merge-by="type" parent="GenericItem" type="JevJudgment" component="listview">
+		<list-view:list-view xmlns:list-view="http://www.hybris.com/cockpitng/component/listView">
+			<list-view:column qualifier="creationtime"/>
+			<list-view:column qualifier="useCase"/>
+			<list-view:column qualifier="dryRun"/>
+			<list-view:column qualifier="language"/>
+			<list-view:column qualifier="decision"/>
+			<list-view:column qualifier="humanDecision"/>
+			<list-view:column qualifier="item"/>
+		</list-view:list-view>
+	</context>
+	<context merge-by="type" parent="GenericItem" type="JevJudgment" component="editor-area">
+		<editorArea:editorArea xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+			<editorArea:essentials>
+				<editorArea:essentialSection name="hmc.essential">
+					<editorArea:attribute xmlns="http://www.hybris.com/cockpitng/component/editorArea" qualifier="item"/>
+					<editorArea:attribute xmlns="http://www.hybris.com/cockpitng/component/editorArea" qualifier="useCase"/>
+					<editorArea:attribute xmlns="http://www.hybris.com/cockpitng/component/editorArea" qualifier="decision"/>
+					<editorArea:attribute xmlns="http://www.hybris.com/cockpitng/component/editorArea" qualifier="humanDecision"/>
+				</editorArea:essentialSection>
+			</editorArea:essentials>
+			<editorArea:tab name="jevintegration.tab.jev">
+				<editorArea:section name="jevintegration.section.answers">
+					<editorArea:attribute xmlns="http://www.hybris.com/cockpitng/component/editorArea" qualifier="dryRun"/>
+					<editorArea:attribute xmlns="http://www.hybris.com/cockpitng/component/editorArea" qualifier="language"/>
+					<editorArea:attribute xmlns="http://www.hybris.com/cockpitng/component/editorArea" qualifier="model"/>
+					<editorArea:attribute xmlns="http://www.hybris.com/cockpitng/component/editorArea" qualifier="inputTokens"/>
+					<editorArea:attribute xmlns="http://www.hybris.com/cockpitng/component/editorArea" qualifier="answers">
+						<editor-parameter>
+							<name>rows</name>
+							<value>15</value>
+						</editor-parameter>
+					</editorArea:attribute>
+					<editorArea:attribute xmlns="http://www.hybris.com/cockpitng/component/editorArea" qualifier="creationtime"/>
+				</editorArea:section>
+			</editorArea:tab>
+		</editorArea:editorArea>
+	</context>
+	<context merge-by="type" parent="GenericItem" type="JevJudgment" component="advanced-search">
+		<advanced-search:advanced-search xmlns:advanced-search="http://www.hybris.com/cockpitng/config/advancedsearch">
+			<advanced-search:field-list>
+				<advanced-search:field xmlns="http://www.hybris.com/cockpitng/config/advancedsearch" name="useCase" selected="true"/>
+				<advanced-search:field xmlns="http://www.hybris.com/cockpitng/config/advancedsearch" name="dryRun" selected="true"/>
+				<advanced-search:field xmlns="http://www.hybris.com/cockpitng/config/advancedsearch" name="decision" selected="true"/>
+				<advanced-search:field xmlns="http://www.hybris.com/cockpitng/config/advancedsearch" name="humanDecision" selected="true"/>
+				<advanced-search:field xmlns="http://www.hybris.com/cockpitng/config/advancedsearch" name="language" selected="true"/>
+				<advanced-search:field xmlns="http://www.hybris.com/cockpitng/config/advancedsearch" name="creationtime" selected="false"/>
+			</advanced-search:field-list>
+		</advanced-search:advanced-search>
+	</context>
+	<context type="JevJudgment" component="base" merge-by="type" parent="GenericItem">
+		<y:base xmlns:y="http://www.hybris.com/cockpit/config/hybris">
+			<y:labels>
+				<y:label>useCase + ': ' + decision</y:label>
+			</y:labels>
+		</y:base>
+	</context>
+</config>
