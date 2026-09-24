@@ -1,0 +1,161 @@
+product	language	label	decision	best	score	path	beam	model	input_tokens
+eval-p01	de	ha-15-14-3-1	ha-15-14-3-1	ha-15-14-3-1	0.971	Heimwerkerbedarf > Werkzeuge > Bohrmaschinen > Elektrische Handbohrmaschinen > Bohrhammer	ha-15-14-3-1|ha-15-14-3-2|ha-15-14-4	jev-1.13.0	4397
+eval-p01	en	ha-15-14-3-1	ha-15-14-3-1	ha-15-14-3-1	0.971	Hardware > Tools > Drills > Handheld Power Drills > Hammer Drills	ha-15-14-3-1|ha-15-14-3-2|ha-15-34-1	jev-1.13.0	4120
+eval-p01	fr	ha-15-14-3-1	ha-15-14-3-1	ha-15-14-3-1	0.864	Quincaillerie > Outils > Perceuses > Perceuses électriques portatives > Perceuses à percussion	ha-15-14-3-1|ha-15-14-3-2|ha-15-14-3-3	jev-1.13.0	5373
+eval-p01	it	ha-15-14-3-1	ha-15-14-3-1	ha-15-14-3-1	0.903	Articoli di ferramenta > Utensili > Trapani > Trapani portatili > Trapani perforatori	ha-15-14-3-1|ha-15-14-4|ha-15-14-3-2	jev-1.13.0	4486
+eval-p02	de	ha-15-14-3-2	ha-15-14-3-2	ha-15-14-3-2	0.998	Heimwerkerbedarf > Werkzeuge > Bohrmaschinen > Elektrische Handbohrmaschinen > Schlagbohrmaschinen	ha-15-14-3-2|ha-15-14-3-1|ha-15-14-3-3	jev-1.13.0	4479
+eval-p02	en	ha-15-14-3-2	ha-15-14-3-1	ha-15-14-3-1	0.938	Hardware > Tools > Drills > Handheld Power Drills > Hammer Drills	ha-15-14-3-1|ha-15-14-3-2|ha-15-14-3-3	jev-1.13.0	4094
+eval-p02	fr	ha-15-14-3-2	ha-15-14-3-1	ha-15-14-3-1	0.973	Quincaillerie > Outils > Perceuses > Perceuses électriques portatives > Perceuses à percussion	ha-15-14-3-1|ha-11-7-3|none	jev-1.13.0	4572
+eval-p02	it	ha-15-14-3-2	ha-15-14-3-2	ha-15-14-3-2	0.992	Articoli di ferramenta > Utensili > Trapani > Trapani portatili > Trapani a percussione	ha-15-14-3-2|ha-15-14-3-1|none	jev-1.13.0	4448
+eval-p03	de	ha-15-20-1-1	ha-15-20-1-1	ha-15-20-1-1	0.998	Heimwerkerbedarf > Werkzeuge > Hämmer > Manuelle Hämmer > Klauenhämmer	ha-15-20-1-1|ha-15-20-1-3|ha-15-20-1-2	jev-1.13.0	4838
+eval-p03	en	ha-15-20-1-1	ha-15-20-1-1	ha-15-20-1-1	1.0	Hardware > Tools > Hammers > Manual Hammers > Claw Hammers	ha-15-20-1-1|ha-15-20-1-2|ha-15-20-1-3	jev-1.13.0	4422
+eval-p03	fr	ha-15-20-1-1	ha-15-20-1-1	ha-15-20-1-1	0.998	Quincaillerie > Outils > Marteaux > Marteaux à main > Marteaux arrache-clous	ha-15-20-1-1|ha-15-20-1-2|ha-15-20-1-3	jev-1.13.0	4284
+eval-p03	it	ha-15-20-1-1	ha-15-20-1-1	ha-15-20-1-1	1.0	Articoli di ferramenta > Utensili > Martelli > Martelli manuali > Martelli da carpentiere	ha-15-20-1-1|ha-15-20-1-2|ha-15-20-1-3	jev-1.13.0	4798
+eval-p04	de	ha-15-20-1-3	ha-15-20-1-3	ha-15-20-1-3	0.99	Heimwerkerbedarf > Werkzeuge > Hämmer > Manuelle Hämmer > Vorschlaghämmer	ha-15-20-1-3|ha-15-34-1|ha-14-8-3	jev-1.13.0	5405
+eval-p04	en	ha-15-20-1-3	ha-15-20-1-3	ha-15-20-1-3	0.982	Hardware > Tools > Hammers > Manual Hammers > Sledge Hammers	ha-15-20-1-3|ha-15-20-2-1|ha-15-20-1-2	jev-1.13.0	4071
+eval-p04	fr	ha-15-20-1-3	ha-15-20-1-3	ha-15-20-1-3	0.98	Quincaillerie > Outils > Marteaux > Marteaux à main > Masses	ha-15-20-1-3|ha-15-20-2-1|ha-15-34-1	jev-1.13.0	4831
+eval-p04	it	ha-15-20-1-3	ha-15-20-1-2	ha-15-20-1-2	0.967	Articoli di ferramenta > Utensili > Martelli > Martelli manuali > Magli	ha-15-20-1-2|ha-15-20-1-1|ha-15-35-2	jev-1.13.0	4540
+eval-p05	de	ha-15-62-4	ha-15-62-4	ha-15-62-4	0.99	Heimwerkerbedarf > Werkzeuge > Sägen > Handkreissägen	ha-15-62-4|ha-15-11-8-1|ha-15-11-8-2	jev-1.13.0	4933
+eval-p05	en	ha-15-62-4	ha-15-62-4	ha-15-62-4	0.99	Hardware > Tools > Saws > Handheld Circular Saws	ha-15-62-4|ha-14-20-2|ha-14-23-2-1	jev-1.13.0	4571
+eval-p05	fr	ha-15-62-4	ha-15-62-4	ha-15-62-4	0.97	Quincaillerie > Outils > Scies > Scies circulaires manuelles	ha-15-62-4|ha-15-62-11|ha-15-38	jev-1.13.0	4421
+eval-p05	it	ha-15-62-4	ha-15-62-4	ha-15-62-4	0.985	Articoli di ferramenta > Utensili > Seghe, seghetti > Seghe circolari portatili	ha-15-62-4|ha-15-62-11|ha-15-38	jev-1.13.0	4442
+eval-p06	de	ha-15-62-5	ha-15-62-5	ha-15-62-5	0.982	Heimwerkerbedarf > Werkzeuge > Sägen > Stichsägen	ha-15-62-5|ha-14-20-3|ha-15-62-9	jev-1.13.0	4388
+eval-p06	en	ha-15-62-5	ha-15-62-5	ha-15-62-5	0.942	Hardware > Tools > Saws > Jigsaws	ha-15-62-5|ha-15-62-10-2|ha-15-62-10-1	jev-1.13.0	4458
+eval-p06	fr	ha-15-62-5	ha-15-1-1	ha-15-1-1	0.863	Quincaillerie > Outils > Sableuses > Sableuses d’atelier	ha-15-1-1|ha-15-62-5|ha-15-1-2	jev-1.13.0	4226
+eval-p06	it	ha-15-62-5	ha-15-62-9	ha-15-62-9	0.987	Articoli di ferramenta > Utensili > Seghe, seghetti > Seghetti alternativi	ha-15-62-9|ha-14-20-3|ha-15-38	jev-1.13.0	4370
+eval-p07	de	ha-15-62-3-3	ha-15-62-3-3	ha-15-62-3-3	0.978	Heimwerkerbedarf > Werkzeuge > Sägen > Handsägen > Bügelsägen	ha-15-62-3-3|ha-14-20-3|ha-15-62-2	jev-1.13.0	4808
+eval-p07	en	ha-15-62-3-3	ha-15-62-3-3	ha-15-62-3-3	0.931	Hardware > Tools > Saws > Hand Saws > Hacksaws	ha-15-62-3-3|ha-14-20-1|ha-15-62-2	jev-1.13.0	4443
+eval-p07	fr	ha-15-62-3-3	ha-15-62-3-3	ha-15-62-3-3	0.843	Quincaillerie > Outils > Scies > Scies à main > Scies à métaux	ha-15-62-3-3|ha-15-62-3-2|ha-14-20-3	jev-1.13.0	5279
+eval-p07	it	ha-15-62-3-3	ha-15-62-5	ha-15-62-5	0.919	Articoli di ferramenta > Utensili > Seghe, seghetti > Seghetti	ha-15-62-5|ha-15-62-3-3|ha-14-20-3	jev-1.13.0	5202
+eval-p08	de	ha-15-18-1	ha-15-51-2	ha-15-51-2	0.909	Heimwerkerbedarf > Werkzeuge > Schleifer & Poliermaschinen > Poliermaschinen	ha-15-51-2|ha-15-51-1|ha-15-18-1	jev-1.13.0	4227
+eval-p08	en	ha-15-18-1	ha-15-18-1	ha-15-18-1	0.954	Hardware > Tools > Grinders > Angle Grinders	ha-15-18-1|ha-15-11-7-2|ha-15-11-3	jev-1.13.0	4304
+eval-p08	fr	ha-15-18-1	ha-15-18-1	ha-15-18-1	0.958	Quincaillerie > Outils > Meuleuses > Meuleuses d’angle	ha-15-18-1|ha-15-18-3|ha-14-7-1	jev-1.13.0	4025
+eval-p08	it	ha-15-18-1	ha-15-59-2	ha-15-59-2	0.99	Articoli di ferramenta > Utensili > Smerigliatrici > Smerigliatrici a disco	ha-15-59-2|ha-14-7-1|none	jev-1.13.0	4070
+eval-p09	de	ha-15-36-31	ha-15-36-31	ha-15-36-31	0.928	Heimwerkerbedarf > Werkzeuge > Messwerkzeuge & Messwertgeber > Maßbänder	ha-15-36-31|ha-14-13-3|ha-15-36-19	jev-1.13.0	4855
+eval-p09	en	ha-15-36-31	ha-15-36-31	ha-15-36-31	0.913	Hardware > Tools > Measuring Tools & Sensors > Tape Measures	ha-15-36-31|ha-14-13-3|ha-15-36-25	jev-1.13.0	5064
+eval-p09	fr	ha-15-36-31	ha-15-36-31	ha-15-36-31	0.977	Quincaillerie > Outils > Outils de mesure et détecteurs > Mètres à ruban	ha-15-36-31|ha-14-13-5|ha-14-13-1	jev-1.13.0	5498
+eval-p09	it	ha-15-36-31	ha-15-36-31	ha-15-36-31	0.977	Articoli di ferramenta > Utensili > Strumenti/sensori misurazione > Flessometri	ha-15-36-31|ha-14-13-3|ha-6-4-4	jev-1.13.0	5532
+eval-p10	de	ha-15-36-17-1-1	ha-15-36-17-1-2	ha-15-36-17-1-2	0.933	Heimwerkerbedarf > Werkzeuge > Messwerkzeuge & Messwertgeber > Richtwaagen > Wasserwaagen > I-Profil-Wasserwaagen	ha-15-36-17-1-2|ha-15-36-17-1-1|ha-15-36-18-2	jev-1.13.0	6665
+eval-p10	en	ha-15-36-17-1-1	ha-15-36-17-1-1	ha-15-36-17-1-1	0.976	Hardware > Tools > Measuring Tools & Sensors > Levels > Bubble Levels > Box Levels	ha-15-36-17-1-1|ha-15-36-17-1-2|ha-15-36-17-1-3	jev-1.13.0	5353
+eval-p10	fr	ha-15-36-17-1-1	ha-15-36-17-1-1	ha-15-36-17-1-1	0.992	Quincaillerie > Outils > Outils de mesure et détecteurs > Niveaux > Niveaux à bulle > Niveaux rectangulaires	ha-15-36-17-1-1|ha-14-13-3|ha-14-13-5	jev-1.13.0	6272
+eval-p10	it	ha-15-36-17-1-1	ha-15-36-17-1-1	ha-15-36-17-1-1	0.885	Articoli di ferramenta > Utensili > Strumenti/sensori misurazione > Livelle > Livelle a bolla > Livelle box	ha-15-36-17-1-1|ha-15-36-17-1-2|ha-15-36-17-1-3	jev-1.13.0	6504
+eval-p11	de	ha-15-80-1	ha-15-80-1	ha-15-80-1	0.964	Heimwerkerbedarf > Werkzeuge > Schraubenschlüssel > Verstellbare Schraubenschlüssel	ha-15-80-1|ha-15-73|none	jev-1.13.0	3660
+eval-p11	en	ha-15-80-1	ha-15-80-1	ha-15-80-1	0.997	Hardware > Tools > Wrenches > Adjustable Wrenches	ha-15-80-1|none|ha-15-80-2	jev-1.13.0	3489
+eval-p11	fr	ha-15-80-1	ha-15-80-1	ha-15-80-1	0.97	Quincaillerie > Outils > Clés > Clés à molette	ha-15-80-1|ha-15-73|ha-9-1	jev-1.13.0	4100
+eval-p11	it	ha-15-80-1	ha-15-80-1	ha-15-80-1	0.885	Articoli di ferramenta > Utensili > Chiavi > Chiavi regolabili	ha-15-80-1|ha-15-73|ha-9-1	jev-1.13.0	3810
+eval-p12	de	ha-15-27-2-3	ha-15-27-2-3	ha-15-27-2-3	0.767	Heimwerkerbedarf > Werkzeuge > Leitern & Gerüste > Leitern > Stufenleitern	ha-15-27-2-3|ha-14-27-1-2|ha-14-27-1-3	jev-1.13.0	5183
+eval-p12	en	ha-15-27-2-3	ha-15-27-2-3	ha-15-27-2-3	0.81	Hardware > Tools > Ladders & Scaffolding > Ladders > Step Ladders	ha-15-27-2-3|ha-14-27-1-2|ha-6-24-8-1	jev-1.13.0	5010
+eval-p12	fr	ha-15-27-2-3	ha-15-27-2-3	ha-15-27-2-3	0.768	Quincaillerie > Outils > Échelles et échafaudages > Échelles > Escabeaux	ha-15-27-2-3|ha-15-27-4|ha-6-24-2-1	jev-1.13.0	5362
+eval-p12	it	ha-15-27-2-3	pending	ha-6-24-4-1	0.685	Articoli di ferramenta > Accessori ferramenta > Conservazione/ordine attrezzi > Cassette degli attrezzi > Cassette degli attrezzi per il trasporto a mano	ha-6-24-4-1|ha-6-24-2-1|ha-15-27-2-2	jev-1.13.0	5518
+eval-p13	de	ha-15-36-22-2	ha-15-36-30	ha-15-36-30	0.876	Heimwerkerbedarf > Werkzeuge > Messwerkzeuge & Messwertgeber > Balkensucher	ha-15-36-30|ha-15-36-22-2|ha-15-36-22-1	jev-1.13.0	5974
+eval-p13	en	ha-15-36-22-2	ha-15-36-30	ha-15-36-30	0.975	Hardware > Tools > Measuring Tools & Sensors > Stud Sensors	ha-15-36-30|ha-14-13-1|ha-15-36-22-2	jev-1.13.0	5455
+eval-p13	fr	ha-15-36-22-2	ha-15-36-30	ha-15-36-30	0.867	Quincaillerie > Outils > Outils de mesure et détecteurs > Détecteurs de montants	ha-15-36-30|ha-14-13-1|ha-15-36-24	jev-1.13.0	4815
+eval-p13	it	ha-15-36-22-2	ha-15-36-30	ha-15-36-30	0.844	Articoli di ferramenta > Utensili > Strumenti/sensori misurazione > Sensori tubi e cavi	ha-15-36-30|ha-15-36-22-2|ha-15-36-24	jev-1.13.0	5795
+eval-p14	de	ha-14-4-1-1	ha-14-4-1-1	ha-14-4-1-1	0.941	Heimwerkerbedarf > Werkzeugzubehör > Bohrzubehör > Bohrer & Bits > Steinbohrer	ha-14-4-1-1|ha-15-14-3-1|ha-15-75-2	jev-1.13.0	5020
+eval-p14	en	ha-14-4-1-1	ha-14-4-1-1	ha-14-4-1-1	0.992	Hardware > Tool Accessories > Drill & Screwdriver Accessories > Drill & Screwdriver Bits > Masonry Drill Bits	ha-14-4-1-1|ha-14-8-1|ha-15-14-3-1	jev-1.13.0	4584
+eval-p14	fr	ha-14-4-1-1	ha-14-5	ha-14-5	0.848	Quincaillerie > Accessoires d’outils > Accessoires pour perceuses	ha-14-5|ha-14-4-1-1|ha-15-14-1-2	jev-1.13.0	5082
+eval-p14	it	ha-14-4-1-1	ha-14-4-1-1	ha-14-4-1-1	0.94	Articoli di ferramenta > Accessori per attrezzi > Accessori per trapani e cacciavite > Punte di trapano e cacciavite > Punte da trapano per muratura	ha-14-4-1-1|ha-15-14-1-2|ha-14-8-1	jev-1.13.0	5527
+eval-p15	de	ha-14-4-1-3	ha-14-4-1-3	ha-14-4-1-3	0.941	Heimwerkerbedarf > Werkzeugzubehör > Bohrzubehör > Bohrer & Bits > Spiralbohrer	ha-14-4-1-3|ha-15-14-3-3|ha-15-14-1-1	jev-1.13.0	5127
+eval-p15	en	ha-14-4-1-3	ha-14-4-1-3	ha-14-4-1-3	0.957	Hardware > Tool Accessories > Drill & Screwdriver Accessories > Drill & Screwdriver Bits > Twist Drill Bits	ha-14-4-1-3|ha-15-14-3-3|ha-15-14-1-1	jev-1.13.0	4631
+eval-p15	fr	ha-14-4-1-3	ha-14-5	ha-14-5	0.768	Quincaillerie > Accessoires d’outils > Accessoires pour perceuses	ha-14-5|ha-14-4-1-3|ha-15-14-1-2	jev-1.13.0	5338
+eval-p15	it	ha-14-4-1-3	ha-14-4-1-3	ha-14-4-1-3	0.822	Articoli di ferramenta > Accessori per attrezzi > Accessori per trapani e cacciavite > Punte di trapano e cacciavite > Punte da trapano elicoidali	ha-14-4-1-3|ha-15-14-1-1|ha-15-14-1-2	jev-1.13.0	5501
+eval-p16	de	ha-14-23-2-1	ha-14-20-4	ha-14-20-4	0.789	Heimwerkerbedarf > Werkzeugzubehör > Sägenzubehör > Kreissägenzubehör	ha-14-20-4|ha-14-23-2-1|ha-14-20-2	jev-1.13.0	5017
+eval-p16	en	ha-14-23-2-1	ha-14-20-2	ha-14-20-2	0.906	Hardware > Tool Accessories > Saw Accessories > Handheld Circular Saw Accessories	ha-14-20-2|ha-14-23-2-1|ha-15-62-4	jev-1.13.0	4501
+eval-p16	fr	ha-14-23-2-1	ha-14-20-2	ha-14-20-2	0.876	Quincaillerie > Accessoires d’outils > Accessoires pour scies > Accessoires pour scies circulaires portatives	ha-14-20-2|ha-14-23-2-1|ha-14-3-1	jev-1.13.0	4655
+eval-p16	it	ha-14-23-2-1	ha-14-23-2-1	ha-14-23-2-1	0.817	Articoli di ferramenta > Accessori per attrezzi > Lame per attrezzi > Lame per seghe > Lame per seghe circolari	ha-14-23-2-1|ha-14-20-4|ha-14-20-2	jev-1.13.0	5534
+eval-p17	de	ha-14-23-2-2	ha-14-20-3	ha-14-20-3	0.849	Heimwerkerbedarf > Werkzeugzubehör > Sägenzubehör > Laubsägenzubehör	ha-14-20-3|ha-14-23-2-2|ha-15-62-5	jev-1.13.0	4982
+eval-p17	en	ha-14-23-2-2	ha-14-23-2-2	ha-14-23-2-2	0.881	Hardware > Tool Accessories > Tool Blades > Saw Blades > Jigsaw Blades	ha-14-23-2-2|ha-14-23-1-1|ha-14-20-3	jev-1.13.0	4319
+eval-p17	fr	ha-14-23-2-2	ha-14-20-3	ha-14-20-3	0.854	Quincaillerie > Accessoires d’outils > Accessoires pour scies > Accessoires pour scies sauteuses	ha-14-20-3|ha-14-23-2-2|ha-15-62-5	jev-1.13.0	5509
+eval-p17	it	ha-14-23-2-2	ha-14-23-2-2	ha-14-23-2-2	0.77	Articoli di ferramenta > Accessori per attrezzi > Lame per attrezzi > Lame per seghe > Lame per seghetto alternativo	ha-14-23-2-2|ha-14-23-2-3|ha-14-23-2-1	jev-1.13.0	5550
+eval-p18	de	ha-14-19-1-2	ha-14-19-1-2	ha-14-19-1-2	0.995	Heimwerkerbedarf > Werkzeugzubehör > Schleifzubehör > Schleifpapier & Schleifschwämme > Schleifblätter	ha-14-19-1-2|ha-15-60|ha-15-18-2	jev-1.13.0	4942
+eval-p18	en	ha-14-19-1-2	ha-14-19-1-2	ha-14-19-1-2	0.927	Hardware > Tool Accessories > Sanding Accessories > Sandpaper & Sanding Sponges > Abrasive Sheets	ha-14-19-1-2|ha-1-6-5|ha-1-6-1	jev-1.13.0	3613
+eval-p18	fr	ha-14-19-1-2	ha-14-19-1-2	ha-14-19-1-2	0.832	Quincaillerie > Accessoires d’outils > Accessoires de ponçage > Papier de verre et éponges à poncer > Feuilles abrasives	ha-14-19-1-2|ha-1-6-1|ha-1-6-5	jev-1.13.0	4023
+eval-p18	it	ha-14-19-1-2	ha-14-19-1-2	ha-14-19-1-2	0.754	Articoli di ferramenta > Accessori per attrezzi > Accessori per carteggio > Carta vetrata e spugne carteggio > Fogli abrasivi	ha-14-19-1-2|ha-1-6-1|ha-1-6-5	jev-1.13.0	3923
+eval-p19	de	ha-14-4-1-2	ha-14-4-1-2	ha-14-4-1-2	0.769	Heimwerkerbedarf > Werkzeugzubehör > Bohrzubehör > Bohrer & Bits > Bits	ha-14-4-1-2|ha-14-26|ha-14-23-1-1	jev-1.13.0	5073
+eval-p19	en	ha-14-4-1-2	ha-14-4-1-2	ha-14-4-1-2	0.969	Hardware > Tool Accessories > Drill & Screwdriver Accessories > Drill & Screwdriver Bits > Screwdriver Bits	ha-14-4-1-2|ha-14-5|ha-15-75-1-2	jev-1.13.0	4356
+eval-p19	fr	ha-14-4-1-2	ha-14-4-1-2	ha-14-4-1-2	0.98	Quincaillerie > Accessoires d’outils > Accessoires pour perceuses et visseuses > Forets et embouts de tournevis > Embouts de tournevis	ha-14-4-1-2|ha-14-26|ha-15-63-2	jev-1.13.0	4627
+eval-p19	it	ha-14-4-1-2	ha-14-4-1-2	ha-14-4-1-2	0.964	Articoli di ferramenta > Accessori per attrezzi > Accessori per trapani e cacciavite > Punte di trapano e cacciavite > Punte per cacciavite	ha-14-4-1-2|ha-14-4-5-2|ha-14-4-2	jev-1.13.0	5346
+eval-p20	de	ha-6-15	ha-6-15	ha-6-15	0.901	Heimwerkerbedarf > Bauzubehör > Scharniere	ha-6-15|ha-9-4-5|ha-9-4-3	jev-1.13.0	2916
+eval-p20	en	ha-6-15	ha-6-15	ha-6-15	0.965	Hardware > Hardware Accessories > Hinges	ha-6-15|ha-2-2-2|ha-2-2-5	jev-1.13.0	2977
+eval-p20	fr	ha-6-15	ha-6-15	ha-6-15	0.986	Quincaillerie > Accessoires de quincaillerie > Charnières	ha-6-15|ha-9-4-5|ha-9-4-1	jev-1.13.0	2735
+eval-p20	it	ha-6-15	ha-6-15	ha-6-15	0.894	Articoli di ferramenta > Accessori ferramenta > Cerniere	ha-6-15|ha-9-4-5|ha-6-16-4	jev-1.13.0	3128
+eval-p21	de	ha-6-14-6-15	ha-6-14-6-15	ha-6-14-6-15	0.846	Heimwerkerbedarf > Bauzubehör > Befestigungselemente > Schrauben > Holzschrauben	ha-6-14-6-15|ha-6-14-3|ha-1-5-1	jev-1.13.0	4094
+eval-p21	en	ha-6-14-6-15	ha-6-14-6-15	ha-6-14-6-15	0.841	Hardware > Hardware Accessories > Hardware Fasteners > Screws > Wood Screws	ha-6-14-6-15|ha-1-5-1|ha-1-5-2-1	jev-1.13.0	3897
+eval-p21	fr	ha-6-14-6-15	ha-6-14-6-15	ha-6-14-6-15	0.84	Quincaillerie > Accessoires de quincaillerie > Fixations de quincaillerie > Vis > Vis à bois	ha-6-14-6-15|ha-1-5-3|ha-1-5-2-1	jev-1.13.0	4161
+eval-p21	it	ha-6-14-6-15	pending	ha-6-14-6-15	0.695	Articoli di ferramenta > Accessori ferramenta > Avvitatori da ferramenta > Viti > Viti per legno	ha-6-14-6-15|ha-6-7|ha-1-5-1	jev-1.13.0	3978
+eval-p22	de	ha-6-14-1	ha-6-14-1	ha-6-14-1	0.898	Heimwerkerbedarf > Bauzubehör > Befestigungselemente > Dübel	ha-6-14-1|ha-6-7|ha-1-11-4	jev-1.13.0	3609
+eval-p22	en	ha-6-14-1	ha-6-14-1	ha-6-14-1	0.868	Hardware > Hardware Accessories > Hardware Fasteners > Drywall Anchors	ha-6-14-1|ha-1-5-1|ha-1-5-2-1	jev-1.13.0	3700
+eval-p22	fr	ha-6-14-1	ha-6-7	ha-6-7	0.941	Quincaillerie > Accessoires de quincaillerie > Goujons et chevilles	ha-6-7|ha-1-5-3|ha-1-5-1	jev-1.13.0	3330
+eval-p22	it	ha-6-14-1	pending	ha-6-7	0.664	Articoli di ferramenta > Accessori ferramenta > Perni e cilindri	ha-6-7|ha-6-1|ha-6-25	jev-1.13.0	2646
+eval-p23	de	ha-6-2-5	ha-6-2-5	ha-6-2-5	0.766	Heimwerkerbedarf > Bauzubehör > Schrankbauteile > Schrankknäufe & -griffe	ha-6-2-5|ha-9-4-5|ha-9-4-3	jev-1.13.0	3185
+eval-p23	en	ha-6-2-5	ha-6-2-5	ha-6-2-5	0.992	Hardware > Hardware Accessories > Cabinet Hardware > Cabinet Knobs & Handles	ha-6-2-5|ha-2-2-5|ha-1-2	jev-1.13.0	3122
+eval-p23	fr	ha-6-2-5	ha-6-2-5	ha-6-2-5	0.953	Quincaillerie > Accessoires de quincaillerie > Matériel pour meubles de cuisine > Poignées et boutons de portes pour meubles de cuisine	ha-6-2-5|ha-6-16-3|ha-6-14-6-6	jev-1.13.0	3836
+eval-p23	it	ha-6-2-5	ha-6-2-5	ha-6-2-5	0.916	Articoli di ferramenta > Accessori ferramenta > Articoli per mobiletti > Pomelli/maniglie mobiletti	ha-6-2-5|ha-6-16-3|ha-6-16-4	jev-1.13.0	3171
+eval-p24	de	ha-6-1	ha-6-14-5	ha-6-14-5	0.908	Heimwerkerbedarf > Bauzubehör > Befestigungselemente > Schraubverbinder	ha-6-14-5|ha-1-5-1|ha-6-1	jev-1.13.0	3305
+eval-p24	en	ha-6-1	ha-6-1	ha-6-1	0.897	Hardware > Hardware Accessories > Brackets & Reinforcement Braces	ha-6-1|ha-2-10-3|ha-1-5-1	jev-1.13.0	3013
+eval-p24	fr	ha-6-1	ha-6-1	ha-6-1	0.98	Quincaillerie > Accessoires de quincaillerie > Supports et équerres de renfort	ha-6-1|ha-6-14-3|ha-6-14-6-15	jev-1.13.0	3965
+eval-p24	it	ha-6-1	ha-6-1	ha-6-1	0.962	Articoli di ferramenta > Accessori ferramenta > Staffe e supporti di rinforzo	ha-6-1|ha-2-12-1|ha-1-5-1	jev-1.13.0	3233
+eval-p25	de	ha-2-2-5	ha-9-4-2	ha-9-4-2	0.728	Heimwerkerbedarf > Schlösser & Schlüssel > Schlösser & Riegel > Haltenocken	ha-9-4-2|ha-9-4-3|ha-9-4-5	jev-1.13.0	3159
+eval-p25	en	ha-2-2-5	ha-9-4-5	ha-9-4-5	0.902	Hardware > Locks & Keys > Locks & Latches > Latches	ha-9-4-5|ha-6-2-5|ha-6-15	jev-1.13.0	2883
+eval-p25	fr	ha-2-2-5	ha-6-1	ha-6-1	0.78	Quincaillerie > Accessoires de quincaillerie > Supports et équerres de renfort	ha-6-1|ha-6-14-6-6|ha-6-21	jev-1.13.0	3162
+eval-p25	it	ha-2-2-5	ha-6-16-4	ha-6-16-4	0.711	Articoli di ferramenta > Accessori ferramenta > Cerniere, ganci e fibbie > Fibbie per usi pratici	ha-6-16-4|ha-6-16-3|ha-6-2-5	jev-1.13.0	3287
+eval-p26	de	ha-2-9-3	ha-1-5-1	ha-1-5-1	0.742	Heimwerkerbedarf > Baumaterial > Maurermaterial > Mauersteine & Betonblöcke	ha-1-5-1|ha-2-9-3|ha-2-9-1	jev-1.13.0	3613
+eval-p26	en	ha-2-9-3	ha-2-9-3	ha-2-9-3	0.906	Hardware > Building Materials > Insulation > Foam Board Insulation	ha-2-9-3|ha-1-5-1|ha-1-8-2	jev-1.13.0	2785
+eval-p26	fr	ha-2-9-3	ha-2-9-3	ha-2-9-3	0.882	Quincaillerie > Matériaux de construction > Isolation > Isolation en panneaux de mousse	ha-2-9-3|ha-2-20-2|ha-1-8-2	jev-1.13.0	3015
+eval-p26	it	ha-2-9-3	ha-2-9-3	ha-2-9-3	0.87	Articoli di ferramenta > Materiali da costruzione > Isolamento > Pannello isolante in schiuma	ha-2-9-3|ha-1-5-1|ha-1-8-2	jev-1.13.0	3020
+eval-p27	de	ha-2-18-2	ha-2-18-2	ha-2-18-2	0.815	Heimwerkerbedarf > Baumaterialien > Wand- & Deckenfliesen > Wandfliesen	ha-2-18-2|ha-1-5-1|ha-1-5-2-3	jev-1.13.0	3981
+eval-p27	en	ha-2-18-2	ha-2-18-2	ha-2-18-2	0.743	Hardware > Building Materials > Wall & Ceiling Tile > Wall Tiles	ha-2-18-2|none|ha-1-5-1	jev-1.13.0	2517
+eval-p27	fr	ha-2-18-2	ha-2-18-2	ha-2-18-2	0.782	Quincaillerie > Matériaux de construction > Carreaux pour plafond et mur > Carrelage mural	ha-2-18-2|none|ha-1-5-3	jev-1.13.0	2740
+eval-p27	it	ha-2-18-2	ha-2-18-2	ha-2-18-2	0.734	Articoli di ferramenta > Materiali da costruzione > Piastrelle per pareti e soffitti > Piastrelle	ha-2-18-2|none|ha-1-5-1	jev-1.13.0	2757
+eval-p28	de	ha-1-2	pending	ha-1-2	0.684	Heimwerkerbedarf > Baumaterial > Kraftklebstoffe & -leime	ha-1-2|ha-6-14-1|ha-6-14-2-1	jev-1.13.0	3957
+eval-p28	en	ha-1-2	ha-1-2	ha-1-2	0.836	Hardware > Building Consumables > Hardware Glue & Adhesives	ha-1-2|ha-2-10-2|ha-2-10-1	jev-1.13.0	3072
+eval-p28	fr	ha-1-2	ha-1-2	ha-1-2	0.883	Quincaillerie > Consommables de construction > Colle et adhésifs de construction	ha-1-2|ha-6-14-2-14|ha-6-14-6-15	jev-1.13.0	4294
+eval-p28	it	ha-1-2	ha-1-2	ha-1-2	0.888	Articoli di ferramenta > Materiali di consumo per costruzioni > Adesivi e colle per articoli di ferramenta	ha-1-2|ha-6-2-3|ha-2-20-4	jev-1.13.0	3313
+eval-p29	de	ha-1-6-1	ha-1-6-1	ha-1-6-1	0.83	Heimwerkerbedarf > Baumaterial > Malermaterial > Farbe	ha-1-6-1|ha-2-19-4|ha-2-19-1	jev-1.13.0	3282
+eval-p29	en	ha-1-6-1	pending	ha-1-6-1	0.662	Hardware > Building Consumables > Painting Consumables > Paint	ha-1-6-1|none|ha-2-19-1	jev-1.13.0	2555
+eval-p29	fr	ha-1-6-1	ha-1-6-1	ha-1-6-1	0.874	Quincaillerie > Consommables de construction > Consommables de peinture > Peinture	ha-1-6-1|ha-2-15|ha-2-18-1	jev-1.13.0	2706
+eval-p29	it	ha-1-6-1	ha-1-6-1	ha-1-6-1	0.845	Articoli di ferramenta > Materiali di consumo per costruzioni > Materiali di consumo per la pittura > Pittura	ha-1-6-1|ha-2-15|ha-1-6-5	jev-1.13.0	2764
+eval-p30	de	ha-1-8-5	ha-1-8-5	ha-1-8-5	0.705	Heimwerkerbedarf > Baumaterial > Schutzbeschichtungen & Dichtmittel > Rostschutzbeschichtungen	ha-1-8-5|ha-2-12-1|ha-6-14-1	jev-1.13.0	3498
+eval-p30	en	ha-1-8-5	ha-1-6-3	ha-1-6-3	0.802	Hardware > Building Consumables > Painting Consumables > Primers	ha-1-6-3|ha-1-8-5|ha-2-20-4	jev-1.13.0	3214
+eval-p30	fr	ha-1-8-5	ha-1-6-3	ha-1-6-3	0.85	Quincaillerie > Consommables de construction > Consommables de peinture > Peintures d’apprêt	ha-1-6-3|ha-2-15|ha-2-20-4	jev-1.13.0	3285
+eval-p30	it	ha-1-8-5	ha-1-6-5	ha-1-6-5	0.723	Articoli di ferramenta > Materiali di consumo per costruzioni > Materiali di consumo per la pittura > Vernici e finiture	ha-1-6-5|ha-1-8-5|ha-2-20-4	jev-1.13.0	3494
+eval-p31	de	ha-10-3-3-3	ha-10-3-3-3	ha-10-3-3-3	0.807	Heimwerkerbedarf > Sanitär > Sanitärkeramik & Armaturen > Armaturen > Küchenarmaturen	ha-10-3-3-3|none|ha-10-3-5-2-1	jev-1.13.0	3718
+eval-p31	en	ha-10-3-3-3	ha-10-3-3-3	ha-10-3-3-3	0.948	Hardware > Plumbing > Plumbing Fixtures > Faucets > Kitchen Sink Faucets	ha-10-3-3-3|ha-10-2-4-2-3|ha-10-2-7-1	jev-1.13.0	3374
+eval-p31	fr	ha-10-3-3-3	ha-10-3-3-3	ha-10-3-3-3	0.858	Quincaillerie > Plomberie > Équipements sanitaires > Robinets > Robinets d’évier de cuisine	ha-10-3-3-3|ha-10-2-7-1|ha-10-7-2-1	jev-1.13.0	3662
+eval-p31	it	ha-10-3-3-3	ha-10-3-3-3	ha-10-3-3-3	0.831	Articoli di ferramenta > Prodotti idraulici > Articoli idraulici > Rubinetteria > Rubinetti lavandino della cucina	ha-10-3-3-3|ha-10-7-2-1|ha-10-2-4-2-3	jev-1.13.0	4237
+eval-p32	de	ha-10-2-6-7-2	ha-10-2-6-7-2	ha-10-2-6-7-2	0.712	Heimwerkerbedarf > Sanitär > Zubehör für sanitäre Anlagen > Duscharmaturen > Duschköpfe > Handduschköpfe	ha-10-2-6-7-2|ha-10-2-4-1|none	jev-1.13.0	4114
+eval-p32	en	ha-10-2-6-7-2	ha-10-3-4	ha-10-3-4	0.837	Hardware > Plumbing > Plumbing Fixtures > Shower Stalls & Kits	ha-10-3-4|ha-10-2-6-7-2|ha-10-3-3-2	jev-1.13.0	3866
+eval-p32	fr	ha-10-2-6-7-2	ha-10-3-4	ha-10-3-4	0.731	Quincaillerie > Plomberie > Équipements sanitaires > Cabines et kits de douche	ha-10-3-4|ha-10-2-6-3-2|ha-10-2-6-1-1	jev-1.13.0	4321
+eval-p32	it	ha-10-2-6-7-2	pending	ha-10-7-1	0.678	Articoli di ferramenta > Prodotti idraulici > Distribuzione/filtro acqua > Filtri acqua integrati	ha-10-7-1|ha-10-7-4-1|ha-10-7-2-1	jev-1.13.0	3361
+eval-p33	de	ha-10-3-3-1	ha-10-3-3-1	ha-10-3-3-1	0.94	Heimwerkerbedarf > Sanitär > Sanitärkeramik & Armaturen > Armaturen > Badezimmerwaschbeckenarmaturen	ha-10-3-3-1|ha-10-2-7-1|none	jev-1.13.0	3087
+eval-p33	en	ha-10-3-3-1	ha-10-3-3-1	ha-10-3-3-1	0.936	Hardware > Plumbing > Plumbing Fixtures > Faucets > Bathroom Sink Faucets	ha-10-3-3-1|ha-10-2-4-2-3|ha-10-2-7-1	jev-1.13.0	3763
+eval-p33	fr	ha-10-3-3-1	ha-10-3-3-1	ha-10-3-3-1	0.892	Quincaillerie > Plomberie > Équipements sanitaires > Robinets > Robinets de lavabo de salle de bain	ha-10-3-3-1|ha-10-2-4-2-3|ha-10-2-4-1	jev-1.13.0	4092
+eval-p33	it	ha-10-3-3-1	ha-10-7-2-1	ha-10-7-2-1	0.821	Articoli di ferramenta > Prodotti idraulici > Distribuzione/filtro acqua > Distributori d'acqua > Fontanelle	ha-10-7-2-1|ha-10-3-3-1|ha-10-2-4-2-3	jev-1.13.0	4183
+eval-p34	de	ha-11-13	ha-11-13	ha-11-13	0.99	Heimwerkerbedarf > Elektrobedarf > Verlängerungskabel	ha-11-13|ha-14-17|ha-14-16	jev-1.13.0	2685
+eval-p34	en	ha-11-13	ha-11-13	ha-11-13	0.955	Hardware > Power & Electrical Supplies > Extension Cords	ha-11-13|none|ha-11-1-1	jev-1.13.0	2526
+eval-p34	fr	ha-11-13	ha-11-13	ha-11-13	0.838	Quincaillerie > Accessoires électriques > Rallonges électriques	ha-11-13|none|ha-11-11	jev-1.13.0	2240
+eval-p34	it	ha-11-13	ha-11-13	ha-11-13	0.951	Articoli di ferramenta > Forniture elettriche > Prolunghe	ha-11-13|ha-11-11|none	jev-1.13.0	2271
+eval-p35	de	ha-11-21-3	ha-11-21-3	ha-11-21-3	0.982	Heimwerkerbedarf > Elektrobedarf > Steckdosen > Wandsteckdosen	ha-11-21-3|ha-11-21-2|ha-11-25-2	jev-1.13.0	2857
+eval-p35	en	ha-11-21-3	ha-11-21-3	ha-11-21-3	0.99	Hardware > Power & Electrical Supplies > Power Outlets & Sockets > Wall Outlets	ha-11-21-3|ha-1-5-1|ha-2-2-1	jev-1.13.0	3237
+eval-p35	fr	ha-11-21-3	ha-11-21-3	ha-11-21-3	0.916	Quincaillerie > Accessoires électriques > Prises de courant > Prises murales	ha-11-21-3|ha-11-19|ha-11-25-1	jev-1.13.0	3027
+eval-p35	it	ha-11-21-3	ha-11-21-3	ha-11-21-3	0.804	Articoli di ferramenta > Forniture elettriche > Prese elettriche > Prese a muro	ha-11-21-3|ha-11-19|ha-2-4	jev-1.13.0	2865
+eval-p36	de	ha-11-5	ha-11-5	ha-11-5	0.929	Heimwerkerbedarf > Elektrobedarf > Leistungsschalter	ha-11-5|ha-11-10-2-3|ha-11-4-2	jev-1.13.0	3267
+eval-p36	en	ha-11-5	ha-11-5	ha-11-5	0.997	Hardware > Power & Electrical Supplies > Circuit Breakers	ha-11-5|none|ha-11-1-1	jev-1.13.0	2506
+eval-p36	fr	ha-11-5	ha-11-5	ha-11-5	0.777	Quincaillerie > Accessoires électriques > Disjoncteurs	ha-11-5|none|ha-11-1-1	jev-1.13.0	2687
+eval-p36	it	ha-11-5	ha-11-5	ha-11-5	0.865	Articoli di ferramenta > Forniture elettriche > Interruttori automatici	ha-11-5|ha-11-10-2-1|none	jev-1.13.0	3152
+eval-p37	de	ha-8-3-3	ha-8-3-3	ha-8-3-3	0.891	Heimwerkerbedarf > Heizen, Belüftung & Klimaanlagen > Steuerungen > Thermostate	ha-8-3-3|ha-11-16-1|none	jev-1.13.0	2726
+eval-p37	en	ha-8-3-3	ha-8-3-3	ha-8-3-3	0.955	Hardware > Heating, Ventilation & Air Conditioning > HVAC Controls > Thermostats	ha-8-3-3|ha-8-3-1|ha-11-16-1	jev-1.13.0	2838
+eval-p37	fr	ha-8-3-3	ha-8-3-3	ha-8-3-3	0.765	Quincaillerie > Chauffage, ventilation et climatisation > Commandes de chauffage, ventilation et climatisation > Thermostats	ha-8-3-3|none|ha-8-3-1	jev-1.13.0	2665
+eval-p37	it	ha-8-3-3	ha-8-3-3	ha-8-3-3	0.73	Articoli di ferramenta > Ventilazione, riscaldamento e condizionamento > Controlli HVAC > Termostati	ha-8-3-3|none|ha-11-16-1	jev-1.13.0	2696
+eval-p38	de	ha-7-2-2	ha-7-2-2	ha-7-2-2	0.807	Heimwerkerbedarf > Metallpumpen > Pool-, Brunnen- und Teichpumpen > Teichpumpen	ha-7-2-2|ha-11-7-3|ha-11-7-1	jev-1.13.0	3008
+eval-p38	en	ha-7-2-2	ha-7-2-2	ha-7-2-2	0.977	Hardware > Hardware Pumps > Pool, Fountain & Pond Pumps > Pond Pumps	ha-7-2-2|ha-7-2-1|ha-10-7-4-2	jev-1.13.0	2899
+eval-p38	fr	ha-7-2-2	ha-7-2-2	ha-7-2-2	0.855	Quincaillerie > Pompes > Pompes pour bassins, fontaines et étangs > Pompes de bassin	ha-7-2-2|none|ha-10-7-4-2	jev-1.13.0	2913
+eval-p38	it	ha-7-2-2	none	none	0.7	None of these categories fits the product	none|ha-7-2-2|ha-10-7-4-2	jev-1.13.0	2887
+eval-p39	de	ha-7-4-3	ha-7-4-2	ha-7-4-2	0.787	Heimwerkerbedarf > Metallpumpen > Sickergruben-, Abwasser- und Abflusspumpen > Schmutzwasserpumpen	ha-7-4-2|ha-7-5-2|ha-11-7-3	jev-1.13.0	4509
+eval-p39	en	ha-7-4-3	ha-7-4-3	ha-7-4-3	0.871	Hardware > Hardware Pumps > Sump, Sewage & Effluent Pumps > Sump Pumps	ha-7-4-3|ha-7-4-2|ha-7-4-1	jev-1.13.0	2929
+eval-p39	fr	ha-7-4-3	ha-7-4-3	ha-7-4-3	0.808	Quincaillerie > Pompes > Pompes d’épuisement, d’effluent et pour relèvement d’eaux usées > Pompes d’épuisement	ha-7-4-3|ha-7-4-2|ha-7-4-1	jev-1.13.0	2477
+eval-p39	it	ha-7-4-3	ha-7-4-1	ha-7-4-1	0.815	Articoli di ferramenta > Pompe da ferramenta > Pompe per pozzi neri, liquami e scarichi > Pompe per effluenti	ha-7-4-1|ha-7-4-2|ha-7-4-3	jev-1.13.0	2488
+eval-p40	de	ha-3-2-3	ha-3-2-3	ha-3-2-3	0.81	Heimwerkerbedarf > Hauseinzäunung > Zaunfelder > Abgrenzungs-Paneele	ha-3-2-3|ha-2-10-3|ha-3-3	jev-1.13.0	2943
+eval-p40	en	ha-3-2-3	ha-3-2-3	ha-3-2-3	0.802	Hardware > Fencing & Barriers > Fence Panels > Privacy Panels	ha-3-2-3|none|ha-2-10-3	jev-1.13.0	2441
+eval-p40	fr	ha-3-2-3	ha-3-2-3	ha-3-2-3	0.859	Quincaillerie > Clôtures et barrières > Panneaux de clôture > Panneaux de confidentialité	ha-3-2-3|none|ha-2-10-3	jev-1.13.0	2669
+eval-p40	it	ha-3-2-3	ha-3-2-3	ha-3-2-3	0.897	Articoli di ferramenta > Barriere e recinzioni > Pannelli per recinzioni > Pannelli per privacy	ha-3-2-3|ha-3-5-1|none	jev-1.13.0	2477

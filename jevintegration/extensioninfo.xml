@@ -3,6 +3,7 @@
 	<extension abstractclassprefix="Generated" classprefix="Jevintegration" name="jevintegration"
 			description="Decisions about shop text with TypeSafe's Jev: dry-run evaluation on your own data, review moderation, an audit record per decision">
 		<requires-extension name="customerreview"/>
+		<requires-extension name="catalog"/>
 		<coremodule generated="true" manager="de.hybris.platform.jalo.extension.GenericManager" packageroot="org.jevintegration"/>
 		<!-- ships Backoffice config from resources/, the same way SAP's customerreview does -->
 		<meta key="backoffice-module" value="true"/>

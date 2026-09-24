@@ -3,7 +3,7 @@
 # Approved includes harsh but legitimate criticism (04-06), which a moderator must not reject.
 # Rejected: insults (11-12), a threat (13), harassment (14), spam (15-16), gibberish (17), off-topic (18),
 # prompt injection with spam (19), and a third person's contact details (20, placeholder data).
-# Use: import into a sandbox that has jevintegration, run jevReviewDryRunCronJob, compare with results-jev-1.13.0.tsv.
+# Use: import into a sandbox that has jevintegration, run jevReviewDryRunCronJob, compare with review-results-jev-1.13.0.tsv.
 INSERT_UPDATE Catalog; id[unique = true]
 ; jevEval
 INSERT_UPDATE CatalogVersion; catalog(id)[unique = true]; version[unique = true]

@@ -10,6 +10,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.Duration;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Optional;
 
@@ -166,6 +167,19 @@ public class JevClient
 		public double confidence(final String id)
 		{
 			return field(id, "confidence").asDouble();
+		}
+
+		/** Choice and Score only: the probability of every option, keyed like the question's criteria. */
+		public Map<String, Double> probabilities(final String id)
+		{
+			final JsonNode node = answers.path(id).path("probabilities");
+			if (!node.isObject())
+			{
+				throw new IllegalStateException("Jev answer has no " + id + ".probabilities");
+			}
+			final Map<String, Double> probabilities = new LinkedHashMap<>();
+			node.properties().forEach(entry -> probabilities.put(entry.getKey(), entry.getValue().asDouble()));
+			return probabilities;
 		}
 
 		private JsonNode field(final String id, final String name)

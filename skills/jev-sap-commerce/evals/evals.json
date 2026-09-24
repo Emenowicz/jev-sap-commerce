@@ -16,7 +16,7 @@
     {
       "id": 3,
       "prompt": "Add a PrepareInterceptor on Product that asks Jev to pick the category from the description before save.",
-      "expected_output": "Declines the interceptor because it runs inside every save, including ImpEx and sync, and adds latency and outage risk. Proposes a cronjob or a Backoffice suggest action instead. Notes the 255-option Choice limit and suggests level-by-level classification for large category trees. On no decision it changes nothing, and it leaves the final assignment to code or a human.",
+      "expected_output": "Declines the interceptor because it runs inside every save, including ImpEx and sync, and adds latency and outage risk. Points at the extension's jevCategoryDryRunCronJob (measure on categorised products) and jevCategorySuggestionCronJob (suggestions for products without a category), which walk the tree level by level and never change a product. Configures jev.category.catalog and jev.category.roots. On no decision it changes nothing, and the final assignment stays with a merchandiser.",
       "files": []
     },
     {

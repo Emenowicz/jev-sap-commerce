@@ -1,0 +1,1150 @@
+# The Hardware branch of Shopify's Product Taxonomy v2026-02 as SAP Commerce categories: 1,122 categories in
+# English, German, French and Italian, codes = Shopify ids (ha, ha-1, ha-1-1, ...). Used to measure category
+# suggestions; set jev.category.catalog=jevEval and jev.category.roots=ha.
+#
+# Category names: Shopify Product Taxonomy (https://github.com/Shopify/product-taxonomy), MIT License:
+#   Copyright (c) Shopify
+#   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+#   documentation files (the "Software"), to deal in the Software without restriction, including without limitation
+#   the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
+#   permit persons to whom the Software is furnished to do so, subject to the following conditions:
+#   The above copyright notice and this permission notice shall be included in all copies or substantial portions
+#   of the Software.
+#   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+#   THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+#   TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+#   SOFTWARE.
+INSERT_UPDATE Language; isocode[unique = true]; active
+; en ; true
+; de ; true
+; fr ; true
+; it ; true
+INSERT_UPDATE Catalog; id[unique = true]
+; jevEval
+INSERT_UPDATE CatalogVersion; catalog(id)[unique = true]; version[unique = true]
+; jevEval ; Staged
+
+INSERT_UPDATE Category; code[unique = true]; catalogVersion(catalog(id), version)[unique = true]; name[lang = en]; name[lang = de]; name[lang = fr]; name[lang = it]; supercategories(code, catalogVersion(catalog(id), version))
+; ha ; jevEval:Staged ; "Hardware" ; "Heimwerkerbedarf" ; "Quincaillerie" ; "Articoli di ferramenta" ; 
+; ha-1 ; jevEval:Staged ; "Building Consumables" ; "Baumaterial" ; "Consommables de construction" ; "Materiali di consumo per costruzioni" ; ha:jevEval:Staged
+; ha-2 ; jevEval:Staged ; "Building Materials" ; "Baumaterialien" ; "Matériaux de construction" ; "Materiali da costruzione" ; ha:jevEval:Staged
+; ha-3 ; jevEval:Staged ; "Fencing & Barriers" ; "Hauseinzäunung" ; "Clôtures et barrières" ; "Barriere e recinzioni" ; ha:jevEval:Staged
+; ha-4 ; jevEval:Staged ; "Fuel" ; "Treibstoff" ; "Carburant" ; "Carburante" ; ha:jevEval:Staged
+; ha-5 ; jevEval:Staged ; "Fuel Containers & Tanks" ; "Brennstoffbehälter & -tanks" ; "Conteneurs et citernes pour combustible" ; "Serbatoi e contenitori per carburante" ; ha:jevEval:Staged
+; ha-6 ; jevEval:Staged ; "Hardware Accessories" ; "Bauzubehör" ; "Accessoires de quincaillerie" ; "Accessori ferramenta" ; ha:jevEval:Staged
+; ha-7 ; jevEval:Staged ; "Hardware Pumps" ; "Metallpumpen" ; "Pompes" ; "Pompe da ferramenta" ; ha:jevEval:Staged
+; ha-8 ; jevEval:Staged ; "Heating, Ventilation & Air Conditioning" ; "Heizen, Belüftung & Klimaanlagen" ; "Chauffage, ventilation et climatisation" ; "Ventilazione, riscaldamento e condizionamento" ; ha:jevEval:Staged
+; ha-9 ; jevEval:Staged ; "Locks & Keys" ; "Schlösser & Schlüssel" ; "Serrures et clés" ; "Serrature e chiavi" ; ha:jevEval:Staged
+; ha-10 ; jevEval:Staged ; "Plumbing" ; "Sanitär" ; "Plomberie" ; "Prodotti idraulici" ; ha:jevEval:Staged
+; ha-11 ; jevEval:Staged ; "Power & Electrical Supplies" ; "Elektrobedarf" ; "Accessoires électriques" ; "Forniture elettriche" ; ha:jevEval:Staged
+; ha-12 ; jevEval:Staged ; "Small Engines" ; "Kleinmotoren" ; "Petits moteurs" ; "Piccoli motori" ; ha:jevEval:Staged
+; ha-13 ; jevEval:Staged ; "Storage Tanks" ; "Vorratsbehälter" ; "Réservoirs de stockage" ; "Cisterne" ; ha:jevEval:Staged
+; ha-14 ; jevEval:Staged ; "Tool Accessories" ; "Werkzeugzubehör" ; "Accessoires d’outils" ; "Accessori per attrezzi" ; ha:jevEval:Staged
+; ha-15 ; jevEval:Staged ; "Tools" ; "Werkzeuge" ; "Outils" ; "Utensili" ; ha:jevEval:Staged
+; ha-1-1 ; jevEval:Staged ; "Chemicals" ; "Chemikalien" ; "Produits chimiques" ; "Prodotti chimici" ; ha-1:jevEval:Staged
+; ha-1-2 ; jevEval:Staged ; "Hardware Glue & Adhesives" ; "Kraftklebstoffe & -leime" ; "Colle et adhésifs de construction" ; "Adesivi e colle per articoli di ferramenta" ; ha-1:jevEval:Staged
+; ha-1-3 ; jevEval:Staged ; "Hardware Tape" ; "Klebebänder" ; "Bandes et rubans" ; "Nastro da pacchi" ; ha-1:jevEval:Staged
+; ha-1-4 ; jevEval:Staged ; "Lubricants" ; "Schmiermittel" ; "Lubrifiants" ; "Lubrificanti" ; ha-1:jevEval:Staged
+; ha-1-5 ; jevEval:Staged ; "Masonry Consumables" ; "Maurermaterial" ; "Consommables de maçonnerie" ; "Materiali di consumo per opere di muratura" ; ha-1:jevEval:Staged
+; ha-1-6 ; jevEval:Staged ; "Painting Consumables" ; "Malermaterial" ; "Consommables de peinture" ; "Materiali di consumo per la pittura" ; ha-1:jevEval:Staged
+; ha-1-7 ; jevEval:Staged ; "Plumbing Primer" ; "Primer für Rohrverbindungen" ; "Apprêts de plomberie" ; "Primer per tubi" ; ha-1:jevEval:Staged
+; ha-1-8 ; jevEval:Staged ; "Protective Coatings & Sealants" ; "Schutzbeschichtungen & Dichtmittel" ; "Enduits de protection et matériaux d’étanchéité" ; "Sigillanti e rivestimenti protettivi" ; ha-1:jevEval:Staged
+; ha-1-9 ; jevEval:Staged ; "Solder & Flux" ; "Lötmetall & Flussmittel" ; "Fils de soudure et flux d’alliage" ; "Lega per saldare e fondente" ; ha-1:jevEval:Staged
+; ha-1-10 ; jevEval:Staged ; "Solvents, Strippers & Thinners" ; "Lösungsmittel, Abbeizmittel & Verdünner" ; "Solvants, décapants et diluants" ; "Solventi, sverniciatori e diluenti" ; ha-1:jevEval:Staged
+; ha-1-11 ; jevEval:Staged ; "Wall Patching Compounds & Plaster" ; "Wandausbesserungsmaterial & Gips" ; "Enduits de rebouchage et plâtre" ; "Intonaco e composti per riparare pareti" ; ha-1:jevEval:Staged
+; ha-2-1 ; jevEval:Staged ; "Countertops" ; "Arbeitsplatten" ; "Comptoirs" ; "Piani di lavoro" ; ha-2:jevEval:Staged
+; ha-2-2 ; jevEval:Staged ; "Door Hardware" ; "Türbeschläge & -klingeln" ; "Quincaillerie pour portes" ; "Componenti per porte" ; ha-2:jevEval:Staged
+; ha-2-3 ; jevEval:Staged ; "Doors" ; "Türen" ; "Portes" ; "Porte" ; ha-2:jevEval:Staged
+; ha-2-4 ; jevEval:Staged ; "Drywall" ; "Gipskarton" ; "Plaques de plâtre" ; "Muro a secco" ; ha-2:jevEval:Staged
+; ha-2-5 ; jevEval:Staged ; "Flooring & Carpet" ; "Fußböden & Teppichböden" ; "Tapis et revêtements de sol" ; "Pavimenti e moquette" ; ha-2:jevEval:Staged
+; ha-2-6 ; jevEval:Staged ; "Glass" ; "Glas" ; "Verre" ; "Vetro" ; ha-2:jevEval:Staged
+; ha-2-7 ; jevEval:Staged ; "Handrails & Railing Systems" ; "Handläufe und Geländersysteme" ; "Mains courantes et rampes d’escalier" ; "Sistemi per corrimano e rotaie" ; ha-2:jevEval:Staged
+; ha-2-8 ; jevEval:Staged ; "Hatches" ; "Luken" ; "Trappes" ; "Portelli" ; ha-2:jevEval:Staged
+; ha-2-9 ; jevEval:Staged ; "Insulation" ; "Isolierung" ; "Isolation" ; "Isolamento" ; ha-2:jevEval:Staged
+; ha-2-10 ; jevEval:Staged ; "Lumber & Sheet Stock" ; "Bauholz" ; "Planches et bois d’œuvre" ; "Legname" ; ha-2:jevEval:Staged
+; ha-2-11 ; jevEval:Staged ; "Molding" ; "Leisten" ; "Moulages" ; "Modanature" ; ha-2:jevEval:Staged
+; ha-2-12 ; jevEval:Staged ; "Rebar & Remesh" ; "Betonstahl & -gitter" ; "Barres d’armature et grillages de renforcement" ; "Barre e reticolati di ferro" ; ha-2:jevEval:Staged
+; ha-2-13 ; jevEval:Staged ; "Roofing" ; "Dach" ; "Toiture" ; "Testa a croce" ; ha-2:jevEval:Staged
+; ha-2-14 ; jevEval:Staged ; "Shutters" ; "Fensterläden" ; "Volets" ; "Serrande" ; ha-2:jevEval:Staged
+; ha-2-15 ; jevEval:Staged ; "Siding" ; "Hausverkleidung" ; "Revêtements d’extérieur" ; "Rivestimenti laterali" ; ha-2:jevEval:Staged
+; ha-2-16 ; jevEval:Staged ; "Sound Dampening Panels & Foam" ; "Schalldämpfende Materialien" ; "Panneaux et mousse d’isolation acoustique" ; "Pannelli e schiume insonorizzanti" ; ha-2:jevEval:Staged
+; ha-2-17 ; jevEval:Staged ; "Staircases" ; "Treppen" ; "Escaliers" ; "Scalinate" ; ha-2:jevEval:Staged
+; ha-2-18 ; jevEval:Staged ; "Wall & Ceiling Tile" ; "Wand- & Deckenfliesen" ; "Carreaux pour plafond et mur" ; "Piastrelle per pareti e soffitti" ; ha-2:jevEval:Staged
+; ha-2-19 ; jevEval:Staged ; "Wall Paneling" ; "Wandverkleidung" ; "Lambris" ; "Pannelli" ; ha-2:jevEval:Staged
+; ha-2-20 ; jevEval:Staged ; "Weather Stripping & Weatherization Supplies" ; "Zugluftstopper, Fenster- & Türdichtungen" ; "Fournitures pour isolation et protection contre les intempéries" ; "Impermeabilizzanti e protezione dalle intemperie" ; ha-2:jevEval:Staged
+; ha-2-21 ; jevEval:Staged ; "Window Hardware" ; "Fensterbauteile" ; "Équipements pour fenêtres" ; "Materiali per finestre" ; ha-2:jevEval:Staged
+; ha-2-22 ; jevEval:Staged ; "Windows" ; "Fenster" ; "Fenêtres" ; "Windows" ; ha-2:jevEval:Staged
+; ha-3-1 ; jevEval:Staged ; "Fence & Gate Accessories" ; "Zubehör für Zäune & Gartentore" ; "Accessoires pour clôtures et portillons" ; "Accessori per cancelli e recinzioni" ; ha-3:jevEval:Staged
+; ha-3-2 ; jevEval:Staged ; "Fence Panels" ; "Zaunfelder" ; "Panneaux de clôture" ; "Pannelli per recinzioni" ; ha-3:jevEval:Staged
+; ha-3-3 ; jevEval:Staged ; "Fence Pickets" ; "Zaunlatten" ; "Piquets de clôture" ; "Picchetti per recinzioni" ; ha-3:jevEval:Staged
+; ha-3-4 ; jevEval:Staged ; "Fence Posts & Rails" ; "Zaunpfosten & -querlatten" ; "Poteaux et traverses de clôture" ; "Pali e assi per recinzioni" ; ha-3:jevEval:Staged
+; ha-3-5 ; jevEval:Staged ; "Garden Borders & Edging" ; "Beeteinfassungen" ; "Murets et bordures de jardin" ; "Delimitazioni e recinzioni da giardino" ; ha-3:jevEval:Staged
+; ha-3-6 ; jevEval:Staged ; "Gates" ; "Schranken" ; "Portails" ; "Cancelli" ; ha-3:jevEval:Staged
+; ha-3-7 ; jevEval:Staged ; "Lattice" ; "Zaungitter" ; "Treillage" ; "Reticolato" ; ha-3:jevEval:Staged
+; ha-3-8 ; jevEval:Staged ; "Safety & Crowd Control Barriers" ; "Absperrungen" ; "Barrières de sécurité et de contrôle des foules" ; "Barriere di sicurezza e controllo delle folle" ; ha-3:jevEval:Staged
+; ha-4-1 ; jevEval:Staged ; "Home Heating Oil" ; "Heizöl" ; "Mazout de chauffage résidentiel" ; "Gasolio da riscaldamento domestico" ; ha-4:jevEval:Staged
+; ha-4-2 ; jevEval:Staged ; "Kerosene" ; "Petroleum" ; "Kérosène" ; "Cherosene" ; ha-4:jevEval:Staged
+; ha-4-3 ; jevEval:Staged ; "Propane" ; "Propan" ; "Propane" ; "Propano" ; ha-4:jevEval:Staged
+; ha-5-1 ; jevEval:Staged ; "Diesel Cans" ; "Dieselkanister" ; "Bidons de diesel" ; "Barattoli di diesel" ; ha-5:jevEval:Staged
+; ha-5-2 ; jevEval:Staged ; "Fuel Transfer Tanks" ; "Kraftstoffumpumptanks" ; "Réservoirs de transfert de carburant" ; "Serbatoi di trasferimento carburante" ; ha-5:jevEval:Staged
+; ha-5-3 ; jevEval:Staged ; "Gas Cans" ; "Benzinkanister" ; "Bidons d’essence" ; "Bombole di gas" ; ha-5:jevEval:Staged
+; ha-5-4 ; jevEval:Staged ; "Kerosene Cans" ; "Kerosinkanister" ; "Bidons de kérosène" ; "Barattoli di cherosene" ; ha-5:jevEval:Staged
+; ha-5-5 ; jevEval:Staged ; "Propane Tanks" ; "Propantanks" ; "Réservoirs de propane" ; "Serbatoi di propano" ; ha-5:jevEval:Staged
+; ha-6-1 ; jevEval:Staged ; "Brackets & Reinforcement Braces" ; "Halterungen" ; "Supports et équerres de renfort" ; "Staffe e supporti di rinforzo" ; ha-6:jevEval:Staged
+; ha-6-2 ; jevEval:Staged ; "Cabinet Hardware" ; "Schrankbauteile" ; "Matériel pour meubles de cuisine" ; "Articoli per mobiletti" ; ha-6:jevEval:Staged
+; ha-6-3 ; jevEval:Staged ; "Casters" ; "Laufrollen" ; "Roulettes" ; "Rotelle" ; ha-6:jevEval:Staged
+; ha-6-4 ; jevEval:Staged ; "Chain, Wire & Rope" ; "Ketten, Drähte & Seile" ; "Chaînes, câbles et cordes" ; "Corde, fili e catene" ; ha-6:jevEval:Staged
+; ha-6-5 ; jevEval:Staged ; "Coils" ; "Spulen" ; "Bobines" ; "Molle" ; ha-6:jevEval:Staged
+; ha-6-6 ; jevEval:Staged ; "Concrete Molds" ; "Betonformen" ; "Moules à béton" ; "Blocchi di cemento" ; ha-6:jevEval:Staged
+; ha-6-7 ; jevEval:Staged ; "Dowel Pins & Rods" ; "Zylinderstifte & Dübelstangen" ; "Goujons et chevilles" ; "Perni e cilindri" ; ha-6:jevEval:Staged
+; ha-6-8 ; jevEval:Staged ; "Drawer Slides" ; "Schubladenschienen" ; "Coulisses pour tiroirs" ; "Guide per cassetti" ; ha-6:jevEval:Staged
+; ha-6-9 ; jevEval:Staged ; "Drop Cloths" ; "Abdeckfolien" ; "Toiles de protection" ; "Teli protettivi" ; ha-6:jevEval:Staged
+; ha-6-10 ; jevEval:Staged ; "Filters & Screens" ; "Filter & Siebe" ; "Filtres et tamis" ; "Filtri e schermature" ; ha-6:jevEval:Staged
+; ha-6-11 ; jevEval:Staged ; "Flagging & Caution Tape" ; "Warnklebeband" ; "Ruban de signalisation" ; "Nastri segnaletici" ; ha-6:jevEval:Staged
+; ha-6-12 ; jevEval:Staged ; "Gas Hoses" ; "Gasschläuche" ; "Tuyaux de gaz" ; "Tubi per gas" ; ha-6:jevEval:Staged
+; ha-6-13 ; jevEval:Staged ; "Ground Spikes" ; "Bodenspieße" ; "Piquets de sol" ; "Picchetti" ; ha-6:jevEval:Staged
+; ha-6-14 ; jevEval:Staged ; "Hardware Fasteners" ; "Befestigungselemente" ; "Fixations de quincaillerie" ; "Avvitatori da ferramenta" ; ha-6:jevEval:Staged
+; ha-6-15 ; jevEval:Staged ; "Hinges" ; "Scharniere" ; "Charnières" ; "Cerniere" ; ha-6:jevEval:Staged
+; ha-6-16 ; jevEval:Staged ; "Hooks, Buckles & Fasteners" ; "Haken, Schnallen & Verschlüsse" ; "Crochets, boucles et attaches" ; "Cerniere, ganci e fibbie" ; ha-6:jevEval:Staged
+; ha-6-17 ; jevEval:Staged ; "Lubrication Hoses" ; "Schmierschläuche" ; "Tuyaux de lubrification" ; "Tubi di lubrificazione" ; ha-6:jevEval:Staged
+; ha-6-18 ; jevEval:Staged ; "Metal Casting Molds" ; "Metallgussformen" ; "Moules de fonderie" ; "Stampi per fusione di metalli" ; ha-6:jevEval:Staged
+; ha-6-19 ; jevEval:Staged ; "Moving & Soundproofing Blankets & Covers" ; "Transport- und Schallschutzabdeckungen" ; "Couvertures et draps insonorisés et de protection" ; "Coperte e coperture per spostamenti e isolamento acustico" ; ha-6:jevEval:Staged
+; ha-6-20 ; jevEval:Staged ; "Pneumatic Hoses" ; "Luftschläuche" ; "Tuyaux pneumatiques" ; "Tubi pneumatici" ; ha-6:jevEval:Staged
+; ha-6-21 ; jevEval:Staged ; "Post Base Plates" ; "Standfüße für Pfosten" ; "Plaques pour embases de poteaux" ; "Piastre base per pali" ; ha-6:jevEval:Staged
+; ha-6-22 ; jevEval:Staged ; "Springs" ; "Federn" ; "Ressorts de quincaillerie" ; "Molle" ; ha-6:jevEval:Staged
+; ha-6-23 ; jevEval:Staged ; "Tarps" ; "Planen" ; "Bâches" ; "Teloni di plastica" ; ha-6:jevEval:Staged
+; ha-6-24 ; jevEval:Staged ; "Tool Storage & Organization" ; "Werkzeugaufbewahrung & Ordnungssysteme" ; "Organisation et rangement d’outils" ; "Conservazione/ordine attrezzi" ; ha-6:jevEval:Staged
+; ha-6-25 ; jevEval:Staged ; "Wall Jacks & Braces" ; "Richtstützen" ; "Étais et renforts de murs" ; "Staffe e jack da parete" ; ha-6:jevEval:Staged
+; ha-7-1 ; jevEval:Staged ; "Home Appliance Pumps" ; "Haushaltsgerätepumpen" ; "Pompes pour équipements ménagers" ; "Pompe per elettrodomestici" ; ha-7:jevEval:Staged
+; ha-7-2 ; jevEval:Staged ; "Pool, Fountain & Pond Pumps" ; "Pool-, Brunnen- und Teichpumpen" ; "Pompes pour bassins, fontaines et étangs" ; "Pompe per piscine, fontane e laghetti" ; ha-7:jevEval:Staged
+; ha-7-3 ; jevEval:Staged ; "Sprinkler, Booster & Irrigation System Pumps" ; "Bewässerungs-, Sprinkler- und Boosterpumpen" ; "Pompes d’irrigation, de gavage et pour arroseurs" ; "Pompe per irrigazione e irrigatori a pioggia e pompe ausiliarie" ; ha-7:jevEval:Staged
+; ha-7-4 ; jevEval:Staged ; "Sump, Sewage & Effluent Pumps" ; "Sickergruben-, Abwasser- und Abflusspumpen" ; "Pompes d’épuisement, d’effluent et pour relèvement d’eaux usées" ; "Pompe per pozzi neri, liquami e scarichi" ; ha-7:jevEval:Staged
+; ha-7-5 ; jevEval:Staged ; "Utility Pumps" ; "Pumpen zur Entwässerung und Wasserleitung" ; "Pompes d’appoint" ; "Pompe per utenze" ; ha-7:jevEval:Staged
+; ha-7-6 ; jevEval:Staged ; "Well Pumps & Systems" ; "Brunnenpumpen und -systeme" ; "Pompes et systèmes de puisage" ; "Pompe e sistemi per pozzi" ; ha-7:jevEval:Staged
+; ha-8-1 ; jevEval:Staged ; "Air & Filter Dryers" ; "Filtertrockner" ; "Filtres déshydrateurs" ; "Filtri/essiccatori" ; ha-8:jevEval:Staged
+; ha-8-2 ; jevEval:Staged ; "Air Ducts" ; "Luftkanäle" ; "Conduits d’air" ; "Condotti d'aria" ; ha-8:jevEval:Staged
+; ha-8-3 ; jevEval:Staged ; "HVAC Controls" ; "Steuerungen" ; "Commandes de chauffage, ventilation et climatisation" ; "Controlli HVAC" ; ha-8:jevEval:Staged
+; ha-8-4 ; jevEval:Staged ; "Vents & Flues" ; "Luftdurchlässe & Abzugsrohre" ; "Bouches et conduits de ventilation" ; "Bocche e condotti aerazione" ; ha-8:jevEval:Staged
+; ha-9-1 ; jevEval:Staged ; "Key Blanks" ; "Schlüsselrohlinge" ; "Clés brutes" ; "Chiavi per duplicati" ; ha-9:jevEval:Staged
+; ha-9-2 ; jevEval:Staged ; "Key Caps" ; "Schlüsselkappen" ; "Coques de clé" ; "Cappucci per chiavi" ; ha-9:jevEval:Staged
+; ha-9-3 ; jevEval:Staged ; "Key Card Entry Systems" ; "Kartenschließsysteme" ; "Systèmes d’accès par carte" ; "Sistemi ingresso con chiave magnetica" ; ha-9:jevEval:Staged
+; ha-9-4 ; jevEval:Staged ; "Locks & Latches" ; "Schlösser & Riegel" ; "Verrous et loquets" ; "Lucchetti e chiavistelli" ; ha-9:jevEval:Staged
+; ha-10-1 ; jevEval:Staged ; "Plumbing Fittings & Supports" ; "Rohrverbindungsstücke & -halterungen" ; "Fixations et supports de plomberie" ; "Supporti e raccordi per tubi" ; ha-10:jevEval:Staged
+; ha-10-2 ; jevEval:Staged ; "Plumbing Fixture Hardware & Parts" ; "Zubehör für sanitäre Anlagen" ; "Pièces et matériel de plomberie" ; "Ferramenta per la riparazione di impianti idraulici" ; ha-10:jevEval:Staged
+; ha-10-3 ; jevEval:Staged ; "Plumbing Fixtures" ; "Sanitärkeramik & Armaturen" ; "Équipements sanitaires" ; "Articoli idraulici" ; ha-10:jevEval:Staged
+; ha-10-4 ; jevEval:Staged ; "Plumbing Hoses & Supply Lines" ; "Schläuche & Leitungen" ; "Tuyaux de plomberie et arrivées d’eau" ; "Tubi e flessibili" ; ha-10:jevEval:Staged
+; ha-10-5 ; jevEval:Staged ; "Plumbing Pipes" ; "Installationsrohre" ; "Tuyaux de plomberie" ; "Tubature idrauliche" ; ha-10:jevEval:Staged
+; ha-10-6 ; jevEval:Staged ; "Plumbing Repair Kits" ; "Sanitär-Reparatursätze" ; "Trousses de plomberie" ; "Kit per riparazioni idrauliche" ; ha-10:jevEval:Staged
+; ha-10-7 ; jevEval:Staged ; "Water Dispensing & Filtration" ; "Trinkwasserspender & Filter" ; "Distribution et filtration de l’eau" ; "Distribuzione/filtro acqua" ; ha-10:jevEval:Staged
+; ha-10-8 ; jevEval:Staged ; "Water Levelers" ; "Wasserstandsregler" ; "Régulateurs de niveau d’eau" ; "Livellatori acqua" ; ha-10:jevEval:Staged
+; ha-10-9 ; jevEval:Staged ; "Water Timers" ; "Wasserschaltuhren" ; "Programmateurs d’arrosage" ; "Timer per acqua" ; ha-10:jevEval:Staged
+; ha-10-10 ; jevEval:Staged ; "Well Supplies" ; "Brunnenbedarf" ; "Accessoires pour puits" ; "Articoli per pozzi" ; ha-10:jevEval:Staged
+; ha-11-1 ; jevEval:Staged ; "Armatures, Rotors & Stators" ; "Anker, Rotoren und Statoren" ; "Armatures, rotors et stators" ; "Armature, rotori e statori" ; ha-11:jevEval:Staged
+; ha-11-2 ; jevEval:Staged ; "Ballasts & Starters" ; "Vorschaltgeräte & Starter" ; "Ballasts et démarreurs" ; "Resistenze e starter" ; ha-11:jevEval:Staged
+; ha-11-3 ; jevEval:Staged ; "Carbon Brushes" ; "Kohlebürsten" ; "Brosses à charbon" ; "Spazzole di carbonio" ; ha-11:jevEval:Staged
+; ha-11-4 ; jevEval:Staged ; "Circuit Breaker Panels" ; "Verteilerkästen" ; "Tableaux électriques" ; "Pannelli per interruttori" ; ha-11:jevEval:Staged
+; ha-11-5 ; jevEval:Staged ; "Circuit Breakers" ; "Leistungsschalter" ; "Disjoncteurs" ; "Interruttori automatici" ; ha-11:jevEval:Staged
+; ha-11-6 ; jevEval:Staged ; "Conduit & Housings" ; "Leitungen & Gehäuse" ; "Tuyaux et gaines" ; "Tubi e alloggiamenti" ; ha-11:jevEval:Staged
+; ha-11-7 ; jevEval:Staged ; "Electrical Motors" ; "Elektromotoren" ; "Moteurs électriques" ; "Motori elettrici" ; ha-11:jevEval:Staged
+; ha-11-8 ; jevEval:Staged ; "Electrical Mount Boxes & Brackets" ; "Anschlussdosen & Halterungen" ; "Boîtiers de fixation électriques" ; "Scatole di derivazione e staffe" ; ha-11:jevEval:Staged
+; ha-11-9 ; jevEval:Staged ; "Electrical Plug Caps" ; "Steckdosenabdeckungen" ; "Cache-prises électriques" ; "Copriprese elettriche" ; ha-11:jevEval:Staged
+; ha-11-10 ; jevEval:Staged ; "Electrical Switches" ; "Elektroschalter" ; "Interrupteurs" ; "Interruttori elettrici" ; ha-11:jevEval:Staged
+; ha-11-11 ; jevEval:Staged ; "Electrical Wires & Cable" ; "Elektrische Leitungen" ; "Fils et câbles électriques" ; "Fili e cavi elettrici" ; ha-11:jevEval:Staged
+; ha-11-12 ; jevEval:Staged ; "Extension Cord Accessories" ; "Verlängerungskabelzubehör" ; "Accessoires pour rallonges" ; "Accessori per prolunghe" ; ha-11:jevEval:Staged
+; ha-11-13 ; jevEval:Staged ; "Extension Cords" ; "Verlängerungskabel" ; "Rallonges électriques" ; "Prolunghe" ; ha-11:jevEval:Staged
+; ha-11-14 ; jevEval:Staged ; "Generator Accessories" ; "Zubehör für Generatoren" ; "Accessoires pour générateurs" ; "Accessori generatori" ; ha-11:jevEval:Staged
+; ha-11-15 ; jevEval:Staged ; "Generators" ; "Generatoren" ; "Générateurs" ; "Generatori" ; ha-11:jevEval:Staged
+; ha-11-16 ; jevEval:Staged ; "Home Automation Kits" ; "Heim- & Gebäudeautomatisierung" ; "Kits de domotique" ; "Kit per la domotica" ; ha-11:jevEval:Staged
+; ha-11-17 ; jevEval:Staged ; "Phone & Data Jacks" ; "Telefon- & Internetbuchsen" ; "Connecteurs téléphone et réseau" ; "Connettori telefono e dati" ; ha-11:jevEval:Staged
+; ha-11-18 ; jevEval:Staged ; "Power Converters" ; "Schaltnetzteile" ; "Convertisseurs électriques" ; "Convertitori di potenza" ; ha-11:jevEval:Staged
+; ha-11-19 ; jevEval:Staged ; "Power Inlets" ; "Gerätestecker" ; "Prises de courant mâles" ; "Prese di corrente" ; ha-11:jevEval:Staged
+; ha-11-20 ; jevEval:Staged ; "Power Inverters" ; "Wechselrichter" ; "Onduleurs" ; "Invertitori di corrente" ; ha-11:jevEval:Staged
+; ha-11-21 ; jevEval:Staged ; "Power Outlets & Sockets" ; "Steckdosen" ; "Prises de courant" ; "Prese elettriche" ; ha-11:jevEval:Staged
+; ha-11-22 ; jevEval:Staged ; "Solar Energy Kits" ; "Solarenergie-Kits" ; "Kits d’énergie solaire" ; "Kit fotovoltaici" ; ha-11:jevEval:Staged
+; ha-11-23 ; jevEval:Staged ; "Solar Panels" ; "Solarpaneele" ; "Panneaux solaires" ; "Pannelli solari" ; ha-11:jevEval:Staged
+; ha-11-24 ; jevEval:Staged ; "Voltage Transformers & Regulators" ; "Spannungswandler & -regler" ; "Transformateurs et régulateurs de tension" ; "Regolatori e trasformatori di tensione" ; ha-11:jevEval:Staged
+; ha-11-25 ; jevEval:Staged ; "Wall Plates & Covers" ; "Wandplatten" ; "Plaques murales" ; "Placche a muro e coperture" ; ha-11:jevEval:Staged
+; ha-11-26 ; jevEval:Staged ; "Wall Socket Controls & Sensors" ; "Steckdosen-Zeitschaltuhren & -Sensoren" ; "Commandes de prises murales et capteurs électriques" ; "Controlli e sensori per prese" ; ha-11:jevEval:Staged
+; ha-11-27 ; jevEval:Staged ; "Wire Caps & Nuts" ; "Drahtbindemaschinen" ; "Capuchons de connexion" ; "Tappi e dadi per cavi" ; ha-11:jevEval:Staged
+; ha-11-28 ; jevEval:Staged ; "Wire Terminals & Connectors" ; "Kabelanschlüsse & Steckverbinder" ; "Bornes et connecteurs de fils électriques" ; "Connettori e terminali cavo" ; ha-11:jevEval:Staged
+; ha-14-1 ; jevEval:Staged ; "Abrasive Blaster Accessories" ; "Sandstrahler-Zubehör" ; "Accessoires de sablage" ; "Accessori per sabbiatura" ; ha-14:jevEval:Staged
+; ha-14-2 ; jevEval:Staged ; "Axe Accessories" ; "Axtzubehör" ; "Accessoires pour haches" ; "Accessori per asce" ; ha-14:jevEval:Staged
+; ha-14-3 ; jevEval:Staged ; "Cutter Accessories" ; "Schneidwerkzeug-Zubehör" ; "Accessoires pour outils de coupe" ; "Accessori per taglierine" ; ha-14:jevEval:Staged
+; ha-14-4 ; jevEval:Staged ; "Drill & Screwdriver Accessories" ; "Bohrzubehör" ; "Accessoires pour perceuses et visseuses" ; "Accessori per trapani e cacciavite" ; ha-14:jevEval:Staged
+; ha-14-5 ; jevEval:Staged ; "Driver Accessories" ; "Drehmaschinenzubehör" ; "Accessoires pour perceuses" ; "Accessori per conducenti" ; ha-14:jevEval:Staged
+; ha-14-6 ; jevEval:Staged ; "Flashlight Accessories" ; "Zubehör für Taschenlampen" ; "Accessoires de lampe de poche" ; "Accessori torce elettriche" ; ha-14:jevEval:Staged
+; ha-14-7 ; jevEval:Staged ; "Grinder Accessories" ; "Schleifmaschinenzubehör" ; "Accessoires pour meuleuses" ; "Accessori per smerigliatrici" ; ha-14:jevEval:Staged
+; ha-14-8 ; jevEval:Staged ; "Hammer Accessories" ; "Hammerzubehör" ; "Accessoires pour marteaux" ; "Accessori per martelli" ; ha-14:jevEval:Staged
+; ha-14-9 ; jevEval:Staged ; "Industrial Staples" ; "Klammern" ; "Agrafes industrielles" ; "Graffette industriali" ; ha-14:jevEval:Staged
+; ha-14-10 ; jevEval:Staged ; "Jigs" ; "Spannvorrichtungen" ; "Gabarits" ; "Maschere di foratura" ; ha-14:jevEval:Staged
+; ha-14-11 ; jevEval:Staged ; "Magnetizers & Demagnetizers" ; "Magnetisierer & Entmagnetisierer" ; "Magnétiseurs et démagnétiseurs" ; "Magnetizzatori e demagnetizzatori" ; ha-14:jevEval:Staged
+; ha-14-12 ; jevEval:Staged ; "Mattock & Pickaxe Accessories" ; "Zubehör für Hacken & Pickel" ; "Accessoires pour haches et pioches" ; "Accessori per zappascuri e picconi" ; ha-14:jevEval:Staged
+; ha-14-13 ; jevEval:Staged ; "Measuring Tool & Sensor Accessories" ; "Zubehör für Messwerkzeuge & Messwertgeber" ; "Accessoires pour outils de mesure et détecteurs" ; "Accessori strumenti/sensori misurazione" ; ha-14:jevEval:Staged
+; ha-14-14 ; jevEval:Staged ; "Mixing Tool Paddles" ; "Mischwerkzeuge" ; "Pales de malaxeur" ; "Pale per miscelatori" ; ha-14:jevEval:Staged
+; ha-14-15 ; jevEval:Staged ; "Paint Tool Accessories" ; "Anstreichzubehör" ; "Accessoires pour outils de peinture" ; "Accessori per verniciatura" ; ha-14:jevEval:Staged
+; ha-14-16 ; jevEval:Staged ; "Power Tool Batteries" ; "Elektrowerkzeug-Akkus" ; "Batteries d’outils électriques" ; "Batterie per utensili elettrici" ; ha-14:jevEval:Staged
+; ha-14-17 ; jevEval:Staged ; "Power Tool Chargers" ; "Ladegeräte für Elektrowerkzeuge" ; "Chargeurs de batteries" ; "Caricabatterie per utensili elettrici" ; ha-14:jevEval:Staged
+; ha-14-18 ; jevEval:Staged ; "Router Accessories" ; "Zubehör für Oberfräsen" ; "Accessoires pour défonceuses" ; "Accessori fresatrici verticali" ; ha-14:jevEval:Staged
+; ha-14-19 ; jevEval:Staged ; "Sanding Accessories" ; "Schleifzubehör" ; "Accessoires de ponçage" ; "Accessori per carteggio" ; ha-14:jevEval:Staged
+; ha-14-20 ; jevEval:Staged ; "Saw Accessories" ; "Sägenzubehör" ; "Accessoires pour scies" ; "Accessori per seghe" ; ha-14:jevEval:Staged
+; ha-14-21 ; jevEval:Staged ; "Shaper Accessories" ; "Zubehör für Stoßmaschinen" ; "Accessoires pour toupies" ; "Accessori per limatrici" ; ha-14:jevEval:Staged
+; ha-14-22 ; jevEval:Staged ; "Soldering Iron Accessories" ; "Zubehör für Lötkolben" ; "Accessoires pour fers à souder" ; "Accessori saldatori a stilo" ; ha-14:jevEval:Staged
+; ha-14-23 ; jevEval:Staged ; "Tool Blades" ; "Werkzeugklingen & -blätter" ; "Lames d’outils" ; "Lame per attrezzi" ; ha-14:jevEval:Staged
+; ha-14-24 ; jevEval:Staged ; "Tool Handle Wedges" ; "Keile für Werkzeuggriffe" ; "Renforts pour manches d’outils" ; "Cunei per manici di utensili" ; ha-14:jevEval:Staged
+; ha-14-25 ; jevEval:Staged ; "Tool Safety Tethers" ; "Werkzeugsicherungen" ; "Longes de sécurité pour outils" ; "Cordini di sicurezza per attrezzi" ; ha-14:jevEval:Staged
+; ha-14-26 ; jevEval:Staged ; "Tool Sockets" ; "Steckschlüsseleinsätze" ; "Douilles" ; "Prese per strumenti" ; ha-14:jevEval:Staged
+; ha-14-27 ; jevEval:Staged ; "Tool Stands" ; "Werkzeugständer" ; "Supports pour outils" ; "Supporti per attrezzi" ; ha-14:jevEval:Staged
+; ha-14-28 ; jevEval:Staged ; "Wedge Tools" ; "Keilwerkzeuge" ; "Coins" ; "Cunei" ; ha-14:jevEval:Staged
+; ha-14-29 ; jevEval:Staged ; "Welding Accessories" ; "Schweißzubehör" ; "Accessoires de soudage" ; "Accessori per saldatura" ; ha-14:jevEval:Staged
+; ha-15-1 ; jevEval:Staged ; "Abrasive Blasters" ; "Sandstrahler" ; "Sableuses" ; "Sabbiatrici" ; ha-15:jevEval:Staged
+; ha-15-2 ; jevEval:Staged ; "Anvils" ; "Ambosse" ; "Enclumes" ; "Incudini" ; ha-15:jevEval:Staged
+; ha-15-3 ; jevEval:Staged ; "Axes" ; "Äxte" ; "Haches" ; "Asce" ; ha-15:jevEval:Staged
+; ha-15-4 ; jevEval:Staged ; "Carpentry Jointers" ; "Tischlerbänke" ; "Dégauchisseuses" ; "Giunti per carpenteria" ; ha-15:jevEval:Staged
+; ha-15-5 ; jevEval:Staged ; "Carving Chisels & Gouges" ; "Schnitzwerkzeuge & Hohlmeißel" ; "Burins et gouges pour sculpture" ; "Ceselli e scalpellini per intaglio" ; ha-15:jevEval:Staged
+; ha-15-6 ; jevEval:Staged ; "Caulking Tools" ; "Stemmwerkzeuge" ; "Outils de calfat" ; "Attrezzi da calafato" ; ha-15:jevEval:Staged
+; ha-15-7 ; jevEval:Staged ; "Chimney Brushes" ; "Kaminbürste" ; "Brosses de cheminée" ; "Spazzole per camini" ; ha-15:jevEval:Staged
+; ha-15-8 ; jevEval:Staged ; "Compactors" ; "Bodenverdichter" ; "Compacteurs" ; "Compattatori" ; ha-15:jevEval:Staged
+; ha-15-9 ; jevEval:Staged ; "Compressors" ; "Kompressoren" ; "Compresseurs" ; "Compressori" ; ha-15:jevEval:Staged
+; ha-15-10 ; jevEval:Staged ; "Concrete Brooms" ; "Betonbesen" ; "Balais à béton" ; "Scope calcestruzzo" ; ha-15:jevEval:Staged
+; ha-15-11 ; jevEval:Staged ; "Cutters" ; "Schneidegeräte" ; "Outils de coupe" ; "Attrezzi per taglio" ; ha-15:jevEval:Staged
+; ha-15-12 ; jevEval:Staged ; "Deburrers" ; "Entgrater" ; "Outils d’ébavurage" ; "Sbavatori" ; ha-15:jevEval:Staged
+; ha-15-13 ; jevEval:Staged ; "Dollies & Hand Trucks" ; "Rollwagen & Sackkarren" ; "Diables et chariots de manutention" ; "Carrelli merci" ; ha-15:jevEval:Staged
+; ha-15-14 ; jevEval:Staged ; "Drills" ; "Bohrmaschinen" ; "Perceuses" ; "Trapani" ; ha-15:jevEval:Staged
+; ha-15-15 ; jevEval:Staged ; "Electrician Fish Tape" ; "Einziehhilfen" ; "Tire-fils" ; "Fish tape per elettricisti" ; ha-15:jevEval:Staged
+; ha-15-16 ; jevEval:Staged ; "Flashlights & Headlamps" ; "Taschenlampen & Stirnlampen" ; "Lampes de poche et lampes frontales" ; "Torce tascabili e da testa" ; ha-15:jevEval:Staged
+; ha-15-17 ; jevEval:Staged ; "Grease Guns" ; "Fettpressen" ; "Pompes à graisse" ; "Pistole lubrificanti" ; ha-15:jevEval:Staged
+; ha-15-18 ; jevEval:Staged ; "Grinders" ; "Schleifmaschinen" ; "Meuleuses" ; "Molatrici" ; ha-15:jevEval:Staged
+; ha-15-19 ; jevEval:Staged ; "Grips" ; "Griffe" ; "Poignées" ; "Pinze manuali" ; ha-15:jevEval:Staged
+; ha-15-20 ; jevEval:Staged ; "Hammers" ; "Hämmer" ; "Marteaux" ; "Martelli" ; ha-15:jevEval:Staged
+; ha-15-21 ; jevEval:Staged ; "Handheld Power Mixers" ; "Handmischmaschinen" ; "Mélangeurs portatifs" ; "Miscelatori manuali" ; ha-15:jevEval:Staged
+; ha-15-22 ; jevEval:Staged ; "Hardware Torches" ; "Arbeitslampen" ; "Chalumeaux" ; "Torce elettriche" ; ha-15:jevEval:Staged
+; ha-15-23 ; jevEval:Staged ; "Heat Guns" ; "Heißluftpistole" ; "Pistolets thermiques" ; "Pistole termiche" ; ha-15:jevEval:Staged
+; ha-15-24 ; jevEval:Staged ; "Impact Wrenches & Drivers" ; "Schlagschrauber" ; "Clés et tournevis à chocs" ; "Avvitatori a impulsi" ; ha-15:jevEval:Staged
+; ha-15-25 ; jevEval:Staged ; "Industrial Vibrators" ; "Industrievibratoren" ; "Vibrateurs industriels" ; "Vibratori per industria" ; ha-15:jevEval:Staged
+; ha-15-26 ; jevEval:Staged ; "Inspection Mirrors" ; "Kontrollspiegel" ; "Miroirs d’inspection" ; "Specchi di ispezione" ; ha-15:jevEval:Staged
+; ha-15-27 ; jevEval:Staged ; "Ladders & Scaffolding" ; "Leitern & Gerüste" ; "Échelles et échafaudages" ; "Scale e ponteggi" ; ha-15:jevEval:Staged
+; ha-15-28 ; jevEval:Staged ; "Lathes" ; "Drehmaschinen" ; "Tours fraiseuses" ; "Torni" ; ha-15:jevEval:Staged
+; ha-15-29 ; jevEval:Staged ; "Light Bulb Changers" ; "Glühbirnenwechsler" ; "Changeurs d’ampoules" ; "Strumenti cambio lampadine" ; ha-15:jevEval:Staged
+; ha-15-30 ; jevEval:Staged ; "Lighters & Matches" ; "Feuerzeuge & Streichhölzer" ; "Briquets et allumettes" ; "Accendini e fiammiferi" ; ha-15:jevEval:Staged
+; ha-15-31 ; jevEval:Staged ; "Log Splitters" ; "Holzspalter" ; "Fendeuses de bûches" ; "Spaccalegna" ; ha-15:jevEval:Staged
+; ha-15-32 ; jevEval:Staged ; "Magnetic Sweepers" ; "Lasthebemagnete" ; "Balais magnétiques" ; "Elettromagneti da sollevamento" ; ha-15:jevEval:Staged
+; ha-15-33 ; jevEval:Staged ; "Marking Tools" ; "Markierwerkzeuge" ; "Outils de traçage" ; "Attrezzi per marcatura" ; ha-15:jevEval:Staged
+; ha-15-34 ; jevEval:Staged ; "Masonry Tools" ; "Bauwerkzeuge" ; "Outils de maçonnerie" ; "Attrezzi per muratura" ; ha-15:jevEval:Staged
+; ha-15-35 ; jevEval:Staged ; "Mattocks & Pickaxes" ; "Hacken & Spitzhacken" ; "Haches et pioches" ; "Zappascuri e picconi" ; ha-15:jevEval:Staged
+; ha-15-36 ; jevEval:Staged ; "Measuring Tools & Sensors" ; "Messwerkzeuge & Messwertgeber" ; "Outils de mesure et détecteurs" ; "Strumenti/sensori misurazione" ; ha-15:jevEval:Staged
+; ha-15-37 ; jevEval:Staged ; "Milling Machines" ; "Mühlen" ; "Fraiseuses" ; "Fresatrici" ; ha-15:jevEval:Staged
+; ha-15-38 ; jevEval:Staged ; "Multifunction Power Tools" ; "Multifunktionales Elektrowerkzeug" ; "Outils électriques multi-usages" ; "Utensili elettrici multifunzione" ; ha-15:jevEval:Staged
+; ha-15-39 ; jevEval:Staged ; "Nail Pullers" ; "Nageleisen" ; "Arrache-clous" ; "Levachiodi" ; ha-15:jevEval:Staged
+; ha-15-40 ; jevEval:Staged ; "Nailers & Staplers" ; "Nagler & Tacker" ; "Cloueuses et agrafeuses" ; "Sparachiodi e spillatrici" ; ha-15:jevEval:Staged
+; ha-15-41 ; jevEval:Staged ; "Oil Filter Drains" ; "Ölfilterabfluss" ; "Systèmes de purge pour filtres à huile" ; "Scarichi per filtri dell'olio" ; ha-15:jevEval:Staged
+; ha-15-42 ; jevEval:Staged ; "Paint Tools" ; "Malerwerkzeug" ; "Outils de peinture" ; "Articoli per verniciatura" ; ha-15:jevEval:Staged
+; ha-15-43 ; jevEval:Staged ; "Pickup Tools" ; "Müll- & Papierkrallen" ; "Outils de ramassage" ; "Attrezzi per raccogliere oggetti" ; ha-15:jevEval:Staged
+; ha-15-44 ; jevEval:Staged ; "Pipe & Bar Benders" ; "Biegewerkzeuge für Rohre & Stangen" ; "Plieuses de tuyaux et barres" ; "Piegatubi e curvatubi" ; ha-15:jevEval:Staged
+; ha-15-45 ; jevEval:Staged ; "Pipe & Tube Cleaners" ; "Rohrreiniger" ; "Matériel de débouchage des canalisations" ; "Pulizia tubi e condutture" ; ha-15:jevEval:Staged
+; ha-15-46 ; jevEval:Staged ; "Pipe Brushes" ; "Rohrbürsten" ; "Brosses à tubes" ; "Spazzole per tubi" ; ha-15:jevEval:Staged
+; ha-15-47 ; jevEval:Staged ; "Planers" ; "Elektrohobel" ; "Raboteuses" ; "Piallatrici" ; ha-15:jevEval:Staged
+; ha-15-48 ; jevEval:Staged ; "Planes" ; "Hobel" ; "Rabots" ; "Pialle" ; ha-15:jevEval:Staged
+; ha-15-49 ; jevEval:Staged ; "Pliers" ; "Zangen" ; "Pinces" ; "Pinze da ferramenta" ; ha-15:jevEval:Staged
+; ha-15-50 ; jevEval:Staged ; "Plungers" ; "Saugglocken" ; "Ventouses" ; "Stura scarichi" ; ha-15:jevEval:Staged
+; ha-15-51 ; jevEval:Staged ; "Polishers & Buffers" ; "Schleifer & Poliermaschinen" ; "Polisseuses et lustreuses" ; "Lucidatrici e pulitrici" ; ha-15:jevEval:Staged
+; ha-15-52 ; jevEval:Staged ; "Post Hole Diggers" ; "Lochschaufeln" ; "Bêches tarières" ; "Foratrici per pali" ; ha-15:jevEval:Staged
+; ha-15-53 ; jevEval:Staged ; "Pry Bars" ; "Brecheisen" ; "Barres de levier" ; "Palanchini" ; ha-15:jevEval:Staged
+; ha-15-54 ; jevEval:Staged ; "Punches & Awls" ; "Locheisen & Ahlen" ; "Poinçons et alènes" ; "Punzoni e punteruoli" ; ha-15:jevEval:Staged
+; ha-15-55 ; jevEval:Staged ; "Putty Knives & Scrapers" ; "Kittmesser & -spachtel" ; "Spatules et grattoirs" ; "Spatole e raschietti per stucco" ; ha-15:jevEval:Staged
+; ha-15-56 ; jevEval:Staged ; "Reamers" ; "Reibahlen" ; "Alésoirs" ; "Alesatori" ; ha-15:jevEval:Staged
+; ha-15-57 ; jevEval:Staged ; "Riveting Tools" ; "Nietwerkzeuge" ; "Outils de rivetage" ; "Rivettatrici" ; ha-15:jevEval:Staged
+; ha-15-58 ; jevEval:Staged ; "Routing Tools" ; "Oberfräsen" ; "Défonceuses" ; "Fresatrici verticali" ; ha-15:jevEval:Staged
+; ha-15-59 ; jevEval:Staged ; "Sanders" ; "Schwingschleifer" ; "Ponceuses" ; "Smerigliatrici" ; ha-15:jevEval:Staged
+; ha-15-60 ; jevEval:Staged ; "Sanding Blocks" ; "Schleifblöcke" ; "Blocs de ponçage" ; "Tamponi per carteggiatura" ; ha-15:jevEval:Staged
+; ha-15-61 ; jevEval:Staged ; "Saw Horses" ; "Sägeböcke" ; "Chevalet de sciage" ; "Cavalletti (per legna)" ; ha-15:jevEval:Staged
+; ha-15-62 ; jevEval:Staged ; "Saws" ; "Sägen" ; "Scies" ; "Seghe, seghetti" ; ha-15:jevEval:Staged
+; ha-15-63 ; jevEval:Staged ; "Screwdrivers" ; "Schraubendreher" ; "Tournevis et visseuses" ; "Cacciaviti" ; ha-15:jevEval:Staged
+; ha-15-64 ; jevEval:Staged ; "Shapers" ; "Stoßmaschinen" ; "Burins de tournage" ; "Limatrici" ; ha-15:jevEval:Staged
+; ha-15-65 ; jevEval:Staged ; "Sharpeners" ; "Schärfgeräte" ; "Aiguiseurs" ; "Affilatrici, temperamatite" ; ha-15:jevEval:Staged
+; ha-15-66 ; jevEval:Staged ; "Socket Drivers" ; "Steckschlüssel" ; "Tournevis à douilles" ; "Cacciaviti testa esagonale" ; ha-15:jevEval:Staged
+; ha-15-67 ; jevEval:Staged ; "Soldering Irons" ; "Lötkolben" ; "Fers à souder" ; "Saldatori" ; ha-15:jevEval:Staged
+; ha-15-68 ; jevEval:Staged ; "Tap Reseaters" ; "Wasseranschluss-Nachschleifwerkzeuge" ; "Rectifieuses de robinet" ; "Frese per rubinetti" ; ha-15:jevEval:Staged
+; ha-15-69 ; jevEval:Staged ; "Taps & Dies" ; "Gewindebohrer" ; "Tarauds" ; "Maschi filettatori e filiere" ; ha-15:jevEval:Staged
+; ha-15-70 ; jevEval:Staged ; "Threading Machines" ; "Gewindeschneidmaschinen" ; "Machines à fileter" ; "Filettatrici" ; ha-15:jevEval:Staged
+; ha-15-71 ; jevEval:Staged ; "Tool Clamps & Vises" ; "Schraubzwingen & -stöcke" ; "Serre-joints et étaux" ; "Morse e morsetti" ; ha-15:jevEval:Staged
+; ha-15-72 ; jevEval:Staged ; "Tool Files" ; "Werkzeugfeilen" ; "Lime à outils" ; "Utensile lime" ; ha-15:jevEval:Staged
+; ha-15-73 ; jevEval:Staged ; "Tool Keys" ; "Werkzeugschlüssel" ; "Clés de serrage" ; "Utensile Chiavi" ; ha-15:jevEval:Staged
+; ha-15-74 ; jevEval:Staged ; "Tool Knives" ; "Werkzeugmesser" ; "Couteaux-outils" ; "Coltelli multiuso" ; ha-15:jevEval:Staged
+; ha-15-75 ; jevEval:Staged ; "Tool Sets" ; "Werkzeugsets" ; "Jeux d’outils" ; "Set di attrezzi" ; ha-15:jevEval:Staged
+; ha-15-76 ; jevEval:Staged ; "Welders" ; "Schweißgeräte" ; "Soudeuses" ; "Saldatori" ; ha-15:jevEval:Staged
+; ha-15-77 ; jevEval:Staged ; "Welding Guns & Plasma Cutters" ; "Schweißwerkzeuge & Plasmaschneider" ; "Pistolets à souder et découpeurs plasma" ; "Saldatori a pistola e strumenti per taglio al plasma" ; ha-15:jevEval:Staged
+; ha-15-78 ; jevEval:Staged ; "Wire & Cable Hand Tools" ; "Handwerkzeuge für Drähte und Kabel" ; "Outils pour câbles et fils" ; "Utensili per fili e cavi" ; ha-15:jevEval:Staged
+; ha-15-79 ; jevEval:Staged ; "Work Lights" ; "Arbeitsscheinwerfer" ; "Projecteurs de chantier" ; "Luci da lavoro" ; ha-15:jevEval:Staged
+; ha-15-80 ; jevEval:Staged ; "Wrenches" ; "Schraubenschlüssel" ; "Clés" ; "Chiavi" ; ha-15:jevEval:Staged
+; ha-1-1-1 ; jevEval:Staged ; "Acid Neutralizers" ; "Säureneutralisierer" ; "Neutraliseurs d’acides" ; "Neutralizzatori di acidi" ; ha-1-1:jevEval:Staged
+; ha-1-1-2 ; jevEval:Staged ; "Ammonia" ; "Ammoniak" ; "Ammoniaque" ; "Ammoniaca" ; ha-1-1:jevEval:Staged
+; ha-1-1-3 ; jevEval:Staged ; "Chimney Cleaners" ; "Kaminreiniger" ; "Produits pour le nettoyage de cheminées" ; "Pulizia canne fumarie" ; ha-1-1:jevEval:Staged
+; ha-1-1-4 ; jevEval:Staged ; "Concrete & Masonry Cleaners" ; "Beton- & Mauerreiniger" ; "Produits nettoyants pour béton et maçonnerie" ; "Prodotti di pulizia per cemento e murature" ; ha-1-1:jevEval:Staged
+; ha-1-1-5 ; jevEval:Staged ; "De-Icers" ; "Enteiser" ; "Dégivreurs" ; "Prodotti antigelo" ; ha-1-1:jevEval:Staged
+; ha-1-1-6 ; jevEval:Staged ; "Deck & Fence Cleaners" ; "Holzterrassen- & -zaunreiniger" ; "Produits nettoyants pour terrasses et clôtures" ; "Prodotti di pulizia per ponti e recinti" ; ha-1-1:jevEval:Staged
+; ha-1-1-7 ; jevEval:Staged ; "Drain Cleaners" ; "Abflussreiniger" ; "Produits de débouchage" ; "Liquidi disgorganti" ; ha-1-1:jevEval:Staged
+; ha-1-1-8 ; jevEval:Staged ; "Electrical Freeze Sprays" ; "Kältespray für Elektronik" ; "Sprays réfrigérants pour équipement électrique" ; "Spray congelante per uso elettrico" ; ha-1-1:jevEval:Staged
+; ha-1-1-9 ; jevEval:Staged ; "Lighter Fluid" ; "Anzünderflüssigkeit" ; "Allume-barbecue liquides" ; "Liquido per accendini" ; ha-1-1:jevEval:Staged
+; ha-1-1-10 ; jevEval:Staged ; "Septic Tank & Cesspool Treatments" ; "Reiniger für Abwassertanks & Senkgruben" ; "Produits pour le nettoyage de fosses septiques" ; "Prodotti di pulizia per fosse settiche e pozzi neri" ; ha-1-1:jevEval:Staged
+; ha-1-3-1 ; jevEval:Staged ; "Duct Tape" ; "Klebeband" ; "Ruban adhésif" ; "Nastro adesivo" ; ha-1-3:jevEval:Staged
+; ha-1-3-2 ; jevEval:Staged ; "Electrical Tape" ; "Isolierband" ; "Ruban adhésif électrique" ; "Nastro elettrico" ; ha-1-3:jevEval:Staged
+; ha-1-3-3 ; jevEval:Staged ; "Masking Tape" ; "Abdeckband" ; "Ruban de masquage" ; "Nastro protettivo" ; ha-1-3:jevEval:Staged
+; ha-1-4-1 ; jevEval:Staged ; "Dry Lubricants" ; "Trockenschmierstoffe" ; "Lubrifiants secs" ; "Lubrificanti per occhi secchi" ; ha-1-4:jevEval:Staged
+; ha-1-4-2 ; jevEval:Staged ; "Grease" ; "Fett" ; "Graisse" ; "Grasso" ; ha-1-4:jevEval:Staged
+; ha-1-4-4 ; jevEval:Staged ; "Oil" ; "Öl" ; "Huile" ; "Olio" ; ha-1-4:jevEval:Staged
+; ha-1-5-1 ; jevEval:Staged ; "Bricks & Concrete Blocks" ; "Mauersteine & Betonblöcke" ; "Briques et parpaings" ; "Mattoni e calcestruzzo" ; ha-1-5:jevEval:Staged
+; ha-1-5-2 ; jevEval:Staged ; "Cement, Mortar & Concrete Mixes" ; "Zement, Mörtel & Beton" ; "Mélanges de ciment, mortier et béton" ; "Cementi, malte e miscele di calcestruzzo" ; ha-1-5:jevEval:Staged
+; ha-1-5-3 ; jevEval:Staged ; "Grout" ; "Mörtel" ; "Jointoyer" ; "Malta" ; ha-1-5:jevEval:Staged
+; ha-1-6-1 ; jevEval:Staged ; "Paint" ; "Farbe" ; "Peinture" ; "Pittura" ; ha-1-6:jevEval:Staged
+; ha-1-6-2 ; jevEval:Staged ; "Paint Binders" ; "Farbenbindemittel" ; "Liants pour peintures" ; "Leganti" ; ha-1-6:jevEval:Staged
+; ha-1-6-3 ; jevEval:Staged ; "Primers" ; "Grundierungen" ; "Peintures d’apprêt" ; "Mestica" ; ha-1-6:jevEval:Staged
+; ha-1-6-4 ; jevEval:Staged ; "Stains" ; "Flecken" ; "Teintures" ; "Macchie" ; ha-1-6:jevEval:Staged
+; ha-1-6-5 ; jevEval:Staged ; "Varnishes & Finishes" ; "Lacke & Beschichtungen" ; "Vernis et produits de finition" ; "Vernici e finiture" ; ha-1-6:jevEval:Staged
+; ha-1-8-1 ; jevEval:Staged ; "Concrete Sealers" ; "Betonversiegelungen" ; "Matériaux d’étanchéité pour béton" ; "Sigillanti per calcestruzzo" ; ha-1-8:jevEval:Staged
+; ha-1-8-2 ; jevEval:Staged ; "Protective Coatings" ; "Schutzbeschichtungen" ; "Enduits de protection" ; "Rivestimenti protettivi" ; ha-1-8:jevEval:Staged
+; ha-1-8-3 ; jevEval:Staged ; "Roll Roofing Glue" ; "Kleber für Dacheindeckungsrollen" ; "Colle à toiture en rouleau" ; "Colla per coperture in rotoli" ; ha-1-8:jevEval:Staged
+; ha-1-8-4 ; jevEval:Staged ; "Roof Sealants" ; "Dachdichtmittel" ; "Matériaux d’étanchéité pour toiture" ; "Sigillanti per tetti" ; ha-1-8:jevEval:Staged
+; ha-1-8-5 ; jevEval:Staged ; "Rust Prevention Coatings" ; "Rostschutzbeschichtungen" ; "Enduits antirouille" ; "Rivestimenti antiruggine" ; ha-1-8:jevEval:Staged
+; ha-1-8-6 ; jevEval:Staged ; "Waterproofing Coatings" ; "Wasserabweisende Beschichtungen" ; "Ensuits imperméabilisants" ; "Rivestimenti impermeabilizzanti" ; ha-1-8:jevEval:Staged
+; ha-1-9-1 ; jevEval:Staged ; "Lead-Based Solder" ; "Lötmittel auf Bleibasis" ; "Soudure à base de plomb" ; "Saldatura a base di piombo" ; ha-1-9:jevEval:Staged
+; ha-1-9-2 ; jevEval:Staged ; "Lead-Free Solder" ; "Bleifreies Lötmittel" ; "Soudure sans plomb" ; "Saldatura senza piombo" ; ha-1-9:jevEval:Staged
+; ha-1-9-3 ; jevEval:Staged ; "Rosin Flux" ; "Harz-Flussmittel" ; "Flux de colophane" ; "Rosin Flux" ; ha-1-9:jevEval:Staged
+; ha-1-10-1 ; jevEval:Staged ; "Solvents" ; "Lösungsmittel" ; "Solvants" ; "Solventi" ; ha-1-10:jevEval:Staged
+; ha-1-10-2 ; jevEval:Staged ; "Thinners" ; "Verdünner" ; "Diluants" ; "Diluenti" ; ha-1-10:jevEval:Staged
+; ha-1-10-3 ; jevEval:Staged ; "Strippers" ; "Abstreifer" ; "Décapants" ; "Sverniciatori" ; ha-1-10:jevEval:Staged
+; ha-1-11-1 ; jevEval:Staged ; "Cement Plaster" ; "Zementputz" ; "Plâtre de ciment" ; "Intonaco di cemento" ; ha-1-11:jevEval:Staged
+; ha-1-11-2 ; jevEval:Staged ; "Gypsum Plaster" ; "Gipsputz" ; "Plâtre de gypse" ; "Gesso" ; ha-1-11:jevEval:Staged
+; ha-1-11-3 ; jevEval:Staged ; "Heat Resistant Plaster" ; "Hitzebeständiger Gips" ; "Plâtre résistant à la chaleur" ; "Intonaco resistente al calore" ; ha-1-11:jevEval:Staged
+; ha-1-11-4 ; jevEval:Staged ; "Joint Compounds" ; "Fugenmassen" ; "Composés à joints" ; "Composti congiunti" ; ha-1-11:jevEval:Staged
+; ha-1-11-5 ; jevEval:Staged ; "Lime Plaster" ; "Kalkputz" ; "Enduit à la chaux" ; "Intonaco di calce" ; ha-1-11:jevEval:Staged
+; ha-1-11-6 ; jevEval:Staged ; "Polymer Dispersion Plaster" ; "Polymer-Dispersionsputz" ; "Plâtre de dispersion polymère" ; "Intonaco a dispersione polimerica" ; ha-1-11:jevEval:Staged
+; ha-1-11-7 ; jevEval:Staged ; "Polyurethane Alkyds" ; "Polyurethan-Alkyde" ; "Alkydes de polyuréthane" ; "Alchidi poliuretanici" ; ha-1-11:jevEval:Staged
+; ha-1-11-8 ; jevEval:Staged ; "Polyurethane Dispersions" ; "Polyurethan-Dispersionen" ; "Dispersions de polyuréthane" ; "Dispersioni di poliuretano" ; ha-1-11:jevEval:Staged
+; ha-1-11-9 ; jevEval:Staged ; "Spackling Paste" ; "Spachtelmasse" ; "Pâte à reboucher" ; "Pasta spalmabile" ; ha-1-11:jevEval:Staged
+; ha-2-2-1 ; jevEval:Staged ; "Door Bells & Chimes" ; "Türklingeln" ; "Sonnettes et carillons" ; "Campanelli per porte" ; ha-2-2:jevEval:Staged
+; ha-2-2-2 ; jevEval:Staged ; "Door Closers" ; "Türschließer" ; "Ferme-porte" ; "Chiudiporte" ; ha-2-2:jevEval:Staged
+; ha-2-2-3 ; jevEval:Staged ; "Door Frames" ; "Türrahmen" ; "Encadrements de porte" ; "Telai per porte" ; ha-2-2:jevEval:Staged
+; ha-2-2-4 ; jevEval:Staged ; "Door Keyhole Escutcheons" ; "Schlüssellochverzierungen für Türen" ; "Entrées de serrure" ; "Bocchette per serrature" ; ha-2-2:jevEval:Staged
+; ha-2-2-5 ; jevEval:Staged ; "Door Knobs & Handles" ; "Türknäufe & -klinken" ; "Boutons et poignées de porte" ; "Maniglie per porte e maniglie" ; ha-2-2:jevEval:Staged
+; ha-2-2-6 ; jevEval:Staged ; "Door Knockers" ; "Türklopfer" ; "Heurtoirs de porte" ; "Batacchi" ; ha-2-2:jevEval:Staged
+; ha-2-2-7 ; jevEval:Staged ; "Door Push Plates" ; "Türdruckplatten" ; "Plaques de porte" ; "Piastre per spinta porte" ; ha-2-2:jevEval:Staged
+; ha-2-2-8 ; jevEval:Staged ; "Door Stops" ; "Türstopper" ; "Butoirs de porte" ; "Fermaporta" ; ha-2-2:jevEval:Staged
+; ha-2-2-9 ; jevEval:Staged ; "Door Strikes" ; "Schlossfallen" ; "Gâches électriques" ; "Serrature" ; ha-2-2:jevEval:Staged
+; ha-2-3-1 ; jevEval:Staged ; "Garage Doors" ; "Garagentore" ; "Portes de garage" ; "Porte per garage" ; ha-2-3:jevEval:Staged
+; ha-2-3-2 ; jevEval:Staged ; "Home Doors" ; "Haustüren" ; "Portes d’entrée" ; "Porte di casa" ; ha-2-3:jevEval:Staged
+; ha-2-6-1 ; jevEval:Staged ; "Float Glass" ; "Floatglas" ; "Verre flotté" ; "Vetro float" ; ha-2-6:jevEval:Staged
+; ha-2-6-2 ; jevEval:Staged ; "Insulated Glass" ; "Isolierglas" ; "Verre isolé" ; "Vetro isolante" ; ha-2-6:jevEval:Staged
+; ha-2-6-3 ; jevEval:Staged ; "Laminated Glass" ; "Verbundglas" ; "Verre feuilleté" ; "Vetro stratificato" ; ha-2-6:jevEval:Staged
+; ha-2-6-4 ; jevEval:Staged ; "Tempered Glass" ; "Gehärtetes Glas" ; "Verre trempé" ; "Vetro temperato" ; ha-2-6:jevEval:Staged
+; ha-2-7-1 ; jevEval:Staged ; "Guardrails" ; "Schutzgeländer" ; "Garde-corps" ; "Guardrail" ; ha-2-7:jevEval:Staged
+; ha-2-7-2 ; jevEval:Staged ; "Handrails" ; "Handläufe" ; "Rampes" ; "Corrimano" ; ha-2-7:jevEval:Staged
+; ha-2-9-1 ; jevEval:Staged ; "Batt Insulation" ; "Dämmstoffplatten" ; "Isolation en batte" ; "Isolamento battuta" ; ha-2-9:jevEval:Staged
+; ha-2-9-2 ; jevEval:Staged ; "Blown-In Insulation" ; "Einblasdämmung" ; "Isolation soufflée" ; "Isolamento insufflato" ; ha-2-9:jevEval:Staged
+; ha-2-9-3 ; jevEval:Staged ; "Foam Board Insulation" ; "Schaumstoffplatten-Dämmung" ; "Isolation en panneaux de mousse" ; "Pannello isolante in schiuma" ; ha-2-9:jevEval:Staged
+; ha-2-9-4 ; jevEval:Staged ; "Loose-Fill Insulation" ; "Lose gefüllte Isolierung" ; "Isolation en vrac" ; "Isolamento sfuso" ; ha-2-9:jevEval:Staged
+; ha-2-9-5 ; jevEval:Staged ; "Roll Insulation" ; "Rollenisolierung" ; "Isolation en rouleau" ; "Isolamento a rotolo" ; ha-2-9:jevEval:Staged
+; ha-2-9-6 ; jevEval:Staged ; "Spray Foam Insulation" ; "Sprühschaumisolierung" ; "Isolation en mousse pulvérisée" ; "Isolamento in schiuma spray" ; ha-2-9:jevEval:Staged
+; ha-2-10-1 ; jevEval:Staged ; "Hardwood Lumber" ; "Laubholz" ; "Planches de bois dur" ; "Legname di legno duro" ; ha-2-10:jevEval:Staged
+; ha-2-10-2 ; jevEval:Staged ; "Plywood" ; "Sperrholz" ; "Contre-plaqué" ; "Compensato" ; ha-2-10:jevEval:Staged
+; ha-2-10-3 ; jevEval:Staged ; "Softwood Lumber" ; "Nadelholz" ; "Bois d’œuvre tendre" ; "Legname di conifere" ; ha-2-10:jevEval:Staged
+; ha-2-12-1 ; jevEval:Staged ; "Rebar" ; "Betonstahl" ; "Barres d’armature" ; "Armatura" ; ha-2-12:jevEval:Staged
+; ha-2-12-2 ; jevEval:Staged ; "Remesh" ; "Remesh" ; "Grillages de renforcement" ; "Remesh" ; ha-2-12:jevEval:Staged
+; ha-2-12-3 ; jevEval:Staged ; "Wire Mesh" ; "Bewehrungsmatte" ; "Grillages" ; "Rete metallica" ; ha-2-12:jevEval:Staged
+; ha-2-13-1 ; jevEval:Staged ; "Gutter Accessories" ; "Zubehör für Dachrinnen" ; "Accessoires pour gouttières" ; "Accessori per grondaie" ; ha-2-13:jevEval:Staged
+; ha-2-13-2 ; jevEval:Staged ; "Gutters" ; "Dachrinnen" ; "Gouttières" ; "Grondaie" ; ha-2-13:jevEval:Staged
+; ha-2-13-3 ; jevEval:Staged ; "Roof Flashings" ; "Kehlbleche" ; "Solins de toiture" ; "Scossaline" ; ha-2-13:jevEval:Staged
+; ha-2-13-4 ; jevEval:Staged ; "Roofing Shingles & Tiles" ; "Dachschindeln & -pfannen" ; "Bardeaux et tuiles" ; "Coperture e tegole per tetti" ; ha-2-13:jevEval:Staged
+; ha-2-14-1 ; jevEval:Staged ; "Board & Batten Shutters" ; "Brett- und Lattenläden" ; "Volets à planches et à lattes" ; "Persiane a bordo e stecca" ; ha-2-14:jevEval:Staged
+; ha-2-14-2 ; jevEval:Staged ; "Louvered Shutters" ; "Lamellenläden" ; "Volets à persiennes" ; "Tapparelle" ; ha-2-14:jevEval:Staged
+; ha-2-14-3 ; jevEval:Staged ; "Raised Panel Shutters" ; "Abgehobene Paneel-Fensterläden" ; "Volets à panneaux surélevés" ; "Persiane a pannelli rialzati" ; ha-2-14:jevEval:Staged
+; ha-2-16-1 ; jevEval:Staged ; "Acoustic Panels" ; "Akustikplatten" ; "Panneaux acoustiques" ; "Pannelli acustici" ; ha-2-16:jevEval:Staged
+; ha-2-16-2 ; jevEval:Staged ; "Bass Traps" ; "Bassfallen" ; "Absorbeurs de basses" ; "Trappole per bassi" ; ha-2-16:jevEval:Staged
+; ha-2-16-3 ; jevEval:Staged ; "Diffusers" ; "Diffusoren" ; "Diffuseurs" ; "Diffusori" ; ha-2-16:jevEval:Staged
+; ha-2-16-4 ; jevEval:Staged ; "Foam Tiles" ; "Schaumstofffliesen" ; "Carreaux de mousse" ; "Piastrelle in schiuma" ; ha-2-16:jevEval:Staged
+; ha-2-17-1 ; jevEval:Staged ; "Curved Staircases" ; "Gebogene Treppen" ; "Escaliers courbes" ; "Scale curve" ; ha-2-17:jevEval:Staged
+; ha-2-17-2 ; jevEval:Staged ; "Floating Staircases" ; "Schwebende Treppen" ; "Escaliers flottants" ; "Scale galleggianti" ; ha-2-17:jevEval:Staged
+; ha-2-17-3 ; jevEval:Staged ; "Spiral Staircases" ; "Spindelreppen" ; "Escaliers en spirale" ; "Scale a chiocciola" ; ha-2-17:jevEval:Staged
+; ha-2-17-4 ; jevEval:Staged ; "Straight Staircases" ; "Gerade Treppen" ; "Escaliers droits" ; "Scale dritte" ; ha-2-17:jevEval:Staged
+; ha-2-17-5 ; jevEval:Staged ; "Winder Staircases" ; "Gewendelte Treppen" ; "Escaliers en colimaçon" ; "Scale con salita a chiocciola" ; ha-2-17:jevEval:Staged
+; ha-2-18-1 ; jevEval:Staged ; "Ceiling Tiles" ; "Deckenfliesen" ; "Carreaux de plafond" ; "Pannelli del controsoffitto" ; ha-2-18:jevEval:Staged
+; ha-2-18-2 ; jevEval:Staged ; "Wall Tiles" ; "Wandfliesen" ; "Carrelage mural" ; "Piastrelle" ; ha-2-18:jevEval:Staged
+; ha-2-19-1 ; jevEval:Staged ; "Beadboards" ; "Beadboards" ; "Lambris bas" ; "Beadboard" ; ha-2-19:jevEval:Staged
+; ha-2-19-2 ; jevEval:Staged ; "Board & Batten Paneling" ; "Brett- und Lattenverkleidung" ; "Lambris à planches et à lattes" ; "Pannellatura di tavole e listelli" ; ha-2-19:jevEval:Staged
+; ha-2-19-3 ; jevEval:Staged ; "Planks" ; "Bretter" ; "Planches" ; "Tavole" ; ha-2-19:jevEval:Staged
+; ha-2-19-4 ; jevEval:Staged ; "Wainscoting Paneling" ; "Vertäfelung" ; "Lambris mural" ; "Boiserie" ; ha-2-19:jevEval:Staged
+; ha-2-20-1 ; jevEval:Staged ; "Door Sweeps" ; "Bodendichtung" ; "Balayages de porte" ; "Guarnizioni porte" ; ha-2-20:jevEval:Staged
+; ha-2-20-2 ; jevEval:Staged ; "Foam Tape" ; "Schaumband" ; "Ruban mousse" ; "Nastro in schiuma" ; ha-2-20:jevEval:Staged
+; ha-2-20-3 ; jevEval:Staged ; "V Strips" ; "V-Streifen" ; "Bandes en V" ; "Strisce a V" ; ha-2-20:jevEval:Staged
+; ha-2-20-4 ; jevEval:Staged ; "Weatherstrip Seal" ; "Dichtungsstreifendichtung" ; "Joint coupe-froid" ; "Guarnizione di tenuta" ; ha-2-20:jevEval:Staged
+; ha-2-21-1 ; jevEval:Staged ; "Window Cranks" ; "Fensterhebel" ; "Manivelles pour fenêtres" ; "Manovelle per finestre" ; ha-2-21:jevEval:Staged
+; ha-2-21-2 ; jevEval:Staged ; "Window Frames" ; "Fensterrahmen" ; "Encadrements de fenêtre" ; "Telai per finestre" ; ha-2-21:jevEval:Staged
+; ha-2-22-1 ; jevEval:Staged ; "Awning Windows" ; "Markisenfenster" ; "Fenêtres à auvent" ; "Finestre per tende da sole" ; ha-2-22:jevEval:Staged
+; ha-2-22-2 ; jevEval:Staged ; "Bay Windows" ; "Erkerfenster" ; "Baies vitrées" ; "Finestre a bovindo" ; ha-2-22:jevEval:Staged
+; ha-2-22-3 ; jevEval:Staged ; "Casement Windows" ; "Flügelfenster" ; "Fenêtres à battants" ; "Finestre a battente" ; ha-2-22:jevEval:Staged
+; ha-2-22-4 ; jevEval:Staged ; "Double Hung Windows" ; "Doppelflügelige Fenster" ; "Fenêtres à guillotine double" ; "Finestre a doppia anta" ; ha-2-22:jevEval:Staged
+; ha-2-22-5 ; jevEval:Staged ; "Picture Windows" ; "Bildfenster" ; "Fenêtres panoramiques" ; "Finestre panoramiche" ; ha-2-22:jevEval:Staged
+; ha-2-22-6 ; jevEval:Staged ; "Sliding Windows" ; "Schiebefenster" ; "Fenêtres coulissantes" ; "Finestre scorrevoli" ; ha-2-22:jevEval:Staged
+; ha-3-2-1 ; jevEval:Staged ; "Decorative Panels" ; "Dekorative Paneele" ; "Panneaux décoratifs" ; "Pannelli decorativi" ; ha-3-2:jevEval:Staged
+; ha-3-2-2 ; jevEval:Staged ; "Pickets" ; "Latten" ; "Piquets" ; "Picchetti" ; ha-3-2:jevEval:Staged
+; ha-3-2-3 ; jevEval:Staged ; "Privacy Panels" ; "Abgrenzungs-Paneele" ; "Panneaux de confidentialité" ; "Pannelli per privacy" ; ha-3-2:jevEval:Staged
+; ha-3-2-4 ; jevEval:Staged ; "Security Panels" ; "Sicherheits-Paneele" ; "Panneau de sécurité" ; "Pannelli di sicurezza" ; ha-3-2:jevEval:Staged
+; ha-3-4-1 ; jevEval:Staged ; "End Posts" ; "Endpfosten" ; "Poteaux de fin de clôture" ; "Post terminali" ; ha-3-4:jevEval:Staged
+; ha-3-4-2 ; jevEval:Staged ; "Line Posts" ; "Linienpfosten" ; "Poteaux de clôture" ; "Post in linea" ; ha-3-4:jevEval:Staged
+; ha-3-4-3 ; jevEval:Staged ; "Rails" ; "Geländer" ; "Rails" ; "Binari" ; ha-3-4:jevEval:Staged
+; ha-3-5-1 ; jevEval:Staged ; "Border Fences" ; "Grenzzäune" ; "Clôtures de bordures" ; "Recinzioni di confine" ; ha-3-5:jevEval:Staged
+; ha-3-5-2 ; jevEval:Staged ; "Edging" ; "Einfassung" ; "Bordures" ; "Bordatura" ; ha-3-5:jevEval:Staged
+; ha-3-6-1 ; jevEval:Staged ; "Driveway Gates" ; "Einfahrtstore" ; "Portails d’allée" ; "Cancelli carrabili" ; ha-3-6:jevEval:Staged
+; ha-3-6-2 ; jevEval:Staged ; "Garden Gates" ; "Gartentore" ; "Portails de jardin" ; "Cancelli del giardino" ; ha-3-6:jevEval:Staged
+; ha-3-6-3 ; jevEval:Staged ; "Security Gates" ; "Sicherheitstore" ; "Barrière de sécurité" ; "Cancelli di sicurezza" ; ha-3-6:jevEval:Staged
+; ha-3-8-1 ; jevEval:Staged ; "Articulating Panels" ; "Schwenkbare Paneele" ; "Panneaux articulés" ; "Pannelli articolati" ; ha-3-8:jevEval:Staged
+; ha-3-8-2 ; jevEval:Staged ; "Auto Barriers" ; "Automatische Barrieren" ; "Barrières automatiques" ; "Barriere automatiche" ; ha-3-8:jevEval:Staged
+; ha-3-8-3 ; jevEval:Staged ; "Parking Locks" ; "Parksperren" ; "Arceaux de parking" ; "Blocchi di parcheggio" ; ha-3-8:jevEval:Staged
+; ha-3-8-4 ; jevEval:Staged ; "Retractable Belts" ; "Einziehbare Gurte" ; "Ceintures rétractables" ; "Cinture retrattili" ; ha-3-8:jevEval:Staged
+; ha-4-2-1 ; jevEval:Staged ; "Clear Kerosene" ; "Klares Kerosin" ; "Kérosène clair" ; "Cherosene non tinto" ; ha-4-2:jevEval:Staged
+; ha-4-2-2 ; jevEval:Staged ; "Dyed Kerosene" ; "Gefärbtes Kerosin" ; "Kérosène teinté" ; "Cherosene tinto" ; ha-4-2:jevEval:Staged
+; ha-6-2-1 ; jevEval:Staged ; "Cabinet & Furniture Keyhole Escutcheons" ; "Schlüssellochverzierungen für Schränke" ; "Entrées de serrure pour armoires et autres meubles" ; "Bocchette per serrature di armadietti e mobili" ; ha-6-2:jevEval:Staged
+; ha-6-2-2 ; jevEval:Staged ; "Cabinet Backplates" ; "Schrankbeschläge" ; "Plaques pour poignées de meubles de cuisine" ; "Piastre posteriori mobiletti" ; ha-6-2:jevEval:Staged
+; ha-6-2-3 ; jevEval:Staged ; "Cabinet Catches" ; "Schrankscharniere" ; "Crochets de portes pour meubles de cuisine" ; "Cerniere per mobili" ; ha-6-2:jevEval:Staged
+; ha-6-2-4 ; jevEval:Staged ; "Cabinet Doors" ; "Schranktüren" ; "Portes pour meubles de cuisine" ; "Ante per mobiletti" ; ha-6-2:jevEval:Staged
+; ha-6-2-5 ; jevEval:Staged ; "Cabinet Knobs & Handles" ; "Schrankknäufe & -griffe" ; "Poignées et boutons de portes pour meubles de cuisine" ; "Pomelli/maniglie mobiletti" ; ha-6-2:jevEval:Staged
+; ha-6-4-1 ; jevEval:Staged ; "Bungee Cords" ; "Spanngummis" ; "Sangles élastiques" ; "Corde elastiche" ; ha-6-4:jevEval:Staged
+; ha-6-4-2 ; jevEval:Staged ; "Chains" ; "Ketten" ; "Chaînes" ; "Catene" ; ha-6-4:jevEval:Staged
+; ha-6-4-3 ; jevEval:Staged ; "Pull Chains" ; "Zugschalterketten und -kordeln" ; "Chaînettes" ; "Catenelle" ; ha-6-4:jevEval:Staged
+; ha-6-4-4 ; jevEval:Staged ; "Ropes & Hardware Cable" ; "Seile" ; "Cordes et câbles de construction" ; "Cavi e funi" ; ha-6-4:jevEval:Staged
+; ha-6-4-5 ; jevEval:Staged ; "Tie Down Straps" ; "Spanngurte" ; "Sangles" ; "Cinghie di fissaggio carichi" ; ha-6-4:jevEval:Staged
+; ha-6-4-6 ; jevEval:Staged ; "Twine" ; "Bindegarne" ; "Ficelles" ; "Spago" ; ha-6-4:jevEval:Staged
+; ha-6-4-7 ; jevEval:Staged ; "Utility Wire" ; "Draht" ; "Câbles" ; "Fil di ferro" ; ha-6-4:jevEval:Staged
+; ha-6-5-1 ; jevEval:Staged ; "Compression Coils" ; "Kompressionsspulen" ; "Bobines de compression" ; "Molle a compressione" ; ha-6-5:jevEval:Staged
+; ha-6-5-2 ; jevEval:Staged ; "Extension Coils" ; "Verlängerungsspulen" ; "Bobines d’extension" ; "Molle ad estensione" ; ha-6-5:jevEval:Staged
+; ha-6-5-3 ; jevEval:Staged ; "Torsion Coils" ; "Windungsspulen" ; "Bobines de torsion" ; "Molle a torsione" ; ha-6-5:jevEval:Staged
+; ha-6-11-1 ; jevEval:Staged ; "Barricade Tape" ; "Absperrband" ; "Rubans de barricade" ; "Nastro per barricata" ; ha-6-11:jevEval:Staged
+; ha-6-11-2 ; jevEval:Staged ; "Flagging Tape" ; "Kennzeichnungsband" ; "Rubans de signalisation" ; "Nastro di segnalazione" ; ha-6-11:jevEval:Staged
+; ha-6-11-3 ; jevEval:Staged ; "Marking Tape" ; "Markierungsband" ; "Rubans de marquage" ; "Nastro di marcatura" ; ha-6-11:jevEval:Staged
+; ha-6-14-1 ; jevEval:Staged ; "Drywall Anchors" ; "Dübel" ; "Ancrages pour cloisons sèches" ; "Tasselli per cartongesso" ; ha-6-14:jevEval:Staged
+; ha-6-14-2 ; jevEval:Staged ; "Nails" ; "Nägel" ; "Clous" ; "Chiodi" ; ha-6-14:jevEval:Staged
+; ha-6-14-3 ; jevEval:Staged ; "Nuts & Bolts" ; "Schrauben & Muttern" ; "Écrous et boulons" ; "Dadi e bulloni" ; ha-6-14:jevEval:Staged
+; ha-6-14-4 ; jevEval:Staged ; "Rivets" ; "Nieten" ; "Rivets" ; "Rivetti" ; ha-6-14:jevEval:Staged
+; ha-6-14-5 ; jevEval:Staged ; "Screw Posts" ; "Schraubverbinder" ; "Vis radiculaires" ; "Viti tubolari" ; ha-6-14:jevEval:Staged
+; ha-6-14-6 ; jevEval:Staged ; "Screws" ; "Schrauben" ; "Vis" ; "Viti" ; ha-6-14:jevEval:Staged
+; ha-6-14-7 ; jevEval:Staged ; "Threaded Rods" ; "Gewindestangen" ; "Tiges filetées" ; "Barre filettate" ; ha-6-14:jevEval:Staged
+; ha-6-14-8 ; jevEval:Staged ; "Washers" ; "Unterlegscheiben" ; "Rondelles" ; "Guarnizioni" ; ha-6-14:jevEval:Staged
+; ha-6-16-1 ; jevEval:Staged ; "Chain Connectors & Links" ; "Kettenverbinder & -glieder" ; "Maillons et mailles d’accouplement pour chaînes" ; "Maglie e connettori per catene" ; ha-6-16:jevEval:Staged
+; ha-6-16-2 ; jevEval:Staged ; "Gear Ties" ; "Gear Tie-Universalkabelbinder" ; "Attaches flexibles" ; "Fascette varie" ; ha-6-16:jevEval:Staged
+; ha-6-16-3 ; jevEval:Staged ; "Lifting Hooks, Clamps & Shackles" ; "Lasthaken, Trageklemmen & Schäkel" ; "Crochets de levage, pinces et manilles" ; "Ganci di sollevamento, morsetti e moschettoni" ; ha-6-16:jevEval:Staged
+; ha-6-16-4 ; jevEval:Staged ; "Utility Buckles" ; "Schnallen- & Steckschnallen" ; "Attaches industrielles" ; "Fibbie per usi pratici" ; ha-6-16:jevEval:Staged
+; ha-6-19-1 ; jevEval:Staged ; "Moving Blankets & Covers" ; "Transportschutzabdeckungen" ; "Couvertures et draps de déménagement" ; "Coperte e coperture per traslochi" ; ha-6-19:jevEval:Staged
+; ha-6-19-2 ; jevEval:Staged ; "Soundproofing Blankets & Covers" ; "Schallschutzabdeckungen" ; "Couvertures et draps d’insonorisation" ; "Coperte e coperture insonorizzate" ; ha-6-19:jevEval:Staged
+; ha-6-20-1 ; jevEval:Staged ; "Air Pneumatic Hoses" ; "Luftpneumatikschläuche" ; "Tuyaux pneumatiques à air" ; "Tubi pneumatici" ; ha-6-20:jevEval:Staged
+; ha-6-20-2 ; jevEval:Staged ; "Oil Pneumatic Hoses" ; "Ölpneumatikschläuche" ; "Tuyaux pneumatiques à huile" ; "Tubi oleopneumatici" ; ha-6-20:jevEval:Staged
+; ha-6-22-1 ; jevEval:Staged ; "Compression Springs" ; "Druckfedern" ; "Ressorts de compression" ; "Molle di compressione" ; ha-6-22:jevEval:Staged
+; ha-6-22-2 ; jevEval:Staged ; "Extension Springs" ; "Zugfedern" ; "Ressorts d’extension" ; "Molle di estensione" ; ha-6-22:jevEval:Staged
+; ha-6-22-3 ; jevEval:Staged ; "Torsion Springs" ; "Drehfedern" ; "Ressorts de torsion" ; "Molle di torsione" ; ha-6-22:jevEval:Staged
+; ha-6-24-1 ; jevEval:Staged ; "Garden Hose Storage" ; "Gartenschlauchhalterungen" ; "Porte-tuyau d’arrosage" ; "Portacanna dell'acqua" ; ha-6-24:jevEval:Staged
+; ha-6-24-2 ; jevEval:Staged ; "Tool & Equipment Belts" ; "Dienst- & Werkzeuggürtel" ; "Ceintures de service et porte-outils" ; "Cinture portautensili" ; ha-6-24:jevEval:Staged
+; ha-6-24-3 ; jevEval:Staged ; "Tool Bags" ; "Werkzeugtaschen" ; "Sacs à outils" ; "Borse porta-attrezzi" ; ha-6-24:jevEval:Staged
+; ha-6-24-4 ; jevEval:Staged ; "Tool Boxes" ; "Werkzeugkästen" ; "Boîtes à outils" ; "Cassette degli attrezzi" ; ha-6-24:jevEval:Staged
+; ha-6-24-5 ; jevEval:Staged ; "Tool Cabinets & Chests" ; "Werkzeugschränke" ; "Armoires à outils" ; "Armadietti per attrezzi" ; ha-6-24:jevEval:Staged
+; ha-6-24-6 ; jevEval:Staged ; "Tool Organizer Liners & Inserts" ; "Einsätze zur Werkzeugaufbewahrung" ; "Rangements et caissons pour caisses à outils" ; "Fodere e inserti per l'organizzazione di strumenti" ; ha-6-24:jevEval:Staged
+; ha-6-24-7 ; jevEval:Staged ; "Tool Sheaths" ; "Werkzeugetuis" ; "Étuis pour outils" ; "Fondine per attrezzi" ; ha-6-24:jevEval:Staged
+; ha-6-24-8 ; jevEval:Staged ; "Work Benches" ; "Werkbänke" ; "Établis" ; "Banchi da lavoro" ; ha-6-24:jevEval:Staged
+; ha-7-1-1 ; jevEval:Staged ; "Condensate Pumps" ; "Kondensatpumpen" ; "Pompes à condensats" ; "Pompe per condensa" ; ha-7-1:jevEval:Staged
+; ha-7-1-2 ; jevEval:Staged ; "Drain Pumps" ; "Entwässerungspumpen" ; "Pompes de vidange" ; "Pompe di scarico" ; ha-7-1:jevEval:Staged
+; ha-7-1-3 ; jevEval:Staged ; "Recirculating Pumps" ; "Umwälzpumpen" ; "Pompes de recirculation" ; "Pompe di ricircolo" ; ha-7-1:jevEval:Staged
+; ha-7-2-1 ; jevEval:Staged ; "Fountain Pumps" ; "Springbrunnenpumpen" ; "Pompes de fontaine" ; "Pompe per fontane" ; ha-7-2:jevEval:Staged
+; ha-7-2-2 ; jevEval:Staged ; "Pond Pumps" ; "Teichpumpen" ; "Pompes de bassin" ; "Pompe per stagno" ; ha-7-2:jevEval:Staged
+; ha-7-2-3 ; jevEval:Staged ; "Pool Pumps" ; "Poolpumpen" ; "Pompes de piscine" ; "Pompe per piscine" ; ha-7-2:jevEval:Staged
+; ha-7-3-1 ; jevEval:Staged ; "Booster Pumps" ; "Druckerhöhungspumpen" ; "Pompes de surpression" ; "Pompe booster" ; ha-7-3:jevEval:Staged
+; ha-7-3-2 ; jevEval:Staged ; "Centrifugal Pumps" ; "Kreiselpumpen" ; "Pompes centrifuges" ; "Pompe centrifughe" ; ha-7-3:jevEval:Staged
+; ha-7-3-5 ; jevEval:Staged ; "Positive Displacement Pumps" ; "Verdrängerpumpen" ; "Pompes volumétriques" ; "Pompe volumetriche positive" ; ha-7-3:jevEval:Staged
+; ha-7-4-1 ; jevEval:Staged ; "Effluent Pumps" ; "Abwasserpumpen" ; "Pompes d’effluent" ; "Pompe per effluenti" ; ha-7-4:jevEval:Staged
+; ha-7-4-2 ; jevEval:Staged ; "Sewage Pumps" ; "Schmutzwasserpumpen" ; "Pompes à eaux usées" ; "Pompe per fognature" ; ha-7-4:jevEval:Staged
+; ha-7-4-3 ; jevEval:Staged ; "Sump Pumps" ; "Sumpfpumpen" ; "Pompes d’épuisement" ; "Pompe di raccolta" ; ha-7-4:jevEval:Staged
+; ha-7-5-1 ; jevEval:Staged ; "Drum Pumps" ; "Fasspumpen" ; "Pompes pour fût" ; "Pompe per cilindri" ; ha-7-5:jevEval:Staged
+; ha-7-5-2 ; jevEval:Staged ; "Submersible Pumps" ; "Tauchpumpen" ; "Pompes submersibles" ; "Pompe sommergibili" ; ha-7-5:jevEval:Staged
+; ha-7-5-3 ; jevEval:Staged ; "Transfer Pumps" ; "Transferpumpen" ; "Pompes de transfert" ; "Pompe di trasferimento" ; ha-7-5:jevEval:Staged
+; ha-8-3-1 ; jevEval:Staged ; "Control Panels" ; "Schalt- & Bedienungstafeln" ; "Panneaux de commandes" ; "Quadri di controllo" ; ha-8-3:jevEval:Staged
+; ha-8-3-2 ; jevEval:Staged ; "Humidistats" ; "Feuchtigkeitsregler" ; "Humidostats" ; "Strumenti per la misurazione dell'umidità" ; ha-8-3:jevEval:Staged
+; ha-8-3-3 ; jevEval:Staged ; "Thermostats" ; "Thermostate" ; "Thermostats" ; "Termostati" ; ha-8-3:jevEval:Staged
+; ha-9-3-1 ; jevEval:Staged ; "Magnetic Stripe Cards" ; "Magnetstreifenkarten" ; "Cartes à bande magnétique" ; "Carte a banda magnetica" ; ha-9-3:jevEval:Staged
+; ha-9-3-3 ; jevEval:Staged ; "Contactless Cards" ; "Kontaktlose Karten" ; "Cartes sans contact" ; "Carta contactless" ; ha-9-3:jevEval:Staged
+; ha-9-4-1 ; jevEval:Staged ; "Barrel Bolts" ; "Torschließbolzen" ; "Verrous pistolets" ; "Bulloni a barre" ; ha-9-4:jevEval:Staged
+; ha-9-4-2 ; jevEval:Staged ; "Cam Locks" ; "Haltenocken" ; "Serrures à cale" ; "Serrature a camma" ; ha-9-4:jevEval:Staged
+; ha-9-4-3 ; jevEval:Staged ; "Deadbolts" ; "Türriegel" ; "Verrous à clé" ; "Catenacci" ; ha-9-4:jevEval:Staged
+; ha-9-4-5 ; jevEval:Staged ; "Latches" ; "Arretierungen" ; "Loquets" ; "Chiusure" ; ha-9-4:jevEval:Staged
+; ha-10-1-1 ; jevEval:Staged ; "Gaskets & O-Rings" ; "Dichtungen & O-Ringe" ; "Joints d’étanchéité et joints toriques" ; "Guarnizioni idrauliche" ; ha-10-1:jevEval:Staged
+; ha-10-1-2 ; jevEval:Staged ; "In-Wall Carriers & Mounting Frames" ; "In der Wand verbaute Trägerleisten" ; "Bâti-supports" ; "Telai e supporti interni alle pareti" ; ha-10-1:jevEval:Staged
+; ha-10-1-3 ; jevEval:Staged ; "Nozzles" ; "Düsen" ; "Buses" ; "Ugelli" ; ha-10-1:jevEval:Staged
+; ha-10-1-4 ; jevEval:Staged ; "Pipe Adapters & Bushings" ; "Rohranschlüsse & Reduzierstücke" ; "Adaptateurs et raccords de tuyauterie" ; "Adattatori e boccole tubi" ; ha-10-1:jevEval:Staged
+; ha-10-1-5 ; jevEval:Staged ; "Pipe Caps & Plugs" ; "Rohrkappen & -verschlüsse" ; "Bouchons mâles et femelles" ; "Cappucci e tappi per tubi" ; ha-10-1:jevEval:Staged
+; ha-10-1-6 ; jevEval:Staged ; "Pipe Connectors" ; "Rohrverbinder" ; "Raccords de tuyauterie" ; "Raccordi tubi" ; ha-10-1:jevEval:Staged
+; ha-10-1-7 ; jevEval:Staged ; "Plumbing Flanges" ; "Rohrflansche" ; "Colliers de serrage de plomberie" ; "Flange idrauliche" ; ha-10-1:jevEval:Staged
+; ha-10-1-8 ; jevEval:Staged ; "Plumbing Pipe Clamps" ; "Rohrschellen" ; "Brides de fixation de plomberie" ; "Morsetti per tubi" ; ha-10-1:jevEval:Staged
+; ha-10-1-9 ; jevEval:Staged ; "Plumbing Regulators" ; "Druckminderer" ; "Régulateurs de plomberie" ; "Regolatori idraulici" ; ha-10-1:jevEval:Staged
+; ha-10-1-10 ; jevEval:Staged ; "Plumbing Valves" ; "Ventile" ; "Soupapes de plomberie" ; "Valvole idrauliche" ; ha-10-1:jevEval:Staged
+; ha-10-2-1 ; jevEval:Staged ; "Bathtub Accessories" ; "Zubehör für Badewannen" ; "Accessoires pour baignoires" ; "Accessori vasche da bagno" ; ha-10-2:jevEval:Staged
+; ha-10-2-2 ; jevEval:Staged ; "Drain Components" ; "Abflusskomponenten" ; "Éléments de canalisations" ; "Componenti idraulici" ; ha-10-2:jevEval:Staged
+; ha-10-2-3 ; jevEval:Staged ; "Drains" ; "Abflüsse" ; "Canalisations" ; "Articoli per idraulica" ; ha-10-2:jevEval:Staged
+; ha-10-2-4 ; jevEval:Staged ; "Faucet Accessories" ; "Zubehör für Armaturen" ; "Accessoires pour robinets" ; "Accessori rubinetti" ; ha-10-2:jevEval:Staged
+; ha-10-2-5 ; jevEval:Staged ; "Fixture Plates" ; "Halterungsplatten" ; "Plaques d’usinage" ; "Piastre di fissaggio" ; ha-10-2:jevEval:Staged
+; ha-10-2-6 ; jevEval:Staged ; "Shower Parts" ; "Duscharmaturen" ; "Pièces de douches" ; "Componenti doccia" ; ha-10-2:jevEval:Staged
+; ha-10-2-7 ; jevEval:Staged ; "Sink Accessories" ; "Waschbecken- & Spülenzubehör" ; "Accessoires pour éviers" ; "Accessori lavandini" ; ha-10-2:jevEval:Staged
+; ha-10-2-8 ; jevEval:Staged ; "Toilet & Bidet Accessories" ; "Toiletten- und Bidetzubehör" ; "Accessoires pour bidets et toilettes" ; "Accessori WC e bidet" ; ha-10-2:jevEval:Staged
+; ha-10-3-1 ; jevEval:Staged ; "Bathroom Suites" ; "Badezimmerausstattungen" ; "Ensembles d’équipements pour salles de bains" ; "Set di sanitari per bagno" ; ha-10-3:jevEval:Staged
+; ha-10-3-2 ; jevEval:Staged ; "Bathtubs" ; "Badewannen" ; "Baignoires" ; "Vasche da bagno" ; ha-10-3:jevEval:Staged
+; ha-10-3-3 ; jevEval:Staged ; "Faucets" ; "Armaturen" ; "Robinets" ; "Rubinetteria" ; ha-10-3:jevEval:Staged
+; ha-10-3-4 ; jevEval:Staged ; "Shower Stalls & Kits" ; "Duschkabinen" ; "Cabines et kits de douche" ; "Cabine e kit per doccia" ; ha-10-3:jevEval:Staged
+; ha-10-3-5 ; jevEval:Staged ; "Sinks" ; "Waschbecken & Spülen" ; "Éviers et lavabos" ; "Lavandini" ; ha-10-3:jevEval:Staged
+; ha-10-3-6 ; jevEval:Staged ; "Toilets & Bidets" ; "Toiletten & Bidets" ; "Toilettes et bidets" ; "WC e bidet" ; ha-10-3:jevEval:Staged
+; ha-10-4-1 ; jevEval:Staged ; "Faucet Supply Lines" ; "Armaturenleitungen" ; "Conduits d’alimentation de robinet" ; "Tubature di alimentazione per rubinetto" ; ha-10-4:jevEval:Staged
+; ha-10-4-2 ; jevEval:Staged ; "Toilet Supply Lines" ; "Toilettenleitungen" ; "Conduits d’alimentation des toilettes" ; "Tubature di alimentazione per bagno" ; ha-10-4:jevEval:Staged
+; ha-10-4-3 ; jevEval:Staged ; "Washing Machine Supply Lines" ; "Waschmaschinenleitungen" ; "Conduites d’alimentation pour machine à laver" ; "Tubature di alimentazione per lavatrice" ; ha-10-4:jevEval:Staged
+; ha-10-5-1 ; jevEval:Staged ; "Drain Pipes" ; "Abflussrohre" ; "Tuyau de vidange" ; "Tubi di scarico" ; ha-10-5:jevEval:Staged
+; ha-10-5-2 ; jevEval:Staged ; "Supply Pipes" ; "Versorgungsrohre" ; "Tuyaux d’alimentation" ; "Tubi di alimentazione" ; ha-10-5:jevEval:Staged
+; ha-10-5-3 ; jevEval:Staged ; "Vent Pipes" ; "Entlüftungsrohre" ; "Tuyaux de ventilation" ; "Tubi di sfiato" ; ha-10-5:jevEval:Staged
+; ha-10-6-1 ; jevEval:Staged ; "Faucet Repair Kits" ; "Armaturen-Reparaturkits" ; "Kits de réparation de robinet" ; "Kit di riparazione rubinetti" ; ha-10-6:jevEval:Staged
+; ha-10-6-2 ; jevEval:Staged ; "Pipe Repair Kits" ; "Rohr-Reparaturkits" ; "Kits de réparation de tuyaux" ; "Kit di riparazione tubi" ; ha-10-6:jevEval:Staged
+; ha-10-6-3 ; jevEval:Staged ; "Toilet Repair Kits" ; "Toiletten-Reparaturkits" ; "Kits de réparation de toilettes" ; "Kit di riparazione bagni" ; ha-10-6:jevEval:Staged
+; ha-10-7-1 ; jevEval:Staged ; "In-Line Water Filters" ; "Wasserleitungsfilter" ; "Filtres à eau en ligne" ; "Filtri acqua integrati" ; ha-10-7:jevEval:Staged
+; ha-10-7-2 ; jevEval:Staged ; "Water Dispensers" ; "Wasserspender" ; "Distributeurs d’eau fraîche" ; "Distributori d'acqua" ; ha-10-7:jevEval:Staged
+; ha-10-7-3 ; jevEval:Staged ; "Water Distillers" ; "Wasserdestillationsgeräte" ; "Distillateurs d’eau" ; "Distillatori acqua" ; ha-10-7:jevEval:Staged
+; ha-10-7-4 ; jevEval:Staged ; "Water Filtration Accessories" ; "Zubehör für Wasserfilter" ; "Accessoires de filtration de l’eau" ; "Accessori per filtro acqua" ; ha-10-7:jevEval:Staged
+; ha-10-7-5 ; jevEval:Staged ; "Water Softener Salt" ; "Salz zur Wasserenthärtung" ; "Sel pour adoucisseur d’eau" ; "Sale anticalcare" ; ha-10-7:jevEval:Staged
+; ha-10-7-6 ; jevEval:Staged ; "Water Softeners" ; "Wasserenthärter" ; "Adoucisseurs d’eau" ; "Addolcitori" ; ha-10-7:jevEval:Staged
+; ha-11-1-1 ; jevEval:Staged ; "Armatures" ; "Ankerspulen" ; "Armatures" ; "Armature" ; ha-11-1:jevEval:Staged
+; ha-11-1-2 ; jevEval:Staged ; "Rotors" ; "Rotoren" ; "Rotors" ; "Rotori" ; ha-11-1:jevEval:Staged
+; ha-11-1-3 ; jevEval:Staged ; "Stators" ; "Statoren" ; "Stators" ; "Statori" ; ha-11-1:jevEval:Staged
+; ha-11-2-1 ; jevEval:Staged ; "Electronic Ballasts" ; "Elektronische Vorschaltgeräte" ; "Ballasts électroniques" ; "Resistenze elettroniche" ; ha-11-2:jevEval:Staged
+; ha-11-2-2 ; jevEval:Staged ; "Magnetic Ballasts" ; "Magnetische Vorschaltgeräte" ; "Ballasts magnétiques" ; "Resistenze magnetiche" ; ha-11-2:jevEval:Staged
+; ha-11-2-3 ; jevEval:Staged ; "Starters" ; "Starter" ; "Démarreurs" ; "Starters" ; ha-11-2:jevEval:Staged
+; ha-11-4-1 ; jevEval:Staged ; "Main Breaker Panels" ; "Hauptschaltertafel" ; "Tableaux électriques principaux" ; "Pannelli interruttori principali" ; ha-11-4:jevEval:Staged
+; ha-11-4-2 ; jevEval:Staged ; "Sub-Panel Breaker Panels" ; "Untergeordnete Schaltertafel" ; "Sous-panneaux électriques" ; "Pannelli interruttori sottopannello" ; ha-11-4:jevEval:Staged
+; ha-11-6-1 ; jevEval:Staged ; "Electrical Conduit" ; "Kabelkanäle" ; "Gaine électrique" ; "Condotti elettrici" ; ha-11-6:jevEval:Staged
+; ha-11-6-2 ; jevEval:Staged ; "Heat-Shrink Tubing" ; "Schrumpfschläuche" ; "Tubes thermorétrécissables" ; "Guaine termorestringenti" ; ha-11-6:jevEval:Staged
+; ha-11-7-1 ; jevEval:Staged ; "Induction Motors" ; "Induktionsmotoren" ; "Moteurs à induction" ; "Motori a induzione" ; ha-11-7:jevEval:Staged
+; ha-11-7-2 ; jevEval:Staged ; "Servo Motors" ; "Servomotoren" ; "Servomoteurs" ; "Servomotori" ; ha-11-7:jevEval:Staged
+; ha-11-7-3 ; jevEval:Staged ; "Universal Motors" ; "Universalmotoren" ; "Moteurs universels" ; "Motori universali" ; ha-11-7:jevEval:Staged
+; ha-11-8-1 ; jevEval:Staged ; "Mount Boxes" ; "Montageboxen" ; "Boîtes de fixation" ; "Scatole di montaggio" ; ha-11-8:jevEval:Staged
+; ha-11-8-2 ; jevEval:Staged ; "Mount Brackets" ; "Montagehalterungen" ; "Équerres de fixation" ; "Staffe di montaggio" ; ha-11-8:jevEval:Staged
+; ha-11-10-1 ; jevEval:Staged ; "Light Switches" ; "Lichtschalter" ; "Interrupteurs lumineux" ; "Interruttori della luce" ; ha-11-10:jevEval:Staged
+; ha-11-10-2 ; jevEval:Staged ; "Specialty Electrical Switches & Relays" ; "Spezielle elektrische Schalter" ; "Interrupteurs électriques spéciaux" ; "Interruttori elettrici speciali" ; ha-11-10:jevEval:Staged
+; ha-11-15-1 ; jevEval:Staged ; "Inverter Generators" ; "Wechselrichtergeneratoren" ; "Générateurs à onduleur" ; "Generatori di inverter" ; ha-11-15:jevEval:Staged
+; ha-11-15-2 ; jevEval:Staged ; "Portable Generators" ; "Tragbare Generatoren" ; "Générateurs portatifs" ; "Generatori portatili" ; ha-11-15:jevEval:Staged
+; ha-11-15-3 ; jevEval:Staged ; "Standby Generators" ; "Behelfsgeneratoren" ; "Générateurs de secours" ; "Generatori di riserva" ; ha-11-15:jevEval:Staged
+; ha-11-16-1 ; jevEval:Staged ; "Energy Management Kits" ; "Energiemanagement-Kits" ; "Kits de gestion de l’énergie" ; "Kit di gestione energetica" ; ha-11-16:jevEval:Staged
+; ha-11-16-2 ; jevEval:Staged ; "Lighting Control Kits" ; "Lichtsteuerungskits" ; "Kits de contrôle d’éclairage" ; "Kit di controllo dell'illuminazione" ; ha-11-16:jevEval:Staged
+; ha-11-16-3 ; jevEval:Staged ; "Security Kits" ; "Sicherheitskits" ; "Kits de sécurité" ; "Kit di sicurezza" ; ha-11-16:jevEval:Staged
+; ha-11-17-1 ; jevEval:Staged ; "Ethernet Jacks" ; "Ethernet-Buchsen" ; "Prises Ethernet" ; "Jack Ethernet" ; ha-11-17:jevEval:Staged
+; ha-11-17-2 ; jevEval:Staged ; "Phone Jacks" ; "Telefonbuchsen" ; "Prises téléphoniques" ; "Jack per telefono" ; ha-11-17:jevEval:Staged
+; ha-11-18-1 ; jevEval:Staged ; "Step-Down Converters" ; "Abwärtswandler" ; "Convertisseurs abaisseurs" ; "Convertitori step-down" ; ha-11-18:jevEval:Staged
+; ha-11-18-2 ; jevEval:Staged ; "Step-Up Converters" ; "Aufwärtswandler" ; "Convertisseurs élévateurs" ; "Convertitori step-up" ; ha-11-18:jevEval:Staged
+; ha-11-21-1 ; jevEval:Staged ; "Floor Outlets" ; "Bodensteckdosen" ; "Prises au sol" ; "Prese a pavimento" ; ha-11-21:jevEval:Staged
+; ha-11-21-2 ; jevEval:Staged ; "Pop-Up Outlets" ; "Versenkbare Steckdosen" ; "Prises escamotables" ; "Prese pop-up" ; ha-11-21:jevEval:Staged
+; ha-11-21-3 ; jevEval:Staged ; "Wall Outlets" ; "Wandsteckdosen" ; "Prises murales" ; "Prese a muro" ; ha-11-21:jevEval:Staged
+; ha-11-22-1 ; jevEval:Staged ; "Backup Power Kits" ; "Reserveleistungskits" ; "Kits d’alimentation de secours" ; "Kit di alimentazione di backup" ; ha-11-22:jevEval:Staged
+; ha-11-22-2 ; jevEval:Staged ; "Grid-Tied Solar Kits" ; "Netzgekoppelte Solar-Kits" ; "Kits solaires connectés au réseau" ; "Kit solari collegati alla rete" ; ha-11-22:jevEval:Staged
+; ha-11-22-3 ; jevEval:Staged ; "Off-Grid Solar Kits" ; "Netzunabhängige Solar-Kits" ; "Kits solaires hors réseau" ; "Kit solari fuori rete" ; ha-11-22:jevEval:Staged
+; ha-11-23-1 ; jevEval:Staged ; "Monocrystalline Solar Panels" ; "Monokristalline Solarpaneele" ; "Panneaux solaires monocristallins" ; "Pannelli solari monocristallini" ; ha-11-23:jevEval:Staged
+; ha-11-23-2 ; jevEval:Staged ; "Polycrystalline Solar Panels" ; "Polykristalline Solarpaneele" ; "Panneaux solaires polycristallins" ; "Pannelli solari policristallini" ; ha-11-23:jevEval:Staged
+; ha-11-23-3 ; jevEval:Staged ; "Thin-Film Solar Panels" ; "Dünnschicht-Solarpaneele" ; "Panneaux solaires en couches minces" ; "Pannelli solari a film sottile" ; ha-11-23:jevEval:Staged
+; ha-11-24-1 ; jevEval:Staged ; "Voltage Regulators" ; "Spannungsregler" ; "Régulateurs de tension" ; "Regolatori di tensione" ; ha-11-24:jevEval:Staged
+; ha-11-24-2 ; jevEval:Staged ; "Voltage Transformers" ; "Spannungswandler" ; "Transformateurs de tension" ; "Trasformatori di tensione" ; ha-11-24:jevEval:Staged
+; ha-11-25-1 ; jevEval:Staged ; "Blank Wall Plates" ; "Leere Wandplatten" ; "Plaques murales vierges" ; "Placche a muro vuote" ; ha-11-25:jevEval:Staged
+; ha-11-25-2 ; jevEval:Staged ; "Plug Socket Covers" ; "Steckdosenkappen" ; "Cache-prise" ; "Coperture per prese di corrente" ; ha-11-25:jevEval:Staged
+; ha-11-25-3 ; jevEval:Staged ; "Toggle Switch Plates" ; "Kippschalterplatten" ; "Plaques d’interrupteurs" ; "Piastre per interruttori a levetta" ; ha-11-25:jevEval:Staged
+; ha-11-26-1 ; jevEval:Staged ; "Light Sensors" ; "Lichtsensoren" ; "Capteurs de lumière" ; "Sensori di luce" ; ha-11-26:jevEval:Staged
+; ha-11-26-2 ; jevEval:Staged ; "Timer Switches" ; "Zeitschaltuhren" ; "Commutateurs de minuteries" ; "Interruttori timer" ; ha-11-26:jevEval:Staged
+; ha-11-27-1 ; jevEval:Staged ; "Wire Caps" ; "Drahtkappen" ; "Capuchons de fils" ; "Tappi per cavi" ; ha-11-27:jevEval:Staged
+; ha-11-27-2 ; jevEval:Staged ; "Wire Nuts" ; "Drahtmuttern" ; "Écrous de fils" ; "Dadi per cavi" ; ha-11-27:jevEval:Staged
+; ha-11-28-1 ; jevEval:Staged ; "Butt Connectors" ; "Stoßverbinder" ; "Connecteurs bout à bout" ; "Connettori di testa" ; ha-11-28:jevEval:Staged
+; ha-11-28-2 ; jevEval:Staged ; "Ring Terminals" ; "Geschlossene Kabelschuhe" ; "Bornes à anneau" ; "Terminali ad anello" ; ha-11-28:jevEval:Staged
+; ha-11-28-3 ; jevEval:Staged ; "Spade Terminals" ; "Flachsteckhülse" ; "Bornes à fourche" ; "Terminali a forcella" ; ha-11-28:jevEval:Staged
+; ha-14-1-1 ; jevEval:Staged ; "Sandblasting Cabinets" ; "Sandstrahlkabinen" ; "Armoires pour sablage" ; "Dispositivi per sabbiatura" ; ha-14-1:jevEval:Staged
+; ha-14-2-1 ; jevEval:Staged ; "Axe Handles" ; "Axtgriffe" ; "Manches de hache" ; "Manici per asce" ; ha-14-2:jevEval:Staged
+; ha-14-2-2 ; jevEval:Staged ; "Axe Heads" ; "Axtköpfe" ; "Têtes de haches" ; "Teste per asce" ; ha-14-2:jevEval:Staged
+; ha-14-3-1 ; jevEval:Staged ; "Nibbler Dies" ; "Nibbelmaschinenstempel" ; "Matrices pour grignoteuses" ; "Pinze di serraggio con dado" ; ha-14-3:jevEval:Staged
+; ha-14-4-1 ; jevEval:Staged ; "Drill & Screwdriver Bits" ; "Bohrer & Bits" ; "Forets et embouts de tournevis" ; "Punte di trapano e cacciavite" ; ha-14-4:jevEval:Staged
+; ha-14-4-2 ; jevEval:Staged ; "Drill Bit Extensions" ; "Bohrerverlängerungen" ; "Extensions de forets" ; "Adattatori e estensioni per punte di trapano" ; ha-14-4:jevEval:Staged
+; ha-14-4-3 ; jevEval:Staged ; "Drill Bit Sharpeners" ; "Bohrerschleifgeräte" ; "Affûteuses de forets" ; "Affilatori per punte di trapano" ; ha-14-4:jevEval:Staged
+; ha-14-4-4 ; jevEval:Staged ; "Drill Chucks" ; "Bohrfutter" ; "Mandrins" ; "Mandrini" ; ha-14-4:jevEval:Staged
+; ha-14-4-5 ; jevEval:Staged ; "Drill Stands & Guides" ; "Bohrständer & -führungen" ; "Supports et guides de perçage" ; "Guide e supporti per punte" ; ha-14-4:jevEval:Staged
+; ha-14-4-6 ; jevEval:Staged ; "Hole Saws" ; "Lochsägen" ; "Scie cloche" ; "Sega a tazza" ; ha-14-4:jevEval:Staged
+; ha-14-7-1 ; jevEval:Staged ; "Grinding Wheels & Points" ; "Schleifscheiben & -stifte" ; "Meules et pointes montées" ; "Dischi e punte per smerigliatrici" ; ha-14-7:jevEval:Staged
+; ha-14-8-1 ; jevEval:Staged ; "Air Hammer Accessories" ; "Drucklufthammerzubehör" ; "Accessoires pour marteaux à air comprimé" ; "Accessori per martelli ad aria compressa" ; ha-14-8:jevEval:Staged
+; ha-14-8-2 ; jevEval:Staged ; "Hammer Handles" ; "Hammerstiele" ; "Poignées de marteau" ; "Manici di martelli" ; ha-14-8:jevEval:Staged
+; ha-14-8-3 ; jevEval:Staged ; "Hammer Heads" ; "Hammerköpfe" ; "Têtes de marteaux" ; "Teste per martelli" ; ha-14-8:jevEval:Staged
+; ha-14-10-1 ; jevEval:Staged ; "Drill Jigs" ; "Bohrschablonen" ; "Gabarits de perçage" ; "Maschere di foratura per trapano" ; ha-14-10:jevEval:Staged
+; ha-14-10-2 ; jevEval:Staged ; "Router Jigs" ; "Frässchablonen" ; "Gabarits de routeur" ; "Maschere per fresatrice" ; ha-14-10:jevEval:Staged
+; ha-14-10-3 ; jevEval:Staged ; "Saw Jigs" ; "Sägeschablonen" ; "Gabarits de scie" ; "Maschere per sega" ; ha-14-10:jevEval:Staged
+; ha-14-12-1 ; jevEval:Staged ; "Mattock & Pickaxe Handles" ; "Griffe für Hacken & Pickel" ; "Manches pour haches et pioches" ; "Manici per zappascuri e picconi" ; ha-14-12:jevEval:Staged
+; ha-14-13-1 ; jevEval:Staged ; "Electrical Testing Tool Accessories" ; "Zubehör für Spannungsmesser" ; "Accessoires pour outils de test électrique" ; "Accessori per rilevatori di tensione" ; ha-14-13:jevEval:Staged
+; ha-14-13-2 ; jevEval:Staged ; "Gas Detector Accessories" ; "Zubehör für Gasdetektoren" ; "Accessoires pour détecteurs de gaz" ; "Accessori gas detector" ; ha-14-13:jevEval:Staged
+; ha-14-13-3 ; jevEval:Staged ; "Measuring Scale Accessories" ; "Zubehör für Messskalen" ; "Accessoires pour balances" ; "Accessori per scale di misurazione" ; ha-14-13:jevEval:Staged
+; ha-14-13-4 ; jevEval:Staged ; "Multimeter Accessories" ; "Multimeter-Zubehör" ; "Accessoires pour multimètres" ; "Accessori per misuratori di tensione" ; ha-14-13:jevEval:Staged
+; ha-14-13-5 ; jevEval:Staged ; "Micrometer Accessories" ; "Mikrometer-Zubehör" ; "Accessoires pour micromètres" ; "Accessori per micrometri" ; ha-14-13:jevEval:Staged
+; ha-14-15-1 ; jevEval:Staged ; "Airbrush Accessories" ; "Airbrushzubehör" ; "Accessoires pour aérographes" ; "Accessori per spruzzatori" ; ha-14-15:jevEval:Staged
+; ha-14-15-2 ; jevEval:Staged ; "Paint Brush Cleaning Solutions" ; "Pinselreiniger" ; "Nettoyants pour pinceaux" ; "Soluzioni per la pulizia dei pennelli" ; ha-14-15:jevEval:Staged
+; ha-14-15-3 ; jevEval:Staged ; "Paint Roller Accessories" ; "Anstreichrollenzubehör" ; "Accessoires pour rouleaux à peinture" ; "Accessori per rulli da verniciatura" ; ha-14-15:jevEval:Staged
+; ha-14-18-1 ; jevEval:Staged ; "Router Bits" ; "Oberfräsenteile" ; "Fraises" ; "Punte fresatrici verticali" ; ha-14-18:jevEval:Staged
+; ha-14-18-2 ; jevEval:Staged ; "Router Tables" ; "Oberfräsentische" ; "Tables de défonceuse" ; "Tavoli fresatrici verticali" ; ha-14-18:jevEval:Staged
+; ha-14-19-1 ; jevEval:Staged ; "Sandpaper & Sanding Sponges" ; "Schleifpapier & Schleifschwämme" ; "Papier de verre et éponges à poncer" ; "Carta vetrata e spugne carteggio" ; ha-14-19:jevEval:Staged
+; ha-14-20-1 ; jevEval:Staged ; "Band Saw Accessories" ; "Bandsägenzubehör" ; "Accessoires pour scies à ruban" ; "Accessori per seghe a nastro" ; ha-14-20:jevEval:Staged
+; ha-14-20-2 ; jevEval:Staged ; "Handheld Circular Saw Accessories" ; "Handkreissägen-Zubehör" ; "Accessoires pour scies circulaires portatives" ; "Accessori per seghe circolari manuali" ; ha-14-20:jevEval:Staged
+; ha-14-20-3 ; jevEval:Staged ; "Jigsaw Accessories" ; "Laubsägenzubehör" ; "Accessoires pour scies sauteuses" ; "Accessori per seghetti" ; ha-14-20:jevEval:Staged
+; ha-14-20-4 ; jevEval:Staged ; "Miter Saw Accessories" ; "Kreissägenzubehör" ; "Accessoires pour scies à onglets" ; "Accessori per seghe circolari" ; ha-14-20:jevEval:Staged
+; ha-14-20-5 ; jevEval:Staged ; "Table Saw Accessories" ; "Tischsägenzubehör" ; "Accessoires pour scies sur table" ; "Accessori per seghe da tavolo" ; ha-14-20:jevEval:Staged
+; ha-14-21-1 ; jevEval:Staged ; "Shaper Cutters" ; "Stoßmaschinenwerkzeuge" ; "Fraises de toupie" ; "Coltelli stozzatori limatrice" ; ha-14-21:jevEval:Staged
+; ha-14-22-1 ; jevEval:Staged ; "Soldering Iron Stands" ; "Lötkolbenständer" ; "Supports pour fers à souder" ; "Supporti saldatori a stilo" ; ha-14-22:jevEval:Staged
+; ha-14-22-2 ; jevEval:Staged ; "Soldering Iron Tips" ; "Lötkolbenspitzen" ; "Pannes pour fers à souder" ; "Punte saldatori a stilo" ; ha-14-22:jevEval:Staged
+; ha-14-23-1 ; jevEval:Staged ; "Cutter & Scraper Blades" ; "Cutter-, Schaber- & Spachtelklingen" ; "Lames pour cutters et grattoirs" ; "Lame a raschietto e frese" ; ha-14-23:jevEval:Staged
+; ha-14-23-2 ; jevEval:Staged ; "Saw Blades" ; "Sägeblätter" ; "Lames de scie" ; "Lame per seghe" ; ha-14-23:jevEval:Staged
+; ha-14-24-1 ; jevEval:Staged ; "Axe Handle Wedges" ; "Keile für Axtstiele" ; "Renforts de manches de hache" ; "Cunei con manico d'ascia" ; ha-14-24:jevEval:Staged
+; ha-14-24-2 ; jevEval:Staged ; "Hammer Handle Wedges" ; "Keile für Hammerstiele" ; "Renforts de manches de marteau" ; "Cunei con manico a martello" ; ha-14-24:jevEval:Staged
+; ha-14-27-1 ; jevEval:Staged ; "Saw Stands" ; "Sägeständer" ; "Supports pour scies" ; "Supporti per seghe" ; ha-14-27:jevEval:Staged
+; ha-14-28-1 ; jevEval:Staged ; "Felling Wedges" ; "Fällkeile" ; "Coins d’abattage" ; "Cunei per abbattimento" ; ha-14-28:jevEval:Staged
+; ha-14-28-2 ; jevEval:Staged ; "Flange Wedges" ; "Flanschkeile" ; "Coins à embase" ; "Cunei a flangia" ; ha-14-28:jevEval:Staged
+; ha-14-28-3 ; jevEval:Staged ; "Splitting Wedges" ; "Spaltkeile" ; "Coins de fendage" ; "Cunei per spaccature" ; ha-14-28:jevEval:Staged
+; ha-15-1-1 ; jevEval:Staged ; "Cabinet Blasters" ; "Kabinensandstrahler" ; "Sableuses d’atelier" ; "Sabbiatrici per armadietti" ; ha-15-1:jevEval:Staged
+; ha-15-1-2 ; jevEval:Staged ; "Pressure Blasters" ; "Hochdruckreiniger" ; "Sableuses à pression" ; "Sabbiatrici a pressione" ; ha-15-1:jevEval:Staged
+; ha-15-1-3 ; jevEval:Staged ; "Siphon Blasters" ; "Siphon-Reiniger" ; "Sableuses à siphon" ; "Sabbiatrici a sifone" ; ha-15-1:jevEval:Staged
+; ha-15-3-1 ; jevEval:Staged ; "Felling Axes" ; "Fälläxte" ; "Haches d’abattage" ; "Asce per abbattimento" ; ha-15-3:jevEval:Staged
+; ha-15-3-2 ; jevEval:Staged ; "Hatchets" ; "Beile" ; "Hachettes" ; "Accette" ; ha-15-3:jevEval:Staged
+; ha-15-3-3 ; jevEval:Staged ; "Splitting Axes" ; "Spaltäxte" ; "Haches de fendage" ; "Assi per spaccature" ; ha-15-3:jevEval:Staged
+; ha-15-4-1 ; jevEval:Staged ; "Bench Jointers" ; "Tischhobelmaschine" ; "Dégauchisseuses de table" ; "Giunti da banco" ; ha-15-4:jevEval:Staged
+; ha-15-4-2 ; jevEval:Staged ; "Handheld Jointers" ; "Handhobel" ; "Dégauchisseuses portatives" ; "Giunti portatili" ; ha-15-4:jevEval:Staged
+; ha-15-5-1 ; jevEval:Staged ; "Straight Chisels" ; "Gerade Meißel" ; "Burins droits" ; "Scalpelli dritti" ; ha-15-5:jevEval:Staged
+; ha-15-5-2 ; jevEval:Staged ; "U-Gouges" ; "Hohlmeißel, U-förmig" ; "Gouges en U" ; "Scalpellini a U" ; ha-15-5:jevEval:Staged
+; ha-15-5-3 ; jevEval:Staged ; "V-Gouges" ; "Hohlmeißel, V-förmig" ; "Gouges en V" ; "Scalpellini a V" ; ha-15-5:jevEval:Staged
+; ha-15-6-1 ; jevEval:Staged ; "Caulk Removers" ; "Dichtmittelentferner" ; "Dissolvants de calfeutrage" ; "Prodotti per la rimozione del mastice" ; ha-15-6:jevEval:Staged
+; ha-15-6-2 ; jevEval:Staged ; "Caulk Smoothers" ; "Dichtmittelglätter" ; "Lisseurs de calfeutrage" ; "Prodotti per la lisciatura del mastice" ; ha-15-6:jevEval:Staged
+; ha-15-6-3 ; jevEval:Staged ; "Caulking Guns" ; "Dichtmittelpistolen" ; "Pistolets de calfeutrage" ; "Pistole per mastice" ; ha-15-6:jevEval:Staged
+; ha-15-8-1 ; jevEval:Staged ; "Plate Compactors" ; "Vibrationsplatten" ; "Compacteurs à plaques" ; "Compattatori a piastre" ; ha-15-8:jevEval:Staged
+; ha-15-8-2 ; jevEval:Staged ; "Rammer Compactors" ; "Stampfer" ; "Pilonneuses" ; "Compattatori costipatori" ; ha-15-8:jevEval:Staged
+; ha-15-11-1 ; jevEval:Staged ; "Bolt Cutters" ; "Bolzenschneider" ; "Coupe-boulons" ; "Tagliabulloni" ; ha-15-11:jevEval:Staged
+; ha-15-11-2 ; jevEval:Staged ; "Glass Cutters" ; "Glasschneider" ; "Coupe-verre" ; "Tagliavetro" ; ha-15-11:jevEval:Staged
+; ha-15-11-3 ; jevEval:Staged ; "Handheld Metal Shears & Nibblers" ; "Metallscheren & Nibbelmaschinen" ; "Cisailles et grignoteuses à main" ; "Cesoie e roditrici manuali per metalli" ; ha-15-11:jevEval:Staged
+; ha-15-11-4 ; jevEval:Staged ; "Nippers" ; "Zwickzangen" ; "Tenailles" ; "Pinze nipper" ; ha-15-11:jevEval:Staged
+; ha-15-11-5 ; jevEval:Staged ; "Pipe Cutters" ; "Rohrschneider" ; "Coupe-tubes" ; "Tagliatubi" ; ha-15-11:jevEval:Staged
+; ha-15-11-6 ; jevEval:Staged ; "Rebar Cutters" ; "Betonstahlschneider" ; "Coupe-barre" ; "Cesoie per tondini" ; ha-15-11:jevEval:Staged
+; ha-15-11-7 ; jevEval:Staged ; "Tile & Shingle Cutters" ; "Fliesen-, Ziegel- & Schindelschneider" ; "Coupe-carreaux et bardeaux" ; "Tagliapiastrelle e scandole" ; ha-15-11:jevEval:Staged
+; ha-15-11-8 ; jevEval:Staged ; "Utility Knives" ; "Cutter" ; "Cutters" ; "Coltelli multiuso" ; ha-15-11:jevEval:Staged
+; ha-15-12-1 ; jevEval:Staged ; "Manual Deburrers" ; "Manuelle Entgrater" ; "Ébavureurs manuels" ; "Sbavatori manuali" ; ha-15-12:jevEval:Staged
+; ha-15-12-2 ; jevEval:Staged ; "Power Deburrers" ; "Elektrischer Entgrater" ; "Outils d’ébavurage électriques" ; "Sbavatori elettrici" ; ha-15-12:jevEval:Staged
+; ha-15-13-1 ; jevEval:Staged ; "Appliance Dollies" ; "Gerätewagen" ; "Diables pour appareils électroménagers" ; "Carrelli per apparecchiature" ; ha-15-13:jevEval:Staged
+; ha-15-13-2 ; jevEval:Staged ; "Convertible Hand Trucks" ; "Umwandelbare Sackkarren" ; "Chariots de manutention convertibles" ; "Carrelli manuali convertibili" ; ha-15-13:jevEval:Staged
+; ha-15-13-3 ; jevEval:Staged ; "Platform Dollies" ; "Plattformwagen" ; "Diables à plateforme" ; "Carrelli con piattaforma" ; ha-15-13:jevEval:Staged
+; ha-15-14-1 ; jevEval:Staged ; "Augers" ; "Schneckenbohrer" ; "Tarières" ; "Trivelle" ; ha-15-14:jevEval:Staged
+; ha-15-14-2 ; jevEval:Staged ; "Drill Presses" ; "Ständerbohrmaschinen" ; "Perceuses à colonne" ; "Trapani a colonna" ; ha-15-14:jevEval:Staged
+; ha-15-14-3 ; jevEval:Staged ; "Handheld Power Drills" ; "Elektrische Handbohrmaschinen" ; "Perceuses électriques portatives" ; "Trapani portatili" ; ha-15-14:jevEval:Staged
+; ha-15-14-4 ; jevEval:Staged ; "Mortisers" ; "Stemmmaschinen" ; "Mortaiseuses" ; "Cavatrici" ; ha-15-14:jevEval:Staged
+; ha-15-14-5 ; jevEval:Staged ; "Pneumatic Drills" ; "Druckluftbohrer" ; "Perceuses pneumatiques" ; "Trapani pneumatici" ; ha-15-14:jevEval:Staged
+; ha-15-16-1 ; jevEval:Staged ; "Flashlights" ; "Taschenlampen" ; "Lampes de poche" ; "Torce" ; ha-15-16:jevEval:Staged
+; ha-15-16-2 ; jevEval:Staged ; "Headlamps" ; "Stirnleuchten" ; "Lampes frontales" ; "Fanali" ; ha-15-16:jevEval:Staged
+; ha-15-17-2 ; jevEval:Staged ; "Lever Grease Guns" ; "Hebelfettpressen" ; "Pistolets à graisse à levier" ; "Pistole lubrificanti a leva" ; ha-15-17:jevEval:Staged
+; ha-15-17-3 ; jevEval:Staged ; "Pistol-Grip Grease Guns" ; "Pistolengriff-Fettpressen" ; "Pistolets à graisse à poignée pistolet" ; "Pistole lubrificanti con impugnatura a pistola" ; ha-15-17:jevEval:Staged
+; ha-15-18-1 ; jevEval:Staged ; "Angle Grinders" ; "Winkelschleifer" ; "Meuleuses d’angle" ; "Smerigliatrici angolari" ; ha-15-18:jevEval:Staged
+; ha-15-18-2 ; jevEval:Staged ; "Bench Grinders" ; "Tischschleifer" ; "Meuleuses de table" ; "Smerigliatrici da banco" ; ha-15-18:jevEval:Staged
+; ha-15-18-3 ; jevEval:Staged ; "Die Grinders" ; "Schleifmaschine mit Spannzange" ; "Meuleuses droite" ; "Smerigliatrici a stampo" ; ha-15-18:jevEval:Staged
+; ha-15-19-1 ; jevEval:Staged ; "Handlebar Grips" ; "Lenkergriffe" ; "Poignées de guidon" ; "Impugnature a manubrio" ; ha-15-19:jevEval:Staged
+; ha-15-19-2 ; jevEval:Staged ; "Pistol Grips" ; "Pistolengriffe" ; "Poignées de pistolet" ; "Impugnature a pistola" ; ha-15-19:jevEval:Staged
+; ha-15-19-3 ; jevEval:Staged ; "Pliers Grips" ; "Zangengriffe" ; "Poignées de pinces" ; "Impugnature a pinza" ; ha-15-19:jevEval:Staged
+; ha-15-20-1 ; jevEval:Staged ; "Manual Hammers" ; "Manuelle Hämmer" ; "Marteaux à main" ; "Martelli manuali" ; ha-15-20:jevEval:Staged
+; ha-15-20-2 ; jevEval:Staged ; "Powered Hammers" ; "Maschinenbetriebene Hämmer" ; "Marteaux électriques" ; "Martelli a batteria" ; ha-15-20:jevEval:Staged
+; ha-15-23-1 ; jevEval:Staged ; "Hot Air Guns" ; "Heißluftpistolen" ; "Pistolets à air chaud" ; "Pistole ad aria calda" ; ha-15-23:jevEval:Staged
+; ha-15-23-2 ; jevEval:Staged ; "Infrared Heat Guns" ; "Infrarot-Heißluftpistolen" ; "Pistolets thermiques infrarouges" ; "Pistole termiche a infrarossi" ; ha-15-23:jevEval:Staged
+; ha-15-24-1 ; jevEval:Staged ; "Impact Drivers" ; "Schlagschraubendreher" ; "Tournevis à chocs" ; "Avvitatore a percussione" ; ha-15-24:jevEval:Staged
+; ha-15-24-2 ; jevEval:Staged ; "Power Screwdrivers" ; "Schraubvorrichtungen" ; "Tournevis électriques" ; "Cacciaviti elettrici" ; ha-15-24:jevEval:Staged
+; ha-15-24-3 ; jevEval:Staged ; "Screw Guns" ; "Schraubpistolen" ; "Pistolets à vis" ; "Pistole a vite" ; ha-15-24:jevEval:Staged
+; ha-15-27-1 ; jevEval:Staged ; "Ladder Carts" ; "Leiterwagen" ; "Chariots à échelle" ; "Carrelli con scale" ; ha-15-27:jevEval:Staged
+; ha-15-27-2 ; jevEval:Staged ; "Ladders" ; "Leitern" ; "Échelles" ; "Scale" ; ha-15-27:jevEval:Staged
+; ha-15-27-3 ; jevEval:Staged ; "Scaffolding" ; "Gerüste" ; "Échafaudages" ; "Ponteggi" ; ha-15-27:jevEval:Staged
+; ha-15-27-4 ; jevEval:Staged ; "Step Stools" ; "Tritthocker" ; "Tabourets-escabeaux" ; "Sgabelli a gradini" ; ha-15-27:jevEval:Staged
+; ha-15-27-5 ; jevEval:Staged ; "Work Platforms" ; "Arbeitsplattformen" ; "Plateformes de travail" ; "Piattaforme di lavoro" ; ha-15-27:jevEval:Staged
+; ha-15-29-1 ; jevEval:Staged ; "Pole Changers" ; "Polwechsler" ; "Changeurs de pôles" ; "Strumenti cambio poli" ; ha-15-29:jevEval:Staged
+; ha-15-29-2 ; jevEval:Staged ; "Suction Cup Changers" ; "Saugnapfwechsler" ; "Changeurs de ventouses" ; "Cambiaventose" ; ha-15-29:jevEval:Staged
+; ha-15-30-1 ; jevEval:Staged ; "Gas Lighters" ; "Gasfeuerzeuge" ; "Briquets à gaz" ; "Accendini a gas" ; ha-15-30:jevEval:Staged
+; ha-15-30-2 ; jevEval:Staged ; "Safety Matches" ; "Sicherheitsstreichhölzer" ; "Allumettes de sécurité" ; "Fiammiferi di sicurezza" ; ha-15-30:jevEval:Staged
+; ha-15-30-3 ; jevEval:Staged ; "Metal Lighters" ; "Feuerzeuge aus Metall" ; "Briquets en métal" ; "Accendini in metallo" ; ha-15-30:jevEval:Staged
+; ha-15-31-1 ; jevEval:Staged ; "Manual Log Splitters" ; "Manuelle Holzspalter" ; "Fendeuses de bûches manuelles" ; "Spaccalegna manuali" ; ha-15-31:jevEval:Staged
+; ha-15-31-2 ; jevEval:Staged ; "Power Log Splitters" ; "Elektrische Holzspalter" ; "Fendeuses de bûches électriques" ; "Spaccalegna elettrici" ; ha-15-31:jevEval:Staged
+; ha-15-32-1 ; jevEval:Staged ; "Handheld Magnetic Sweepers" ; "Magnetische Handkehrmaschinen" ; "Balais magnétiques manuels" ; "Elettromagneti da sollevamento portatili" ; ha-15-32:jevEval:Staged
+; ha-15-32-2 ; jevEval:Staged ; "Rolling Magnetic Sweepers" ; "Magnetische Rollenkehrmaschinen" ; "Balais magnétiques à roulettes" ; "Elettromagneti da sollevamento rotanti" ; ha-15-32:jevEval:Staged
+; ha-15-34-1 ; jevEval:Staged ; "Brick Tools" ; "Maurerwerkzeuge" ; "Outils de maçon" ; "Attrezzi per murature" ; ha-15-34:jevEval:Staged
+; ha-15-34-2 ; jevEval:Staged ; "Cement Mixers" ; "Betonmischer" ; "Bétonnières" ; "Betoniere" ; ha-15-34:jevEval:Staged
+; ha-15-34-3 ; jevEval:Staged ; "Construction Lines" ; "Maurerschnüre" ; "Lignes de construction" ; "Corde da costruzione" ; ha-15-34:jevEval:Staged
+; ha-15-34-4 ; jevEval:Staged ; "Floats" ; "Glättkellen" ; "Taloches" ; "Frattazzi" ; ha-15-34:jevEval:Staged
+; ha-15-34-5 ; jevEval:Staged ; "Grout Sponges" ; "Fugenschwamm" ; "Éponges à coulis" ; "Spugne per intonaco" ; ha-15-34:jevEval:Staged
+; ha-15-34-6 ; jevEval:Staged ; "Masonry Edgers & Groovers" ; "Kanten- & Schneidwerkzeuge" ; "Dresseuses de maçonnerie" ; "Profilatori per bordi" ; ha-15-34:jevEval:Staged
+; ha-15-34-7 ; jevEval:Staged ; "Masonry Jointers" ; "Fugenkellen" ; "Fers à joints" ; "Jointer muratura" ; ha-15-34:jevEval:Staged
+; ha-15-34-8 ; jevEval:Staged ; "Masonry Trowels" ; "Maurerkellen" ; "Truelles" ; "Cazzuole" ; ha-15-34:jevEval:Staged
+; ha-15-34-9 ; jevEval:Staged ; "Power Trowels" ; "Glättmaschinen" ; "Talocheuses-lisseuses" ; "Frattazzatrici" ; ha-15-34:jevEval:Staged
+; ha-15-35-1 ; jevEval:Staged ; "Mattocks" ; "Breithacken" ; "Hoyaux" ; "Zappascuri" ; ha-15-35:jevEval:Staged
+; ha-15-35-2 ; jevEval:Staged ; "Pickaxes" ; "Spitzhacken" ; "Pioches" ; "PIcconi" ; ha-15-35:jevEval:Staged
+; ha-15-36-1 ; jevEval:Staged ; "Air Quality Meters" ; "Raumluftmessgeräte" ; "Appareils de mesure de la qualité de l’air" ; "Rilevatori qualità dell'aria" ; ha-15-36:jevEval:Staged
+; ha-15-36-2 ; jevEval:Staged ; "Altimeters" ; "Höhenmesser" ; "Altimètres" ; "Altimetri" ; ha-15-36:jevEval:Staged
+; ha-15-36-3 ; jevEval:Staged ; "Anemometers" ; "Windgeschwindigkeitsmesser" ; "Anémomètres" ; "Anemometri" ; ha-15-36:jevEval:Staged
+; ha-15-36-4 ; jevEval:Staged ; "Barometers" ; "Barometer" ; "Baromètres" ; "Barometri" ; ha-15-36:jevEval:Staged
+; ha-15-36-5 ; jevEval:Staged ; "Calipers" ; "Messschieber" ; "Étriers" ; "Calibri" ; ha-15-36:jevEval:Staged
+; ha-15-36-6 ; jevEval:Staged ; "Cruising Rods" ; "Kluppen" ; "Compas" ; "Calibri calcolo pezzi legno" ; ha-15-36:jevEval:Staged
+; ha-15-36-7 ; jevEval:Staged ; "Distance Meters" ; "Entfernungsmesser" ; "Distancemètres" ; "Misuratori di distanza" ; ha-15-36:jevEval:Staged
+; ha-15-36-8 ; jevEval:Staged ; "Dividers" ; "Teiler" ; "Intercalaires" ; "Divisori" ; ha-15-36:jevEval:Staged
+; ha-15-36-9 ; jevEval:Staged ; "Electrical Testing Tools" ; "Elektrische Prüfgeräte" ; "Outils de test électrique" ; "Strumenti per test elettrici" ; ha-15-36:jevEval:Staged
+; ha-15-36-10 ; jevEval:Staged ; "Flow Meters & Controllers" ; "Durchflussmesser" ; "Débitmètres" ; "Flussimetri e controllori" ; ha-15-36:jevEval:Staged
+; ha-15-36-11 ; jevEval:Staged ; "Gas Detectors" ; "Gasdetektoren" ; "Détecteurs de gaz" ; "Rilevatori di gas" ; ha-15-36:jevEval:Staged
+; ha-15-36-12 ; jevEval:Staged ; "Gauges" ; "Messinstrumente" ; "Manomètres" ; "Misuratori" ; ha-15-36:jevEval:Staged
+; ha-15-36-13 ; jevEval:Staged ; "Geiger Counters" ; "Geigerzähler" ; "Compteurs Geiger" ; "Contatori geiger" ; ha-15-36:jevEval:Staged
+; ha-15-36-14 ; jevEval:Staged ; "Hygrometers" ; "Hygrometer" ; "Hygromètres" ; "Igrometri" ; ha-15-36:jevEval:Staged
+; ha-15-36-15 ; jevEval:Staged ; "Infrared Thermometers" ; "Infrarotthermometer" ; "Thermomètres infrarouges" ; "Termometri a infrarossi" ; ha-15-36:jevEval:Staged
+; ha-15-36-16 ; jevEval:Staged ; "Knife Guides" ; "Messerführungen" ; "Guides pour couteaux" ; "Guide coltelli" ; ha-15-36:jevEval:Staged
+; ha-15-36-17 ; jevEval:Staged ; "Levels" ; "Richtwaagen" ; "Niveaux" ; "Livelle" ; ha-15-36:jevEval:Staged
+; ha-15-36-18 ; jevEval:Staged ; "Measuring Scales" ; "Waagen" ; "Balances" ; "Bilance" ; ha-15-36:jevEval:Staged
+; ha-15-36-19 ; jevEval:Staged ; "Measuring Wheels" ; "Messräder" ; "Roues de mesure" ; "Ruote di misurazione" ; ha-15-36:jevEval:Staged
+; ha-15-36-20 ; jevEval:Staged ; "Moisture Meters" ; "Feuchtigkeitsmesser" ; "Humidimètres" ; "Misuratori di umidità" ; ha-15-36:jevEval:Staged
+; ha-15-36-21 ; jevEval:Staged ; "PH Meters" ; "pH-Meter" ; "pH-mètres" ; "Piaccametri" ; ha-15-36:jevEval:Staged
+; ha-15-36-22 ; jevEval:Staged ; "Probes & Finders" ; "Sonden & Suchgeräte" ; "Sondes et détecteurs" ; "Sonde e rilevatori" ; ha-15-36:jevEval:Staged
+; ha-15-36-23 ; jevEval:Staged ; "Protractors" ; "Winkelmesser" ; "Rapporteurs" ; "Goniometri" ; ha-15-36:jevEval:Staged
+; ha-15-36-24 ; jevEval:Staged ; "Rebar Locators" ; "Stahlbewehrungssucher" ; "Détecteurs d’armatures" ; "Localizzatori di tondini" ; ha-15-36:jevEval:Staged
+; ha-15-36-25 ; jevEval:Staged ; "Rulers" ; "Zollstöcke" ; "Règles" ; "Righelli" ; ha-15-36:jevEval:Staged
+; ha-15-36-26 ; jevEval:Staged ; "Seismometer" ; "Seismographen" ; "Sismographes" ; "Sismografo" ; ha-15-36:jevEval:Staged
+; ha-15-36-27 ; jevEval:Staged ; "Sound Meters" ; "Lautstärkemesser" ; "Sonomètres" ; "Fonometri" ; ha-15-36:jevEval:Staged
+; ha-15-36-28 ; jevEval:Staged ; "Squares" ; "Winkel" ; "Équerres de traçage et de charpentier" ; "Squadrato" ; ha-15-36:jevEval:Staged
+; ha-15-36-29 ; jevEval:Staged ; "Straight Edges" ; "Haarlineale" ; "Règles droites" ; "Righe" ; ha-15-36:jevEval:Staged
+; ha-15-36-30 ; jevEval:Staged ; "Stud Sensors" ; "Balkensucher" ; "Détecteurs de montants" ; "Sensori tubi e cavi" ; ha-15-36:jevEval:Staged
+; ha-15-36-31 ; jevEval:Staged ; "Tape Measures" ; "Maßbänder" ; "Mètres à ruban" ; "Flessometri" ; ha-15-36:jevEval:Staged
+; ha-15-36-32 ; jevEval:Staged ; "Theodolites" ; "Theodolite" ; "Théodolites" ; "Teodoliti" ; ha-15-36:jevEval:Staged
+; ha-15-36-33 ; jevEval:Staged ; "Thermal Imaging Cameras" ; "Wärmekameras" ; "Caméras thermiques" ; "Telecamere termografiche" ; ha-15-36:jevEval:Staged
+; ha-15-36-34 ; jevEval:Staged ; "Thermocouples & Thermopiles" ; "Thermoelemente & -säulen" ; "Thermocouples et thermopiles" ; "Termocoppie e termopile" ; ha-15-36:jevEval:Staged
+; ha-15-36-35 ; jevEval:Staged ; "Transducers" ; "Transducer & Messumformer" ; "Transducteurs" ; "Trasduttori" ; ha-15-36:jevEval:Staged
+; ha-15-36-36 ; jevEval:Staged ; "UV Light Meters" ; "UV-Lichtmesser" ; "Appareils de mesure UV" ; "Esposimetri UV" ; ha-15-36:jevEval:Staged
+; ha-15-36-37 ; jevEval:Staged ; "Vibration Meters" ; "Schwingungsmesser" ; "Vibromètres" ; "Misuratori di vibrazioni" ; ha-15-36:jevEval:Staged
+; ha-15-36-38 ; jevEval:Staged ; "Weather Forecasters & Stations" ; "Wetterstationen" ; "Dispositifs de prévisions météorologiques et stations météo" ; "Stazioni meteorologiche" ; ha-15-36:jevEval:Staged
+; ha-15-36-39 ; jevEval:Staged ; "Micrometers" ; "Mikrometer" ; "Micromètres" ; "Micrometri" ; ha-15-36:jevEval:Staged
+; ha-15-37-1 ; jevEval:Staged ; "Horizontal Milling Machines" ; "Horizontale Fräsmaschinen" ; "Fraiseuses horizontales" ; "Fresatrici orizzontali" ; ha-15-37:jevEval:Staged
+; ha-15-37-2 ; jevEval:Staged ; "Vertical Milling Machines" ; "Vertikale Fräsmaschinen" ; "Fraiseuses verticales" ; "Fresatrici verticali" ; ha-15-37:jevEval:Staged
+; ha-15-39-1 ; jevEval:Staged ; "Claw Pullers" ; "Klauenabzieher" ; "Pieds-de-biche" ; "Estrattori" ; ha-15-39:jevEval:Staged
+; ha-15-39-2 ; jevEval:Staged ; "Slide Hammer Pullers" ; "Gleithammer-Abzieher" ; "Extracteurs à marteau coulissant" ; "Estrattori a martello slittante" ; ha-15-39:jevEval:Staged
+; ha-15-40-1 ; jevEval:Staged ; "Finish Nailers" ; "Finish-Nagler" ; "Cloueuses de finition" ; "Finitura chiodatrici" ; ha-15-40:jevEval:Staged
+; ha-15-40-2 ; jevEval:Staged ; "Framing Nailers" ; "Rahmennagler" ; "Cloueuses à charpente" ; "Chiodatrici per telai" ; ha-15-40:jevEval:Staged
+; ha-15-40-3 ; jevEval:Staged ; "Staple Guns" ; "Handheftpistolen" ; "Agrafeuses-cloueuses" ; "Pistole per punti metallici" ; ha-15-40:jevEval:Staged
+; ha-15-40-4 ; jevEval:Staged ; "Heavy Duty Staplers" ; "Hochleistungshefter" ; "Agrafeuses robustes" ; "Cucitrici pesanti" ; ha-15-40:jevEval:Staged
+; ha-15-42-1 ; jevEval:Staged ; "Airbrushes" ; "Airbrushpistolen" ; "Aérographes" ; "Aerografi" ; ha-15-42:jevEval:Staged
+; ha-15-42-2 ; jevEval:Staged ; "Paint Brushes" ; "Malerpinsel" ; "Pinceaux" ; "Pennelli da pittura" ; ha-15-42:jevEval:Staged
+; ha-15-42-3 ; jevEval:Staged ; "Paint Edgers" ; "Kantenmaler" ; "Rouleaux à peinture spécial contours" ; "Accessori per dipingere i bordi" ; ha-15-42:jevEval:Staged
+; ha-15-42-4 ; jevEval:Staged ; "Paint Rollers" ; "Farbrollen" ; "Rouleaux à peinture" ; "Rulli per vernici" ; ha-15-42:jevEval:Staged
+; ha-15-42-5 ; jevEval:Staged ; "Paint Shakers" ; "Farbrüttler" ; "Mélangeurs de peinture" ; "Miscelatori per vernice" ; ha-15-42:jevEval:Staged
+; ha-15-42-6 ; jevEval:Staged ; "Paint Sponges" ; "Malschwämme" ; "Éponges à peinture" ; "Spugne per vernici" ; ha-15-42:jevEval:Staged
+; ha-15-42-7 ; jevEval:Staged ; "Paint Sprayers" ; "Farbspritzpistolen" ; "Pistolets à peinture" ; "Spruzzatori vernici" ; ha-15-42:jevEval:Staged
+; ha-15-42-8 ; jevEval:Staged ; "Paint Strainers" ; "Farbsiebe" ; "Tamis de peinture" ; "Filtri per vernice" ; ha-15-42:jevEval:Staged
+; ha-15-42-9 ; jevEval:Staged ; "Paint Trays" ; "Farbwannen" ; "Bacs à peinture" ; "Vassoi per vernici" ; ha-15-42:jevEval:Staged
+; ha-15-43-1 ; jevEval:Staged ; "Grabber Pickup Tools" ; "Greifzangen" ; "Outils de ramassage à pince" ; "Strumenti di raccolta oggetti" ; ha-15-43:jevEval:Staged
+; ha-15-43-2 ; jevEval:Staged ; "Magnetic Pickup Tools" ; "Magnetheber" ; "Outils de ramassage magnétiques" ; "Strumenti di raccolta oggetti magnetici" ; ha-15-43:jevEval:Staged
+; ha-15-44-1 ; jevEval:Staged ; "Hydraulic Benders" ; "Hydraulische Rohrbieger" ; "Plieuses hydrauliques" ; "Piegatrici idrauliche" ; ha-15-44:jevEval:Staged
+; ha-15-44-2 ; jevEval:Staged ; "Manual Benders" ; "Handrohrbieger" ; "Plieuses manuelles" ; "Piegatrici manuali" ; ha-15-44:jevEval:Staged
+; ha-15-45-1 ; jevEval:Staged ; "Handheld Cleaners" ; "Handreiniger" ; "Nettoyeurs portatifs" ; "Pulitori portatili" ; ha-15-45:jevEval:Staged
+; ha-15-45-2 ; jevEval:Staged ; "Power Cleaners" ; "Kraftreiniger" ; "Produits d’entretien électriques" ; "Pulitori elettrici" ; ha-15-45:jevEval:Staged
+; ha-15-47-1 ; jevEval:Staged ; "Benchtop Planers" ; "Tischhobelmaschinen" ; "Raboteuses sur table" ; "Pialle da banco" ; ha-15-47:jevEval:Staged
+; ha-15-47-2 ; jevEval:Staged ; "Handheld Planers" ; "Handhobelmaschine" ; "Raboteuses portatives" ; "Pialle portatili" ; ha-15-47:jevEval:Staged
+; ha-15-48-1 ; jevEval:Staged ; "Bench Planes" ; "Bankhobel" ; "Rabots d’établi" ; "Piani da banco" ; ha-15-48:jevEval:Staged
+; ha-15-48-2 ; jevEval:Staged ; "Block Planes" ; "Hirnholzhobel" ; "Rabots blocs" ; "Piani di blocco" ; ha-15-48:jevEval:Staged
+; ha-15-48-3 ; jevEval:Staged ; "Router Planes" ; "Grundhobel" ; "Rabots de routeur" ; "Piani router" ; ha-15-48:jevEval:Staged
+; ha-15-49-1 ; jevEval:Staged ; "Locking Pliers" ; "Feststellzangen" ; "Pince de verrouillage" ; "Pinze di bloccaggio" ; ha-15-49:jevEval:Staged
+; ha-15-49-2 ; jevEval:Staged ; "Needle-Nose Pliers" ; "Spitzzangen" ; "Pinces à long bec" ; "Pinze ad ago" ; ha-15-49:jevEval:Staged
+; ha-15-49-3 ; jevEval:Staged ; "Slip Joint Pliers" ; "Slip-Joint-Zangen" ; "Pince à joint coulissant" ; "Pinze per giunti scorrevoli" ; ha-15-49:jevEval:Staged
+; ha-15-50-2 ; jevEval:Staged ; "Sink Plungers" ; "Saugglocken für Waschbecken" ; "Déboucheurs d’évier" ; "Sturalavandini" ; ha-15-50:jevEval:Staged
+; ha-15-50-3 ; jevEval:Staged ; "Toilet Plungers" ; "Saugglocken für Toilette" ; "Déboucheurs de toilettes" ; "Stura-WC" ; ha-15-50:jevEval:Staged
+; ha-15-51-1 ; jevEval:Staged ; "Orbital Polishers & Buffers" ; "Exzenterpoliermaschinen" ; "Polisseuses et tampons orbitaux" ; "Lucidatrici e pulitrici orbitali" ; ha-15-51:jevEval:Staged
+; ha-15-51-2 ; jevEval:Staged ; "Rotary Polishers & Buffers" ; "Poliermaschinen" ; "Polisseuses et tampons rotatifs" ; "Lucidatrici e pulitrici rotanti" ; ha-15-51:jevEval:Staged
+; ha-15-52-1 ; jevEval:Staged ; "Manual Diggers" ; "Manuelle Schaufeln" ; "Bêches manuelles" ; "Scavatori manuali" ; ha-15-52:jevEval:Staged
+; ha-15-52-2 ; jevEval:Staged ; "Power Diggers" ; "Elektrische Schaufeln" ; "Bêches électriques" ; "Scavatori elettrici" ; ha-15-52:jevEval:Staged
+; ha-15-54-1 ; jevEval:Staged ; "Center Punches" ; "Federkörner" ; "Poinçons centraux" ; "Punzoni centrali" ; ha-15-54:jevEval:Staged
+; ha-15-54-2 ; jevEval:Staged ; "Pin Punches" ; "Splinttreiber" ; "Poinçons" ; "Punzoni a spillo" ; ha-15-54:jevEval:Staged
+; ha-15-54-3 ; jevEval:Staged ; "Scratch Awls" ; "Kratzahlen" ; "Alênes à gratter" ; "Punteruoli" ; ha-15-54:jevEval:Staged
+; ha-15-55-1 ; jevEval:Staged ; "Flexible Putty Knives" ; "Flexible Kittmesser" ; "Spatules flexibles" ; "Raschietti per stucco flessibili" ; ha-15-55:jevEval:Staged
+; ha-15-55-2 ; jevEval:Staged ; "Wallpaper & Paint Scrapers" ; "Tapeten- und Farbspachteln" ; "Grattoirs à papier peint et à peinture" ; "Raschietti per carta da parati e vernice" ; ha-15-55:jevEval:Staged
+; ha-15-55-3 ; jevEval:Staged ; "Stiff Putty Knives" ; "Steife Kittmesser" ; "Spatules rigides" ; "Raschietti per mastice rigidi" ; ha-15-55:jevEval:Staged
+; ha-15-56-1 ; jevEval:Staged ; "Hand Reamers" ; "Handreibahlen" ; "Alésoirs à main" ; "Alesatori manuali" ; ha-15-56:jevEval:Staged
+; ha-15-56-2 ; jevEval:Staged ; "Machine Reamers" ; "Maschinenreibahlen" ; "Alésoirs mécaniques" ; "Alesatori elettrici" ; ha-15-56:jevEval:Staged
+; ha-15-57-1 ; jevEval:Staged ; "Rivet Guns" ; "Nietpistolen" ; "Pistolets à riveter" ; "Rivettatrici pneumatiche" ; ha-15-57:jevEval:Staged
+; ha-15-57-2 ; jevEval:Staged ; "Rivet Pliers" ; "Nietzangen" ; "Pinces à riveter" ; "Rivettatrici manuali" ; ha-15-57:jevEval:Staged
+; ha-15-59-1 ; jevEval:Staged ; "Belt Sanders" ; "Bandschleifer" ; "Ponceuses à bande" ; "Smerigliatrici a nastro" ; ha-15-59:jevEval:Staged
+; ha-15-59-2 ; jevEval:Staged ; "Disc Sanders" ; "Tellerschleifer" ; "Ponceuses à disque" ; "Smerigliatrici a disco" ; ha-15-59:jevEval:Staged
+; ha-15-59-3 ; jevEval:Staged ; "Orbital Sanders" ; "Exzenterschleifer" ; "Ponceuses orbitales" ; "Smerigliatrici orbitali" ; ha-15-59:jevEval:Staged
+; ha-15-62-1 ; jevEval:Staged ; "Band Saws" ; "Bandsägen" ; "Scies à ruban" ; "Seghe nastro" ; ha-15-62:jevEval:Staged
+; ha-15-62-2 ; jevEval:Staged ; "Cut-Off Saws" ; "Trennsägen" ; "Ébouteuses" ; "Seghe circolari per metalli" ; ha-15-62:jevEval:Staged
+; ha-15-62-3 ; jevEval:Staged ; "Hand Saws" ; "Handsägen" ; "Scies à main" ; "Seghetti a lama libera" ; ha-15-62:jevEval:Staged
+; ha-15-62-4 ; jevEval:Staged ; "Handheld Circular Saws" ; "Handkreissägen" ; "Scies circulaires manuelles" ; "Seghe circolari portatili" ; ha-15-62:jevEval:Staged
+; ha-15-62-5 ; jevEval:Staged ; "Jigsaws" ; "Stichsägen" ; "Scies sauteuses" ; "Seghetti" ; ha-15-62:jevEval:Staged
+; ha-15-62-6 ; jevEval:Staged ; "Masonry & Tile Saws" ; "Fliesensägen" ; "Scies de maçon et scies à carrelage" ; "Taglia mattoni e piastrelle" ; ha-15-62:jevEval:Staged
+; ha-15-62-7 ; jevEval:Staged ; "Miter Saws" ; "Gehrungssägen" ; "Scies à onglet" ; "Troncatrici" ; ha-15-62:jevEval:Staged
+; ha-15-62-8 ; jevEval:Staged ; "Panel Saws" ; "Plattensägen" ; "Scies à panneaux" ; "Seghe a pannello" ; ha-15-62:jevEval:Staged
+; ha-15-62-9 ; jevEval:Staged ; "Reciprocating Saws" ; "Säbelsägen" ; "Scies alternatives" ; "Seghetti alternativi" ; ha-15-62:jevEval:Staged
+; ha-15-62-10 ; jevEval:Staged ; "Scroll Saws" ; "Dekupiersägen" ; "Scies à chantourner" ; "Seghetti da traforo" ; ha-15-62:jevEval:Staged
+; ha-15-62-11 ; jevEval:Staged ; "Table Saws" ; "Tischkreissägen" ; "Scies à table" ; "Seghe da piano, banchi sega" ; ha-15-62:jevEval:Staged
+; ha-15-63-1 ; jevEval:Staged ; "Flathead Screwdrivers" ; "Schlitzschraubendreher" ; "Tournevis à tête plate" ; "Cacciaviti a testa piatta" ; ha-15-63:jevEval:Staged
+; ha-15-63-2 ; jevEval:Staged ; "Phillips Screwdrivers" ; "Kreuzschlitzschraubendreher" ; "Tournevis Phillips" ; "Cacciaviti a croce" ; ha-15-63:jevEval:Staged
+; ha-15-63-3 ; jevEval:Staged ; "Torx Screwdrivers" ; "Torx-Schraubendreher" ; "Tournevis Torx" ; "Cacciaviti Torx" ; ha-15-63:jevEval:Staged
+; ha-15-68-1 ; jevEval:Staged ; "Manual Tap Reseaters" ; "Manuelle Wasseranschluss-Nachschleifwerkzeuge" ; "Rectifieuses de robinet manuelles" ; "Frese per rubinetti manuali" ; ha-15-68:jevEval:Staged
+; ha-15-68-2 ; jevEval:Staged ; "Power Tap Reseaters" ; "Strombetriebene Wasseranschluss-Nachschleifwerkzeuge" ; "Rectifieuses de robinet électriques" ; "Frese per rubinetti elettriche" ; ha-15-68:jevEval:Staged
+; ha-15-69-1 ; jevEval:Staged ; "Hex Dies" ; "Sechskant-Schneideisen" ; "Tarauds hexagonaux" ; "Filiere esagonali" ; ha-15-69:jevEval:Staged
+; ha-15-69-2 ; jevEval:Staged ; "Spiral-Flute Taps" ; "Gewindebohrer mit gewendelten Spannuten" ; "Tarauds à cannelure hélicoïdale" ; "Maschi con scanalatura elicoidale" ; ha-15-69:jevEval:Staged
+; ha-15-69-3 ; jevEval:Staged ; "Straight-Flute Taps" ; "Gewindebohrer mit gerader Nut" ; "Tarauds à cannelure droite" ; "Maschi con scanalatura dritta" ; ha-15-69:jevEval:Staged
+; ha-15-71-1 ; jevEval:Staged ; "Bar Clamps" ; "Stengenzwingen" ; "Serre-joints à barre" ; "Morsetti a barra" ; ha-15-71:jevEval:Staged
+; ha-15-71-2 ; jevEval:Staged ; "Bench Vises" ; "Schraubstöcke" ; "Étaux d’établi" ; "Morse da banco" ; ha-15-71:jevEval:Staged
+; ha-15-71-3 ; jevEval:Staged ; "C-Clamps" ; "C-Klemmen" ; "Brides de fixation C" ; "Morsetti a C" ; ha-15-71:jevEval:Staged
+; ha-15-75-1 ; jevEval:Staged ; "Hand Tool Sets" ; "Handwerkzeugsets" ; "Jeux d’outils à main" ; "Set di utensili" ; ha-15-75:jevEval:Staged
+; ha-15-75-2 ; jevEval:Staged ; "Power Tool Combo Sets" ; "Elektrowerkzeug-Combo-Sets" ; "Jeux d’outils mixtes" ; "Set combinati utensili elettrici" ; ha-15-75:jevEval:Staged
+; ha-15-76-1 ; jevEval:Staged ; "MIG Welders" ; "MIG-Schweißgeräte" ; "Soudeuses MIG" ; "Saldatori Mig" ; ha-15-76:jevEval:Staged
+; ha-15-76-2 ; jevEval:Staged ; "TIG Welders" ; "WIG-Schweißgeräte" ; "Soudeuses TIG" ; "Saldatori Tig" ; ha-15-76:jevEval:Staged
+; ha-15-77-1 ; jevEval:Staged ; "MIG Torches" ; "MIG-Brenner" ; "Torches MIG" ; "Torce MIG" ; ha-15-77:jevEval:Staged
+; ha-15-77-2 ; jevEval:Staged ; "Plasma Cutters" ; "Plasmaschneider" ; "Découpeurs plasma" ; "Taglierine plasma" ; ha-15-77:jevEval:Staged
+; ha-15-77-3 ; jevEval:Staged ; "TIG Torches" ; "TIG-Brenner" ; "Torches TIG" ; "Torce TIG" ; ha-15-77:jevEval:Staged
+; ha-15-78-1 ; jevEval:Staged ; "Cable Cutters" ; "Kabelschneider" ; "Coupe-câbles" ; "Tagliacavi" ; ha-15-78:jevEval:Staged
+; ha-15-78-2 ; jevEval:Staged ; "Crimping Tools" ; "Crimp-Werkzeuge" ; "Outils de sertissage" ; "Strumenti di crimpatura" ; ha-15-78:jevEval:Staged
+; ha-15-78-3 ; jevEval:Staged ; "Wire Strippers" ; "Abisolierzangen" ; "Pinces à dénuder" ; "Spellafili" ; ha-15-78:jevEval:Staged
+; ha-15-80-1 ; jevEval:Staged ; "Adjustable Wrenches" ; "Verstellbare Schraubenschlüssel" ; "Clés à molette" ; "Chiavi regolabili" ; ha-15-80:jevEval:Staged
+; ha-15-80-2 ; jevEval:Staged ; "Socket Wrenches" ; "Knarren" ; "Clés à douille" ; "Chiavi a bussola" ; ha-15-80:jevEval:Staged
+; ha-15-80-3 ; jevEval:Staged ; "Torque Wrenches" ; "Drehmomentschlüssel" ; "Clés dynamométriques" ; "Chiavi dinamometriche" ; ha-15-80:jevEval:Staged
+; ha-1-5-2-1 ; jevEval:Staged ; "Cement" ; "Zement" ; "Ciment" ; "Cemento" ; ha-1-5-2:jevEval:Staged
+; ha-1-5-2-2 ; jevEval:Staged ; "Firestop Mortar" ; "Brandschutzmörtel" ; "Mortier coupe-feu" ; "Malta antifuoco" ; ha-1-5-2:jevEval:Staged
+; ha-1-5-2-3 ; jevEval:Staged ; "Mortar Mixes" ; "Mörtelmischungen" ; "Mélanges de mortier" ; "Miscele di malta" ; ha-1-5-2:jevEval:Staged
+; ha-1-5-2-4 ; jevEval:Staged ; "Concrete Mixes" ; "Betonmischungen" ; "Mélanges de béton" ; "Miscele di calcestruzzo" ; ha-1-5-2:jevEval:Staged
+; ha-1-5-2-5 ; jevEval:Staged ; "Polymer-Modified Mortar" ; "Polymermodifizierter Mörtel" ; "Mortier modifié aux polymères" ; "Malta modificata con polimero" ; ha-1-5-2:jevEval:Staged
+; ha-1-5-2-6 ; jevEval:Staged ; "Pozzolanic Mortar" ; "Puzzolanischer Mörtel" ; "Mortier pouzzolanique" ; "Malta pozzolanica" ; ha-1-5-2:jevEval:Staged
+; ha-1-5-2-7 ; jevEval:Staged ; "Surkhi Mortar" ; "Surkhi-Mörtel" ; "Mortier Surkhi" ; "Malta Surkhi" ; ha-1-5-2:jevEval:Staged
+; ha-2-2-9-1 ; jevEval:Staged ; "Deadbolt Strikes" ; "Riegelbeschläge" ; "Gâches à verrou" ; "Colpi chiavistello senza scatto" ; ha-2-2-9:jevEval:Staged
+; ha-2-2-9-2 ; jevEval:Staged ; "Latch Strikes" ; "Klinkenbeschläge" ; "Gâches de verrouillage" ; "Colpi di chiavistello" ; ha-2-2-9:jevEval:Staged
+; ha-2-3-1-1 ; jevEval:Staged ; "Roll-Up Garage Doors" ; "Rolltore für Garagen" ; "Portes de garage enroulables" ; "Porte da garage avvolgibili" ; ha-2-3-1:jevEval:Staged
+; ha-2-3-1-2 ; jevEval:Staged ; "Sectional Garage Doors" ; "Sektionaltore für Garagen" ; "Portes de garage sectionnelles" ; "Porte da garage sezionali" ; ha-2-3-1:jevEval:Staged
+; ha-2-3-1-3 ; jevEval:Staged ; "Side Hinged Garage Doors" ; "Seitlich angeschlagene Garagentore" ; "Portes de garage à charnières latérales" ; "Porte da garage con cerniera laterale" ; ha-2-3-1:jevEval:Staged
+; ha-2-13-3-1 ; jevEval:Staged ; "Drip Edges" ; "Tropfkanten" ; "Bords d’égouttement" ; "Bordi antigoccia" ; ha-2-13-3:jevEval:Staged
+; ha-2-13-3-2 ; jevEval:Staged ; "Pipe Boots" ; "Rohrmanschetten" ; "Solins de tuyaux" ; "Tubazioni" ; ha-2-13-3:jevEval:Staged
+; ha-2-13-3-3 ; jevEval:Staged ; "Step Flashings" ; "Ortgangbleche" ; "Solins en escalier" ; "Scossaline a muro" ; ha-2-13-3:jevEval:Staged
+; ha-2-13-3-4 ; jevEval:Staged ; "Valley Flashings" ; "Dachkehlbleche" ; "Solins en V" ; "Scossaline a valle" ; ha-2-13-3:jevEval:Staged
+; ha-2-13-4-1 ; jevEval:Staged ; "3-Tab Shingles" ; "3-Tab-Schindeln" ; "Bardeaux plats" ; "Tegole a 3 linguette" ; ha-2-13-4:jevEval:Staged
+; ha-2-13-4-2 ; jevEval:Staged ; "Architectural Shingles" ; "Architekturschindeln" ; "Bardeaux architecturaux" ; "Scandole architettoniche" ; ha-2-13-4:jevEval:Staged
+; ha-2-13-4-3 ; jevEval:Staged ; "Shake-Style Shingles" ; "Schindeln im Shake-Stil" ; "Bardeaux de style Shake" ; "Scandole stile Shake" ; ha-2-13-4:jevEval:Staged
+; ha-2-21-2-1 ; jevEval:Staged ; "Awning Window Frames" ; "Markisenfensterrahmen" ; "Cadres de fenêtres à auvent" ; "Telai per finestre per tende da sole" ; ha-2-21-2:jevEval:Staged
+; ha-2-21-2-2 ; jevEval:Staged ; "Casement Window Frames" ; "Flügelfensterrahmen" ; "Cadres de fenêtres à battants" ; "Infissi per finestre a battente" ; ha-2-21-2:jevEval:Staged
+; ha-2-21-2-3 ; jevEval:Staged ; "Double Hung Window Frames" ; "Rahmen für doppelflügelige Fenster" ; "Cadres de fenêtres à guillotine double" ; "Infissi a doppia anta" ; ha-2-21-2:jevEval:Staged
+; ha-2-21-2-4 ; jevEval:Staged ; "Picture Window Frames" ; "Bildfensterrahmen" ; "Cadres de fenêtres panoramiques" ; "Cornici per finestre" ; ha-2-21-2:jevEval:Staged
+; ha-2-21-2-5 ; jevEval:Staged ; "Sliding Window Frames" ; "Schiebefensterrahmen" ; "Cadres de fenêtres coulissantes" ; "Infissi per finestre scorrevoli" ; ha-2-21-2:jevEval:Staged
+; ha-6-14-2-1 ; jevEval:Staged ; "Boat Nails" ; "Bootsnägel" ; "Clous de bateau" ; "Chiodi per barche" ; ha-6-14-2:jevEval:Staged
+; ha-6-14-2-2 ; jevEval:Staged ; "Brad Nails" ; "Stauchkopfnägel" ; "Clous tête homme" ; "Chiodi senza testa" ; ha-6-14-2:jevEval:Staged
+; ha-6-14-2-3 ; jevEval:Staged ; "Cap Nails" ; "Kappennägel" ; "Clous à capuchon" ; "Chiodi a cappuccio" ; ha-6-14-2:jevEval:Staged
+; ha-6-14-2-4 ; jevEval:Staged ; "Decorative Nails" ; "Dekorative Nägel" ; "Clous décoratifs" ; "Chiodi decorativi" ; ha-6-14-2:jevEval:Staged
+; ha-6-14-2-5 ; jevEval:Staged ; "Fiber Cement Nails" ; "Faserzementnägel" ; "Clous à fibre ciment" ; "Chiodi in fibrocemento" ; ha-6-14-2:jevEval:Staged
+; ha-6-14-2-6 ; jevEval:Staged ; "Finishing Nails" ; "Drahtstifte" ; "Clous de finition" ; "Chiodi di finitura" ; ha-6-14-2:jevEval:Staged
+; ha-6-14-2-7 ; jevEval:Staged ; "Horseshoe Nails" ; "Hufeisennägel" ; "Clous à ferrer" ; "Chiodi a ferro di cavallo" ; ha-6-14-2:jevEval:Staged
+; ha-6-14-2-8 ; jevEval:Staged ; "Masonry Nails" ; "Mauerwerksnägel" ; "Clous de maçon" ; "Chiodi per muratura" ; ha-6-14-2:jevEval:Staged
+; ha-6-14-2-9 ; jevEval:Staged ; "Railroad Spikes" ; "Eisenbahnspitzen" ; "Clous de chemin de fer" ; "Picchi per ferrovia" ; ha-6-14-2:jevEval:Staged
+; ha-6-14-2-10 ; jevEval:Staged ; "Roofing Nails" ; "Dachnägel" ; "Clous à toiture" ; "Chiodi per coperture" ; ha-6-14-2:jevEval:Staged
+; ha-6-14-2-11 ; jevEval:Staged ; "Survey Nails" ; "Vermessungsnägel" ; "Clous gravés" ; "Chiodi topografici" ; ha-6-14-2:jevEval:Staged
+; ha-6-14-2-12 ; jevEval:Staged ; "Twist Nails" ; "Nagelschrauben" ; "Clous torsadés" ; "Chiodi di torsione" ; ha-6-14-2:jevEval:Staged
+; ha-6-14-2-13 ; jevEval:Staged ; "Upholstery Nails" ; "Polsternägel" ; "Clous pour tissus d’ameublement" ; "Chiodi per tappezzeria" ; ha-6-14-2:jevEval:Staged
+; ha-6-14-2-14 ; jevEval:Staged ; "Wire Nails" ; "Drahtnägel" ; "Clous métalliques" ; "Chiodi a filo" ; ha-6-14-2:jevEval:Staged
+; ha-6-14-6-2 ; jevEval:Staged ; "Deck Screws" ; "Deckverschlüsse" ; "Vis de pont" ; "Viti del ponte" ; ha-6-14-6:jevEval:Staged
+; ha-6-14-6-3 ; jevEval:Staged ; "Drywall Screws" ; "Schnellbauschrauben" ; "Vis pour cloisons sèches" ; "Viti per cartongesso" ; ha-6-14-6:jevEval:Staged
+; ha-6-14-6-4 ; jevEval:Staged ; "Screw Eyes & Hooks" ; "Schraubösen und -haken" ; "Vis et crochets" ; "Viti ad anello e ganci" ; ha-6-14-6:jevEval:Staged
+; ha-6-14-6-6 ; jevEval:Staged ; "Lag Screws" ; "Außensechskant-Holzzschrauben" ; "Vis de fixation" ; "Viti a testa esagonale" ; ha-6-14-6:jevEval:Staged
+; ha-6-14-6-7 ; jevEval:Staged ; "Machine Screws" ; "Maschinenschrauben" ; "Vis mécaniques" ; "Viti della macchina" ; ha-6-14-6:jevEval:Staged
+; ha-6-14-6-8 ; jevEval:Staged ; "Masonry Screws" ; "Mauerwerksschrauben" ; "Vis de maçon" ; "Viti per muratura" ; ha-6-14-6:jevEval:Staged
+; ha-6-14-6-9 ; jevEval:Staged ; "Roofing Screws" ; "Dachdeckerschrauben" ; "Vis de toiture" ; "Viti per coperture" ; ha-6-14-6:jevEval:Staged
+; ha-6-14-6-10 ; jevEval:Staged ; "Self-Drilling Screws" ; "Gewindebohrende Schrauben" ; "Vis auto-perceuses" ; "Viti autoperforanti" ; ha-6-14-6:jevEval:Staged
+; ha-6-14-6-11 ; jevEval:Staged ; "Set Screws" ; "Stellschrauben" ; "Vis de réglage" ; "Viti di fissaggio" ; ha-6-14-6:jevEval:Staged
+; ha-6-14-6-12 ; jevEval:Staged ; "Sheet Metal Screws" ; "Blechschrauben" ; "Vis à tôle" ; "Viti per lamiera" ; ha-6-14-6:jevEval:Staged
+; ha-6-14-6-13 ; jevEval:Staged ; "Socket Screws" ; "Inbusschrauben" ; "Vis à douille" ; "Viti a presa" ; ha-6-14-6:jevEval:Staged
+; ha-6-14-6-14 ; jevEval:Staged ; "Thumb Screws" ; "Flügelschrauben" ; "Vis à pouce" ; "Viti a testa zigrinata" ; ha-6-14-6:jevEval:Staged
+; ha-6-14-6-15 ; jevEval:Staged ; "Wood Screws" ; "Holzschrauben" ; "Vis à bois" ; "Viti per legno" ; ha-6-14-6:jevEval:Staged
+; ha-6-24-1-1 ; jevEval:Staged ; "Hose Hangers" ; "Schlauchaufhänger" ; "Cintres de tuyaux" ; "Ganci per tubi" ; ha-6-24-1:jevEval:Staged
+; ha-6-24-1-2 ; jevEval:Staged ; "Hose Pots" ; "Schlauchtöpfe" ; "Pots de tuyau" ; "Vasi per tubi flessibili" ; ha-6-24-1:jevEval:Staged
+; ha-6-24-1-3 ; jevEval:Staged ; "Hose Reels" ; "Schlauchtrommeln" ; "Enrouleurs de tuyaux" ; "Avvolgitubo" ; ha-6-24-1:jevEval:Staged
+; ha-6-24-2-1 ; jevEval:Staged ; "Carpenter Belts" ; "Zimmermannsgürtel" ; "Ceintures de charpentier" ; "Cinture da carpentiere" ; ha-6-24-2:jevEval:Staged
+; ha-6-24-2-2 ; jevEval:Staged ; "Electrician Belts" ; "Elektrikergürtel" ; "Ceintures d’électricien" ; "Cinture per elettricisti" ; ha-6-24-2:jevEval:Staged
+; ha-6-24-2-3 ; jevEval:Staged ; "Framer Belts" ; "Schreinergürtel" ; "Ceintures d’encadreur" ; "Cinture per corniciaio" ; ha-6-24-2:jevEval:Staged
+; ha-6-24-4-1 ; jevEval:Staged ; "Hand Carry Tool Boxes" ; "Tragbare Werkzeugkästen" ; "Boîtes à outils à main" ; "Cassette degli attrezzi per il trasporto a mano" ; ha-6-24-4:jevEval:Staged
+; ha-6-24-4-2 ; jevEval:Staged ; "Rolling Tool Boxes" ; "Werkzeugkästen auf Rädern" ; "Boîtes à outils roulantes" ; "Cassette degli attrezzi con ruote" ; ha-6-24-4:jevEval:Staged
+; ha-6-24-4-3 ; jevEval:Staged ; "Truck Tool Boxes" ; "LKW-Werkzeugkästen" ; "Coffres à outils" ; "Cassette degli attrezzi per camion" ; ha-6-24-4:jevEval:Staged
+; ha-6-24-5-1 ; jevEval:Staged ; "Rolling Cabinets & Chests" ; "Schränke und Truhen auf Rädern" ; "Armoires et coffres roulants" ; "Armadietti e cassapanche con rotelle" ; ha-6-24-5:jevEval:Staged
+; ha-6-24-5-2 ; jevEval:Staged ; "Stationary Cabinets & Chests" ; "Feststehende Schränke und Truhen" ; "Armoires et coffres fixes" ; "Armadi e cassapanche fissi" ; ha-6-24-5:jevEval:Staged
+; ha-6-24-6-1 ; jevEval:Staged ; "Drawer Liners" ; "Schubladeneinlagen" ; "Rangements de tiroirs" ; "Fodere per cassetti" ; ha-6-24-6:jevEval:Staged
+; ha-6-24-6-2 ; jevEval:Staged ; "Tool Box Inserts" ; "Werkzeugkasteneinsätze" ; "Caissons de boîte à outils" ; "Inserti per cassetta degli attrezzi" ; ha-6-24-6:jevEval:Staged
+; ha-6-24-8-1 ; jevEval:Staged ; "Mobile Work Benches" ; "Mobile Werkbänke" ; "Établis mobiles" ; "Banchi da lavoro mobili" ; ha-6-24-8:jevEval:Staged
+; ha-6-24-8-2 ; jevEval:Staged ; "Stationary Work Benches" ; "Feststehende Werkbänke" ; "Établis fixes" ; "Banchi da lavoro fissi" ; ha-6-24-8:jevEval:Staged
+; ha-10-1-2-1 ; jevEval:Staged ; "In-Wall Carriers" ; "Unterputz-Träger" ; "Support de mur" ; "Trasportini a muro" ; ha-10-1-2:jevEval:Staged
+; ha-10-1-2-2 ; jevEval:Staged ; "Mounting Frames" ; "Montagerahmen" ; "Cadres de montage" ; "Telai di montaggio" ; ha-10-1-2:jevEval:Staged
+; ha-10-1-4-1 ; jevEval:Staged ; "Adapters" ; "Adapter" ; "Adaptateurs" ; "Adattatori" ; ha-10-1-4:jevEval:Staged
+; ha-10-1-4-2 ; jevEval:Staged ; "Bushings" ; "Buchsen" ; "Bagues" ; "Boccole" ; ha-10-1-4:jevEval:Staged
+; ha-10-1-5-1 ; jevEval:Staged ; "Caps" ; "Kappen" ; "Casquettes" ; "Cappelli" ; ha-10-1-5:jevEval:Staged
+; ha-10-1-5-2 ; jevEval:Staged ; "Plugs" ; "Stecker" ; "Bouchons mâles" ; "Tappi" ; ha-10-1-5:jevEval:Staged
+; ha-10-1-6-1 ; jevEval:Staged ; "Couplings" ; "Kupplungen" ; "Couplages" ; "Accoppiamenti" ; ha-10-1-6:jevEval:Staged
+; ha-10-1-6-2 ; jevEval:Staged ; "Unions" ; "Anschlussstücke" ; "Unions" ; "Unioni" ; ha-10-1-6:jevEval:Staged
+; ha-10-1-9-1 ; jevEval:Staged ; "Pressure Regulators" ; "Druckregler" ; "Régulateurs de pression" ; "Regolatori di pressione" ; ha-10-1-9:jevEval:Staged
+; ha-10-1-9-2 ; jevEval:Staged ; "Temperature Regulators" ; "Temperaturregler" ; "Régulateurs de température" ; "Regolatori di temperatura" ; ha-10-1-9:jevEval:Staged
+; ha-10-1-10-1 ; jevEval:Staged ; "Ball Valves" ; "Kugelventile" ; "Robinets à boisseau" ; "Valvole a sfera" ; ha-10-1-10:jevEval:Staged
+; ha-10-1-10-2 ; jevEval:Staged ; "Check Valves" ; "Absperrventile" ; "Clapets anti-retour" ; "Valvole di controllo" ; ha-10-1-10:jevEval:Staged
+; ha-10-1-10-3 ; jevEval:Staged ; "Gate Valves" ; "Schieberventile" ; "Vannes d’arrêt" ; "Valvole di chiusura" ; ha-10-1-10:jevEval:Staged
+; ha-10-1-10-4 ; jevEval:Staged ; "Globe Valves" ; "Durchgangsventile" ; "Robinets à soupape" ; "Valvole a globo" ; ha-10-1-10:jevEval:Staged
+; ha-10-1-10-5 ; jevEval:Staged ; "Pressure Relief Valves" ; "Überdruckventile" ; "Limiteurs de pression" ; "Valvole limitatrici di pressione" ; ha-10-1-10:jevEval:Staged
+; ha-10-2-1-1 ; jevEval:Staged ; "Bathtub Bases & Feet" ; "Badewannenunterbau & -füße" ; "Supports et pieds pour baignoires" ; "Piedini e basi per vasche da bagno" ; ha-10-2-1:jevEval:Staged
+; ha-10-2-1-2 ; jevEval:Staged ; "Bathtub Skirts" ; "Badewannenverkleidungen" ; "Contours de baignoires" ; "Rivestimenti vasche da bagno" ; ha-10-2-1:jevEval:Staged
+; ha-10-2-1-3 ; jevEval:Staged ; "Bathtub Spouts" ; "Badewanneneinläufe" ; "Becs de baignoire" ; "Rubinetti vasche da bagno" ; ha-10-2-1:jevEval:Staged
+; ha-10-2-2-1 ; jevEval:Staged ; "Drain Covers & Strainers" ; "Abflussstöpsel & -filter" ; "Bouchons de plomberie et filtres" ; "Rubinetti e filtri idraulici" ; ha-10-2-2:jevEval:Staged
+; ha-10-2-2-2 ; jevEval:Staged ; "Drain Frames" ; "Abflussgitter" ; "Grilles de bonde" ; "Griglie di scarico" ; ha-10-2-2:jevEval:Staged
+; ha-10-2-2-3 ; jevEval:Staged ; "Drain Liners" ; "Abflussauskleidung bzw. -Abdichtung" ; "Tuyaux de vidange" ; "Liner di scarico" ; ha-10-2-2:jevEval:Staged
+; ha-10-2-2-4 ; jevEval:Staged ; "Drain Openers" ; "Abflussreinigungswerkzeug" ; "Déboucheurs de bonde" ; "Sgorgatori" ; ha-10-2-2:jevEval:Staged
+; ha-10-2-2-5 ; jevEval:Staged ; "Drain Rods" ; "Kanal- & Abflussstäbe" ; "Furets pour bondes" ; "Sonde per spurgo" ; ha-10-2-2:jevEval:Staged
+; ha-10-2-2-6 ; jevEval:Staged ; "Plumbing Traps" ; "Geruchsverschlüsse" ; "Siphons hydrauliques" ; "Sifoni idraulici" ; ha-10-2-2:jevEval:Staged
+; ha-10-2-2-7 ; jevEval:Staged ; "Plumbing Wastes" ; "Sanitärabläufe" ; "Bondes de vidange" ; "Scarichi idraulici" ; ha-10-2-2:jevEval:Staged
+; ha-10-2-3-1 ; jevEval:Staged ; "Floor Drains" ; "Bodenabläufe" ; "Siphons de sol" ; "Scarichi a pavimento" ; ha-10-2-3:jevEval:Staged
+; ha-10-2-3-2 ; jevEval:Staged ; "Shower Drains" ; "Duschabflüsse" ; "Siphons de douche" ; "Scarichi doccia" ; ha-10-2-3:jevEval:Staged
+; ha-10-2-3-3 ; jevEval:Staged ; "Sink Drains" ; "Abflüsse für Waschbecken" ; "Siphons d’évier" ; "Scarichi del lavandino" ; ha-10-2-3:jevEval:Staged
+; ha-10-2-4-1 ; jevEval:Staged ; "Faucet Aerators" ; "Strahlregler" ; "Aérateurs pour robinets" ; "Aeratori per rubinetti" ; ha-10-2-4:jevEval:Staged
+; ha-10-2-4-2 ; jevEval:Staged ; "Faucet Handles & Controls" ; "Armaturen-Griffe" ; "Poignées de robinets" ; "Manopole per rubinetti" ; ha-10-2-4:jevEval:Staged
+; ha-10-2-5-1 ; jevEval:Staged ; "Cover Plates" ; "Abdeckplatten" ; "Plaques de recouvrement" ; "Piastre di copertura" ; ha-10-2-5:jevEval:Staged
+; ha-10-2-5-2 ; jevEval:Staged ; "Escutcheon Plates" ; "Blenden" ; "Plaques d’écusson" ; "Piastre a stemma" ; ha-10-2-5:jevEval:Staged
+; ha-10-2-5-3 ; jevEval:Staged ; "Flange Plates" ; "Flanschplatten" ; "Plaques à embase" ; "Piastre flangiate" ; ha-10-2-5:jevEval:Staged
+; ha-10-2-6-1 ; jevEval:Staged ; "Bathtub & Shower Jets" ; "Badewannen- & Duschdüsen" ; "Jets pour baignoires et douches" ; "Getti per vasca da bagno e doccia" ; ha-10-2-6:jevEval:Staged
+; ha-10-2-6-2 ; jevEval:Staged ; "Electric & Power Showers" ; "Elektrische & Powerduschen" ; "Chauffe-eau électriques instantanés et jets haute pression" ; "Docce elettriche" ; ha-10-2-6:jevEval:Staged
+; ha-10-2-6-3 ; jevEval:Staged ; "Shower Arms & Connectors" ; "Duscharme & Verbindungsteile" ; "Bras et embouts de douche" ; "Connettori e bracci doccia" ; ha-10-2-6:jevEval:Staged
+; ha-10-2-6-4 ; jevEval:Staged ; "Shower Bases" ; "Duschwannen" ; "Bacs de douche" ; "Piatti doccia" ; ha-10-2-6:jevEval:Staged
+; ha-10-2-6-5 ; jevEval:Staged ; "Shower Columns" ; "Duschpaneele" ; "Colonnes de douche" ; "Pannelli doccia" ; ha-10-2-6:jevEval:Staged
+; ha-10-2-6-6 ; jevEval:Staged ; "Shower Doors & Enclosures" ; "Duschkabinen & -türen" ; "Portes et parois de douche" ; "Porte doccia" ; ha-10-2-6:jevEval:Staged
+; ha-10-2-6-7 ; jevEval:Staged ; "Shower Heads" ; "Duschköpfe" ; "Pommes de douche" ; "Soffioni doccia" ; ha-10-2-6:jevEval:Staged
+; ha-10-2-6-8 ; jevEval:Staged ; "Shower Walls & Surrounds" ; "Duschwände" ; "Panneaux de douche" ; "Pareti e ambienti doccia" ; ha-10-2-6:jevEval:Staged
+; ha-10-2-6-9 ; jevEval:Staged ; "Shower Water Filters" ; "Wasserfilter für Duschen" ; "Filtres de douche" ; "Filtri acqua doccia" ; ha-10-2-6:jevEval:Staged
+; ha-10-2-7-1 ; jevEval:Staged ; "Sink Legs" ; "Waschbeckenfüße" ; "Pieds de lavabo" ; "Gambe lavandini" ; ha-10-2-7:jevEval:Staged
+; ha-10-2-8-1 ; jevEval:Staged ; "Ballcocks & Flappers" ; "Kugelhähne & Verschlüsse" ; "Robinets à flotteur et clapets à battant" ; "Galleggianti/flapper" ; ha-10-2-8:jevEval:Staged
+; ha-10-2-8-2 ; jevEval:Staged ; "Bidet Faucets & Sprayers" ; "Bidet-Hähne & -Sprüher" ; "Robinets et douchettes pour bidets" ; "Doccette igieniche e rubinetti per bidet" ; ha-10-2-8:jevEval:Staged
+; ha-10-2-8-3 ; jevEval:Staged ; "Toilet & Bidet Seats" ; "Toilettensitze" ; "Sièges de toilettes et de bidets" ; "Tavolette WC e bidet" ; ha-10-2-8:jevEval:Staged
+; ha-10-2-8-4 ; jevEval:Staged ; "Toilet Seat Covers" ; "WC-Papiersitze" ; "Couvre-sièges de toilettes" ; "Copriwater" ; ha-10-2-8:jevEval:Staged
+; ha-10-2-8-5 ; jevEval:Staged ; "Toilet Seat Lid Covers" ; "Toilettendeckel" ; "Couvre-couvercles de sièges de toilettes" ; "Rivestimenti per coperchi di water" ; ha-10-2-8:jevEval:Staged
+; ha-10-2-8-6 ; jevEval:Staged ; "Toilet Tank Covers" ; "Spülkastenabdeckungen" ; "Couvercles de réservoirs de toilettes" ; "Coperchi di vaschette esterne per WC" ; ha-10-2-8:jevEval:Staged
+; ha-10-2-8-7 ; jevEval:Staged ; "Toilet Tank Levers" ; "WC-Spülkastengriffe" ; "Poignées de WC" ; "Leve per vaschette di WC" ; ha-10-2-8:jevEval:Staged
+; ha-10-2-8-8 ; jevEval:Staged ; "Toilet Tanks" ; "Spülkästen" ; "Réservoirs de toilette" ; "Vaschette per WC" ; ha-10-2-8:jevEval:Staged
+; ha-10-2-8-9 ; jevEval:Staged ; "Toilet Trim" ; "Toilettenverkleidung" ; "Éléments internes aux toilettes" ; "Guarnizione WC" ; ha-10-2-8:jevEval:Staged
+; ha-10-3-2-1 ; jevEval:Staged ; "Alcove Bathtubs" ; "Alkoven-Badewannen" ; "Baignoires en alcôve" ; "Vasche da bagno alcova" ; ha-10-3-2:jevEval:Staged
+; ha-10-3-2-2 ; jevEval:Staged ; "Drop-In Bathtubs" ; "Einbaubadewannen" ; "Baignoires encastrées" ; "Vasche da bagno da incasso" ; ha-10-3-2:jevEval:Staged
+; ha-10-3-2-3 ; jevEval:Staged ; "Freestanding Bathtubs" ; "Freistehende Badewannen" ; "Baignoires autoportantes" ; "Vasche da bagno freestanding" ; ha-10-3-2:jevEval:Staged
+; ha-10-3-3-1 ; jevEval:Staged ; "Bathroom Sink Faucets" ; "Badezimmerwaschbeckenarmaturen" ; "Robinets de lavabo de salle de bain" ; "Rubinetti lavandino del bagno" ; ha-10-3-3:jevEval:Staged
+; ha-10-3-3-2 ; jevEval:Staged ; "Bathtub & Shower Faucets" ; "Badewannen- und Duscharmaturen" ; "Robinets de baignoire et de douche" ; "Rubinetti per vasca da bagno e doccia" ; ha-10-3-3:jevEval:Staged
+; ha-10-3-3-3 ; jevEval:Staged ; "Kitchen Sink Faucets" ; "Küchenarmaturen" ; "Robinets d’évier de cuisine" ; "Rubinetti lavandino della cucina" ; ha-10-3-3:jevEval:Staged
+; ha-10-3-5-1 ; jevEval:Staged ; "Bathroom Sinks" ; "Badezimmerwaschbecken" ; "Lavabos" ; "Lavandini bagno" ; ha-10-3-5:jevEval:Staged
+; ha-10-3-5-2 ; jevEval:Staged ; "Kitchen & Utility Sinks" ; "Küchenspülen & Spülbecken" ; "Éviers & Plonges" ; "Lavandini cucina" ; ha-10-3-5:jevEval:Staged
+; ha-10-3-6-1 ; jevEval:Staged ; "Bidets" ; "Bidets" ; "Bidets" ; "Bidet" ; ha-10-3-6:jevEval:Staged
+; ha-10-3-6-2 ; jevEval:Staged ; "Toilets" ; "Toiletten" ; "Toilettes" ; "WC" ; ha-10-3-6:jevEval:Staged
+; ha-10-3-6-3 ; jevEval:Staged ; "Urinals" ; "Urinale" ; "Urinoirs" ; "Orinatoi" ; ha-10-3-6:jevEval:Staged
+; ha-10-7-2-1 ; jevEval:Staged ; "Drinking Fountains" ; "Trinkbrunnen" ; "Fontaines à eau potable" ; "Fontanelle" ; ha-10-7-2:jevEval:Staged
+; ha-10-7-2-2 ; jevEval:Staged ; "Water Chillers" ; "Wasserkühler" ; "Refroidisseurs industriels" ; "Refrigeratori ad acqua" ; ha-10-7-2:jevEval:Staged
+; ha-10-7-4-1 ; jevEval:Staged ; "Water Filter Cartridges" ; "Wasserfilterkartuschen" ; "Cartouches pour filtres à eau" ; "Cartucce filtri acqua" ; ha-10-7-4:jevEval:Staged
+; ha-10-7-4-2 ; jevEval:Staged ; "Water Filter Housings" ; "Wasserfiltergehäuse" ; "Boîtiers pour filtres à eau" ; "Contenitori filtri acqua" ; ha-10-7-4:jevEval:Staged
+; ha-10-7-6-1 ; jevEval:Staged ; "Salt-Based Water Softeners" ; "Wasserenthärter auf Salzbasis" ; "Adoucisseurs d’eau à base de sel" ; "Addolcitori a base di sale" ; ha-10-7-6:jevEval:Staged
+; ha-10-7-6-2 ; jevEval:Staged ; "Salt-Free Water Softeners" ; "Wasserenthärter ohne Salz" ; "Adoucisseurs d’eau sans sel" ; "Addolcitori senza sale" ; ha-10-7-6:jevEval:Staged
+; ha-11-6-1-1 ; jevEval:Staged ; "Flexible Electrical Conduit" ; "Flexible Kabelkanäle" ; "Conduit électrique flexible" ; "Condotto elettrico flessibile" ; ha-11-6-1:jevEval:Staged
+; ha-11-6-1-2 ; jevEval:Staged ; "Rigid Electrical Conduit" ; "Starre Kabelkanäle" ; "Conduit électrique rigide" ; "Condotto elettrico rigido" ; ha-11-6-1:jevEval:Staged
+; ha-11-10-1-1 ; jevEval:Staged ; "Dimmer Switches" ; "Dimmerschalter" ; "Gradateurs" ; "Interruttori dimmer" ; ha-11-10-1:jevEval:Staged
+; ha-11-10-1-2 ; jevEval:Staged ; "Single-Pole Switches" ; "Einpolige Schalter" ; "Interrupteurs unipolaires" ; "Interruttori unipolari" ; ha-11-10-1:jevEval:Staged
+; ha-11-10-1-3 ; jevEval:Staged ; "Three-Way Switches" ; "Drei-Wege-Schalter" ; "Interrupteurs à trois voies" ; "Interruttori a tre vie" ; ha-11-10-1:jevEval:Staged
+; ha-11-10-2-1 ; jevEval:Staged ; "Limit Switches" ; "Endschalter" ; "Interrupteurs de position" ; "Interruttore d'arresto" ; ha-11-10-2:jevEval:Staged
+; ha-11-10-2-2 ; jevEval:Staged ; "Pressure Switches" ; "Druckschalter" ; "Interrupteurs de pression" ; "Pressostati" ; ha-11-10-2:jevEval:Staged
+; ha-11-10-2-3 ; jevEval:Staged ; "Specialty Relays" ; "Spezialrelais" ; "Relais spécialisés" ; "Relè speciali" ; ha-11-10-2:jevEval:Staged
+; ha-14-1-1-1 ; jevEval:Staged ; "Benchtop Cabinets" ; "Tischschränke" ; "Armoires de plan de travail" ; "Armadi da banco" ; ha-14-1-1:jevEval:Staged
+; ha-14-1-1-2 ; jevEval:Staged ; "Stand-Up Cabinets" ; "Standschränke" ; "Armoires sur pied" ; "Armadi stand-up" ; ha-14-1-1:jevEval:Staged
+; ha-14-4-1-1 ; jevEval:Staged ; "Masonry Drill Bits" ; "Steinbohrer" ; "Forets à maçonnerie" ; "Punte da trapano per muratura" ; ha-14-4-1:jevEval:Staged
+; ha-14-4-1-2 ; jevEval:Staged ; "Screwdriver Bits" ; "Bits" ; "Embouts de tournevis" ; "Punte per cacciavite" ; ha-14-4-1:jevEval:Staged
+; ha-14-4-1-3 ; jevEval:Staged ; "Twist Drill Bits" ; "Spiralbohrer" ; "Forets hélicoïdaux" ; "Punte da trapano elicoidali" ; ha-14-4-1:jevEval:Staged
+; ha-14-4-3-1 ; jevEval:Staged ; "Power Sharpeners" ; "Elektrische Schärfer" ; "Affûteurs électriques" ; "Affilatrici elettriche" ; ha-14-4-3:jevEval:Staged
+; ha-14-4-3-2 ; jevEval:Staged ; "Manual Sharpeners" ; "Manuelle Schärfer" ; "Affûteuses manuelles" ; "Affilatori manuali" ; ha-14-4-3:jevEval:Staged
+; ha-14-4-4-1 ; jevEval:Staged ; "Keyed Chucks" ; "Spannfutter mit Schlüssel" ; "Mandrins à clé" ; "Mandrini con chiave" ; ha-14-4-4:jevEval:Staged
+; ha-14-4-4-2 ; jevEval:Staged ; "Keyless Chucks" ; "Schnellspannfutter" ; "Mandrins sans clé" ; "Mandrini senza chiave" ; ha-14-4-4:jevEval:Staged
+; ha-14-4-5-1 ; jevEval:Staged ; "Drill Guides" ; "Bohrführungen" ; "Guides de perçage" ; "Guide per punte" ; ha-14-4-5:jevEval:Staged
+; ha-14-4-5-2 ; jevEval:Staged ; "Drill Stands" ; "Bohrständer" ; "Supports de perçage" ; "Supporti per punte" ; ha-14-4-5:jevEval:Staged
+; ha-14-15-2-1 ; jevEval:Staged ; "Oil-Based Cleaners" ; "Reiniger auf Ölbasis" ; "Nettoyants à base d’huile" ; "Detergenti a base di olio" ; ha-14-15-2:jevEval:Staged
+; ha-14-15-2-2 ; jevEval:Staged ; "Water-Based Cleaners" ; "Reiniger auf Wasserbasis" ; "Nettoyants à base d’eau" ; "Detergenti a base acqua" ; ha-14-15-2:jevEval:Staged
+; ha-14-18-1-1 ; jevEval:Staged ; "Edge-Forming Bits" ; "Kantenformende Bits" ; "Fraises quart de rond" ; "Punte per bordi" ; ha-14-18-1:jevEval:Staged
+; ha-14-18-1-2 ; jevEval:Staged ; "Flush-Trim Bits" ; "Bündig abschließende Bits" ; "Fraises à affleurer" ; "Punte per rifinitura a filo" ; ha-14-18-1:jevEval:Staged
+; ha-14-18-1-3 ; jevEval:Staged ; "Straight Bits" ; "Gerade Bits" ; "Fraises droites" ; "Punte dritte" ; ha-14-18-1:jevEval:Staged
+; ha-14-19-1-1 ; jevEval:Staged ; "Abrasive Rolls" ; "Schleifrollen" ; "Rouleaux abrasifs" ; "Rulli abrasivi" ; ha-14-19-1:jevEval:Staged
+; ha-14-19-1-2 ; jevEval:Staged ; "Abrasive Sheets" ; "Schleifblätter" ; "Feuilles abrasives" ; "Fogli abrasivi" ; ha-14-19-1:jevEval:Staged
+; ha-14-19-1-3 ; jevEval:Staged ; "Polishing Pads" ; "Polierkissen" ; "Tampons de polissage" ; "Tamponi per lucidatura" ; ha-14-19-1:jevEval:Staged
+; ha-14-19-1-4 ; jevEval:Staged ; "Sanding Belts" ; "Schleifbänder" ; "Bandes de ponçage" ; "Nastri abrasivi" ; ha-14-19-1:jevEval:Staged
+; ha-14-19-1-5 ; jevEval:Staged ; "Sanding Cords" ; "Schleifschnüre" ; "Cordons de ponçage" ; "Cavi abrasivi" ; ha-14-19-1:jevEval:Staged
+; ha-14-19-1-6 ; jevEval:Staged ; "Sanding Pads" ; "Schleifkissen" ; "Tampons de ponçage" ; "Cuscinetti abrasivi" ; ha-14-19-1:jevEval:Staged
+; ha-14-19-1-7 ; jevEval:Staged ; "Sanding Plates" ; "Schleifscheiben" ; "Plaques de ponçage" ; "Piastre abrasive" ; ha-14-19-1:jevEval:Staged
+; ha-14-19-1-8 ; jevEval:Staged ; "Sanding Sponges" ; "Schleifschwämme" ; "Éponges de ponçage" ; "Spugne abrasive" ; ha-14-19-1:jevEval:Staged
+; ha-14-19-1-9 ; jevEval:Staged ; "Steel Wool" ; "Stahlwolle" ; "Paille de fer" ; "Lana d'acciaio" ; ha-14-19-1:jevEval:Staged
+; ha-14-21-1-1 ; jevEval:Staged ; "Molding Cutters" ; "Fräser" ; "Fraises à moulurer" ; "Frese per formatura" ; ha-14-21-1:jevEval:Staged
+; ha-14-21-1-2 ; jevEval:Staged ; "Profile Cutters" ; "Profilfräser" ; "Fraises à profil" ; "Frese per profili" ; ha-14-21-1:jevEval:Staged
+; ha-14-21-1-3 ; jevEval:Staged ; "Straight Cutters" ; "Geradeschneider" ; "Fraise droite" ; "Frese dritte" ; ha-14-21-1:jevEval:Staged
+; ha-14-22-2-1 ; jevEval:Staged ; "Bevel Tips" ; "Abschrägungsspitzen" ; "Embouts biseau" ; "Punte smussate" ; ha-14-22-2:jevEval:Staged
+; ha-14-22-2-2 ; jevEval:Staged ; "Chisel Tips" ; "Meißelspitzen" ; "Embouts burin" ; "Punte scalpello" ; ha-14-22-2:jevEval:Staged
+; ha-14-22-2-3 ; jevEval:Staged ; "Conical Tips" ; "Konische Spitzen" ; "Embouts coniques" ; "Punte coniche" ; ha-14-22-2:jevEval:Staged
+; ha-14-23-1-1 ; jevEval:Staged ; "Cutter Blades" ; "Cutter-Klingen" ; "Lames de cutters" ; "Lame da taglio" ; ha-14-23-1:jevEval:Staged
+; ha-14-23-1-2 ; jevEval:Staged ; "Scraper Blades" ; "Schaberklingen" ; "Lames de grattoirs" ; "Lame raschianti" ; ha-14-23-1:jevEval:Staged
+; ha-14-23-2-1 ; jevEval:Staged ; "Circular Saw Blades" ; "Kreissägeblätter" ; "Lames de scie circulaire" ; "Lame per seghe circolari" ; ha-14-23-2:jevEval:Staged
+; ha-14-23-2-2 ; jevEval:Staged ; "Jigsaw Blades" ; "Stichsägeblätter" ; "Lames de scie sauteuse" ; "Lame per seghetto alternativo" ; ha-14-23-2:jevEval:Staged
+; ha-14-23-2-3 ; jevEval:Staged ; "Reciprocating Saw Blades" ; "Gattersägeblätter" ; "Lames de scie sabre" ; "Lame per seghe alternative" ; ha-14-23-2:jevEval:Staged
+; ha-14-27-1-1 ; jevEval:Staged ; "Band Saw Stands" ; "Bandsägenständer" ; "Supports pour scies à ruban" ; "Supporti per seghe a nastro" ; ha-14-27-1:jevEval:Staged
+; ha-14-27-1-2 ; jevEval:Staged ; "Miter Saw Stands" ; "Gehrungssägenständer" ; "Supports pour scies à onglet" ; "Supporti per troncatrice" ; ha-14-27-1:jevEval:Staged
+; ha-14-27-1-3 ; jevEval:Staged ; "Table Saw Stands" ; "Tischsägenständer" ; "Supports pour scies de table" ; "Supporti per sega da tavolo" ; ha-14-27-1:jevEval:Staged
+; ha-15-11-1-2 ; jevEval:Staged ; "Chain Cutters" ; "Kettenschneider" ; "Coupe-chaînes" ; "Tagliacatena" ; ha-15-11-1:jevEval:Staged
+; ha-15-11-1-3 ; jevEval:Staged ; "Concrete Mesh Cutters" ; "Betonmattenschneider" ; "Coupe-treillis en béton" ; "Taglierine per reti di cemento" ; ha-15-11-1:jevEval:Staged
+; ha-15-11-2-1 ; jevEval:Staged ; "Custom Grip Cutters" ; "Schneider mit maßgearbeitetem Griff" ; "Cutters personnalisés" ; "Taglierine con impugnatura personalizzata" ; ha-15-11-2:jevEval:Staged
+; ha-15-11-2-2 ; jevEval:Staged ; "Pencil Grip Cutters" ; "Stiftschneider" ; "Cutters crayons" ; "Taglierini con impugnatura a matita" ; ha-15-11-2:jevEval:Staged
+; ha-15-11-2-3 ; jevEval:Staged ; "Pistol Grip Cutters" ; "Pistolengriffschneider" ; "Cutters pistolets" ; "Taglierine con impugnatura a pistola" ; ha-15-11-2:jevEval:Staged
+; ha-15-11-4-1 ; jevEval:Staged ; "End-Cutting Nippers" ; "Vornschneidende Zwickzangen" ; "Tenailles coupantes en bout" ; "Tronchesi per taglio finale" ; ha-15-11-4:jevEval:Staged
+; ha-15-11-4-2 ; jevEval:Staged ; "Side-Cutting Nippers" ; "Seitenschneidende Zwickzangen" ; "Tenailles coupantes latérales" ; "Tronchesi per taglio laterale" ; ha-15-11-4:jevEval:Staged
+; ha-15-11-6-1 ; jevEval:Staged ; "Power Rebar Cutters" ; "Elektrische Betonstahlschneider" ; "Coupe-barres électriques" ; "Taglierine elettriche per tondini per cemento armato" ; ha-15-11-6:jevEval:Staged
+; ha-15-11-6-2 ; jevEval:Staged ; "Manual Rebar Cutters" ; "Manuelle Betonstahlschneider" ; "Coupe-barres manuels" ; "Taglierine manuali per tondini per cemento armato" ; ha-15-11-6:jevEval:Staged
+; ha-15-11-7-1 ; jevEval:Staged ; "Manual Cutters" ; "Manuelle Schneider" ; "Découpeuses manuelles" ; "Taglierine manuali" ; ha-15-11-7:jevEval:Staged
+; ha-15-11-7-2 ; jevEval:Staged ; "Power Cutters" ; "Elektroschere" ; "Découpeuses électriques" ; "Monotroncatrici" ; ha-15-11-7:jevEval:Staged
+; ha-15-11-8-1 ; jevEval:Staged ; "Fixed Blade Knives" ; "Messer mit feststehender Klinge" ; "Couteaux à lame fixe" ; "Coltelli a lama fissa" ; ha-15-11-8:jevEval:Staged
+; ha-15-11-8-2 ; jevEval:Staged ; "Retractable Blade Knives" ; "Messer mit einziehbarer Klinge" ; "Couteaux à lame rétractable" ; "Coltelli a lama retrattile" ; ha-15-11-8:jevEval:Staged
+; ha-15-14-1-1 ; jevEval:Staged ; "Hand Augers" ; "Handschneckenbohrer" ; "Tarières manuelles" ; "Trivelle manuali" ; ha-15-14-1:jevEval:Staged
+; ha-15-14-1-2 ; jevEval:Staged ; "Power Augers" ; "Motorschneckenbohrer" ; "Tarières électriques" ; "Trivelle elettriche" ; ha-15-14-1:jevEval:Staged
+; ha-15-14-3-1 ; jevEval:Staged ; "Hammer Drills" ; "Bohrhammer" ; "Perceuses à percussion" ; "Trapani perforatori" ; ha-15-14-3:jevEval:Staged
+; ha-15-14-3-2 ; jevEval:Staged ; "Impact Drills" ; "Schlagbohrmaschinen" ; "Perceuses à impact" ; "Trapani a percussione" ; ha-15-14-3:jevEval:Staged
+; ha-15-14-3-3 ; jevEval:Staged ; "Rotary Drills" ; "Drehbohrer" ; "Perceuses rotatives" ; "Trapani rotanti" ; ha-15-14-3:jevEval:Staged
+; ha-15-14-5-1 ; jevEval:Staged ; "Pistol Grip Drills" ; "Handbohrmaschinen" ; "Perceuses à poignée pistolet" ; "Punte con impugnatura a pistola" ; ha-15-14-5:jevEval:Staged
+; ha-15-14-5-2 ; jevEval:Staged ; "Right Angle Drills" ; "Rechtwinkelbohrmaschine" ; "Perceuses à angle droit" ; "Trapani ad angolo retto" ; ha-15-14-5:jevEval:Staged
+; ha-15-16-1-1 ; jevEval:Staged ; "Handheld Torches" ; "Handtaschenlampen" ; "Torches portatives" ; "Torce portatili" ; ha-15-16-1:jevEval:Staged
+; ha-15-16-1-3 ; jevEval:Staged ; "Lanterns" ; "Laternen" ; "Lanternes" ; "Lanterne" ; ha-15-16-1:jevEval:Staged
+; ha-15-20-1-1 ; jevEval:Staged ; "Claw Hammers" ; "Klauenhämmer" ; "Marteaux arrache-clous" ; "Martelli da carpentiere" ; ha-15-20-1:jevEval:Staged
+; ha-15-20-1-2 ; jevEval:Staged ; "Mallets" ; "Mallets" ; "Maillets" ; "Magli" ; ha-15-20-1:jevEval:Staged
+; ha-15-20-1-3 ; jevEval:Staged ; "Sledge Hammers" ; "Vorschlaghämmer" ; "Masses" ; "Martelli da fabbro" ; ha-15-20-1:jevEval:Staged
+; ha-15-20-2-1 ; jevEval:Staged ; "Demolition Hammers" ; "Abbruchhämmer" ; "Marteaux de démolition" ; "Martelli demolitori" ; ha-15-20-2:jevEval:Staged
+; ha-15-20-2-2 ; jevEval:Staged ; "Rotary Hammers" ; "Bohrhämmer" ; "Marteaux perforateurs" ; "Martelli rotanti" ; ha-15-20-2:jevEval:Staged
+; ha-15-27-2-1 ; jevEval:Staged ; "Extension Ladders" ; "Ausziehleitern" ; "Échelles à rallonge" ; "Scale telescopica" ; ha-15-27-2:jevEval:Staged
+; ha-15-27-2-2 ; jevEval:Staged ; "Multi-Position Ladders" ; "Multipositionsleitern" ; "Échelles multi-positions" ; "Scale multiposizione" ; ha-15-27-2:jevEval:Staged
+; ha-15-27-2-3 ; jevEval:Staged ; "Step Ladders" ; "Stufenleitern" ; "Escabeaux" ; "Scale a pioli" ; ha-15-27-2:jevEval:Staged
+; ha-15-27-3-3 ; jevEval:Staged ; "Supported Scaffolding" ; "Gestütztes Gerüst" ; "Échafaudages soutenus" ; "Ponteggi supportati" ; ha-15-27-3:jevEval:Staged
+; ha-15-27-3-4 ; jevEval:Staged ; "Suspended Scaffolding" ; "Hängegerüst" ; "Échafaudages suspendus" ; "Ponteggi sospesi" ; ha-15-27-3:jevEval:Staged
+; ha-15-34-2-1 ; jevEval:Staged ; "Handheld Cement Mixers" ; "Handbetonmischer" ; "Bétonnières portatives" ; "Betoniere portatili" ; ha-15-34-2:jevEval:Staged
+; ha-15-34-2-2 ; jevEval:Staged ; "Stand Cement Mixers" ; "Standbetonmischer" ; "Bétonnières sur socle" ; "Betoniere da banco" ; ha-15-34-2:jevEval:Staged
+; ha-15-34-4-1 ; jevEval:Staged ; "Bull Floats" ; "Betonpatschen" ; "Taloches balai" ; "Galleggianti" ; ha-15-34-4:jevEval:Staged
+; ha-15-34-4-2 ; jevEval:Staged ; "Darby Floats" ; "Kartätschen" ; "Taloches Darby" ; "Galleggianti darby" ; ha-15-34-4:jevEval:Staged
+; ha-15-34-4-3 ; jevEval:Staged ; "Hand Floats" ; "Handschwimmer" ; "Taloches manuelles" ; "Galleggianti manuali" ; ha-15-34-4:jevEval:Staged
+; ha-15-34-6-1 ; jevEval:Staged ; "Edgers" ; "Kantenschneider" ; "Plaques spécial contours" ; "Bordatori" ; ha-15-34-6:jevEval:Staged
+; ha-15-34-6-2 ; jevEval:Staged ; "Groovers" ; "Nutfräser" ; "Plaques dresseuses" ; "Scanalatori" ; ha-15-34-6:jevEval:Staged
+; ha-15-34-7-1 ; jevEval:Staged ; "Block Jointers" ; "Blockfräser" ; "Fers à joints de blocs" ; "Giunti a blocchi" ; ha-15-34-7:jevEval:Staged
+; ha-15-34-7-2 ; jevEval:Staged ; "Brick Jointers" ; "Ziegelfräser" ; "Fers à joints de briques" ; "Giunti per mattoni" ; ha-15-34-7:jevEval:Staged
+; ha-15-34-8-1 ; jevEval:Staged ; "Brick Trowels" ; "Ziegelkellen" ; "Truelles à briques" ; "Cazzuole per mattoni" ; ha-15-34-8:jevEval:Staged
+; ha-15-34-8-2 ; jevEval:Staged ; "Gauging Trowels" ; "Stukateurkellen" ; "Truelles de jaugeage" ; "Cazzuole di misurazione" ; ha-15-34-8:jevEval:Staged
+; ha-15-34-8-3 ; jevEval:Staged ; "Pointing Trowels" ; "Spitzkellen" ; "Truelles de pointage" ; "Cazzuole di puntamento" ; ha-15-34-8:jevEval:Staged
+; ha-15-36-1-1 ; jevEval:Staged ; "CO2 Meters" ; "CO2-Messgeräte" ; "Compteurs de CO2" ; "Misuratori di CO2" ; ha-15-36-1:jevEval:Staged
+; ha-15-36-1-2 ; jevEval:Staged ; "Particulate Meters" ; "Partikelmessgeräte" ; "Compteurs de particules" ; "Misuratori di particolato" ; ha-15-36-1:jevEval:Staged
+; ha-15-36-1-3 ; jevEval:Staged ; "Volatile Organic Compound (VOC) Meters" ; "Messgeräte für flüchtige organische Verbindungen (VOC)." ; "Compteurs de composés organiques volatils (COV)" ; "Misuratori di composti organici volatili (COV)" ; ha-15-36-1:jevEval:Staged
+; ha-15-36-3-1 ; jevEval:Staged ; "Cup Anemometers" ; "Schalenkreuzanemometer" ; "Anémomètres à coupelles" ; "Anemometri a coppa" ; ha-15-36-3:jevEval:Staged
+; ha-15-36-3-2 ; jevEval:Staged ; "Hot-Wire Anemometers" ; "Hitzdrahtanemometer" ; "Anémomètres à fil chaud" ; "Anemometri a caldo" ; ha-15-36-3:jevEval:Staged
+; ha-15-36-3-3 ; jevEval:Staged ; "Vane Anemometers" ; "Flügelradanemometer" ; "Anémomètres à hélices" ; "Anemometri a palette" ; ha-15-36-3:jevEval:Staged
+; ha-15-36-4-1 ; jevEval:Staged ; "Aneroid Barometers" ; "Dosenbarometer" ; "Baromètres anéroïdes" ; "Barometri aneroidi" ; ha-15-36-4:jevEval:Staged
+; ha-15-36-4-2 ; jevEval:Staged ; "Digital Barometers" ; "Digitale Barometer" ; "Baromètres numériques" ; "Barometri digitali" ; ha-15-36-4:jevEval:Staged
+; ha-15-36-4-3 ; jevEval:Staged ; "Mercury Barometers" ; "Quecksilberbarometer" ; "Baromètres à mercure" ; "Barometri a mercurio" ; ha-15-36-4:jevEval:Staged
+; ha-15-36-5-1 ; jevEval:Staged ; "Dial Calipers" ; "Skalenmessschieber" ; "Pieds à coulisse à cadran" ; "Calibri con quadrante" ; ha-15-36-5:jevEval:Staged
+; ha-15-36-5-2 ; jevEval:Staged ; "Digital Calipers" ; "Digitale Messschieber" ; "Pieds à coulisse numériques" ; "Calibri digitali" ; ha-15-36-5:jevEval:Staged
+; ha-15-36-5-3 ; jevEval:Staged ; "Vernier Calipers" ; "Schieblehre" ; "Pieds à coulisse à vernier" ; "Calibri a cursore" ; ha-15-36-5:jevEval:Staged
+; ha-15-36-9-1 ; jevEval:Staged ; "Circuit Testers" ; "Stromprüfer" ; "Testeurs de circuits" ; "Tester di circuiti" ; ha-15-36-9:jevEval:Staged
+; ha-15-36-9-2 ; jevEval:Staged ; "Multimeters" ; "Multimeter" ; "Multimètres" ; "Multimetri" ; ha-15-36-9:jevEval:Staged
+; ha-15-36-9-3 ; jevEval:Staged ; "Voltage Testers" ; "Spannungsprüfer" ; "Testeurs de tension" ; "Tester di tensione" ; ha-15-36-9:jevEval:Staged
+; ha-15-36-10-1 ; jevEval:Staged ; "Gas Flow Meters" ; "Gasdurchflussmesser" ; "Débitmètres de gaz" ; "Misuratori di portata del gas" ; ha-15-36-10:jevEval:Staged
+; ha-15-36-10-2 ; jevEval:Staged ; "Liquid Flow Meters" ; "Flüssigkeitsdurchflussmesser" ; "Débitmètres de liquide" ; "Misuratori di portata per liquidi" ; ha-15-36-10:jevEval:Staged
+; ha-15-36-11-1 ; jevEval:Staged ; "Combustible Gas Detectors" ; "Detektoren für brennbare Gase" ; "Détecteurs de gaz combustibles" ; "Rilevatori di gas combustibili" ; ha-15-36-11:jevEval:Staged
+; ha-15-36-11-2 ; jevEval:Staged ; "Radon Detectors" ; "Radondetektoren" ; "Détecteurs de radon" ; "Rilevatori di radon" ; ha-15-36-11:jevEval:Staged
+; ha-15-36-12-1 ; jevEval:Staged ; "Depth Gauges" ; "Tiefenmesser" ; "Manomètres de profondeur" ; "Indicatori di profondità" ; ha-15-36-12:jevEval:Staged
+; ha-15-36-12-2 ; jevEval:Staged ; "Pressure Gauges" ; "Manometer" ; "Manomètres de pression" ; "Manometri" ; ha-15-36-12:jevEval:Staged
+; ha-15-36-12-3 ; jevEval:Staged ; "Temperature Gauges" ; "Temperaturanzeigegeräte" ; "Manomètres de température" ; "Indicatori di temperatura" ; ha-15-36-12:jevEval:Staged
+; ha-15-36-13-1 ; jevEval:Staged ; "Desktop Geiger Counters" ; "Tischgeigerzähler" ; "Compteurs Geiger de bureau" ; "Contatori Geiger da tavolo" ; ha-15-36-13:jevEval:Staged
+; ha-15-36-13-2 ; jevEval:Staged ; "Handheld Geiger Counters" ; "Tragbare Geigerzähler" ; "Compteurs Geiger portatifs" ; "Contatori Geiger portatili" ; ha-15-36-13:jevEval:Staged
+; ha-15-36-16-1 ; jevEval:Staged ; "Angle Guides" ; "Winkelführungen" ; "Guides d’angle" ; "Guide angolari" ; ha-15-36-16:jevEval:Staged
+; ha-15-36-16-2 ; jevEval:Staged ; "Height Guides" ; "Höhenführungen" ; "Guides de hauteur" ; "Guide di altezza" ; ha-15-36-16:jevEval:Staged
+; ha-15-36-17-1 ; jevEval:Staged ; "Bubble Levels" ; "Wasserwaagen" ; "Niveaux à bulle" ; "Livelle a bolla" ; ha-15-36-17:jevEval:Staged
+; ha-15-36-17-2 ; jevEval:Staged ; "Laser Levels" ; "Laser-Wasserwaagen" ; "Niveaux laser" ; "Livelle laser" ; ha-15-36-17:jevEval:Staged
+; ha-15-36-17-3 ; jevEval:Staged ; "Sight Levels" ; "Schaugläser" ; "Lunettes de niveau" ; "Livelli visivi" ; ha-15-36-17:jevEval:Staged
+; ha-15-36-18-1 ; jevEval:Staged ; "Digital Scales" ; "Digitale Waagen" ; "Balances numériques" ; "Bilance digitali" ; ha-15-36-18:jevEval:Staged
+; ha-15-36-18-2 ; jevEval:Staged ; "Mechanical Scales" ; "Mechanische Waagen" ; "Balances mécaniques" ; "Bilance meccaniche" ; ha-15-36-18:jevEval:Staged
+; ha-15-36-20-1 ; jevEval:Staged ; "Pin-Type Meters" ; "Stiftmessgeräte" ; "Mètres à broches" ; "Misuratori di tipo con puntale" ; ha-15-36-20:jevEval:Staged
+; ha-15-36-20-2 ; jevEval:Staged ; "Pinless Meters" ; "Stiftlose Messgeräte" ; "Mètres sans broches" ; "Misuratori senza puntale" ; ha-15-36-20:jevEval:Staged
+; ha-15-36-21-1 ; jevEval:Staged ; "Digital pH Meters" ; "Digitales pH-Meter" ; "pH-mètres numériques" ; "Misuratori di PH digitali" ; ha-15-36-21:jevEval:Staged
+; ha-15-36-21-2 ; jevEval:Staged ; "Test Strips" ; "Teststreifen" ; "Bandelettes de test" ; "Strisce di prova" ; ha-15-36-21:jevEval:Staged
+; ha-15-36-22-1 ; jevEval:Staged ; "Circuit Finders" ; "Leitungsfinder" ; "Détecteurs de circuits" ; "Rilevatori di circuiti" ; ha-15-36-22:jevEval:Staged
+; ha-15-36-22-2 ; jevEval:Staged ; "Stud Finders" ; "Balkenfinder" ; "Détecteurs de goujons" ; "Rilevatori di montanti" ; ha-15-36-22:jevEval:Staged
+; ha-15-36-22-3 ; jevEval:Staged ; "Voltage Probes" ; "Spannungstester" ; "Sondes de tension" ; "Sonde di tensione" ; ha-15-36-22:jevEval:Staged
+; ha-15-36-26-1 ; jevEval:Staged ; "Broadband Seismometers" ; "Breitband-Seismographen" ; "Sismomètres à large bande" ; "Sismometri a banda larga" ; ha-15-36-26:jevEval:Staged
+; ha-15-36-26-2 ; jevEval:Staged ; "Long-Period Seismometers" ; "Langzeit-Seismographen" ; "Sismomètres longue période" ; "Sismometri a lungo periodo" ; ha-15-36-26:jevEval:Staged
+; ha-15-36-26-3 ; jevEval:Staged ; "Short-Period Seismometers" ; "Kurzzeit-Seismographen" ; "Sismomètres courte période" ; "Sismometri a breve periodo" ; ha-15-36-26:jevEval:Staged
+; ha-15-36-28-1 ; jevEval:Staged ; "Framing Squares" ; "Winkeleisen" ; "Équerres de traçage" ; "Squadre incorniciate" ; ha-15-36-28:jevEval:Staged
+; ha-15-36-28-2 ; jevEval:Staged ; "Speed Squares" ; "Winkel mit Gehrung" ; "Équerres rapides" ; "Squadre velocità" ; ha-15-36-28:jevEval:Staged
+; ha-15-36-28-3 ; jevEval:Staged ; "Try Squares" ; "Anschlagwinkel" ; "Équerres à angle droit" ; "Squadre di prova" ; ha-15-36-28:jevEval:Staged
+; ha-15-36-34-1 ; jevEval:Staged ; "Thermopiles" ; "Thermosäulen" ; "Thermopiles" ; "Termopili" ; ha-15-36-34:jevEval:Staged
+; ha-15-36-34-2 ; jevEval:Staged ; "Thermocouples" ; "Thermoelemente" ; "Thermocouples" ; "Termocoppie" ; ha-15-36-34:jevEval:Staged
+; ha-15-36-35-1 ; jevEval:Staged ; "Force Transducers" ; "Kraftaufnehmer" ; "Transducteurs de force" ; "Trasduttori di forza" ; ha-15-36-35:jevEval:Staged
+; ha-15-36-35-2 ; jevEval:Staged ; "Pressure Transducers" ; "Druckmessumformer" ; "Transducteurs de pression" ; "Trasduttori di pressione" ; ha-15-36-35:jevEval:Staged
+; ha-15-36-35-3 ; jevEval:Staged ; "Temperature Transducers" ; "Temperaturmessumformer" ; "Transducteurs de température" ; "Trasduttori di temperatura" ; ha-15-36-35:jevEval:Staged
+; ha-15-36-37-1 ; jevEval:Staged ; "Fixed Vibration Meters" ; "Fest installierte Schwingungsmesser" ; "Vibromètres fixes" ; "Misuratori di vibrazioni fissi" ; ha-15-36-37:jevEval:Staged
+; ha-15-36-37-2 ; jevEval:Staged ; "Handheld Vibration Meters" ; "Tragbare Schwingungsmesser" ; "Vibromètres portatifs" ; "Misuratori di vibrazioni portatili" ; ha-15-36-37:jevEval:Staged
+; ha-15-42-3-1 ; jevEval:Staged ; "Pad Edgers" ; "Pad Edger" ; "Plaque spécial contours" ; "Bordatrici per cuscinetti" ; ha-15-42-3:jevEval:Staged
+; ha-15-42-3-2 ; jevEval:Staged ; "Roller Edgers" ; "Kantenroller" ; "Rouleaux spécial contours" ; "Bordatrici a rulli" ; ha-15-42-3:jevEval:Staged
+; ha-15-42-4-1 ; jevEval:Staged ; "Mini Rollers" ; "Mini-Farbrollen" ; "Mini-rouleaux" ; "Mini rulli" ; ha-15-42-4:jevEval:Staged
+; ha-15-42-4-2 ; jevEval:Staged ; "Standard Rollers" ; "Standardrollen" ; "Rouleaux standards" ; "Rulli standard" ; ha-15-42-4:jevEval:Staged
+; ha-15-42-4-3 ; jevEval:Staged ; "Texture Rollers" ; "Texturrollen" ; "Rouleaux de texture" ; "Rulli di trama" ; ha-15-42-4:jevEval:Staged
+; ha-15-42-5-1 ; jevEval:Staged ; "Power Shakers" ; "Power-Shaker" ; "Shakers Power" ; "Shaker elettrici" ; ha-15-42-5:jevEval:Staged
+; ha-15-42-5-2 ; jevEval:Staged ; "Manual Shakers" ; "Manuelle Farbrüttler" ; "Mélangeurs manuels" ; "Miscelatori manuali" ; ha-15-42-5:jevEval:Staged
+; ha-15-42-7-1 ; jevEval:Staged ; "Airless Sprayers" ; "Airless-Spritzgeräte" ; "Pulvérisateurs sans air" ; "Spruzzatori airless" ; ha-15-42-7:jevEval:Staged
+; ha-15-42-7-2 ; jevEval:Staged ; "Compressed Air Sprayers" ; "Druckpumpzerstäuber" ; "Pulvérisateurs à air comprimé" ; "Spruzzatori ad aria compressa" ; ha-15-42-7:jevEval:Staged
+; ha-15-42-7-3 ; jevEval:Staged ; "HVLP Sprayers" ; "Hvlp-Spritzgeräte" ; "Pulvérisateurs HVLP" ; "Spruzzatori Hvlp" ; ha-15-42-7:jevEval:Staged
+; ha-15-42-8-1 ; jevEval:Staged ; "Cone Strainers" ; "Lacksiebe" ; "Tamis coniques" ; "Filtri a cono" ; ha-15-42-8:jevEval:Staged
+; ha-15-42-8-2 ; jevEval:Staged ; "Pan Strainers" ; "Pfannensiebe" ; "Tamis passoires" ; "Filtri a maglia" ; ha-15-42-8:jevEval:Staged
+; ha-15-57-1-1 ; jevEval:Staged ; "Manual Rivet Guns" ; "Manuelle Nietpistolen" ; "Pistolets à rivets manuels" ; "Rivettatrici pnenumatiche manuali" ; ha-15-57-1:jevEval:Staged
+; ha-15-57-1-2 ; jevEval:Staged ; "Pneumatic Rivet Guns" ; "Pneumatische Nietpistolen" ; "Pistolets à rivets pneumatiques" ; "Pistole per rivetti pneumatiche" ; ha-15-57-1:jevEval:Staged
+; ha-15-62-3-1 ; jevEval:Staged ; "Back Saws" ; "Feinsägen" ; "Scies à dos" ; "Seghe posteriori" ; ha-15-62-3:jevEval:Staged
+; ha-15-62-3-2 ; jevEval:Staged ; "Coping Saws" ; "Laubsägen" ; "Scies à archer" ; "Seghe da traforo" ; ha-15-62-3:jevEval:Staged
+; ha-15-62-3-3 ; jevEval:Staged ; "Hacksaws" ; "Bügelsägen" ; "Scies à métaux" ; "Seghetti" ; ha-15-62-3:jevEval:Staged
+; ha-15-62-10-1 ; jevEval:Staged ; "C-Arm Scroll Saws" ; "Dekupiersägen mit C-Öffnung" ; "Scies à chantourner à bras en C" ; "Seghe da traforo con braccio a C" ; ha-15-62-10:jevEval:Staged
+; ha-15-62-10-2 ; jevEval:Staged ; "Parallel-Arm Scroll Saws" ; "Dekupiersägen mit Parallelarm" ; "Scies à chantourner à bras parallèles" ; "Seghe da traforo con braccio parallelo" ; ha-15-62-10:jevEval:Staged
+; ha-15-75-1-1 ; jevEval:Staged ; "Electrician Tool Sets" ; "Elektriker-Werkzeugsets" ; "Ensembles d’outils pour électricien" ; "Set di attrezzi da elettricista" ; ha-15-75-1:jevEval:Staged
+; ha-15-75-1-2 ; jevEval:Staged ; "General Purpose Sets" ; "Allzweck-Sets" ; "Jeux d’outils multiusages" ; "Set per usi generali" ; ha-15-75-1:jevEval:Staged
+; ha-15-75-1-3 ; jevEval:Staged ; "Mechanic Tool Sets" ; "Mechaniker-Werkzeugsets" ; "Ensembles d’outils de mécanicien" ; "Set di attrezzi da meccanico" ; ha-15-75-1:jevEval:Staged
+; ha-10-2-1-3-1 ; jevEval:Staged ; "Diverter Spouts" ; "Umlenkausläufe" ; "Becs inverseurs" ; "Beccucci deviatori" ; ha-10-2-1-3:jevEval:Staged
+; ha-10-2-1-3-2 ; jevEval:Staged ; "Non-Diverter Spouts" ; "Ausläufe ohne Umlenkung" ; "Becs sans déviateur" ; "Beccucci senza deviatore" ; ha-10-2-1-3:jevEval:Staged
+; ha-10-2-2-1-1 ; jevEval:Staged ; "Drain Covers" ; "Abflussabdeckungen" ; "Bouchons de plomberie" ; "Coperture di scarico" ; ha-10-2-2-1:jevEval:Staged
+; ha-10-2-2-1-2 ; jevEval:Staged ; "Drain Strainers" ; "Abflusssiebe" ; "Filtres de plomberie" ; "Filtri di scarico" ; ha-10-2-2-1:jevEval:Staged
+; ha-10-2-4-2-1 ; jevEval:Staged ; "Cross Handles" ; "Kreuzgriffe" ; "Poignées cruciformes" ; "Maniglie a croce" ; ha-10-2-4-2:jevEval:Staged
+; ha-10-2-4-2-2 ; jevEval:Staged ; "Knob Handles" ; "Knopfgriffe" ; "Poignées à boutons" ; "Maniglie a pomello" ; ha-10-2-4-2:jevEval:Staged
+; ha-10-2-4-2-3 ; jevEval:Staged ; "Lever Handles" ; "Hebelgriffe" ; "Poignées à levier" ; "Maniglie a leva" ; ha-10-2-4-2:jevEval:Staged
+; ha-10-2-6-1-1 ; jevEval:Staged ; "Body Jets" ; "Körperstrahldüsen" ; "Jets corporels" ; "Getti corpo" ; ha-10-2-6-1:jevEval:Staged
+; ha-10-2-6-1-2 ; jevEval:Staged ; "Whirlpool Jets" ; "Whirlpool-Düsen" ; "Jets à remous" ; "Getti idromassaggio" ; ha-10-2-6-1:jevEval:Staged
+; ha-10-2-6-2-1 ; jevEval:Staged ; "Mixer Showers" ; "Duschen mit Mischbatterien" ; "Douches mixtes" ; "Docce con miscelatore" ; ha-10-2-6-2:jevEval:Staged
+; ha-10-2-6-2-2 ; jevEval:Staged ; "Power Showers" ; "Hochdruckduschen" ; "Douches électriques" ; "Docce multigetto" ; ha-10-2-6-2:jevEval:Staged
+; ha-10-2-6-3-1 ; jevEval:Staged ; "Shower Arms" ; "Duscharme" ; "Bras de douche" ; "Bracci doccia" ; ha-10-2-6-3:jevEval:Staged
+; ha-10-2-6-3-2 ; jevEval:Staged ; "Shower Connectors" ; "Duschanschlüsse" ; "Embouts de douche" ; "Connettori doccia" ; ha-10-2-6-3:jevEval:Staged
+; ha-10-2-6-6-1 ; jevEval:Staged ; "Hinged Doors" ; "Flügeltüren" ; "Portes battantes" ; "Porte a battente" ; ha-10-2-6-6:jevEval:Staged
+; ha-10-2-6-6-2 ; jevEval:Staged ; "Pivot Doors" ; "Drehtüren" ; "Portes pivotantes" ; "Porte girevoli" ; ha-10-2-6-6:jevEval:Staged
+; ha-10-2-6-6-3 ; jevEval:Staged ; "Sliding Doors" ; "Schiebetüren" ; "Portes coulissantes" ; "Porte scorrevoli" ; ha-10-2-6-6:jevEval:Staged
+; ha-10-2-6-7-1 ; jevEval:Staged ; "Fixed Shower Heads" ; "Feste Duschköpfe" ; "Pommeaux de douche fixes" ; "Soffioni doccia fissi" ; ha-10-2-6-7:jevEval:Staged
+; ha-10-2-6-7-2 ; jevEval:Staged ; "Handheld Shower Heads" ; "Handduschköpfe" ; "Pommeaux de douche à main" ; "Soffioni doccia portatili" ; ha-10-2-6-7:jevEval:Staged
+; ha-10-2-6-8-1 ; jevEval:Staged ; "Shower Surrounds" ; "Duscheinfassungen" ; "Contours de douche" ; "Ambienti doccia" ; ha-10-2-6-8:jevEval:Staged
+; ha-10-2-6-8-2 ; jevEval:Staged ; "Shower Walls" ; "Duschkabinenwände" ; "Parois de douche" ; "Pareti doccia" ; ha-10-2-6-8:jevEval:Staged
+; ha-10-2-8-1-1 ; jevEval:Staged ; "Ballcocks" ; "Kugelhähne" ; "Robinets à flotteur" ; "Rubinetti a sfera" ; ha-10-2-8-1:jevEval:Staged
+; ha-10-2-8-1-2 ; jevEval:Staged ; "Flappers" ; "Prallplatten" ; "Clapets" ; "Flapper" ; ha-10-2-8-1:jevEval:Staged
+; ha-10-2-8-2-1 ; jevEval:Staged ; "Bidet Faucets" ; "Bidet-Armaturen" ; "Robinets de bidets" ; "Rubinetti per bidet" ; ha-10-2-8-2:jevEval:Staged
+; ha-10-2-8-2-2 ; jevEval:Staged ; "Bidet Sprayers" ; "Bidet-Sprüheinrichtungen" ; "Douchettes de bidets" ; "Spruzzatori per bidet" ; ha-10-2-8-2:jevEval:Staged
+; ha-10-2-8-7-1 ; jevEval:Staged ; "Front Mount Levers" ; "Vorne montierte Hebel" ; "Poignées montées à l’avant" ; "Leve per montaggio anteriore" ; ha-10-2-8-7:jevEval:Staged
+; ha-10-2-8-7-2 ; jevEval:Staged ; "Side Mount Levers" ; "Seitlich montierte Hebel" ; "Poignées latérales" ; "Leve per montaggio laterale" ; ha-10-2-8-7:jevEval:Staged
+; ha-10-2-8-8-1 ; jevEval:Staged ; "Gravity-Fed Tanks" ; "Schwerkraftgespeiste Tanks" ; "Réservoirs alimentés par gravité" ; "Serbatoi alimentati per gravità" ; ha-10-2-8-8:jevEval:Staged
+; ha-10-2-8-8-2 ; jevEval:Staged ; "Pressure-Assisted Tanks" ; "Druckunterstützte Tanks" ; "Réservoirs assistés par pression" ; "Serbatoi a pressione assistita" ; ha-10-2-8-8:jevEval:Staged
+; ha-10-3-5-1-1 ; jevEval:Staged ; "Pedestal Sinks" ; "Sockelwaschbecken" ; "Lavabos sur colonne" ; "Lavelli piedistallo" ; ha-10-3-5-1:jevEval:Staged
+; ha-10-3-5-1-2 ; jevEval:Staged ; "Undermount Sinks" ; "Unterbauwaschbecken" ; "Éviers sous plan" ; "Lavelli sottopiano" ; ha-10-3-5-1:jevEval:Staged
+; ha-10-3-5-1-3 ; jevEval:Staged ; "Vessel Sinks" ; "Waschbecken" ; "Vasques" ; "Lavelli per navi" ; ha-10-3-5-1:jevEval:Staged
+; ha-10-3-5-2-1 ; jevEval:Staged ; "Drop-In Sinks" ; "Einbauwaschbecken" ; "Éviers encastrables" ; "Lavelli da incasso" ; ha-10-3-5-2:jevEval:Staged
+; ha-10-3-5-2-2 ; jevEval:Staged ; "Farmhouse Sinks" ; "Waschbecken im Bauernhausstil" ; "Éviers de ferme" ; "Lavelli per fattoria" ; ha-10-3-5-2:jevEval:Staged
+; ha-10-3-5-2-3 ; jevEval:Staged ; "Undermount Sinks" ; "Unterbauwaschbecken" ; "Éviers sous plan" ; "Lavelli sottopiano" ; ha-10-3-5-2:jevEval:Staged
+; ha-10-3-6-2-1 ; jevEval:Staged ; "One-Piece Toilets" ; "Einteilige Toiletten" ; "Toilettes monobloc" ; "WC monopezzo" ; ha-10-3-6-2:jevEval:Staged
+; ha-10-3-6-2-2 ; jevEval:Staged ; "Two-Piece Toilets" ; "Zweiteilige Toiletten" ; "Toilettes bi-bloc" ; "WC bipezzo" ; ha-10-3-6-2:jevEval:Staged
+; ha-10-3-6-2-3 ; jevEval:Staged ; "Wall-Mounted Toilets" ; "Wandmontierte Toiletten" ; "Toilettes murales" ; "Wc sospesi" ; ha-10-3-6-2:jevEval:Staged
+; ha-15-36-17-1-1 ; jevEval:Staged ; "Box Levels" ; "Dosenlibellen" ; "Niveaux rectangulaires" ; "Livelle box" ; ha-15-36-17-1:jevEval:Staged
+; ha-15-36-17-1-2 ; jevEval:Staged ; "I-Beam Levels" ; "I-Profil-Wasserwaagen" ; "Niveaux de poutre en I" ; "Livelle I-Beam" ; ha-15-36-17-1:jevEval:Staged
+; ha-15-36-17-1-3 ; jevEval:Staged ; "Torpedo Levels" ; "Torpedo-Wasserwaagen" ; "Niveaux Torpedo" ; "Livelle torpedo" ; ha-15-36-17-1:jevEval:Staged
+; ha-15-36-17-2-1 ; jevEval:Staged ; "Dot Laser Levels" ; "Punktlasernivelliere" ; "Niveaux laser à points" ; "Livelle laser a punti" ; ha-15-36-17-2:jevEval:Staged
+; ha-15-36-17-2-2 ; jevEval:Staged ; "Line & Combi Laser Levels" ; "Linien- und Kombilaser-Nivelliergeräte" ; "Niveaux laser linéaires et combinés" ; "Livelle laser lineari combinate" ; ha-15-36-17-2:jevEval:Staged
+; ha-15-36-17-2-3 ; jevEval:Staged ; "Rotary Laser Levels" ; "Rotationslasernivelliere" ; "Niveaux laser rotatifs" ; "Livelle laser rotanti" ; ha-15-36-17-2:jevEval:Staged
+; ha-15-36-17-3-1 ; jevEval:Staged ; "Handheld Sight Levels" ; "Tragbare Nivelliergeräte" ; "Lunettes de niveau portables" ; "Livelle visive portatili" ; ha-15-36-17-3:jevEval:Staged
+; ha-15-36-17-3-2 ; jevEval:Staged ; "Tripod Sight Levels" ; "Stativ-Nivelliergeräte" ; "Lunettes de niveau sur trépied" ; "Livelle visive del treppiede" ; ha-15-36-17-3:jevEval:Staged

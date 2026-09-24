@@ -23,4 +23,18 @@
 	<bean id="jevReviewDryRunJob" parent="jevReviewModerationJob">
 		<property name="dryRun" value="true"/>
 	</bean>
+	<!-- Suggest: records a category suggestion for products without one. Never changes a product. -->
+	<bean id="jevCategorySuggestionJob" class="org.jevintegration.category.JevCategorySuggestionJob" parent="abstractJobPerformable">
+		<property name="jevClient" ref="jevClient"/>
+		<property name="configurationService" ref="configurationService"/>
+		<property name="commonI18NService" ref="commonI18NService"/>
+		<property name="catalogVersionService" ref="catalogVersionService"/>
+		<property name="categoryService" ref="categoryService"/>
+		<property name="dryRun" value="false"/>
+	</bean>
+
+	<!-- Dry run: suggests categories for products that already have one, to compare. -->
+	<bean id="jevCategoryDryRunJob" parent="jevCategorySuggestionJob">
+		<property name="dryRun" value="true"/>
+	</bean>
 </beans>

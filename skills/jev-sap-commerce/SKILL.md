@@ -32,14 +32,14 @@ Do not invent fields.
 | Jev fits: a judgment about text | Keep in code: numbers, dates, identity, rules |
 | --- | --- |
 | Review moderation (abuse, spam, personal data, off topic): **built into `jevintegration`** | Fraud scoring on order totals, velocity, addresses |
-| Category or attribute suggestion from product copy | Pricing, discounts, promotion eligibility |
+| Category suggestion from product copy: **built into `jevintegration`** (attribute suggestion is not) | Pricing, discounts, promotion eligibility |
 | Product content quality score, before approval | Stock, ATP, sourcing, delivery dates |
 | Customer ticket or message routing, urgency | Anything a FlexibleSearch, regex or rule can answer exactly |
 | Order note, gift message or B2B comment triage | Date comparison, counting, arithmetic |
 | Search query intent, e.g. which Solr handler to use | Deciding on its own a step that has legal or financial effect |
 
-Only review moderation ships in the extension. The other rows are use cases that fit Jev; you build
-them on top of the extension (section 3), so don't tell the user they already exist.
+Only review moderation and category suggestions ship in the extension. The other rows are use cases
+that fit Jev; you build them on top of the extension (section 3), so don't tell the user they already exist.
 
 Jev reads numbers, dates and counts poorly. If a decision rests on numbers, say so, and offer a
 text-only question or plain code instead. If the user still wants a numeric decision, measure Jev
@@ -76,7 +76,7 @@ has them, built and tested on 2211 (JDK 17) and 2211-jdk21 (JDK 21).
    5. Run `jevReviewDryRunCronJob` before anything live.
 
    The repository README has the details.
-3. **For review moderation, use it as it is.** For another use case, build in the project's own
+3. **For review moderation or category suggestions, use it as it is.** For another use case, build in the project's own
    extension with `<requires-extension name="jevintegration"/>`, and reuse `JevClient` and
    `JevJudgment` instead of changing the third-party extension.
 
@@ -87,6 +87,7 @@ What it contains:
 | `org.jevintegration.JevClient` | JDK HttpClient plus the platform's Jackson, so no new dependency. Retries 408, 429 and 5xx (the same set as TypeSafe's SDKs) with backoff and honours `retry-after`. Returns `Optional.empty()` on any failure. A missing answer throws, so it is never read as 0. |
 | `JevJudgment` item type | One audit record per decision: judged item, use case, dry-run flag, language, model version, raw answers JSON, decision, the moderator's decision (dry run), input tokens. It also marks an item as judged, so SAP's own types stay untouched. |
 | Review moderation (`org.jevintegration.review`) | The worked example: `ReviewModerationQuestions` (state, questions, pure `decide()`), `JevReviewModerationJob`, and the `jevReviewDryRunCronJob` and `jevReviewModerationCronJob` cronjobs (no triggers). Thresholds are `jev.review.*` properties. |
+| Category suggestions (`org.jevintegration.category`) | TypeSafe's hierarchical classification: a Choice per level, 3 paths kept (beam search), one request per level. Records a suggestion with its path and score and never changes a product. Cronjobs `jevCategoryDryRunCronJob` (products that have a category, to compare) and `jevCategorySuggestionCronJob` (products without one). Configure `jev.category.catalog`, `jev.category.roots`, `jev.category.min.score`. |
 
 For a new use case, follow the review package: a questions class (state builder, all questions,
 pure `decide()`), and a job that selects items with no `JevJudgment` for its use case, makes one Jev

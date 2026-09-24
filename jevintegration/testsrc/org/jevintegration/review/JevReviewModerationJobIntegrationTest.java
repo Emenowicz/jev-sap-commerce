@@ -11,6 +11,7 @@ import de.hybris.platform.catalog.model.CatalogModel;
 import de.hybris.platform.catalog.model.CatalogVersionModel;
 import de.hybris.platform.core.model.product.ProductModel;
 import de.hybris.platform.cronjob.enums.CronJobResult;
+import de.hybris.platform.cronjob.enums.CronJobStatus;
 import de.hybris.platform.cronjob.model.CronJobModel;
 import de.hybris.platform.servicelayer.cronjob.CronJobService;
 import de.hybris.platform.customerreview.CustomerReviewService;
@@ -159,20 +160,25 @@ public class JevReviewModerationJobIntegrationTest extends ServicelayerTransacti
 	}
 
 	@Test
-	public void essentialDataCronJobsRunThroughTheCronJobService() throws Exception
+	public void essentialDataCronJobsStartThroughTheCronJobService() throws Exception
 	{
 		importCsv("/impex/essentialdata-jevintegration.impex", "UTF-8");
 
 		final List<CronJobModel> cronJobs = flexibleSearchService.<CronJobModel> search(
-				"SELECT {pk} FROM {CronJob} WHERE {code} IN ('jevReviewDryRunCronJob', 'jevReviewModerationCronJob')").getResult();
-		assertEquals(2, cronJobs.size());
+				"SELECT {pk} FROM {CronJob} WHERE {code} LIKE 'jev%CronJob'").getResult();
+		assertEquals(4, cronJobs.size());
 		for (final CronJobModel cronJob : cronJobs)
 		{
 			assertTrue("nothing runs until someone starts it", cronJob.getTriggers().isEmpty());
 			// the platform starts its own session for a cronjob; that fails without a session language
 			cronJobService.performCronJob(cronJob, true);
 			modelService.refresh(cronJob);
-			assertEquals(cronJob.getCode(), CronJobResult.SUCCESS, cronJob.getResult());
+			assertEquals(cronJob.getCode(), CronJobStatus.FINISHED, cronJob.getStatus());
+			if (cronJob.getCode().startsWith("jevReview"))
+			{
+				// category cronjobs depend on the jev.category.* configuration; review cronjobs just find nothing to do
+				assertEquals(cronJob.getCode(), CronJobResult.SUCCESS, cronJob.getResult());
+			}
 		}
 	}
 
