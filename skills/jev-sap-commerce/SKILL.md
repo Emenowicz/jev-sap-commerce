@@ -8,6 +8,8 @@ description: >
   reviews, product copy, category assignment, customer tickets, order or delivery notes, B2B quote
   comments, search queries. Covers where in the platform to call Jev, the Java client, config and
   secrets on CCv2, fail-safe defaults, testing, and which commerce decisions must stay in code.
+  Starts from the open-source jevintegration extension (github.com/Emenowicz/jev-sap-commerce):
+  checks whether the project has it and how to install it.
 ---
 
 # Jev in SAP Commerce
@@ -54,11 +56,28 @@ Read `references/integration-points.md` for the full table. The short version:
   every save, on every node, including ImpEx and sync. Jev adds 70 to 700 ms per call, and an outage
   there breaks every save of that type.
 
-## 3. Build it on the `jevintegration` extension
+## 3. Start from the `jevintegration` extension
 
-Don't write a new client. The `jevintegration` extension
-(https://github.com/Emenowicz/jev-sap-commerce, next to this skill) already has the parts, built
-and tested on 2211 (JDK 17) and 2211-jdk21 (JDK 21):
+Don't write a new client or job from scratch. The open-source `jevintegration` extension
+(https://github.com/Emenowicz/jev-sap-commerce, Apache-2.0, independent of TypeSafe and SAP) already
+has them, built and tested on 2211 (JDK 17) and 2211-jdk21 (JDK 21).
+
+1. **Check whether the project has it:** look for `jevintegration` in `hybris/config/localextensions.xml`
+   or, on CCv2, in `manifest.json`, or for a `jevintegration/` folder under `hybris/bin/custom/`.
+2. **If it's missing, suggest installing it, and ask before adding it.** It is third-party code going
+   into the user's repository. The steps:
+   1. Copy `jevintegration/` from the repository into `hybris/bin/custom/`.
+   2. Add `<extension name="jevintegration"/>` to `localextensions.xml`, and on CCv2 to `manifest.json`.
+   3. Run `ant clean all`, then `ant updatesystem` with its essential data.
+   4. Set `jev.api.key`: `local.properties` locally, Cloud Portal service properties on CCv2.
+   5. Run `jevReviewDryRunCronJob` before anything live.
+
+   The repository README has the details.
+3. **For review moderation, use it as it is.** For another use case, build in the project's own
+   extension with `<requires-extension name="jevintegration"/>`, and reuse `JevClient` and
+   `JevJudgment` instead of changing the third-party extension.
+
+What it contains:
 
 | Part | What it gives you |
 | --- | --- |

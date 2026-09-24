@@ -164,7 +164,9 @@ The tests use a local fake Jev endpoint, so they need no network or API key. The
 ## Also in this repo
 
 `skills/jev-sap-commerce/` is a Claude Code skill for building on this extension: where in SAP Commerce to call Jev,
-and which decisions to keep in code. Install it with `npx skills add Emenowicz/jev-sap-commerce`, or
+and which decisions to keep in code. It checks whether a project already has `jevintegration`, and
+if not, offers to install it from this repository. Install the skill with
+`npx skills add Emenowicz/jev-sap-commerce`, or
 copy `skills/jev-sap-commerce/` to `~/.claude/skills/`. It pairs with TypeSafe's own skill
 (`claude plugin marketplace add typesafe-ai/skills`).
 
