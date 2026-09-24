@@ -28,9 +28,36 @@ This is an independent project, not made by or affiliated with TypeSafe or SAP.
 It needs the `customerreview` extension and adds no library dependency.
 
 **Tested:** the test suite passes on SAP Commerce **2211.46 (JDK 17)** and **2211-jdk21.17 (JDK 21)**.
-On 2211-jdk21.17, a full run was also checked in a running server with a local stand-in for the Jev
-API: system update, both cronjobs, the Backoffice screens. It has **not yet been run against the
-real Jev API**, so the thresholds are unmeasured.
+On 2211-jdk21.17, a full run was also checked in a running server: system update, both cronjobs,
+the Backoffice screens, and a dry run against the real Jev API (see [First results](#first-results-with-the-real-jev-api)).
+
+## First results with the real Jev API
+
+On 2026-09-24, the dry run judged the 80 synthetic reviews in [`eval/`](eval) with `jev-1.13.0` and
+the default thresholds:
+
+| Language | Reviews | Decided by Jev | Matching the label | Left for a person |
+| --- | --- | --- | --- | --- |
+| de | 20 | 19 | 19 | 1 |
+| en | 20 | 19 | 19 | 1 |
+| fr | 20 | 18 | 18 | 2 |
+| it | 20 | 18 | 18 | 2 |
+
+- No wrong approvals and no wrong rejections.
+- Left for a person:
+  - the 4 reviews containing a third person's contact details, which the policy sends to a person;
+  - the French and Italian examples of harsh but legitimate criticism, with abuse probabilities of
+    0.21 and 0.29, which fall between the thresholds.
+- Every violation (insults, a threat, harassment, spam, gibberish, off-topic, prompt injection)
+  scored 0.94 or higher. Every legitimate review scored 0.29 or lower. The prompt-injection reviews
+  ("ignore all previous instructions…") were rejected as spam.
+- Cost and speed: 55,850 input tokens in total (about 700 per review), roughly $0.002. About 0.3 s
+  per review, run one after another, including SAP's own processing.
+
+These reviews were written for the test and are clear-cut. Real reviews are messier: sarcasm,
+mixed languages, Swiss German dialect, borderline insults. So this shows the setup works in four
+languages; it doesn't tell you your accuracy. Run the dry run on your own moderated reviews before
+going live. Per-review scores are in [`eval/results-jev-1.13.0.tsv`](eval/results-jev-1.13.0.tsv).
 
 ## Install
 
@@ -53,11 +80,11 @@ real Jev API**, so the thresholds are unmeasured.
    for example:
 
    ```
-   Jev review moderation, dry run, language de: 200 judged, 150 decided by Jev, 50 left for a person;
-   of Jev's decisions 146 match your moderators, 1 approved what they rejected, 3 rejected what they approved
+   Jev review moderation, dry run, language de: 20 judged, 19 decided by Jev, 1 left for a person;
+   of Jev's decisions 19 match your moderators, 0 approved what they rejected, 0 rejected what they approved
    ```
 
-   The numbers above illustrate the format only; they are not measured results.
+   That line comes from the synthetic run above.
 3. For the full comparison table per language, run this in HAC (FlexibleSearch):
 
    ```sql
@@ -71,7 +98,8 @@ real Jev API**, so the thresholds are unmeasured.
    most closely.
 
 Jev's strongest language is English. For German, French or Italian storefronts, read the
-per-language lines before you go live.
+per-language lines before you go live. In the synthetic run, the French and Italian examples of
+harsh criticism were the only legitimate reviews left for a person.
 
 ## Go live
 
