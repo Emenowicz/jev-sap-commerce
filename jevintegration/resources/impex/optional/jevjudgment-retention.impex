@@ -1,0 +1,16 @@
+# Optional: deletes Jev judgments older than a retention period, with SAP's retention framework.
+# Not imported automatically. Judgments are your audit trail and your measurements, so agree the period with whoever
+# owns that record, adjust retentionTimeSeconds, then import this file (Backoffice or HAC > ImpEx import).
+# Deleting a judgment lets its item be judged again if it still qualifies, for example a review that is still pending.
+# retentionTimeSeconds 63072000 = 2 years. The job runs every night at 03:00.
+INSERT_UPDATE FlexibleSearchRetentionRule; code[unique = true]; searchQuery; retentionTimeSeconds; actionReference
+; jevJudgmentRetentionRule ; "SELECT {pk}, {itemtype} FROM {JevJudgment} WHERE {creationtime} < ?CALC_RETIREMENT_TIME" ; 63072000 ; basicRemoveCleanupAction
+
+INSERT_UPDATE RetentionJob; code[unique = true]; retentionRule(code); batchSize
+; jevJudgmentRetentionJob ; jevJudgmentRetentionRule ; 1000
+
+INSERT_UPDATE CronJob; code[unique = true]; job(code); sessionUser(uid); sessionLanguage(isocode)
+; jevJudgmentRetentionCronJob ; jevJudgmentRetentionJob ; admin ; en
+
+INSERT_UPDATE Trigger; cronJob(code)[unique = true]; cronExpression
+; jevJudgmentRetentionCronJob ; 0 0 3 * * ?

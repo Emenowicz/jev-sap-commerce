@@ -44,7 +44,8 @@ For all three:
 
 It needs the `customerreview` and `catalog` extensions and adds no library dependency.
 
-**Tested:** the 27 tests pass on SAP Commerce **2211.46 (JDK 17)** and **2211-jdk21.17 (JDK 21)**.
+**Tested:** the 28 tests pass on SAP Commerce **2211.46 (JDK 17)** and **2211-jdk21.17 (JDK 21)**
+with HSQLDB, and on 2211-jdk21.17 with **SQL Server 2022**.
 On 2211-jdk21.17, all three use cases also ran in a real server against the real Jev API (below),
 and the Backoffice screens were checked.
 
@@ -259,6 +260,18 @@ the category path score.
 
 The thresholds are starting guesses. Use the dry runs to set them for your shop.
 
+## Deleting old judgments
+
+The extension never deletes judgments. They are your audit trail and your measurements, and how
+long to keep them is your decision. Once you've made it,
+[`jevjudgment-retention.impex`](jevintegration/resources/impex/optional/jevjudgment-retention.impex)
+sets up SAP's retention framework to do the deleting: a rule, a job and a cronjob that runs every
+night at 03:00. It isn't part of the essential data. Set `retentionTimeSeconds` to your period (the
+file says two years), then import it once, in Backoffice or in HAC under Console > ImpEx Import.
+
+Each job skips the items it has already judged, so deleting a judgment lets the next run judge that
+item again if it still qualifies, for example a review that is still pending. That costs a call.
+
 ## What leaves your platform
 
 - **Reviews:** the product name, the review headline and the comment. Not the author, email,
@@ -318,6 +331,7 @@ The tests use a local fake Jev endpoint, so they need no network or API key. The
   classification system in the junit tenant (empty attributes found, number attributes skipped,
   features never changed), and wrong configuration;
 - **the essential data ImpEx**, with all six cronjobs started through SAP's cronjob service;
+- **the optional retention ImpEx:** a judgment older than two years is deleted, a newer one kept;
 - **the review FlexibleSearch query** above.
 
 ## Evaluation data
