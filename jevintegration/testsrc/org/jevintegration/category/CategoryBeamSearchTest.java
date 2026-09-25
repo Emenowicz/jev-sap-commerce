@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import org.jevintegration.ProductText;
 import org.jevintegration.category.CategoryBeamSearch.Result;
 import org.jevintegration.category.CategorySuggestionQuestions.Question;
 import org.jevintegration.category.CategoryTree.Node;
@@ -95,7 +96,7 @@ public class CategoryBeamSearchTest
 	@Test
 	public void htmlIsRemovedFromDescriptions()
 	{
-		assertEquals("18V drill & charger", CategorySuggestionQuestions.stripHtml("<p>18V <b>drill</b>&nbsp;&amp; charger</p>"));
+		assertEquals("18V drill & charger", ProductText.stripHtml("<p>18V <b>drill</b>&nbsp;&amp; charger</p>"));
 	}
 
 	private static String best(final int width, final Map<String, Map<String, Double>> answers)

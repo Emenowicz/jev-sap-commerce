@@ -2,8 +2,8 @@
 
 `jevintegration` is an SAP Commerce extension that lets [Jev](https://docs.typesafe.ai/introduction),
 TypeSafe's typed-decision model, make narrow decisions about shop text. It **moderates product
-reviews** and **suggests product categories**, and you measure it on your own data before it
-changes anything.
+reviews**, **suggests product categories** and **suggests classification attribute values**, and
+you measure it on your own data before it changes anything.
 
 Jev does not write text. It answers typed questions (yes/no, pick one, score) with probabilities,
 and the extension's Java code decides what to do with them. Anything Jev isn't sure about is left
@@ -24,8 +24,15 @@ at every level it keeps the 3 most likely paths, so a later level can correct an
 one. Suggestions are recorded for a merchandiser to confirm; **the extension never changes a
 product's categories.**
 
-For both:
-- **Dry runs** judge items people already decided (moderated reviews, categorised products) and
+**Attribute suggestions.** For each enum attribute of a product's classification class (material,
+colour, power source, finish and so on), Jev picks the allowed value the product text states, or
+says the text doesn't say. A product's attributes are asked together, up to 25 per request. Suggestions are
+recorded for a merchandiser; **the extension never changes a product's feature values.** Numeric,
+date and free-text attributes are left out on purpose: that's a job for code.
+
+For all three:
+- **Dry runs** judge items people already decided (moderated reviews, categorised products,
+  attribute values already set) and
   compare, changing nothing. Each run writes one summary line per language to the cronjob's log
   file and the server log.
 - **An audit record per decision** (`JevJudgment`): the item, the language, the Jev model version,
@@ -37,13 +44,13 @@ For both:
 
 It needs the `customerreview` and `catalog` extensions and adds no library dependency.
 
-**Tested:** the 22 tests pass on SAP Commerce **2211.46 (JDK 17)** and **2211-jdk21.17 (JDK 21)**.
-On 2211-jdk21.17, both use cases also ran in a real server against the real Jev API (below), and
-the Backoffice screens were checked.
+**Tested:** the 27 tests pass on SAP Commerce **2211.46 (JDK 17)** and **2211-jdk21.17 (JDK 21)**.
+On 2211-jdk21.17, all three use cases also ran in a real server against the real Jev API (below),
+and the Backoffice screens were checked.
 
 ## Results with the real Jev API
 
-Both runs used `jev-1.13.0`, default thresholds and synthetic data written for the test (all in
+All runs used `jev-1.13.0`, default thresholds and synthetic data written for the test (all in
 [`eval/`](eval)). They show that the setup works in English, German, French and Italian. They don't
 tell you your accuracy: run the dry runs on your own data before going live.
 
@@ -99,15 +106,46 @@ was. The cronjob log uses coarser groups: neighbouring, parent or child, further
 person" in Italian includes one product Jev placed outside the tree (a pond pump; the tree does
 have pond pumps). Per-product results: [`eval/category-results-jev-1.13.0.tsv`](eval/category-results-jev-1.13.0.tsv).
 
+### Attribute suggestions: 21 known values × 4 languages
+
+The same 40 products, in a classification class with three of Shopify's enum attributes and all
+their values: Power source (28 values), Hardware material (21) and Color (19). A value was set
+only where the product text clearly states it; the dry run asked Jev to find those 21 values again.
+
+| Language | Values judged | Suggested by Jev | Matching | Left for a person (not stated / unsure) |
+| --- | --- | --- | --- | --- |
+| de | 21 | 15 | 15 | 6 (2 / 4) |
+| en | 21 | 15 | 15 | 6 (4 / 2) |
+| fr | 21 | 16 | 15 | 5 (3 / 2) |
+| it | 21 | 9 | 9 | 12 (8 / 4) |
+
+- 54 of the 55 suggestions matched. The other is a near-duplicate in Shopify's list: "Batteries"
+  instead of "Battery-powered".
+- By attribute: Hardware material 23 of 24 values found, Color 16 of 16, Power source only 15 of
+  44 (plus the near-duplicate).
+- Jev reads literally. For corded tools the text says "750 W" but not "mains", so Jev mostly
+  answered that the text doesn't say, or was unsure; for hand tools it chose "Manual" about half
+  the time. If you want such values filled, state them in the product copy, or derive them with a
+  rule in code.
+- The suggestion run (English) also asked Jev about the 99 attributes left empty. It said "not
+  stated" for 73, was unsure about 8 and filled 18. Nearly all 18 follow from the text: steel for
+  a forged steel head, clear for glue that dries transparent, ceramic for ceramic tiles. Silver
+  was inferred from chrome or stainless steel. One is wrong: aluminium oxide sandpaper became
+  "Aluminum".
+- About 950 input tokens per product (the English dry run took 7.5 s for 40 products); all runs
+  together cost about $0.005.
+
+Per-attribute results: [`eval/attribute-results-jev-1.13.0.tsv`](eval/attribute-results-jev-1.13.0.tsv).
+
 ## Install
 
 1. Copy `jevintegration/` from this repo into `hybris/bin/custom/`, and add
    `<extension name="jevintegration"/>` to `localextensions.xml`. On CCv2, add it to `manifest.json`
    as well.
 2. Build, then update the system with the extension's essential data (`ant updatesystem`, or deploy
-   on CCv2 with data migration). This creates the `JevJudgment` table and four cronjobs:
-   `jevReviewDryRunCronJob`, `jevReviewModerationCronJob`, `jevCategoryDryRunCronJob` and
-   `jevCategorySuggestionCronJob`.
+   on CCv2 with data migration). This creates the `JevJudgment` table and six cronjobs: a dry run
+   and a live or suggestion cronjob each for reviews (`jevReview…`), categories (`jevCategory…`)
+   and attributes (`jevAttribute…`).
 3. Set the key: `jev.api.key` in `local.properties` locally, or as a service property in Cloud
    Portal on CCv2. Never commit it. Get a key from the [TypeSafe console](https://console.typesafe.ai/keys).
 4. On CCv2, make sure the environment can reach `api.typesafe.ai` over outbound HTTPS.
@@ -168,6 +206,35 @@ have pond pumps). Per-product results: [`eval/category-results-jev-1.13.0.tsv`](
    at every level. A merchandiser works through them in Backoffice (**Jev > Jev judgment**,
    filtered by use case) and assigns the categories they agree with.
 
+## Attribute suggestions: configure and measure
+
+1. Point it at your products and classification system: `jev.attribute.catalog` (with
+   `jev.attribute.catalogVersion`, default `Staged`) and `jev.attribute.system` (with
+   `jev.attribute.systemVersion`, default `1.0`), for example `ElectronicsClassification`.
+2. Run `jevAttributeDryRunCronJob`. For every enum attribute that already has a value, Jev picks a
+   value without seeing it, and the log compares:
+
+   ```
+   Jev attribute suggestions, dry run, language en: 40 products, 21 attributes judged, 15 suggested by Jev,
+   6 left for a merchandiser (4 not stated in the text); of Jev's suggestions 15 match the product's value, 0 differ
+   ```
+
+   Texts and value names are read in the cronjob's session language; set it to each storefront
+   language in turn.
+3. Run `jevAttributeSuggestionCronJob`, in one session language, for the enum attributes without a
+   value. Each product gets one `JevJudgment` whose `decision` summarises it (for example "2
+   suggested, 1 unsure, 3 not stated") and whose `answers` list every attribute with Jev's value,
+   confidence and top alternatives. A product with nothing to judge gets a `-` record, so it isn't
+   fetched again.
+
+Products are found through their classification classes, whether a class is assigned to the
+product directly or, as usual, to a category above it.
+
+Limits: only enum attributes with at most 254 allowed values (one Jev question lists at most 255
+options); multi-valued attributes get a single suggestion; the log names every attribute type it
+skipped. `jev.attribute.min.confidence` is Jev's confidence in its choice, a different number from
+the category path score.
+
 ## Configuration
 
 | Property | Default | Meaning |
@@ -185,6 +252,10 @@ have pond pumps). Per-product results: [`eval/category-results-jev-1.13.0.tsv`](
 | `jev.category.min.score` | `0.7` | Path score (geometric mean of Jev's probabilities along the path) needed to suggest. |
 | `jev.category.beam.width` | `3` | Paths kept per level. 1 = greedy search, fewer tokens, no second chances. |
 | `jev.category.batch.size` | `100` | Products per run. Each takes one request per level of the tree. |
+| `jev.attribute.catalog`, `jev.attribute.catalogVersion` | empty, `Staged` | The catalog version with the products. |
+| `jev.attribute.system`, `jev.attribute.systemVersion` | empty, `1.0` | The classification system whose enum attributes are filled in. |
+| `jev.attribute.min.confidence` | `0.7` | Jev's confidence in the chosen value needed to suggest it. |
+| `jev.attribute.batch.size` | `100` | Products per run. Each takes one request per 25 attributes. |
 
 The thresholds are starting guesses. Use the dry runs to set them for your shop.
 
@@ -192,8 +263,8 @@ The thresholds are starting guesses. Use the dry runs to set them for your shop.
 
 - **Reviews:** the product name, the review headline and the comment. Not the author, email,
   customer id or rating.
-- **Categories:** the product name, its description with HTML removed (first 2,000 characters),
-  and the category names being chosen between.
+- **Categories and attributes:** the product name, its description with HTML removed (first
+  2,000 characters), and the category, attribute and value names being chosen between.
 
 The questions tell Jev to treat this text as data, even when it looks like an instruction.
 TypeSafe is a US API. Before going live, settle the data protection position (GDPR, Swiss DSG, a
@@ -243,7 +314,10 @@ The tests use a local fake Jev endpoint, so they need no network or API key. The
   - the beam search, including a case where it finds the right leaf and greedy search does not;
   - the dry run and suggest job against the junit tenant, and variant products being skipped;
   - missing or wrong configuration ending as an error;
-- **the essential data ImpEx**, with all four cronjobs started through SAP's cronjob service;
+- **attribute suggestions:** the questions and policy, the dry run and suggest job against a real
+  classification system in the junit tenant (empty attributes found, number attributes skipped,
+  features never changed), and wrong configuration;
+- **the essential data ImpEx**, with all six cronjobs started through SAP's cronjob service;
 - **the review FlexibleSearch query** above.
 
 ## Evaluation data
@@ -251,10 +325,13 @@ The tests use a local fake Jev endpoint, so they need no network or API key. The
 [`eval/`](eval) has everything needed to repeat the measurements in a sandbox:
 - `synthetic-reviews.impex` (80 reviews) and `review-results-jev-1.13.0.tsv`;
 - `hardware-categories.impex` (1,122 categories in four languages) and `synthetic-products.impex`
-  (40 products), plus `category-results-jev-1.13.0.tsv`.
+  (40 products), plus `category-results-jev-1.13.0.tsv`;
+- `hardware-attributes.impex` (a classification system with three attributes and 68 values in four
+  languages), `hardware-attribute-values.impex` (the 21 labelled values), plus
+  `attribute-results-jev-1.13.0.tsv`.
 
-The category names come from Shopify's Product Taxonomy under the MIT License; the notice is in
-`hardware-categories.impex`.
+The category, attribute and value names come from Shopify's Product Taxonomy under the MIT
+License; the notice is in `hardware-categories.impex`.
 
 ## Also in this repo
 
@@ -266,12 +343,14 @@ Commerce to call Jev, and which decisions to keep in code. It checks whether a p
 
 ## Licence
 
-[Apache-2.0](LICENSE). The evaluation's category names are Shopify's, under the MIT License.
+[Apache-2.0](LICENSE). The evaluation's category, attribute and value names are Shopify's, under the
+MIT License.
 
 ## Not yet
 
-- Applying category suggestions automatically, even when confident.
-- Attribute extraction from product text (for example size, material or voltage).
+- Applying category or attribute suggestions automatically, even when confident.
+- Numeric attributes (size, voltage, weight). Jev reads numbers poorly; extract candidates in code
+  and let Jev pick one, if needed.
 - A Backoffice button to judge a single item on demand.
 - Re-scoring stored answers with new thresholds without calling Jev again. The raw answers are
   already saved in `JevJudgment.answers`.

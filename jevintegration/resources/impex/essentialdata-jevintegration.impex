@@ -7,9 +7,13 @@ INSERT_UPDATE ServicelayerJob; code[unique = true]; springId
 ; jevReviewModerationJob ; jevReviewModerationJob
 ; jevCategoryDryRunJob    ; jevCategoryDryRunJob
 ; jevCategorySuggestionJob ; jevCategorySuggestionJob
+; jevAttributeDryRunJob    ; jevAttributeDryRunJob
+; jevAttributeSuggestionJob ; jevAttributeSuggestionJob
 
 INSERT_UPDATE CronJob; code[unique = true]; job(code); sessionUser(uid); sessionLanguage(isocode)
 ; jevReviewDryRunCronJob     ; jevReviewDryRunJob     ; admin ; en
 ; jevReviewModerationCronJob ; jevReviewModerationJob ; admin ; en
 ; jevCategoryDryRunCronJob    ; jevCategoryDryRunJob    ; admin ; en
 ; jevCategorySuggestionCronJob ; jevCategorySuggestionJob ; admin ; en
+; jevAttributeDryRunCronJob    ; jevAttributeDryRunJob    ; admin ; en
+; jevAttributeSuggestionCronJob ; jevAttributeSuggestionJob ; admin ; en

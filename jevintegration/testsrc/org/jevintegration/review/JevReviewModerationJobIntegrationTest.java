@@ -166,7 +166,7 @@ public class JevReviewModerationJobIntegrationTest extends ServicelayerTransacti
 
 		final List<CronJobModel> cronJobs = flexibleSearchService.<CronJobModel> search(
 				"SELECT {pk} FROM {CronJob} WHERE {code} LIKE 'jev%CronJob'").getResult();
-		assertEquals(4, cronJobs.size());
+		assertEquals(6, cronJobs.size());
 		for (final CronJobModel cronJob : cronJobs)
 		{
 			assertTrue("nothing runs until someone starts it", cronJob.getTriggers().isEmpty());
@@ -176,7 +176,7 @@ public class JevReviewModerationJobIntegrationTest extends ServicelayerTransacti
 			assertEquals(cronJob.getCode(), CronJobStatus.FINISHED, cronJob.getStatus());
 			if (cronJob.getCode().startsWith("jevReview"))
 			{
-				// category cronjobs depend on the jev.category.* configuration; review cronjobs just find nothing to do
+				// category and attribute cronjobs depend on their configuration; review cronjobs just find nothing to do
 				assertEquals(cronJob.getCode(), CronJobResult.SUCCESS, cronJob.getResult());
 			}
 		}

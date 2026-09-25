@@ -37,4 +37,19 @@
 	<bean id="jevCategoryDryRunJob" parent="jevCategorySuggestionJob">
 		<property name="dryRun" value="true"/>
 	</bean>
+	<!-- Suggest: records a value suggestion for enum attributes that have none. Never changes a product. -->
+	<bean id="jevAttributeSuggestionJob" class="org.jevintegration.attribute.JevAttributeSuggestionJob" parent="abstractJobPerformable">
+		<property name="jevClient" ref="jevClient"/>
+		<property name="configurationService" ref="configurationService"/>
+		<property name="commonI18NService" ref="commonI18NService"/>
+		<property name="catalogVersionService" ref="catalogVersionService"/>
+		<property name="classificationService" ref="classificationService"/>
+		<property name="categoryService" ref="categoryService"/>
+		<property name="dryRun" value="false"/>
+	</bean>
+
+	<!-- Dry run: suggests values for enum attributes that already have one, to compare. -->
+	<bean id="jevAttributeDryRunJob" parent="jevAttributeSuggestionJob">
+		<property name="dryRun" value="true"/>
+	</bean>
 </beans>

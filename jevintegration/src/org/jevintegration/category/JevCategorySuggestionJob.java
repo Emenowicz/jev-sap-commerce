@@ -26,6 +26,7 @@ import java.util.Set;
 
 import org.jevintegration.JevClient;
 import org.jevintegration.JevClient.JevAnswers;
+import org.jevintegration.ProductText;
 import org.jevintegration.category.CategoryBeamSearch.Candidate;
 import org.jevintegration.category.CategoryBeamSearch.Result;
 import org.jevintegration.category.CategorySuggestionQuestions.Question;
@@ -111,7 +112,7 @@ public class JevCategorySuggestionJob extends AbstractJobPerformable<CronJobMode
 			try
 			{
 				final Calls calls = new Calls();
-				final Map<String, Object> state = CategorySuggestionQuestions.state(product, locale);
+				final Map<String, Object> state = ProductText.state(product, locale);
 				final Optional<Result> result = CategoryBeamSearch.search(tree.root(), width, paths -> ask(state, paths, tree, calls));
 				if (result.isEmpty())
 				{

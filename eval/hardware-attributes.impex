@@ -1,0 +1,94 @@
+# Classification for measuring attribute suggestions: one class, 'hardware', with three enum attributes from
+# Shopify's Product Taxonomy v2026-02 (Power source, Hardware material, Color) and all their values, in English,
+# German, French and Italian. Set jev.attribute.catalog=jevEval, jev.attribute.system=jevEvalClassification.
+# Import hardware-categories.impex and synthetic-products.impex first, then hardware-attribute-values.impex.
+#
+# Attribute and value names: Shopify Product Taxonomy (https://github.com/Shopify/product-taxonomy), MIT License,
+# Copyright (c) Shopify. The full notice is in hardware-categories.impex.
+INSERT_UPDATE ClassificationSystem; id[unique = true]
+; jevEvalClassification
+INSERT_UPDATE ClassificationSystemVersion; catalog(id)[unique = true]; version[unique = true]; active
+; jevEvalClassification ; 1.0 ; true
+
+INSERT_UPDATE ClassificationClass; code[unique = true]; catalogVersion(catalog(id), version)[unique = true]; name[lang = en]; name[lang = de]; name[lang = fr]; name[lang = it]
+; hardware ; jevEvalClassification:1.0 ; "Hardware attributes" ; "Heimwerker-Merkmale" ; "Caractéristiques quincaillerie" ; "Caratteristiche ferramenta"
+
+INSERT_UPDATE ClassificationAttribute; code[unique = true]; systemVersion(catalog(id), version)[unique = true]; name[lang = en]; name[lang = de]; name[lang = fr]; name[lang = it]
+; power_source ; jevEvalClassification:1.0 ; "Power source" ; "Energiequelle" ; "Source d’énergie" ; "Fonte di alimentazione"
+; hardware_material ; jevEvalClassification:1.0 ; "Hardware material" ; "Hardwarematerial" ; "Matériau du matériel" ; "Materiale dell'hardware"
+; color ; jevEvalClassification:1.0 ; "Color" ; "Farbe" ; "Couleur" ; "Color"
+
+INSERT_UPDATE ClassificationAttributeValue; code[unique = true]; systemVersion(catalog(id), version)[unique = true]; name[lang = en]; name[lang = de]; name[lang = fr]; name[lang = it]
+; power_source_ac_powered ; jevEvalClassification:1.0 ; "AC-powered" ; "Wechselstrombetrieben" ; "Alimenté par courant alternatif" ; "Alimentato in CA"
+; power_source_alcohol ; jevEvalClassification:1.0 ; "Alcohol" ; "Alkohol" ; "Alcool" ; "Alcol"
+; power_source_batteries ; jevEvalClassification:1.0 ; "Batteries" ; "Batterien" ; "Piles" ; "Batterie"
+; power_source_battery_powered ; jevEvalClassification:1.0 ; "Battery-powered" ; "Batteriebetrieben" ; "Alimenté par batterie" ; "Alimentato a batteria"
+; power_source_butane ; jevEvalClassification:1.0 ; "Butane" ; "Butan" ; "Butane" ; "Butano"
+; power_source_charcoal ; jevEvalClassification:1.0 ; "Charcoal" ; "Holzkohle" ; "Charbon" ; "Carbone"
+; power_source_cigar_lighter ; jevEvalClassification:1.0 ; "Cigar lighter" ; "Zigarettenanzünder" ; "Allume-cigare" ; "Accendisigari"
+; power_source_dc_powered ; jevEvalClassification:1.0 ; "DC-powered" ; "Gleichstrombetrieben" ; "Alimenté par courant continu" ; "Alimentato in CC"
+; power_source_diesel ; jevEvalClassification:1.0 ; "Diesel" ; "Diesel" ; "Diesel" ; "Diesel"
+; power_source_ethanol ; jevEvalClassification:1.0 ; "Ethanol" ; "Ethanol" ; "Ethanol" ; "Etanolo"
+; power_source_firewood ; jevEvalClassification:1.0 ; "Firewood" ; "Feuerholz" ; "Bois de chauffage" ; "Legna da ardere"
+; power_source_gasoline ; jevEvalClassification:1.0 ; "Gasoline" ; "Benzin" ; "Gasoline" ; "Benzina"
+; power_source_hot_water ; jevEvalClassification:1.0 ; "Hot water" ; "Heißwasser" ; "Eau chaude" ; "Acqua calda"
+; power_source_hybrid ; jevEvalClassification:1.0 ; "Hybrid" ; "Hybrid" ; "Hybrid" ; "Ibrido"
+; power_source_hydraulic ; jevEvalClassification:1.0 ; "Hydraulic" ; "Hydraulisch" ; "Hydraulique" ; "Idraulico"
+; power_source_infrared ; jevEvalClassification:1.0 ; "Infrared" ; "Infrarot" ; "Infrarouge" ; "Infrarossi"
+; power_source_manual ; jevEvalClassification:1.0 ; "Manual" ; "Manuell" ; "Manuel" ; "Manuale"
+; power_source_mechanical ; jevEvalClassification:1.0 ; "Mechanical" ; "Mechanisch" ; "Mécanique" ; "Meccanico"
+; power_source_natural_gas ; jevEvalClassification:1.0 ; "Natural gas" ; "Erdgas" ; "Gaz naturel" ; "Gas naturale"
+; power_source_oil ; jevEvalClassification:1.0 ; "Oil" ; "Öl" ; "Huile" ; "Olio"
+; power_source_other ; jevEvalClassification:1.0 ; "Other" ; "Sonstiges" ; "Autre" ; "Altro"
+; power_source_pellet ; jevEvalClassification:1.0 ; "Pellet" ; "Pellet" ; "Granulé" ; "Pellet"
+; power_source_pneumatic ; jevEvalClassification:1.0 ; "Pneumatic" ; "Pneumatisch" ; "Pneumatique" ; "Pneumatico"
+; power_source_propane ; jevEvalClassification:1.0 ; "Propane" ; "Propan" ; "Propane" ; "Propano"
+; power_source_rechargeable ; jevEvalClassification:1.0 ; "Rechargeable" ; "Wiederaufladbar" ; "Rechargeable" ; "Ricaricabile"
+; power_source_solar ; jevEvalClassification:1.0 ; "Solar" ; "Solar" ; "Solaire" ; "Solare"
+; power_source_usb ; jevEvalClassification:1.0 ; "USB" ; "USB" ; "USB" ; "USB"
+; power_source_vehicle_electrical_system ; jevEvalClassification:1.0 ; "Vehicle electrical system" ; "Elektrisches System des Fahrzeugs" ; "Système électrique du véhicule" ; "Impianto elettrico del veicolo"
+; hardware_material_aluminum ; jevEvalClassification:1.0 ; "Aluminum" ; "Aluminium" ; "Aluminum" ; "Alluminio"
+; hardware_material_brass ; jevEvalClassification:1.0 ; "Brass" ; "Messing" ; "Laiton" ; "Ottone"
+; hardware_material_bronze ; jevEvalClassification:1.0 ; "Bronze" ; "Bronze" ; "Bronze" ; "Bronzo"
+; hardware_material_carbon_steel ; jevEvalClassification:1.0 ; "Carbon steel" ; "Kohlenstoffstahl" ; "Woks en acier au carbone" ; "Acciaio al carbonio"
+; hardware_material_cast_iron ; jevEvalClassification:1.0 ; "Cast iron" ; "Gusseisen" ; "Fonte" ; "Ghisa"
+; hardware_material_ceramic ; jevEvalClassification:1.0 ; "Ceramic" ; "Keramik" ; "Céramique" ; "Ceramica"
+; hardware_material_chrome_plated ; jevEvalClassification:1.0 ; "Chrome-plated" ; "Verchromt" ; "Chromé" ; "Cromato"
+; hardware_material_copper ; jevEvalClassification:1.0 ; "Copper" ; "Kupfer" ; "Cuivre" ; "Rame"
+; hardware_material_galvanized_iron ; jevEvalClassification:1.0 ; "Galvanized iron" ; "Galvanisiertes Eisen" ; "Fer galvanisé" ; "Ferro galvanizzato"
+; hardware_material_iron ; jevEvalClassification:1.0 ; "Iron" ; "Eisen" ; "Fer" ; "Ferro"
+; hardware_material_metal ; jevEvalClassification:1.0 ; "Metal" ; "Metall" ; "Métal" ; "Metallo"
+; hardware_material_nickel_plated ; jevEvalClassification:1.0 ; "Nickel-plated" ; "Vernickelt" ; "Plaqué nickel" ; "Placcato nickel"
+; hardware_material_nylon ; jevEvalClassification:1.0 ; "Nylon" ; "Nylon" ; "Nylon" ; "Nylon"
+; hardware_material_other ; jevEvalClassification:1.0 ; "Other" ; "Sonstiges" ; "Autre" ; "Altro"
+; hardware_material_plastic ; jevEvalClassification:1.0 ; "Plastic" ; "Kunststoff" ; "Plastique" ; "Plastica"
+; hardware_material_polyvinyl_chloride_pvc ; jevEvalClassification:1.0 ; "Polyvinyl chloride (PVC)" ; "Polyvinylchlorid (PVC)" ; "Chlorure de polyvinyle (PVC)" ; "Cloruro di polivinile (PVC)"
+; hardware_material_stainless_steel ; jevEvalClassification:1.0 ; "Stainless steel" ; "Edelstahl" ; "Acier inoxydable" ; "Acciaio inossidabile"
+; hardware_material_steel ; jevEvalClassification:1.0 ; "Steel" ; "Stahl" ; "Acier" ; "Acciaio"
+; hardware_material_titanium ; jevEvalClassification:1.0 ; "Titanium" ; "Titan" ; "Titane" ; "Titanio"
+; hardware_material_vinyl ; jevEvalClassification:1.0 ; "Vinyl" ; "Vinyl" ; "Vinyl" ; "Vinile"
+; hardware_material_zinc ; jevEvalClassification:1.0 ; "Zinc" ; "Zink" ; "Zinc" ; "Zinco"
+; color_beige ; jevEvalClassification:1.0 ; "Beige" ; "Beige" ; "Beige" ; "Beige"
+; color_black ; jevEvalClassification:1.0 ; "Black" ; "Schwarz" ; "Noir" ; "Nero"
+; color_blue ; jevEvalClassification:1.0 ; "Blue" ; "Blau" ; "Bleu" ; "Blu"
+; color_bronze ; jevEvalClassification:1.0 ; "Bronze" ; "Bronze" ; "Bronze" ; "Bronzo"
+; color_brown ; jevEvalClassification:1.0 ; "Brown" ; "Braun" ; "Marron" ; "Marrone"
+; color_clear ; jevEvalClassification:1.0 ; "Clear" ; "Transparent" ; "Clair" ; "Trasparente"
+; color_gold ; jevEvalClassification:1.0 ; "Gold" ; "Gold" ; "Or" ; "Gold"
+; color_gray ; jevEvalClassification:1.0 ; "Gray" ; "Grau" ; "Gris" ; "Grigio"
+; color_green ; jevEvalClassification:1.0 ; "Green" ; "Grün" ; "Vert" ; "Verde"
+; color_multicolor ; jevEvalClassification:1.0 ; "Multicolor" ; "Mehrfarbig" ; "Multicolore" ; "Multicolore"
+; color_navy ; jevEvalClassification:1.0 ; "Navy" ; "Marineblau" ; "Marine" ; "Blu navy"
+; color_orange ; jevEvalClassification:1.0 ; "Orange" ; "Orange" ; "Orange" ; "Arancione"
+; color_pink ; jevEvalClassification:1.0 ; "Pink" ; "Rosa" ; "Rose" ; "Rosa"
+; color_purple ; jevEvalClassification:1.0 ; "Purple" ; "Lila" ; "Violet" ; "Viola"
+; color_red ; jevEvalClassification:1.0 ; "Red" ; "Rot" ; "Rouge" ; "Rosso"
+; color_rose_gold ; jevEvalClassification:1.0 ; "Rose gold" ; "Roségold" ; "Or rose" ; "Oro rosato"
+; color_silver ; jevEvalClassification:1.0 ; "Silver" ; "Silber" ; "Argent" ; "Silver"
+; color_white ; jevEvalClassification:1.0 ; "White" ; "Weiß" ; "Blanc" ; "Bianco"
+; color_yellow ; jevEvalClassification:1.0 ; "Yellow" ; "Gelb" ; "Jaune" ; "Giallo"
+
+INSERT_UPDATE ClassAttributeAssignment; classificationClass(code, catalogVersion(catalog(id), version))[unique = true]; classificationAttribute(code, systemVersion(catalog(id), version))[unique = true]; systemVersion(catalog(id), version); attributeType(code); attributeValues(code, systemVersion(catalog(id), version))
+; hardware:jevEvalClassification:1.0 ; power_source:jevEvalClassification:1.0 ; jevEvalClassification:1.0 ; enum ; power_source_ac_powered:jevEvalClassification:1.0,power_source_alcohol:jevEvalClassification:1.0,power_source_batteries:jevEvalClassification:1.0,power_source_battery_powered:jevEvalClassification:1.0,power_source_butane:jevEvalClassification:1.0,power_source_charcoal:jevEvalClassification:1.0,power_source_cigar_lighter:jevEvalClassification:1.0,power_source_dc_powered:jevEvalClassification:1.0,power_source_diesel:jevEvalClassification:1.0,power_source_ethanol:jevEvalClassification:1.0,power_source_firewood:jevEvalClassification:1.0,power_source_gasoline:jevEvalClassification:1.0,power_source_hot_water:jevEvalClassification:1.0,power_source_hybrid:jevEvalClassification:1.0,power_source_hydraulic:jevEvalClassification:1.0,power_source_infrared:jevEvalClassification:1.0,power_source_manual:jevEvalClassification:1.0,power_source_mechanical:jevEvalClassification:1.0,power_source_natural_gas:jevEvalClassification:1.0,power_source_oil:jevEvalClassification:1.0,power_source_other:jevEvalClassification:1.0,power_source_pellet:jevEvalClassification:1.0,power_source_pneumatic:jevEvalClassification:1.0,power_source_propane:jevEvalClassification:1.0,power_source_rechargeable:jevEvalClassification:1.0,power_source_solar:jevEvalClassification:1.0,power_source_usb:jevEvalClassification:1.0,power_source_vehicle_electrical_system:jevEvalClassification:1.0
+; hardware:jevEvalClassification:1.0 ; hardware_material:jevEvalClassification:1.0 ; jevEvalClassification:1.0 ; enum ; hardware_material_aluminum:jevEvalClassification:1.0,hardware_material_brass:jevEvalClassification:1.0,hardware_material_bronze:jevEvalClassification:1.0,hardware_material_carbon_steel:jevEvalClassification:1.0,hardware_material_cast_iron:jevEvalClassification:1.0,hardware_material_ceramic:jevEvalClassification:1.0,hardware_material_chrome_plated:jevEvalClassification:1.0,hardware_material_copper:jevEvalClassification:1.0,hardware_material_galvanized_iron:jevEvalClassification:1.0,hardware_material_iron:jevEvalClassification:1.0,hardware_material_metal:jevEvalClassification:1.0,hardware_material_nickel_plated:jevEvalClassification:1.0,hardware_material_nylon:jevEvalClassification:1.0,hardware_material_other:jevEvalClassification:1.0,hardware_material_plastic:jevEvalClassification:1.0,hardware_material_polyvinyl_chloride_pvc:jevEvalClassification:1.0,hardware_material_stainless_steel:jevEvalClassification:1.0,hardware_material_steel:jevEvalClassification:1.0,hardware_material_titanium:jevEvalClassification:1.0,hardware_material_vinyl:jevEvalClassification:1.0,hardware_material_zinc:jevEvalClassification:1.0
+; hardware:jevEvalClassification:1.0 ; color:jevEvalClassification:1.0 ; jevEvalClassification:1.0 ; enum ; color_beige:jevEvalClassification:1.0,color_black:jevEvalClassification:1.0,color_blue:jevEvalClassification:1.0,color_bronze:jevEvalClassification:1.0,color_brown:jevEvalClassification:1.0,color_clear:jevEvalClassification:1.0,color_gold:jevEvalClassification:1.0,color_gray:jevEvalClassification:1.0,color_green:jevEvalClassification:1.0,color_multicolor:jevEvalClassification:1.0,color_navy:jevEvalClassification:1.0,color_orange:jevEvalClassification:1.0,color_pink:jevEvalClassification:1.0,color_purple:jevEvalClassification:1.0,color_red:jevEvalClassification:1.0,color_rose_gold:jevEvalClassification:1.0,color_silver:jevEvalClassification:1.0,color_white:jevEvalClassification:1.0,color_yellow:jevEvalClassification:1.0

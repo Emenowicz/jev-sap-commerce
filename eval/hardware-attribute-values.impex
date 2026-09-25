@@ -1,0 +1,73 @@
+# Labels for measuring attribute suggestions: puts all 40 products of synthetic-products.impex into the 'hardware'
+# class of hardware-attributes.impex, and sets a value only where the product text clearly states it (21 values).
+# Every other attribute stays empty, so the suggestion run also shows how often Jev fills what the text doesn't say.
+$clAttrModifiers = system = 'jevEvalClassification', version = '1.0', translator = de.hybris.platform.catalog.jalo.classification.impex.ClassificationAttributeTranslator
+
+UPDATE Product; code[unique = true]; catalogVersion(catalog(id), version)[unique = true]; supercategories(code, catalogVersion(catalog(id), version))[mode = append]
+; eval-p01 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p02 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p03 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p04 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p05 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p06 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p07 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p08 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p09 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p10 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p11 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p12 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p13 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p14 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p15 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p16 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p17 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p18 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p19 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p20 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p21 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p22 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p23 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p24 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p25 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p26 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p27 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p28 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p29 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p30 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p31 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p32 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p33 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p34 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p35 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p36 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p37 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p38 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p39 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+; eval-p40 ; jevEval:Staged ; hardware:jevEvalClassification:1.0
+
+UPDATE Product; code[unique = true]; catalogVersion(catalog(id), version)[unique = true]; @power_source[$clAttrModifiers]
+; eval-p01 ; jevEval:Staged ; power_source_ac_powered
+; eval-p02 ; jevEval:Staged ; power_source_ac_powered
+; eval-p03 ; jevEval:Staged ; power_source_manual
+; eval-p04 ; jevEval:Staged ; power_source_manual
+; eval-p05 ; jevEval:Staged ; power_source_ac_powered
+; eval-p06 ; jevEval:Staged ; power_source_ac_powered
+; eval-p07 ; jevEval:Staged ; power_source_manual
+; eval-p08 ; jevEval:Staged ; power_source_ac_powered
+; eval-p11 ; jevEval:Staged ; power_source_manual
+; eval-p37 ; jevEval:Staged ; power_source_battery_powered
+; eval-p39 ; jevEval:Staged ; power_source_ac_powered
+
+UPDATE Product; code[unique = true]; catalogVersion(catalog(id), version)[unique = true]; @hardware_material[$clAttrModifiers]
+; eval-p12 ; jevEval:Staged ; hardware_material_aluminum
+; eval-p20 ; jevEval:Staged ; hardware_material_stainless_steel
+; eval-p22 ; jevEval:Staged ; hardware_material_metal
+; eval-p25 ; jevEval:Staged ; hardware_material_stainless_steel
+; eval-p31 ; jevEval:Staged ; hardware_material_chrome_plated
+; eval-p33 ; jevEval:Staged ; hardware_material_chrome_plated
+
+UPDATE Product; code[unique = true]; catalogVersion(catalog(id), version)[unique = true]; @color[$clAttrModifiers]
+; eval-p27 ; jevEval:Staged ; color_white
+; eval-p29 ; jevEval:Staged ; color_white
+; eval-p30 ; jevEval:Staged ; color_gray
+; eval-p35 ; jevEval:Staged ; color_white

@@ -1,0 +1,184 @@
+product	language	mode	attribute	existing	decision	confidence	top	model	product_input_tokens
+eval-p01	de	dry run	power_source	power_source_ac_powered	power_source_ac_powered	0.71	power_source_ac_powered=0.73|not_stated=0.27|power_source_pellet=0.0	jev-1.13.0	879
+eval-p01	en	dry run	power_source	power_source_ac_powered	pending	0.65	power_source_ac_powered=0.68|not_stated=0.32|power_source_alcohol=0.0	jev-1.13.0	827
+eval-p01	en	suggest	color		not_stated	1.0	not_stated=1.0|color_clear=0.0|color_rose_gold=0.0	jev-1.13.0	1069
+eval-p01	en	suggest	hardware_material		not_stated	0.98	not_stated=0.99|hardware_material_steel=0.01|hardware_material_ceramic=0.0	jev-1.13.0	1069
+eval-p01	fr	dry run	power_source	power_source_ac_powered	power_source_ac_powered	0.72	power_source_ac_powered=0.74|not_stated=0.26|power_source_pneumatic=0.0	jev-1.13.0	871
+eval-p01	it	dry run	power_source	power_source_ac_powered	not_stated	0.53	not_stated=0.55|power_source_ac_powered=0.45|power_source_other=0.0	jev-1.13.0	873
+eval-p02	de	dry run	power_source	power_source_ac_powered	pending	0.53	power_source_ac_powered=0.56|not_stated=0.44|power_source_butane=0.0	jev-1.13.0	872
+eval-p02	en	dry run	power_source	power_source_ac_powered	not_stated	0.63	not_stated=0.65|power_source_ac_powered=0.35000000000000003|power_source_mechanical=0.0	jev-1.13.0	822
+eval-p02	en	suggest	color		not_stated	1.0	not_stated=1.0|color_purple=0.0|color_green=0.0	jev-1.13.0	1064
+eval-p02	en	suggest	hardware_material		not_stated	0.84	not_stated=0.86|hardware_material_metal=0.13|hardware_material_steel=0.01	jev-1.13.0	1064
+eval-p02	fr	dry run	power_source	power_source_ac_powered	not_stated	0.6	not_stated=0.62|power_source_ac_powered=0.38|power_source_solar=0.0	jev-1.13.0	858
+eval-p02	it	dry run	power_source	power_source_ac_powered	not_stated	0.7	not_stated=0.72|power_source_ac_powered=0.28|power_source_ethanol=0.0	jev-1.13.0	867
+eval-p03	de	dry run	power_source	power_source_manual	pending	0.66	power_source_manual=0.68|not_stated=0.26|power_source_mechanical=0.05	jev-1.13.0	862
+eval-p03	en	dry run	power_source	power_source_manual	power_source_manual	0.88	power_source_manual=0.89|not_stated=0.11|power_source_butane=0.0	jev-1.13.0	814
+eval-p03	en	suggest	color		not_stated	0.96	not_stated=0.97|color_gray=0.02|color_silver=0.01	jev-1.13.0	1056
+eval-p03	en	suggest	hardware_material		hardware_material_steel	1.0	hardware_material_steel=1.0|hardware_material_ceramic=0.0|hardware_material_vinyl=0.0	jev-1.13.0	1056
+eval-p03	fr	dry run	power_source	power_source_manual	power_source_manual	0.91	power_source_manual=0.92|not_stated=0.05|power_source_mechanical=0.03	jev-1.13.0	851
+eval-p03	it	dry run	power_source	power_source_manual	not_stated	0.51	not_stated=0.54|power_source_manual=0.45|power_source_mechanical=0.01	jev-1.13.0	855
+eval-p04	de	dry run	power_source	power_source_manual	power_source_manual	0.86	power_source_manual=0.87|not_stated=0.09|power_source_mechanical=0.04	jev-1.13.0	863
+eval-p04	en	dry run	power_source	power_source_manual	power_source_manual	0.86	power_source_manual=0.87|not_stated=0.12|power_source_mechanical=0.01	jev-1.13.0	807
+eval-p04	en	suggest	color		not_stated	0.79	not_stated=0.8|color_brown=0.17|color_beige=0.01	jev-1.13.0	1049
+eval-p04	en	suggest	hardware_material		not_stated	0.84	not_stated=0.86|hardware_material_steel=0.08|hardware_material_carbon_steel=0.02	jev-1.13.0	1049
+eval-p04	fr	dry run	power_source	power_source_manual	power_source_manual	0.9	power_source_manual=0.91|not_stated=0.05|power_source_mechanical=0.04	jev-1.13.0	851
+eval-p04	it	dry run	power_source	power_source_manual	pending	0.62	power_source_manual=0.64|not_stated=0.35|power_source_mechanical=0.01	jev-1.13.0	850
+eval-p05	de	dry run	power_source	power_source_ac_powered	power_source_ac_powered	0.7	power_source_ac_powered=0.72|not_stated=0.28|power_source_other=0.0	jev-1.13.0	875
+eval-p05	en	dry run	power_source	power_source_ac_powered	power_source_ac_powered	0.7	power_source_ac_powered=0.72|not_stated=0.28|power_source_mechanical=0.0	jev-1.13.0	833
+eval-p05	en	suggest	color		not_stated	1.0	not_stated=1.0|color_white=0.0|color_clear=0.0	jev-1.13.0	1075
+eval-p05	en	suggest	hardware_material		not_stated	0.97	not_stated=0.98|hardware_material_steel=0.02|hardware_material_bronze=0.0	jev-1.13.0	1075
+eval-p05	fr	dry run	power_source	power_source_ac_powered	power_source_ac_powered	0.77	power_source_ac_powered=0.79|not_stated=0.21|power_source_charcoal=0.0	jev-1.13.0	876
+eval-p05	it	dry run	power_source	power_source_ac_powered	not_stated	0.6	not_stated=0.62|power_source_ac_powered=0.38|power_source_other=0.0	jev-1.13.0	874
+eval-p06	de	dry run	power_source	power_source_ac_powered	pending	0.61	power_source_ac_powered=0.63|not_stated=0.37|power_source_gasoline=0.0	jev-1.13.0	863
+eval-p06	en	dry run	power_source	power_source_ac_powered	not_stated	0.54	not_stated=0.56|power_source_ac_powered=0.44|power_source_natural_gas=0.0	jev-1.13.0	814
+eval-p06	en	suggest	color		not_stated	1.0	not_stated=1.0|color_white=0.0|color_navy=0.0	jev-1.13.0	1056
+eval-p06	en	suggest	hardware_material		not_stated	0.9	not_stated=0.91|hardware_material_metal=0.08|hardware_material_steel=0.01	jev-1.13.0	1056
+eval-p06	fr	dry run	power_source	power_source_ac_powered	pending	0.53	power_source_ac_powered=0.55|not_stated=0.45|power_source_mechanical=0.0	jev-1.13.0	858
+eval-p06	it	dry run	power_source	power_source_ac_powered	not_stated	0.69	not_stated=0.71|power_source_ac_powered=0.29|power_source_dc_powered=0.0	jev-1.13.0	856
+eval-p07	de	dry run	power_source	power_source_manual	power_source_manual	0.91	power_source_manual=0.91|not_stated=0.07|power_source_mechanical=0.02	jev-1.13.0	857
+eval-p07	en	dry run	power_source	power_source_manual	power_source_manual	0.88	power_source_manual=0.9|not_stated=0.1|power_source_mechanical=0.0	jev-1.13.0	809
+eval-p07	en	suggest	color		not_stated	0.99	not_stated=0.99|color_silver=0.01|color_brown=0.0	jev-1.13.0	1051
+eval-p07	en	suggest	hardware_material		pending	0.52	hardware_material_metal=0.55|not_stated=0.3|hardware_material_steel=0.13	jev-1.13.0	1051
+eval-p07	fr	dry run	power_source	power_source_manual	power_source_manual	0.82	power_source_manual=0.83|not_stated=0.14|power_source_mechanical=0.03	jev-1.13.0	850
+eval-p07	it	dry run	power_source	power_source_manual	pending	0.61	power_source_manual=0.62|not_stated=0.31|power_source_mechanical=0.07	jev-1.13.0	850
+eval-p08	de	dry run	power_source	power_source_ac_powered	pending	0.54	power_source_ac_powered=0.56|not_stated=0.44|power_source_mechanical=0.0	jev-1.13.0	871
+eval-p08	en	dry run	power_source	power_source_ac_powered	not_stated	0.6	not_stated=0.62|power_source_ac_powered=0.38|power_source_vehicle_electrical_system=0.0	jev-1.13.0	820
+eval-p08	en	suggest	color		not_stated	1.0	not_stated=1.0|color_brown=0.0|color_orange=0.0	jev-1.13.0	1062
+eval-p08	en	suggest	hardware_material		not_stated	0.91	not_stated=0.92|hardware_material_metal=0.07|hardware_material_steel=0.01	jev-1.13.0	1062
+eval-p08	fr	dry run	power_source	power_source_ac_powered	not_stated	0.61	not_stated=0.63|power_source_ac_powered=0.37|power_source_hot_water=0.0	jev-1.13.0	864
+eval-p08	it	dry run	power_source	power_source_ac_powered	not_stated	0.68	not_stated=0.7|power_source_ac_powered=0.3|power_source_butane=0.0	jev-1.13.0	863
+eval-p09	en	suggest	color		not_stated	0.79	not_stated=0.8|color_silver=0.17|color_gray=0.02	jev-1.13.0	1549
+eval-p09	en	suggest	hardware_material		hardware_material_steel	1.0	hardware_material_steel=1.0|hardware_material_metal=0.0|hardware_material_zinc=0.0	jev-1.13.0	1549
+eval-p09	en	suggest	power_source		not_stated	0.54	not_stated=0.56|power_source_manual=0.26|power_source_mechanical=0.18	jev-1.13.0	1549
+eval-p10	en	suggest	color		not_stated	0.69	not_stated=0.71|color_silver=0.27|color_gray=0.02	jev-1.13.0	1553
+eval-p10	en	suggest	hardware_material		hardware_material_aluminum	1.0	hardware_material_aluminum=1.0|hardware_material_plastic=0.0|hardware_material_stainless_steel=0.0	jev-1.13.0	1553
+eval-p10	en	suggest	power_source		not_stated	0.64	not_stated=0.66|power_source_mechanical=0.17|power_source_manual=0.16	jev-1.13.0	1553
+eval-p11	de	dry run	power_source	power_source_manual	not_stated	0.53	not_stated=0.54|power_source_manual=0.4|power_source_mechanical=0.05	jev-1.13.0	854
+eval-p11	en	dry run	power_source	power_source_manual	pending	0.47	power_source_manual=0.5|not_stated=0.43|power_source_mechanical=0.07	jev-1.13.0	811
+eval-p11	en	suggest	color		pending	0.52	color_silver=0.55|not_stated=0.42|color_gray=0.03	jev-1.13.0	1053
+eval-p11	en	suggest	hardware_material		hardware_material_steel	0.96	hardware_material_steel=0.96|hardware_material_chrome_plated=0.02|hardware_material_carbon_steel=0.01	jev-1.13.0	1053
+eval-p11	fr	dry run	power_source	power_source_manual	pending	0.46	power_source_manual=0.49|not_stated=0.44|power_source_mechanical=0.07	jev-1.13.0	848
+eval-p11	it	dry run	power_source	power_source_manual	not_stated	0.86	not_stated=0.87|power_source_manual=0.09|power_source_mechanical=0.04	jev-1.13.0	853
+eval-p12	de	dry run	hardware_material	hardware_material_aluminum	hardware_material_aluminum	1.0	hardware_material_aluminum=1.0|hardware_material_brass=0.0|hardware_material_iron=0.0	jev-1.13.0	731
+eval-p12	en	dry run	hardware_material	hardware_material_aluminum	hardware_material_aluminum	1.0	hardware_material_aluminum=1.0|hardware_material_bronze=0.0|hardware_material_chrome_plated=0.0	jev-1.13.0	704
+eval-p12	en	suggest	color		not_stated	0.74	not_stated=0.76|color_silver=0.21|color_gray=0.03	jev-1.13.0	1150
+eval-p12	en	suggest	power_source		not_stated	0.74	not_stated=0.75|power_source_manual=0.23|power_source_mechanical=0.02	jev-1.13.0	1150
+eval-p12	fr	dry run	hardware_material	hardware_material_aluminum	hardware_material_aluminum	1.0	hardware_material_aluminum=1.0|hardware_material_zinc=0.0|hardware_material_nylon=0.0	jev-1.13.0	732
+eval-p12	it	dry run	hardware_material	hardware_material_aluminum	hardware_material_aluminum	0.95	hardware_material_aluminum=0.95|not_stated=0.05|hardware_material_steel=0.0	jev-1.13.0	738
+eval-p13	en	suggest	color		not_stated	1.0	not_stated=1.0|color_brown=0.0|color_orange=0.0	jev-1.13.0	1551
+eval-p13	en	suggest	hardware_material		not_stated	0.98	not_stated=0.98|hardware_material_metal=0.02|hardware_material_cast_iron=0.0	jev-1.13.0	1551
+eval-p13	en	suggest	power_source		not_stated	1.0	not_stated=1.0|power_source_butane=0.0|power_source_solar=0.0	jev-1.13.0	1551
+eval-p14	en	suggest	color		not_stated	0.98	not_stated=1.0|color_bronze=0.0|color_clear=0.0	jev-1.13.0	1567
+eval-p14	en	suggest	hardware_material		not_stated	0.38	not_stated=0.41|hardware_material_other=0.36|hardware_material_steel=0.13	jev-1.13.0	1567
+eval-p14	en	suggest	power_source		not_stated	0.95	not_stated=0.96|power_source_mechanical=0.02|power_source_manual=0.01	jev-1.13.0	1567
+eval-p15	en	suggest	color		not_stated	0.8	not_stated=0.81|color_silver=0.13|color_gray=0.04	jev-1.13.0	1560
+eval-p15	en	suggest	hardware_material		hardware_material_steel	0.77	hardware_material_steel=0.79|not_stated=0.09|hardware_material_metal=0.07	jev-1.13.0	1560
+eval-p15	en	suggest	power_source		not_stated	0.89	not_stated=0.9|power_source_manual=0.08|power_source_mechanical=0.02	jev-1.13.0	1560
+eval-p16	en	suggest	color		not_stated	0.96	not_stated=0.97|color_silver=0.03|color_white=0.0	jev-1.13.0	1563
+eval-p16	en	suggest	hardware_material		not_stated	0.35	not_stated=0.38|hardware_material_other=0.28|hardware_material_steel=0.2	jev-1.13.0	1563
+eval-p16	en	suggest	power_source		not_stated	0.96	not_stated=0.97|power_source_mechanical=0.01|power_source_ac_powered=0.01	jev-1.13.0	1563
+eval-p17	en	suggest	color		not_stated	0.99	not_stated=1.0|color_black=0.0|color_multicolor=0.0	jev-1.13.0	1554
+eval-p17	en	suggest	hardware_material		not_stated	0.87	not_stated=0.88|hardware_material_steel=0.1|hardware_material_metal=0.01	jev-1.13.0	1554
+eval-p17	en	suggest	power_source		not_stated	0.97	not_stated=0.98|power_source_mechanical=0.01|power_source_manual=0.01	jev-1.13.0	1554
+eval-p18	en	suggest	color		not_stated	0.95	not_stated=0.96|color_gray=0.02|color_yellow=0.01	jev-1.13.0	1565
+eval-p18	en	suggest	hardware_material		hardware_material_aluminum	0.79	hardware_material_aluminum=0.81|not_stated=0.16|hardware_material_other=0.03	jev-1.13.0	1565
+eval-p18	en	suggest	power_source		power_source_manual	0.85	power_source_manual=0.85|not_stated=0.15|power_source_mechanical=0.0	jev-1.13.0	1565
+eval-p19	en	suggest	color		not_stated	0.99	not_stated=1.0|color_pink=0.0|color_yellow=0.0	jev-1.13.0	1553
+eval-p19	en	suggest	hardware_material		not_stated	0.84	not_stated=0.86|hardware_material_steel=0.12|hardware_material_carbon_steel=0.01	jev-1.13.0	1553
+eval-p19	en	suggest	power_source		not_stated	0.83	not_stated=0.84|power_source_manual=0.12|power_source_mechanical=0.03	jev-1.13.0	1553
+eval-p20	de	dry run	hardware_material	hardware_material_stainless_steel	hardware_material_stainless_steel	1.0	hardware_material_stainless_steel=1.0|hardware_material_carbon_steel=0.0|hardware_material_ceramic=0.0	jev-1.13.0	731
+eval-p20	en	dry run	hardware_material	hardware_material_stainless_steel	hardware_material_stainless_steel	1.0	hardware_material_stainless_steel=1.0|hardware_material_nickel_plated=0.0|hardware_material_brass=0.0	jev-1.13.0	710
+eval-p20	en	suggest	color		color_silver	0.7	color_silver=0.72|not_stated=0.27|color_gray=0.01	jev-1.13.0	1156
+eval-p20	en	suggest	power_source		not_stated	0.83	not_stated=0.85|power_source_mechanical=0.11|power_source_manual=0.04	jev-1.13.0	1156
+eval-p20	fr	dry run	hardware_material	hardware_material_stainless_steel	hardware_material_stainless_steel	1.0	hardware_material_stainless_steel=1.0|hardware_material_carbon_steel=0.0|hardware_material_ceramic=0.0	jev-1.13.0	739
+eval-p20	it	dry run	hardware_material	hardware_material_stainless_steel	hardware_material_stainless_steel	1.0	hardware_material_stainless_steel=1.0|hardware_material_ceramic=0.0|hardware_material_aluminum=0.0	jev-1.13.0	742
+eval-p21	en	suggest	color		color_silver	0.73	color_silver=0.75|not_stated=0.2|color_gray=0.04	jev-1.13.0	1562
+eval-p21	en	suggest	hardware_material		pending	0.43	hardware_material_steel=0.46|hardware_material_zinc=0.37|not_stated=0.07	jev-1.13.0	1562
+eval-p21	en	suggest	power_source		not_stated	0.95	not_stated=0.95|power_source_manual=0.04|power_source_mechanical=0.01	jev-1.13.0	1562
+eval-p22	de	dry run	hardware_material	hardware_material_metal	hardware_material_metal	1.0	hardware_material_metal=1.0|hardware_material_other=0.0|hardware_material_carbon_steel=0.0	jev-1.13.0	731
+eval-p22	en	dry run	hardware_material	hardware_material_metal	hardware_material_metal	0.99	hardware_material_metal=0.99|not_stated=0.01|hardware_material_ceramic=0.0	jev-1.13.0	704
+eval-p22	en	suggest	color		not_stated	0.77	not_stated=0.79|color_silver=0.18|color_gray=0.03	jev-1.13.0	1150
+eval-p22	en	suggest	power_source		not_stated	0.98	not_stated=0.98|power_source_manual=0.01|power_source_mechanical=0.01	jev-1.13.0	1150
+eval-p22	fr	dry run	hardware_material	hardware_material_metal	hardware_material_metal	0.99	hardware_material_metal=1.0|hardware_material_chrome_plated=0.0|hardware_material_zinc=0.0	jev-1.13.0	736
+eval-p22	it	dry run	hardware_material	hardware_material_metal	hardware_material_metal	0.99	hardware_material_metal=0.99|not_stated=0.01|hardware_material_nickel_plated=0.0	jev-1.13.0	740
+eval-p23	en	suggest	color		color_silver	0.93	color_silver=0.94|color_gray=0.05|not_stated=0.01	jev-1.13.0	1554
+eval-p23	en	suggest	hardware_material		hardware_material_steel	0.75	hardware_material_steel=0.76|hardware_material_stainless_steel=0.22|not_stated=0.02	jev-1.13.0	1554
+eval-p23	en	suggest	power_source		not_stated	0.77	not_stated=0.78|power_source_manual=0.16|power_source_mechanical=0.06	jev-1.13.0	1554
+eval-p24	en	suggest	color		pending	0.44	color_silver=0.48|not_stated=0.4|color_gray=0.12	jev-1.13.0	1557
+eval-p24	en	suggest	hardware_material		hardware_material_galvanized_iron	0.92	hardware_material_galvanized_iron=0.93|hardware_material_steel=0.04|hardware_material_carbon_steel=0.01	jev-1.13.0	1557
+eval-p24	en	suggest	power_source		not_stated	0.99	not_stated=0.99|power_source_mechanical=0.01|power_source_pneumatic=0.0	jev-1.13.0	1557
+eval-p25	de	dry run	hardware_material	hardware_material_stainless_steel	hardware_material_stainless_steel	1.0	hardware_material_stainless_steel=1.0|hardware_material_vinyl=0.0|not_stated=0.0	jev-1.13.0	732
+eval-p25	en	dry run	hardware_material	hardware_material_stainless_steel	hardware_material_stainless_steel	1.0	hardware_material_stainless_steel=1.0|hardware_material_steel=0.0|not_stated=0.0	jev-1.13.0	701
+eval-p25	en	suggest	color		color_silver	0.82	color_silver=0.83|not_stated=0.15|color_gray=0.02	jev-1.13.0	1147
+eval-p25	en	suggest	power_source		pending	0.43	power_source_manual=0.46|not_stated=0.38|power_source_mechanical=0.16	jev-1.13.0	1147
+eval-p25	fr	dry run	hardware_material	hardware_material_stainless_steel	hardware_material_stainless_steel	1.0	hardware_material_stainless_steel=1.0|hardware_material_aluminum=0.0|hardware_material_plastic=0.0	jev-1.13.0	732
+eval-p25	it	dry run	hardware_material	hardware_material_stainless_steel	hardware_material_stainless_steel	1.0	hardware_material_stainless_steel=1.0|hardware_material_chrome_plated=0.0|hardware_material_metal=0.0	jev-1.13.0	738
+eval-p26	en	suggest	color		not_stated	0.95	not_stated=0.97|color_blue=0.02|color_white=0.01	jev-1.13.0	1566
+eval-p26	en	suggest	hardware_material		hardware_material_plastic	0.89	hardware_material_plastic=0.91|not_stated=0.05|hardware_material_other=0.04	jev-1.13.0	1566
+eval-p26	en	suggest	power_source		not_stated	1.0	not_stated=1.0|power_source_cigar_lighter=0.0|power_source_solar=0.0	jev-1.13.0	1566
+eval-p27	de	dry run	color	color_white	color_white	1.0	color_white=1.0|color_pink=0.0|color_brown=0.0	jev-1.13.0	683
+eval-p27	en	dry run	color	color_white	color_white	1.0	color_white=1.0|color_clear=0.0|color_silver=0.0	jev-1.13.0	659
+eval-p27	en	suggest	hardware_material		hardware_material_ceramic	1.0	hardware_material_ceramic=1.0|hardware_material_titanium=0.0|hardware_material_vinyl=0.0	jev-1.13.0	1217
+eval-p27	en	suggest	power_source		not_stated	1.0	not_stated=1.0|power_source_pellet=0.0|power_source_hybrid=0.0	jev-1.13.0	1217
+eval-p27	fr	dry run	color	color_white	color_white	1.0	color_white=1.0|color_yellow=0.0|color_brown=0.0	jev-1.13.0	690
+eval-p27	it	dry run	color	color_white	color_white	1.0	color_white=1.0|color_bronze=0.0|color_clear=0.0	jev-1.13.0	695
+eval-p28	en	suggest	color		color_clear	0.97	color_clear=0.97|not_stated=0.03|color_gold=0.0	jev-1.13.0	1555
+eval-p28	en	suggest	hardware_material		not_stated	0.88	not_stated=0.89|hardware_material_other=0.09999999999999999|hardware_material_plastic=0.01	jev-1.13.0	1555
+eval-p28	en	suggest	power_source		not_stated	1.0	not_stated=1.0|power_source_solar=0.0|power_source_alcohol=0.0	jev-1.13.0	1555
+eval-p29	de	dry run	color	color_white	color_white	1.0	color_white=1.0|color_yellow=0.0|color_multicolor=0.0	jev-1.13.0	678
+eval-p29	en	dry run	color	color_white	color_white	1.0	color_white=1.0|color_rose_gold=0.0|color_beige=0.0	jev-1.13.0	654
+eval-p29	en	suggest	hardware_material		not_stated	0.97	not_stated=0.98|hardware_material_vinyl=0.01|hardware_material_plastic=0.01	jev-1.13.0	1212
+eval-p29	en	suggest	power_source		not_stated	1.0	not_stated=1.0|power_source_rechargeable=0.0|power_source_alcohol=0.0	jev-1.13.0	1212
+eval-p29	fr	dry run	color	color_white	color_white	1.0	color_white=1.0|color_green=0.0|color_bronze=0.0	jev-1.13.0	675
+eval-p29	it	dry run	color	color_white	color_white	1.0	color_white=1.0|color_purple=0.0|color_green=0.0	jev-1.13.0	684
+eval-p30	de	dry run	color	color_gray	color_gray	1.0	color_gray=1.0|color_clear=0.0|color_rose_gold=0.0	jev-1.13.0	675
+eval-p30	en	dry run	color	color_gray	color_gray	1.0	color_gray=1.0|color_purple=0.0|color_bronze=0.0	jev-1.13.0	652
+eval-p30	en	suggest	hardware_material		not_stated	0.4	not_stated=0.44|hardware_material_iron=0.35|hardware_material_steel=0.16	jev-1.13.0	1210
+eval-p30	en	suggest	power_source		not_stated	1.0	not_stated=1.0|power_source_diesel=0.0|power_source_usb=0.0	jev-1.13.0	1210
+eval-p30	fr	dry run	color	color_gray	color_gray	1.0	color_gray=1.0|not_stated=0.0|color_yellow=0.0	jev-1.13.0	674
+eval-p30	it	dry run	color	color_gray	color_gray	1.0	color_gray=1.0|not_stated=0.0|color_yellow=0.0	jev-1.13.0	683
+eval-p31	de	dry run	hardware_material	hardware_material_chrome_plated	hardware_material_chrome_plated	0.86	hardware_material_chrome_plated=0.87|not_stated=0.12|hardware_material_metal=0.01	jev-1.13.0	735
+eval-p31	en	dry run	hardware_material	hardware_material_chrome_plated	hardware_material_chrome_plated	0.96	hardware_material_chrome_plated=0.96|not_stated=0.04|hardware_material_zinc=0.0	jev-1.13.0	701
+eval-p31	en	suggest	color		color_silver	0.97	color_silver=0.98|not_stated=0.02|color_black=0.0	jev-1.13.0	1147
+eval-p31	en	suggest	power_source		not_stated	0.79	not_stated=0.8|power_source_manual=0.11|power_source_hydraulic=0.05	jev-1.13.0	1147
+eval-p31	fr	dry run	hardware_material	hardware_material_chrome_plated	hardware_material_chrome_plated	0.92	hardware_material_chrome_plated=0.93|not_stated=0.06|hardware_material_metal=0.01	jev-1.13.0	732
+eval-p31	it	dry run	hardware_material	hardware_material_chrome_plated	hardware_material_chrome_plated	0.9	hardware_material_chrome_plated=0.91|not_stated=0.08|hardware_material_metal=0.01	jev-1.13.0	742
+eval-p32	en	suggest	color		not_stated	1.0	not_stated=1.0|color_black=0.0|color_multicolor=0.0	jev-1.13.0	1550
+eval-p32	en	suggest	hardware_material		not_stated	0.99	not_stated=1.0|hardware_material_brass=0.0|hardware_material_iron=0.0	jev-1.13.0	1550
+eval-p32	en	suggest	power_source		not_stated	0.76	not_stated=0.78|power_source_hydraulic=0.16|power_source_manual=0.04	jev-1.13.0	1550
+eval-p33	de	dry run	hardware_material	hardware_material_chrome_plated	hardware_material_chrome_plated	0.9	hardware_material_chrome_plated=0.9|not_stated=0.08|hardware_material_brass=0.01	jev-1.13.0	730
+eval-p33	en	dry run	hardware_material	hardware_material_chrome_plated	hardware_material_chrome_plated	0.94	hardware_material_chrome_plated=0.95|not_stated=0.05|hardware_material_steel=0.0	jev-1.13.0	701
+eval-p33	en	suggest	color		color_silver	0.96	color_silver=0.96|not_stated=0.04|color_gold=0.0	jev-1.13.0	1147
+eval-p33	en	suggest	power_source		not_stated	0.62	not_stated=0.65|power_source_manual=0.27|power_source_mechanical=0.06	jev-1.13.0	1147
+eval-p33	fr	dry run	hardware_material	hardware_material_chrome_plated	hardware_material_chrome_plated	0.75	hardware_material_chrome_plated=0.77|not_stated=0.21000000000000002|hardware_material_metal=0.01	jev-1.13.0	726
+eval-p33	it	dry run	hardware_material	hardware_material_chrome_plated	pending	0.68	hardware_material_chrome_plated=0.71|not_stated=0.26|hardware_material_brass=0.02	jev-1.13.0	733
+eval-p34	en	suggest	color		not_stated	0.89	not_stated=0.9|color_black=0.04|color_green=0.03	jev-1.13.0	1557
+eval-p34	en	suggest	hardware_material		not_stated	0.69	not_stated=0.71|hardware_material_other=0.19|hardware_material_copper=0.04	jev-1.13.0	1557
+eval-p34	en	suggest	power_source		pending	0.6	power_source_ac_powered=0.63|not_stated=0.37|power_source_ethanol=0.0	jev-1.13.0	1557
+eval-p35	de	dry run	color	color_white	color_white	1.0	color_white=1.0|color_brown=0.0|color_pink=0.0	jev-1.13.0	679
+eval-p35	en	dry run	color	color_white	color_white	1.0	color_white=1.0|color_yellow=0.0|color_brown=0.0	jev-1.13.0	646
+eval-p35	en	suggest	hardware_material		not_stated	0.88	not_stated=0.9|hardware_material_plastic=0.08|hardware_material_nylon=0.01	jev-1.13.0	1204
+eval-p35	en	suggest	power_source		pending	0.52	power_source_ac_powered=0.55|not_stated=0.45|power_source_hot_water=0.0	jev-1.13.0	1204
+eval-p35	fr	dry run	color	color_white	color_white	1.0	color_white=1.0|color_purple=0.0|color_navy=0.0	jev-1.13.0	668
+eval-p35	it	dry run	color	color_white	color_white	1.0	color_white=1.0|color_orange=0.0|color_gray=0.0	jev-1.13.0	678
+eval-p36	en	suggest	color		not_stated	0.98	not_stated=0.99|color_blue=0.01|color_brown=0.0	jev-1.13.0	1552
+eval-p36	en	suggest	hardware_material		not_stated	0.99	not_stated=0.99|hardware_material_metal=0.01|hardware_material_cast_iron=0.0	jev-1.13.0	1552
+eval-p36	en	suggest	power_source		not_stated	0.91	not_stated=0.93|power_source_ac_powered=0.07|power_source_butane=0.0	jev-1.13.0	1552
+eval-p37	de	dry run	power_source	power_source_battery_powered	power_source_battery_powered	0.99	power_source_battery_powered=0.99|power_source_batteries=0.01|power_source_usb=0.0	jev-1.13.0	856
+eval-p37	en	dry run	power_source	power_source_battery_powered	power_source_battery_powered	0.97	power_source_battery_powered=0.97|power_source_batteries=0.03|power_source_ac_powered=0.0	jev-1.13.0	804
+eval-p37	en	suggest	color		not_stated	1.0	not_stated=1.0|color_silver=0.0|color_green=0.0	jev-1.13.0	1046
+eval-p37	en	suggest	hardware_material		not_stated	0.99	not_stated=0.99|hardware_material_plastic=0.01|hardware_material_galvanized_iron=0.0	jev-1.13.0	1046
+eval-p37	fr	dry run	power_source	power_source_battery_powered	power_source_batteries	1.0	power_source_batteries=1.0|power_source_cigar_lighter=0.0|power_source_solar=0.0	jev-1.13.0	849
+eval-p37	it	dry run	power_source	power_source_battery_powered	pending	0.64	power_source_battery_powered=0.67|power_source_batteries=0.31|not_stated=0.02	jev-1.13.0	849
+eval-p38	en	suggest	color		not_stated	1.0	not_stated=1.0|color_white=0.0|color_gold=0.0	jev-1.13.0	1552
+eval-p38	en	suggest	hardware_material		not_stated	1.0	not_stated=1.0|hardware_material_steel=0.0|hardware_material_chrome_plated=0.0	jev-1.13.0	1552
+eval-p38	en	suggest	power_source		not_stated	0.94	not_stated=0.94|power_source_ac_powered=0.06|power_source_mechanical=0.0	jev-1.13.0	1552
+eval-p39	de	dry run	power_source	power_source_ac_powered	not_stated	0.51	not_stated=0.54|power_source_ac_powered=0.46|power_source_hot_water=0.0	jev-1.13.0	865
+eval-p39	en	dry run	power_source	power_source_ac_powered	not_stated	0.61	not_stated=0.64|power_source_ac_powered=0.36|power_source_pneumatic=0.0	jev-1.13.0	815
+eval-p39	en	suggest	color		not_stated	1.0	not_stated=1.0|color_orange=0.0|color_black=0.0	jev-1.13.0	1057
+eval-p39	en	suggest	hardware_material		not_stated	1.0	not_stated=1.0|hardware_material_nickel_plated=0.0|hardware_material_brass=0.0	jev-1.13.0	1057
+eval-p39	fr	dry run	power_source	power_source_ac_powered	not_stated	0.5	not_stated=0.53|power_source_ac_powered=0.47|power_source_pellet=0.0	jev-1.13.0	857
+eval-p39	it	dry run	power_source	power_source_ac_powered	not_stated	0.66	not_stated=0.68|power_source_ac_powered=0.32|power_source_hot_water=0.0	jev-1.13.0	857
+eval-p40	en	suggest	color		not_stated	0.69	not_stated=0.7|color_brown=0.28|color_green=0.01	jev-1.13.0	1551
+eval-p40	en	suggest	hardware_material		pending	0.48	hardware_material_other=0.51|not_stated=0.49|hardware_material_galvanized_iron=0.0	jev-1.13.0	1551
+eval-p40	en	suggest	power_source		not_stated	1.0	not_stated=1.0|power_source_pneumatic=0.0|power_source_manual=0.0	jev-1.13.0	1551
