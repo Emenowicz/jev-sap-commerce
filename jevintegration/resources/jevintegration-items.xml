@@ -2,7 +2,7 @@
 <items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
 	<itemtypes>
 		<itemtype code="JevJudgment" autocreate="true" generate="true">
-			<description>One Jev decision about one item: Jev's raw answers, what was decided and, in a dry run, what a person had decided. Written once, read-only afterwards.</description>
+			<description>One Jev decision about one item: Jev's raw answers, what was decided and, in a dry run, what a person had decided. Written once, read-only afterwards, except for the resolution a person records on a suggestion.</description>
 			<!-- 28400 was free in SAP's modules when this was written. Change it if it collides with a type in your project. -->
 			<deployment table="JevJudgments" typecode="28400"/>
 			<attributes>
@@ -51,6 +51,16 @@
 				</attribute>
 				<attribute qualifier="inputTokens" type="java.lang.Integer">
 					<modifiers initial="true" write="false"/>
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="resolution" type="java.lang.String">
+					<description>Category and attribute suggestions only: "applied" or "dismissed" by a person. Empty while the suggestion is open.</description>
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="resolvedBy" type="User">
+					<persistence type="property"/>
+				</attribute>
+				<attribute qualifier="resolvedAt" type="java.util.Date">
 					<persistence type="property"/>
 				</attribute>
 			</attributes>

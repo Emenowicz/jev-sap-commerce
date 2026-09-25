@@ -21,14 +21,15 @@ only when the answers clear your thresholds; everything else stays pending for a
 category that fits a product best. It uses TypeSafe's
 [hierarchical classification](https://docs.typesafe.ai/cookbooks/hierarchical_classification):
 at every level it keeps the 3 most likely paths, so a later level can correct an unclear earlier
-one. Suggestions are recorded for a merchandiser to confirm; **the extension never changes a
-product's categories.**
+one. Suggestions are recorded for a merchandiser, who applies or dismisses them in Backoffice;
+**the extension never changes a product's categories on its own.**
 
 **Attribute suggestions.** For each enum attribute of a product's classification class (material,
 colour, power source, finish and so on), Jev picks the allowed value the product text states, or
 says the text doesn't say. A product's attributes are asked together, up to 25 per request. Suggestions are
-recorded for a merchandiser; **the extension never changes a product's feature values.** Numeric,
-date and free-text attributes are left out on purpose: that's a job for code.
+recorded for a merchandiser, who applies or dismisses them in Backoffice; **the extension never
+changes a product's feature values on its own.** Numeric, date and free-text attributes are left
+out on purpose: that's a job for code.
 
 For all three:
 - **Dry runs** judge items people already decided (moderated reviews, categorised products,
@@ -37,17 +38,18 @@ For all three:
   file and the server log.
 - **An audit record per decision** (`JevJudgment`): the item, the language, the Jev model version,
   Jev's raw answers, the decision and, in a dry run, what people had decided. Records are
-  read-only once written. You can find them in Backoffice under **Jev**.
+  read-only once written, except for who applied or dismissed a suggestion, and when. You can
+  find them in Backoffice under **Jev**.
 - **Safe defaults:** without an API key every call is skipped. The cronjobs have no triggers, so
   nothing runs until you start it. When Jev is unavailable, nothing is recorded and the next run
   retries.
 
-It needs the `customerreview` and `catalog` extensions and adds no library dependency.
+It needs the `customerreview`, `catalog` and `platformbackoffice` extensions and adds no library dependency.
 
-**Tested:** the 28 tests pass on SAP Commerce **2211.46 (JDK 17)** and **2211-jdk21.17 (JDK 21)**
+**Tested:** the 30 tests pass on SAP Commerce **2211.46 (JDK 17)** and **2211-jdk21.17 (JDK 21)**
 with HSQLDB, and on 2211-jdk21.17 with **SQL Server 2022**.
 On 2211-jdk21.17, all three use cases also ran in a real server against the real Jev API (below),
-and the Backoffice screens were checked.
+and the Backoffice screens were checked, including Apply and Dismiss on the attribute suggestions.
 
 ## Results with the real Jev API
 
@@ -204,8 +206,8 @@ Per-attribute results: [`eval/attribute-results-jev-1.13.0.tsv`](eval/attribute-
    suggestion is a `JevJudgment` whose `decision` is the suggested category code, or `pending` when
    the score is below `jev.category.min.score`, or `none` when the product fits nowhere in the
    tree. Its `answers` hold the full path, the score, the other paths kept and Jev's top answers
-   at every level. A merchandiser works through them in Backoffice (**Jev > Jev judgment**,
-   filtered by use case) and assigns the categories they agree with.
+   at every level. A merchandiser works through them in Backoffice, see
+   [Apply or dismiss suggestions](#apply-or-dismiss-suggestions).
 
 ## Attribute suggestions: configure and measure
 
@@ -226,7 +228,8 @@ Per-attribute results: [`eval/attribute-results-jev-1.13.0.tsv`](eval/attribute-
    value. Each product gets one `JevJudgment` whose `decision` summarises it (for example "2
    suggested, 1 unsure, 3 not stated") and whose `answers` list every attribute with Jev's value,
    confidence and top alternatives. A product with nothing to judge gets a `-` record, so it isn't
-   fetched again.
+   fetched again. A merchandiser works through the suggestions in Backoffice, see
+   [Apply or dismiss suggestions](#apply-or-dismiss-suggestions).
 
 Products are found through their classification classes, whether a class is assigned to the
 product directly or, as usual, to a category above it.
@@ -235,6 +238,33 @@ Limits: only enum attributes with at most 254 allowed values (one Jev question l
 options); multi-valued attributes get a single suggestion; the log names every attribute type it
 skipped. `jev.attribute.min.confidence` is Jev's confidence in its choice, a different number from
 the category path score.
+
+## Apply or dismiss suggestions
+
+In Backoffice, open **Jev > Jev judgment** and search for use case `categorySuggestion` or
+`attributeSuggestion`, dry run off and an empty resolution: that's the queue. Select one or
+several judgments, in the list or in the editor, then:
+
+- **Apply** adds the suggested category to the product, or sets each suggested value whose
+  attribute is still empty. It never replaces a category or a value a person set, including one
+  set after the run. It asks for confirmation first.
+- **Dismiss** marks the suggestion as handled and leaves the product as it is.
+
+Either way the judgment records who did it and when, under **Resolution**, and leaves the queue.
+Apply is only offered when there is something to apply: a `pending` or `none` category, or an
+attribute judgment where nothing was suggested, can only be dismissed. One judgment is applied as a
+whole; to take only some of its attribute values, dismiss it and set the ones you want on the
+product. Apply needs the right to change both the judgment and the product, Dismiss the right to
+change the judgment: give merchandisers read and change access to the Jev judgment type.
+
+If the suggestion cronjob ran in two languages, a product can have two judgments: apply one and
+dismiss the other. An attribute judgment with the decision `-` had nothing to judge; dismiss it to
+clear it from the queue.
+
+Backoffice keeps its configuration once it has built it. If the Resolution column or the two
+buttons don't appear after an upgrade, rebuild it: set `backoffice.cockpitng.reset.triggers=start`
+and `backoffice.cockpitng.reset.scope=cockpitConfig` for one restart, then remove them. Don't add
+`widgets` to the scope: that would also reset the layouts your admins changed.
 
 ## Configuration
 
@@ -270,7 +300,8 @@ night at 03:00. It isn't part of the essential data. Set `retentionTimeSeconds` 
 file says two years), then import it once, in Backoffice or in HAC under Console > ImpEx Import.
 
 Each job skips the items it has already judged, so deleting a judgment lets the next run judge that
-item again if it still qualifies, for example a review that is still pending. That costs a call.
+item again if it still qualifies, for example a review that is still pending. That costs a call. It
+is also the only way to have a dismissed suggestion judged again.
 
 ## What leaves your platform
 
@@ -330,6 +361,9 @@ The tests use a local fake Jev endpoint, so they need no network or API key. The
 - **attribute suggestions:** the questions and policy, the dry run and suggest job against a real
   classification system in the junit tenant (empty attributes found, number attributes skipped,
   features never changed), and wrong configuration;
+- **applying and dismissing suggestions:** a category added, values set only on attributes that
+  are still empty, nothing to apply for `none` or "not stated", and dry-run or already resolved
+  judgments refused;
 - **the essential data ImpEx**, with all six cronjobs started through SAP's cronjob service;
 - **the optional retention ImpEx:** a judgment older than two years is deleted, a newer one kept;
 - **the review FlexibleSearch query** above.

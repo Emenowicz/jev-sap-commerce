@@ -2,6 +2,7 @@ package org.jevintegration.attribute;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import de.hybris.bootstrap.annotations.IntegrationTest;
@@ -40,6 +41,7 @@ import java.util.Locale;
 import java.util.Map;
 
 import org.jevintegration.JevClient;
+import org.jevintegration.JevSuggestionService;
 import org.jevintegration.model.JevJudgmentModel;
 import org.junit.After;
 import org.junit.Before;
@@ -194,6 +196,25 @@ public class JevAttributeSuggestionJobIntegrationTest extends ServicelayerTransa
 	}
 
 	@Test
+	public void aPersonAppliesSuggestedValuesOnlyToAttributesThatAreStillEmpty()
+	{
+		job(false).perform(cronJob());
+		final JevSuggestionService suggestions = getApplicationContext().getBean("jevSuggestionService", JevSuggestionService.class);
+		assertFalse("the socket's empty attribute is not stated in its text", suggestions.canApply(judgmentOf(socket)));
+		assertTrue("so it can only be dismissed", suggestions.canDismiss(judgmentOf(socket)));
+
+		setValue(screwdriver, color, "white"); // a person filled it after the run
+		assertEquals("power only: color has a value by now", 1, suggestions.apply(judgmentOf(screwdriver)));
+		assertEquals("battery", valueOf(screwdriver, power));
+		assertEquals("white", valueOf(screwdriver, color));
+
+		assertEquals("power; color was not stated", 1, suggestions.apply(judgmentOf(hammer)));
+		assertEquals("manual", valueOf(hammer, power));
+		assertNull(valueOf(hammer, color));
+		assertEquals(JevSuggestionService.APPLIED, judgmentOf(hammer).getResolution());
+	}
+
+	@Test
 	public void missingOrWrongConfigurationIsAnError()
 	{
 		configurationService.getConfiguration().setProperty("jev.attribute.system", "");
@@ -310,6 +331,12 @@ public class JevAttributeSuggestionJobIntegrationTest extends ServicelayerTransa
 				.filter(v -> v.getCode().equals(code)).findFirst().orElseThrow();
 		features.getFeatureByAssignment(assignment).addValue(new FeatureValue(value));
 		classificationService.replaceFeatures(product, features);
+	}
+
+	private String valueOf(final ProductModel product, final ClassAttributeAssignmentModel assignment)
+	{
+		final FeatureValue value = classificationService.getFeatures(product).getFeatureByAssignment(assignment).getValue();
+		return value == null ? null : ((ClassificationAttributeValueModel) value.getValue()).getCode();
 	}
 
 	private List<JevJudgmentModel> judgments()

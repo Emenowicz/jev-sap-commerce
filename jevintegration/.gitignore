@@ -15,3 +15,5 @@
 /.springBeans
 /extensioninfo.xsd
 /resources/items.xsd
+/backoffice/classes/
+/resources/backoffice/

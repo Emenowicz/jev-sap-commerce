@@ -1,6 +1,8 @@
 package org.jevintegration.category;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import de.hybris.bootstrap.annotations.IntegrationTest;
@@ -36,6 +38,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.jevintegration.JevClient;
+import org.jevintegration.JevSuggestionService;
 import org.jevintegration.model.JevJudgmentModel;
 import org.junit.After;
 import org.junit.Assume;
@@ -169,6 +172,34 @@ public class JevCategorySuggestionJobIntegrationTest extends ServicelayerTransac
 
 		job(false).perform(cronJob());
 		assertEquals("a product is judged once per mode and language", 2, judgments().size());
+	}
+
+	@Test
+	public void aPersonAppliesOrDismissesSuggestions()
+	{
+		job(false).perform(cronJob());
+		final JevSuggestionService suggestions = getApplicationContext().getBean("jevSuggestionService", JevSuggestionService.class);
+		final JevJudgmentModel tapJudgment = judgmentOf(tap);
+		final JevJudgmentModel gnomeJudgment = judgmentOf(gnome);
+		assertTrue(suggestions.canApply(tapJudgment));
+		assertFalse("none: nothing to apply, only to dismiss", suggestions.canApply(gnomeJudgment));
+
+		assertEquals(1, suggestions.apply(tapJudgment));
+		modelService.refresh(tap);
+		assertEquals(List.of("faucets"), tap.getSupercategories().stream().map(CategoryModel::getCode).toList());
+		assertEquals(JevSuggestionService.APPLIED, tapJudgment.getResolution());
+		assertNotNull(tapJudgment.getResolvedBy());
+		assertNotNull(tapJudgment.getResolvedAt());
+		assertFalse("resolved once", suggestions.canApply(tapJudgment) || suggestions.canDismiss(tapJudgment));
+
+		suggestions.dismiss(gnomeJudgment);
+		assertEquals(JevSuggestionService.DISMISSED, gnomeJudgment.getResolution());
+		modelService.refresh(gnome);
+		assertTrue("dismissing changes no product", gnome.getSupercategories().isEmpty());
+
+		job(true).perform(cronJob());
+		final JevJudgmentModel dryRun = judgmentOf(drill);
+		assertFalse("dry runs only measure", suggestions.canApply(dryRun) || suggestions.canDismiss(dryRun));
 	}
 
 	@Test

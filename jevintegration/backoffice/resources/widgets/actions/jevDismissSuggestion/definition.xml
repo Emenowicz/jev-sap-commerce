@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<action-definition id="org.jevintegration.backoffice.dismiss"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.hybris.com/schema/cockpitng/action-definition.xsd">
+
+	<name>Dismiss suggestion</name>
+	<description>Marks Jev's suggestion as dismissed without changing the product</description>
+	<author>jevintegration</author>
+	<version>1.0</version>
+
+	<iconUri>decline</iconUri>
+
+	<actionClassName>org.jevintegration.backoffice.DismissSuggestionAction</actionClassName>
+
+	<!-- one judgment from the editor, a collection from the list view -->
+	<inputType>java.lang.Object</inputType>
+	<outputType>java.lang.Object</outputType>
+
+	<settings>
+		<setting key="viewMode" default-value="iconAndText"/>
+	</settings>
+
+</action-definition>

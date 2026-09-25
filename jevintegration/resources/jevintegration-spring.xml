@@ -52,4 +52,12 @@
 	<bean id="jevAttributeDryRunJob" parent="jevAttributeSuggestionJob">
 		<property name="dryRun" value="true"/>
 	</bean>
+
+	<!-- Applies or dismisses a category or attribute suggestion when a person asks (the Backoffice actions). -->
+	<bean id="jevSuggestionService" class="org.jevintegration.JevSuggestionService">
+		<property name="modelService" ref="modelService"/>
+		<property name="userService" ref="userService"/>
+		<property name="categoryService" ref="categoryService"/>
+		<property name="classificationService" ref="classificationService"/>
+	</bean>
 </beans>

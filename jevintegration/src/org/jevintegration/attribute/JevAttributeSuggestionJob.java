@@ -69,8 +69,8 @@ public class JevAttributeSuggestionJob extends AbstractJobPerformable<CronJobMod
 	private static final int QUESTIONS_PER_REQUEST = 25;
 
 	private static final String CLASSES = "SELECT {pk} FROM {ClassificationClass} WHERE {catalogVersion} = ?system";
-	// ponytail: the classes and the categories below them go into the query as one IN list; fine for a few thousand
-	// (SQL Server allows 2,100 parameters). Beyond that, mark those categories and join on the mark instead.
+	// The classes and the categories below them go into the query as one IN list. SAP handles long lists: FlexibleSearch
+	// inlines them on SQL Server above db.supported.inline.in.params.sqlserver (2,000) and rewrites them on Oracle.
 	private static final String PRODUCTS = "SELECT {p.pk} FROM {Product AS p} WHERE {p.catalogVersion} = ?version"
 			+ " AND NOT EXISTS ({{ SELECT {v.pk} FROM {VariantProduct AS v} WHERE {v.pk} = {p.pk} }})"
 			+ " AND EXISTS ({{ SELECT {r.pk} FROM {CategoryProductRelation AS r} WHERE {r.target} = {p.pk} AND {r.source} IN (?classified) }})"

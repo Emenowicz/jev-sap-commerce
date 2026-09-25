@@ -54,8 +54,8 @@ public class JevCategorySuggestionJob extends AbstractJobPerformable<CronJobMode
 
 	public static final String USE_CASE = "categorySuggestion";
 
-	// ponytail: the tree's categories go into the query as one IN list; fine for a few thousand categories
-	// (SQL Server allows 2,100 parameters). Beyond that, mark the tree's categories and join on the mark instead.
+	// The tree's categories go into the query as one IN list. SAP handles long lists: FlexibleSearch inlines them on
+	// SQL Server above db.supported.inline.in.params.sqlserver (2,000) and rewrites them on Oracle.
 	private static final String PRODUCTS = "SELECT {p.pk} FROM {Product AS p} WHERE {p.catalogVersion} = ?version"
 			+ " AND NOT EXISTS ({{ SELECT {v.pk} FROM {VariantProduct AS v} WHERE {v.pk} = {p.pk} }})"
 			+ " AND %s EXISTS ({{ SELECT {r.pk} FROM {CategoryProductRelation AS r} WHERE {r.target} = {p.pk} AND {r.source} IN (?categories) }})"
